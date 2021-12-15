@@ -22,6 +22,9 @@ Feel free to add your own personal folder and make sure to include comments that
 
 Reflecting on how you got a solution and making comments in a way that it is easy to understand. Doesn't just helps the community understand your code and reasoning, it helps you retain the knowledge and your reasoning is saved in case you need it later.
 
+Feel free to check and add oppotunities to the folder *Internship Opportunities*
+__
+
 Happy Coding :)
 -
 

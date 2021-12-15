@@ -1,12 +1,28 @@
 LeetCode Solutions
 ==================
-Each folder contains problems divided by dificulty.
----------------------------------------------------
+There are 3 folders, each folder represents the level of difficulty the leetcode problems has.
+
 * Easy
 * Medium
 * Hard
 
-Inside each difficulty folder there are solutions and test cases for each leetcod problem. And also the reference to that problem on leetcode.com
+Each Difficulty folder contains folder that represents different data structures and algorithms
+
+* Arrays
+* Strings
+* LinkedLists
+* Trees
+* Sorting and Searching
+* Dynamic Programming
+* Design
+* Math
+* Others
+
+Feel free to add your own personal folder and make sure to include comments that explain your solution, Big O complexity and reasoning. 
+
+
+Happy Coding :)
+-
 
 
 

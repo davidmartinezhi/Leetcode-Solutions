@@ -1,3 +1,4 @@
 Checar en C++:
     -Maps
     -Sets
+    -Meter mi archivo sobre practicas de apuntadores, a este repositorio

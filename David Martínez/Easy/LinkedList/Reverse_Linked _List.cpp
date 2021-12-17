@@ -47,23 +47,24 @@ public:
         
         //Nodos
         ListNode * prevN = nullptr; //Comienza desde nullptr
-        ListNode * currN = nullptr;    //Comienza en el nodo actual
+        ListNode * currN = nullptr;    //Comienza en nullptr
+        //Estoy usando head, como si fuera un nodo next, al recorrerlo
         
         //Ahora declaro el ciclo
         while(head != nullptr){    //Mientras el siguiente nodo es diferente a nullptr
             
-            currN = head;  //Defino el valor de curr
-            head = head->next;
+            currN = head;  //Defino el valor de curr, al valor actual
+            head = head->next;  //Head lo revorro al siguiente valor
             
-            currN->next = prevN; //Nodo actual apunta hacía atras
+            currN->next = prevN; //Nodo actual ahora apunta hacía atras
             
             //Ahora recorro los nodos
-            prevN = currN;  //Al final, prev va a ser el head
+            prevN = currN;  //El nodo anterior, ahora apunta a el nodo actual
             
             
         }
         
-        //Regreso el nodo prev, que ahora es el head
+        //Regreso el nodo actual, que ahora es el head
         return currN;
         
         //Podría usar head, como uno de los apuntadores, aún así la memoria sería constante

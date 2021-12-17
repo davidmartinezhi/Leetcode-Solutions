@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-//First version
+//Version, sin saber que N esta en el rango de (0-size)
 
  // Definition for singly-linked list.
 struct ListNode {

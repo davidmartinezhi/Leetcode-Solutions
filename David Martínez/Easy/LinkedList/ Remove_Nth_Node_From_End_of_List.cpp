@@ -207,8 +207,10 @@ public:
 };
 */
 
+
+//Optimización de memoria utilizada
+
 /*
-Optimización de memoria utilizada
 class Solution {
 public:
     ListNode* removeNthFromEnd(ListNode* head, int n) {

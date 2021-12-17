@@ -310,4 +310,6 @@ Notas sobre este ejercicio:
     -Si voy a eliminar un nodo, debería de asegurarme en donde estoy poniendo el apuntador del valor anterior
     -Debo recordar la tecnica de tener varios apuntadores
     -Debo hacer los test cases desde el inicio, para estar bien preparado
+    -Siento que si hago la metodologia de analizar el problema, poner test cases. Hacer pseudo codigo para pasos(siendo explicito con lo que ando haciendo siempre),
+    Y luego ponerme a programar. Casí todo problema saldría rapido.
 */

@@ -211,6 +211,9 @@ public:
 //Optimización de memoria utilizada
 
 /*
+//Runtime: 3 ms, faster than 82.23% of C++ online submissions for Remove Nth Node From End of List.
+//Memory Usage: 10.7 MB, less than 73.08% of C++ online submissions for Remove Nth Node From End of List.
+
 class Solution {
 public:
     ListNode* removeNthFromEnd(ListNode* head, int n) {
@@ -305,6 +308,6 @@ public:
 Notas sobre este ejercicio:
     -Debo asegurarme de ser explicito con la asignación de apuntadores 
     -Si voy a eliminar un nodo, debería de asegurarme en donde estoy poniendo el apuntador del valor anterior
-
-
+    -Debo recordar la tecnica de tener varios apuntadores
+    -Debo hacer los test cases desde el inicio, para estar bien preparado
 */

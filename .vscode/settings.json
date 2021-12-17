@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.rmd": "markdown",
+        "*.py": "python",
+        "new": "cpp"
+    }
+}

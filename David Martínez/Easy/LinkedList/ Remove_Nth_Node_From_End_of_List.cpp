@@ -205,6 +205,104 @@ public:
         return head;      
     }
 };
+*/
+
+/*
+Optimización de memoria utilizada
+class Solution {
+public:
+    ListNode* removeNthFromEnd(ListNode* head, int n) {
+        //Asumiendo que n, es un valor dentro de la linkedlist siempre
+        
+        //Test cases
+            //Elimino un unico nodo y la lista solo tiene un nodo
+            //Elimino la cabeza de la linked list
+            //Elimino el ultimo elemento de la linked list
+            //Elimino un elemento enmedio de la linkedList
+            
+        
+        //Como saber si la lista tiene solo 1 nodo
+            //Puede ser con un counter para saber el size de la lista y luego comparar con n
+        
+        //Como se si estoy en el head?
+            //Comparo con el aux, para saber si mover la referencia a head
+        
+        //En Case de que el nodo este en el cuerpo  
+            //Checo si n es igual a 1
+                //Si es igual a 1, elimino aux, que es el ultimo nodo
+            //Si no es 1, asigno los valores de next a aux, y elimino next
+        
+       
+        
+        //nodo Front, que va a recorrer la lista hasta llegar a nullptr
+        ListNode * front = head;
+        
+        //Nodo auxiliar que eliminara el nodo seleccionado
+        ListNode * aux = head;
+        
+                
+        //Recorro el front, n veces
+        for(int i = 0; i <= n; i++){
+            
+            //Si front = nullptr, estamos en el fin de la linkedlist y el dato a borrar es el head
+            if(front == nullptr){
+                
+                
+                head = head->next;
+                delete aux; //Elimino el head anterior
+                
+                return head;  //Regreso la linkedlist con el nuevo head
+                
+                //Si la lista es de un elemento, regresa nullptr
+                
+                //Si la lista es de mas elementos, regresa con nuevo head
+            }
+            
+            if(i != n){ //No recorre en la ultima vuelta
+                front = front->next;    //Recorro front 
+            }
+                   
+        }
+ 
+        //Si N es diferente al numero de nodos en la linkedlist
+        
+        //Puedo recorrer front una vez
+        front = front->next;
+        //Luego ya no usar aux2, solo aux normal pero apuntando a next next
+        
+        //Si tenemos que recorrer
+        while(front != nullptr){    //Mientras no lleguemos al final recorro
+            front = front->next;
+            aux = aux->next;
+        }
+        
+        //Aux ahora se queda un valor antes del ultimo
+        
+        //Aquí ya recorrí
+        //Ahora checo si debo eliminar el ultimo nodo
+        ListNode * next = aux->next;    //Nodo que voy a borrar
+        if(n == 1){
+            aux->next = nullptr;    //ahora aux apunta a nullptr
+            delete next; //Elimino next
+        }
+        else{
+            //Si es un nodo en el cuerpo de la linked list
+            aux->next = next->next;
+            //Elimino next
+            delete next;
+        }
+        return head;      
+    }
+};
+
+
+*/
+
+/*
+
+Notas sobre este ejercicio:
+    -Debo asegurarme de ser explicito con la asignación de apuntadores 
+    -Si voy a eliminar un nodo, debería de asegurarme en donde estoy poniendo el apuntador del valor anterior
 
 
 */

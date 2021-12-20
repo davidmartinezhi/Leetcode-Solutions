@@ -19,7 +19,7 @@
                 //Precompute information, is there a way to make it easier to solve. (ex. sorting, modifying/manipulating data).
                 //Use hash tables (They are highly udes in interview questions and should be on top of your mind)
                 //Think about the best conceivable runtime
-            //*Atacar el brute force con estos pensamientos en mente y aplicar BUD(Pag. 67)
+            //*Atacar el brute force con optimize and solve techniques
         
             //5.Walk Through
                 //Despues de pensar en un algoritmo optimo, no solo aventarse a programar

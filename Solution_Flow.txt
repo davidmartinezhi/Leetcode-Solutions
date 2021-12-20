@@ -1,0 +1,46 @@
+        //Steps:
+            //1.Listen
+                //Escribir los requerimientos y preguntar sobre constrains
+                //Escribir la información importante para no perderla
+        
+            //2.Example
+                //Dibujar un ejemplo para demostrar y tu saber, como funcionará
+                //Dibujar un ejemplo grande y coherente con el problema
+                //No dibujar special case, o hacerlo de manera explicita para tomar notas
+                
+            //3.Brute Force
+                //Declara solución con brute force y como funcionaria.Se puede intercalar pasos 2 y 3
+                //Puede ser un buen punto de inicio para optimizar
+        
+            //4.Optimize
+                //Buscar por información que no utilizamos
+                //Usar otro ejemplo
+                //Make Time vs Space. tradeoffs
+                //Precompute information, is there a way to make it easier to solve. (ex. sorting, modifying/manipulating data).
+                //Use hash tables (They are highly udes in interview questions and should be on top of your mind)
+                //Think about the best conceivable runtime
+            //*Atacar el brute force con estos pensamientos en mente y aplicar BUD(Pag. 67)
+        
+            //5.Walk Through
+                //Despues de pensar en un algoritmo optimo, no solo aventarse a programar
+                //Tomarme un tiempo para solificar mi entendimiento del algoritmo y su funcionamiento
+                //Se puede escribir pseudo codigo, pero de preferencia comenzar a programar rapido
+        
+            //6.Implement
+                //Ahora que ya pensaste en el algoritmo y sabes exactamente que es lo que vas a escribir.
+                //Write beautiful code
+                    //Divide el codigo en modulos, como funciones
+                    //Error check. Escribir una lista de "to do" y explicar que es lo que quieres checar.
+                    //Usar otros structs/classes si es necesario, no necesariamente debes escribir todos los detalles de la clase, con dar a entender lo que hace y si al final tienes tiempo, hacerlo.
+                    //Usar buenos nombre de variables
+            //*Si te confundes, siempre puedes regresar a tu ejemplo y algoritmo propuesto
+        
+            //7.Test
+                //No darle submit, sin haberlo checado antes
+                //Approach
+                    //Start with a conceptual test, leer y analizar lo que hace cada linea de codigo, el codigo hace lo que crees que deberia hacer?.   
+                    //Checar codigo que se ve extraño, por ejemplo: array.size() - 2, o que el loop comience en int i = 1.
+                    //Hot Spots. ou've coded long enough to know what things are likely to cause problems. Base cases in recursive code. Integer division. Null nodes in binary trees. The start and end of iteration through a linked list. Double check that stuff.
+        
+                    //Ahora usar un ejemplo pequeño, no como el de el paso 2(example). Probablemente descubras bugs, pero será mas rapido solucionarlos.
+                    //Extreme cases, and special cases: checar codigo contra nullpointers, single element values.

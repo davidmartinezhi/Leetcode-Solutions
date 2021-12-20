@@ -103,5 +103,6 @@ Notas:
 
         -Se crean 2 pointers, uno fast que recorre de 2 en 2 y un slow que lo hace secuencialmente
         -De esta manera, cuando fast llegue al final de la linkedlist, slow estará en medio y head al principio.
+        -Esto es mientras fast no es nullptr y fast->next no es nullptr
         -Ahora comenzamos a comparar. Esto lo resuelve en tiempo O(N) y memproa O(1).
 */

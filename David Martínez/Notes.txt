@@ -2,6 +2,7 @@ Checar en C++:
     -Maps
     -Sets
     -Meter mi archivo sobre practicas de apuntadores, a este repositorio
+    -"auto" en el uso de variables
 
 *Puede ser utíl checar videos de gente resolviendo los problemas en el momento,
     De tal manera que pueda emular su approach a los problemas y saber identificarlos.

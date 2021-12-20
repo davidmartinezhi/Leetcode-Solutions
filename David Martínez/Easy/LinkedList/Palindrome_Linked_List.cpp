@@ -95,5 +95,9 @@ Notas:
     -El problema lo resolvi en menos de 30 minutos y lo hice sin mucho esfuerzo. Me tarde más escribiendo los pasos del flow
     -Conseguí una solución eficiente en un buen tiempo.
     -Debo de implementar el solution flow chart desde siempre, a partir de ahora y checar "omptimize and solve techniques"
-    
+
+    Optimización:
+        -Se puede hacer un nodo fast y otro slow.
+        -Cuando fast llegue al final, reverseamos lo que sigue despues de slow.
+        -Ahora recorro 1 a 1, head y slow (hasta que slow sea nullptr). Esto lo resuelve en time(N) y memoria(1)
 */

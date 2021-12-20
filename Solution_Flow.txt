@@ -40,7 +40,7 @@
                 //Approach
                     //Start with a conceptual test, leer y analizar lo que hace cada linea de codigo, el codigo hace lo que crees que deberia hacer?.   
                     //Checar codigo que se ve extraño, por ejemplo: array.size() - 2, o que el loop comience en int i = 1.
-                    //Hot Spots. ou've coded long enough to know what things are likely to cause problems. Base cases in recursive code. Integer division. Null nodes in binary trees. The start and end of iteration through a linked list. Double check that stuff.
+                    //Hot Spots. you've coded long enough to know what things are likely to cause problems. Base cases in recursive code. Integer division. Null nodes in binary trees. The start and end of iteration through a linked list. Double check that stuff.
         
                     //Ahora usar un ejemplo pequeño, no como el de el paso 2(example). Probablemente descubras bugs, pero será mas rapido solucionarlos.
                     //Extreme cases, and special cases: checar codigo contra nullpointers, single element values.

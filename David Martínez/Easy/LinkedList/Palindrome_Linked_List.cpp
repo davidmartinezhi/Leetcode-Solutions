@@ -100,4 +100,8 @@ Notas:
         -Se puede hacer un nodo fast y otro slow.
         -Cuando fast llegue al final, reverseamos lo que sigue despues de slow.
         -Ahora recorro 1 a 1, head y slow (hasta que slow sea nullptr). Esto lo resuelve en time(N) y memoria(1)
+
+        -Se crean 2 pointers, uno fast que recorre de 2 en 2 y un slow que lo hace secuencialmente
+        -De esta manera, cuando fast llegue al final de la linkedlist, slow estará en medio y head al principio.
+        -Ahora comenzamos a comparar. Esto lo resuelve en tiempo O(N) y memproa O(1).
 */

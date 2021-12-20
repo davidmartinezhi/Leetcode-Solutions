@@ -1,0 +1,8 @@
+Optimize and Solve techniques
+
+1) BUD (Bottlenecks, Unneccesary Work, Duplicate Work)
+2) DIY (Do It Yourself)
+3) Simplify and Generalize
+4) Base Case and Build
+5) Data Structure brainstorm
+6) Best conceivable rutime

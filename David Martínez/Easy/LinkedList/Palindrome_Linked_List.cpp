@@ -88,3 +88,12 @@ public:
         return true;
     }
 };
+
+/*
+Notas:
+
+    -El problema lo resolvi en menos de 30 minutos y lo hice sin mucho esfuerzo. Me tarde más escribiendo los pasos del flow
+    -Conseguí una solución eficiente en un buen tiempo.
+    -Debo de implementar el solution flow chart desde siempre, a partir de ahora y checar "omptimize and solve techniques"
+    
+*/

@@ -69,3 +69,13 @@ public:
         
     }
 };
+
+/*
+Nota:
+
+    -Terminado en menos de 14 minutos, con test cases y todo
+    -Solución muy eficiente
+    -La metodologia para atacar problemas, aunque un problema sea sencillo. Asegura la menor cantidad de problemas al programar
+    - Esa metodologia es una joya.
+
+*/

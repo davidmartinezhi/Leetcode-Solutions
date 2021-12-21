@@ -15,3 +15,5 @@ Checar en C++:
 //Solution flow: pagina 62 del libro.
 
 //Anotar los problemas que me salieron en la entrevista de facebooks
+
+//Siento que strings y arrays en easy, van a ser una buena introcucción a la utilización de hashtables.

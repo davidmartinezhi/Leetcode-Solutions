@@ -75,12 +75,14 @@ Steps:
         6.Implement
 
                 //Ahora que ya pensaste en el algoritmo y sabes exactamente que es lo que vas a escribir.
+
                 //Write beautiful code
                     //Divide el codigo en modulos, como funciones
                     //Error check. Escribir una lista de "to do" y explicar que es lo que quieres checar.
                     //Usar otros structs/classes si es necesario, no necesariamente debes escribir todos los detalles de la clase, con dar a entender lo que hace y si al final tienes tiempo, hacerlo.
                     //Usar buenos nombre de variables
-            //*Si te confundes, siempre puedes regresar a tu ejemplo y algoritmo propuesto
+
+            //*Si te confundes, siempre puedes regresar a tu ejemplo (paso 2) y algoritmo propuesto (paso 5)
         
         7.Test
 

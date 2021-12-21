@@ -29,4 +29,5 @@ public:
 /*
 Nota:
     -Solución optima con O(1) memoria y O(1) tiempo
+    -Muy util para problemas sobre linked lists, que me he topado luego
 */

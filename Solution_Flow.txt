@@ -63,9 +63,14 @@ Steps:
         
         5.Walk Through
 
-                //Despues de pensar en un algoritmo optimo, no solo aventarse a programar
-                //Tomarme un tiempo para solificar mi entendimiento del algoritmo y su funcionamiento
-                //Se puede escribir pseudo codigo, pero de preferencia comenzar a programar rapido
+                //Despues de pensar en un algoritmo optimo, no solo aventarse a programar.
+                //Tomarme un tiempo para solificar mi entendimiento del algoritmo y su funcionamiento.
+                //Recorrer el algoritmo y checar la estructura de tu codifo (que hace cada sección) y como se
+                    mueve la info.
+                //Se puede escribir pseudo codigo, pero de preferencia comenzar a programar rapido.
+
+            //*Si no entiendes que estas por escribir, vas a batallar más para programar la solución,
+                te va a tomar más tiempo el teminar de programar y es más probable que hagas errores grandes.
         
         6.Implement
 

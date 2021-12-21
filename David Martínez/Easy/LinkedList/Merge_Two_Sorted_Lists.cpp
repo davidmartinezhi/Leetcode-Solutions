@@ -36,8 +36,8 @@ public:
         
         //5)Walthrough
             //creo head para la nueva lista
-            //Creo apuntador auxiliar que se encarga de conectar las listas
-            //Recorro los heads ya conectados y los recorro, par seguir comparando
+            //Creo apuntador auxiliar que se encarga de conectar el nodo menor de cada lista
+            //Recorro los heads ya conectados y los recorro, para seguir comparando
             //Si una lista se termina
                 //checamos la otra
             //Si en la otra aún hay elementos, conectamos al head que queda y regresamos apuntador aux
@@ -124,3 +124,11 @@ public:
         
     }
 };
+
+/*
+Notas:
+    -Lo saque en media hora
+    -No programas sin pensar en que estoy haciendo
+    -O acostumbrarme a hacer ciertas cosas en automatico.
+
+*/

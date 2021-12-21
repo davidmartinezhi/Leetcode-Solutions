@@ -87,7 +87,7 @@ public:
         
         //Si salimos del grupo sin haber tenido errores, significa que si en palindromo
         return true;
-    }
+    
     */
     
         //Solución con apuntadores

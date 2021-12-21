@@ -54,7 +54,8 @@ public:
         
         //Todo list
             //Checar la condición start <= end
-        
+        /*
+        ===== Solución con array =====
         //Llenado del vector
         vector<int> values = {};
         
@@ -85,6 +86,58 @@ public:
         }
         
         //Si salimos del grupo sin haber tenido errores, significa que si en palindromo
+        return true;
+    }
+    */
+    
+        //Solución con apuntadores
+        //Time O(N)
+        //Memory O(1)
+    
+        //Creo apuntadores: fast y slow
+        ListNode * slow = head;
+        ListNode * fast = head;
+        
+        //Los recorro hasta que fast sea nullptr o fast->next sea nullptr
+        while(fast != nullptr && fast->next != nullptr){
+            slow = slow->next;
+            fast = fast->next->next;
+        }
+    
+        //Si fast es nullptr, la lista tiene numero par de nodos y reverseo a partir del que estamos
+    
+        //Si fast->next es nullptr, la lista tiene numero non de nodos y reverseo apartir del slow->next
+        if(fast != nullptr){
+            slow = slow->next;
+        }
+    
+        //Reverseo la lista a partir de slow
+        //Creo apuntadores auxiliares
+        ListNode * prevN = nullptr;
+        ListNode * currN = nullptr;
+    
+        
+        while(slow != nullptr){
+            currN = slow;   //Curr apunta al valor de slow
+            slow = slow->next;  //Slow se recorre
+        
+            currN->next = prevN;    //Curr ahora apunta al nodo anterior
+        
+            prevN = currN;  //El nodo anterior ahora tiene el valor de curr
+        }
+        
+        //Ahora comparo ambas mitades
+        while(currN != nullptr){
+            if(currN->val != head->val){
+                return false;
+            }
+        
+            //recorremos ambos nodos
+            currN = currN->next;
+            head = head->next;
+        }
+        
+        //Si sale del ciclo significa que si son iguales
         return true;
     }
 };

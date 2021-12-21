@@ -6,6 +6,7 @@ Checar en C++:
 
 *Puede ser utíl checar videos de gente resolviendo los problemas en el momento,
     De tal manera que pueda emular su approach a los problemas y saber identificarlos.
+    -También checar el solution flow que viene en cracking the coding interview.
     
 //repositorio
     -Agregar descripción en optimize and solve techniques 

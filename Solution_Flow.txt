@@ -45,14 +45,21 @@ Steps:
                   porque es el punto inicial de optiizaciones y te ayuda a comprender bien el tema. 
         
         4.Optimize
+                Despues de sacar el brute force algorithm, es importante optimizar
 
-                //Buscar por información que no utilizamos
-                //Usar otro ejemplo
-                //Make Time vs Space. tradeoffs
-                //Precompute information, is there a way to make it easier to solve. (ex. sorting, modifying/manipulating data).
-                //Use hash tables (They are highly udes in interview questions and should be on top of your mind)
+                //Buscar por información que no utilizamos(ej. el array esta ordenado?)
+
+                //Usar otro ejemplo (puede ayudar a ver un patron en el problema)
+
+                //Make Time vs Space. tradeoffs (ej. usar mas variables para aumentar velocidad)
+
+                //Precompute information, is there a way to make it easier to solve and more efficient in the long run. (ej. sorting, modifying/manipulating data).
+
+                //Use hash tables (They are highly udes in interview questions and should be on top of your mind).
+
                 //Think about the best conceivable runtime
-            //*Atacar el brute force con optimize and solve techniques
+
+            //*Atacar el brute force con "optimize and solve techniques"
         
         5.Walk Through
 
@@ -71,7 +78,7 @@ Steps:
             //*Si te confundes, siempre puedes regresar a tu ejemplo y algoritmo propuesto
         
         7.Test
-        
+
                 //No darle submit, sin haberlo checado antes
                 //Approach
                     //Start with a conceptual test, leer y analizar lo que hace cada linea de codigo, el codigo hace lo que crees que deberia hacer?.   

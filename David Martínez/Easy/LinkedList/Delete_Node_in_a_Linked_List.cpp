@@ -27,5 +27,6 @@ public:
 };
 
 /*
+Nota:
     -Solución optima con O(1) memoria y O(1) tiempo
 */

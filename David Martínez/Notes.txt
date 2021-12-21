@@ -6,7 +6,7 @@ Checar en C++:
 
 *Puede ser utíl checar videos de gente resolviendo los problemas en el momento,
     De tal manera que pueda emular su approach a los problemas y saber identificarlos.
-    -También checar el solution flow que viene en cracking the coding interview.
+    
     
 //repositorio
     -Agregar descripción en optimize and solve techniques 
@@ -18,3 +18,7 @@ Checar en C++:
 //Anotar los problemas que me salieron en la entrevista de facebooks
 
 //Siento que strings y arrays en easy, van a ser una buena introcucción a la utilización de hashtables.
+
+To-Do:
+-También checar el solution flow que viene en cracking the coding interview. Terminado.
+-Anotar las "Optimize and Solve Techniques"

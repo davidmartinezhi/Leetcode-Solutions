@@ -153,3 +153,11 @@ public:
         */
     }
 };
+
+/*
+Notas:
+    -Me tarde una hora, porque pense en aplicar sliding window technique cuando existia una manera más sencilla de hacerlo
+    -Tenía el concepto de tener dos apuntadores bien, y de tener uno que sigue a los no repetidos.
+    -Pero dentro del loop hice un desastre con wux y while. Cuando pude haberlo resuelto con un loop y ya
+
+*/

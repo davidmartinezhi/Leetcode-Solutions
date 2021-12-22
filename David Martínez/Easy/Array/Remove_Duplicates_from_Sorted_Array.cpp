@@ -159,5 +159,8 @@ Notas:
     -Me tarde una hora, porque pense en aplicar sliding window technique cuando existia una manera más sencilla de hacerlo
     -Tenía el concepto de tener dos apuntadores bien, y de tener uno que sigue a los no repetidos.
     -Pero dentro del loop hice un desastre con wux y while. Cuando pude haberlo resuelto con un loop y ya
+    -Podría funcionar concepto de slifing window, pero lo aplique en fixed points incorrectos.
+        -Pude hacer que fuese una sola ventanta y que fuera creciendo y agregando ahí el dato nuevo no repetido.
+        -En lugar de verlo como una ventana en cada indice diferente
 
 */

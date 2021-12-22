@@ -70,3 +70,9 @@ public:
         return maxProfit;
     }
 };
+
+/*
+Notas:
+    -Buena implementación de los conceptos
+    -Estoy agarrando la onda todavia y aunque me tardo un poco aún, ya soy capaz de implementarlo
+*/

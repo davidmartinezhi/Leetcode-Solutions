@@ -1,4 +1,4 @@
-#include <iostream>
+#include <bits/stdc++.h>
 #include <vector>
 using namespace std;
 
@@ -21,6 +21,8 @@ public:
             //Tendría time:O(N)
             //Tendría Memory: O(N)
             //Siento que esto es mejor a usar un fast y un slow pointer, sería time:O(N^2), memory:O(1)
+            //Podria hacer un sort O(nlogn) y luego recorrer la lista, con ventana que cheque por repetidos
+            //Time (n log n), memory (1) o Log N por espacio auxiliar con el sort de vector
         
         //4)Optimize
             //Usar Hashtables para tener conocimiento de los numeros y la frecuencia
@@ -39,16 +41,13 @@ public:
             //Set con valores repetidos
         
         set<int, greater<int> > values;
-        values.insert(1000000001);//En las condiciones, ningun valor tendra ese valor
-                                //Mi set es de menor a mayor
         
         //El find de set, cuando no encuentra el elemento regresa el ultimo
         //Entonces haré que el ultimo sea uno que no podamos acceder
         
         for(int i = 0; i < nums.size(); i++){//Checa cada valor de nums
             
-            if(values.find(nums[i]) == values.end()){//Si me manda a la ubicación de 1000000001
-                                                    //Significa que no existe el dato 
+            if(values.find(nums[i]) == values.end()){//Si llega al final, significa que no existe el numero
                 values.insert(nums[i]);  //Agregamos el dato al set
             }
             else{   //Si existe el dato

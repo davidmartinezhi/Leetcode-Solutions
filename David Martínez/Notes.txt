@@ -1,6 +1,6 @@
 Checar en C++:
     -Maps
-    -Sets
+    -Sets (En c++, usan el binary tree implementation, han de ser buenos para busqueda y ordenamiento)
     -Meter mi archivo sobre practicas de apuntadores, a este repositorio
     -"auto" en el uso de variables
 

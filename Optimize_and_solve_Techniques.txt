@@ -6,3 +6,41 @@ Optimize and Solve techniques
 4) Base Case and Build
 5) Data Structure brainstorm
 6) Best conceivable rutime
+
+1)Bud (Bottlenecks, Unneccesary Work, Duplicate Work) pag.67
+
+    Estas son las 3 cosas más comunes en las que un algoritmo pierde "tiempo" haciendo.
+    Puedes buscar estas 3 cosas en tu brute force algorithm, o el mejor algoritmo actual.
+
+    
+
+    *Bottlenecks (Cuello de botella)
+
+    Es una parte de tu algotimo que hace más lenta la ejecución en general.
+    Optimizar un cuello de botella puede hacer una gran diferencia en el runtime.
+
+    Existen 2 tipos de Bottlenecks:
+
+        1) Tienes trabajo que se ejecuta una sola vez, pero frena mucho la velocidad.
+                    Ejemplo del libro:
+
+                    Tienes un algoritmo de 2 pasos
+                        -El primer paso tiene un Big O de O(N log N)
+                        -El segundo paso tiene un Big O de O(N)
+
+                    No importa si puedes hacer más eficiente el segundo paso, el primer paso
+                    es el cuello de botella que hace al algoritmo tener un Big O de (N log N).
+
+                    Deberías checar si el primer paso puede ser mejorado, antes de siquiera pensar en
+                    mejorar el segundo paso.
+
+                    *Este consejo es bueno para poder tomar desiciones rapido, sobre que parte del programa
+                        atacar primero, para optimizar.
+
+        2) Tienes mucho trabajo que se repite, cuando se podría hacer más rapido.
+                    Ejemplo del libro:
+
+                    Buscar elementos te toma O(N) de tiempo, talvez lo puedes reducir a O(log N) o O(1).
+                    *Depende de la situación, pero aquí es donde puedes aplicar binary search o hashtables.
+        
+

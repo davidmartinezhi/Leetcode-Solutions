@@ -60,3 +60,11 @@ public:
     }
 };
 
+/*
+    -Si fue de gran ayuda aprender set
+    -Siento que pudo ser más rapída la hashtable si usaba maps
+    -Tarde media hora, pero por aprender como se usaba set
+    -Sietno que me estoy apresurando demasiado en los problemas y paso por alto algunos detalles
+        Mañana voy a darle con calma y poner temporizador, para ver si a mi ritmo hago buen tiempo o si debo acelerar el paso
+        Si llego a necesitar acelerar el paso, checar que metodologia o tips, puedo aplicar para tener atajos mentales
+*/

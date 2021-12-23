@@ -23,4 +23,3 @@ To-Do:
 -También checar el solution flow que viene en cracking the coding interview. Terminado.
 -Anotar las "Optimize and Solve Techniques"
 -Checar si podia resolver el problema de la entrevista con pointers o linkedlists
--Checar como tener la libreria <st

@@ -24,4 +24,4 @@ To-Do:
 -Anotar las "Optimize and Solve Techniques"
 -Checar si podia resolver el problema de la entrevista con pointers o linkedlists
 -Luego investigar bits manipulation, ejemplo el ^= en c++ que es un XOR.
--Repasar Big O
+-Repasar Big O, en especial con memoria

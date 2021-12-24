@@ -25,3 +25,5 @@ To-Do:
 -Checar si podia resolver el problema de la entrevista con pointers o linkedlists
 -Luego investigar bits manipulation, ejemplo el ^= en c++ que es un XOR.
 -Repasar Big O, en especial con memoria
+
+-Lunes practicar set y maps en c++. O ver un video de alguién resolviendo el problema y ver con que lo resuelve el hashtable

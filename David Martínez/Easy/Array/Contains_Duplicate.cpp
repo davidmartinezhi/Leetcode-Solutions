@@ -40,6 +40,10 @@ public:
             //Set de 1 valor
             //Set con valores no repetidos
             //Set con valores repetidos
+        /*
+
+        //runtime O(n)
+        //memory O(n)
         
         set<int, greater<int> > values;
         
@@ -56,7 +60,22 @@ public:
             }
         }
         return false;   //Si llego al final, significa que no se repiten caracteres y regreso false
+        */
+
+        //runtime: O(n log n)
+        //memory: O(1)
         
+        //n log n
+        sort(nums.begin(), nums.end()); //Ordeno los numeros
+        
+        //n
+        for(int i = 1; i < nums.size(); i++){   //Fixed sliding window technique
+            if(nums[i-1] == nums[i]){
+                return true;    //Si existen numeros duplicados, regresamos true
+            }
+        }
+        
+        return false;  //Si recorremos la lista y no se repiten numeros, regresamos false    
         
     }
 };

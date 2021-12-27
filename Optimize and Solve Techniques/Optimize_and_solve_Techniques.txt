@@ -83,7 +83,10 @@ Optimize and Solve techniques
         This won't make a meaningful change to the runtime-our algorithm is still O(N4)-but it's still a good, quick fix to make.
             
 
+    *Duplicate Work
 
+        Esto se refiere en pocas palabras, en "Puedo de alguna manera reducir los esfuerzos a la mitad? para conseguir el objetivo"
+        
 
         
 

@@ -4,6 +4,7 @@ Checar en C++:
     -Meter mi archivo sobre practicas de apuntadores, a este repositorio
     -"auto" en el uso de variables
     -unordered_map, se implementa como hashtable dentro de c++ (search, insert, delete. son O(1))
+        *Usado en intersection of two arrays 2
 
 Use std::map when 
 

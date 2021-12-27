@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
 #include <set>
+#include <unordered_map>
+
 using namespace std;
 
 class Solution {
@@ -44,18 +46,33 @@ public:
         
         //7) test
         
+        //Unordered map, que implementa hash tables
+        
         vector<int> result = {};
-        //Puedo implementarlo mejor con 2 sets
         
-        set<int> numbers;
-        set<int> repChar;
+        unordered_map<int, int> um;
         
-        for(int i = 0; i < nums1.size(); i++){
+        for(auto num: nums1){   //Meto todos los valores de nums1 en el hashtable
+            um[num]++; //Creo el key y le sumo uno al valor
+        }
+        
+        //recorro la segunda lista
+        for(auto num: nums2){
+            if(um[num] > 0){    //Si el valor existe, tendrá más de 0
+                result.push_back(num);  //Se agrega el valor a result, mientras se repita
+                um[num]--;  //Una vez agregado, restamos la frecuencia, porque ya la consideramos
+            }
+            //Lo que pasa es que si en nums1 el valor aparece menos, llegará a cero su ocurrecia en um
+            //Si aparece menos en nums2, no llegará a 0 den nums2, pero solo se agregara k veces
+                //K siendo las veces que aparece el valor en nums2
             
         }
         
+        //Regreso el array con el resultado
+        return result;
+        
         /*
-        //Creación/Definición de hashtables (con map)
+        //Map, no aplica porque maps usan BST
         map<int, int> mapNums1;
         map<int, int> mapNums2;
         

@@ -134,3 +134,6 @@ Optimize and Solve techniques
 
             
             Checando el unnecessary  y duplicate work, bajamos de O(N^4) a O(N^2)
+
+
+2) DIY (Do It Yourself)

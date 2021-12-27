@@ -103,3 +103,17 @@ public:
         
     }
 };
+
+/*
+Notas:
+    -Orgulloso de este resultado.
+    -Me tomo 41 minutos, pero lo saque desde 0, sin ayuda y me salio a la primera.
+    -Talvez deba checar respuesta unado matematicas, pero aún así considero que fue una respuesta bastante eficiente.
+    -Lo hice a mi ritmo y si me dio buen tiempo.
+    -El paso 4, enserío me ayudo a optimizar la respuesta a simplificar los casos.
+    -Paso 5 enserio me hizo darme una buena idea de que hacer y como.
+        Una vez que estaba programando, cuando se me iba el hilo o veia que necesitaba usar algo diferente
+        El paso 5 me ayudo a mantener la mente enfocada en el objetivo de ese paso y como se relaciona al resto del codigo en la solución
+        El paso 5 fue como una brujula, así yo podía enfocarme en hacer que algo funcionara y al terminar tener el hilo de nuevo.
+
+*/

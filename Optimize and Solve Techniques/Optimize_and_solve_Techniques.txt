@@ -16,10 +16,13 @@ Optimize and Solve techniques
 
     *Bottlenecks (Cuello de botella)
 
+    Esta parte se resume en "El proceso menos eficiente del algoritmo, como puedo modificarlo para que cumpla el objetivo con más eficiencia"
+
     Es una parte de tu algotimo que hace más lenta la ejecución en general.
     Optimizar un cuello de botella puede hacer una gran diferencia en el runtime.
 
     Existen 2 tipos de Bottlenecks:
+
 
         1) Tienes trabajo que se ejecuta una sola vez, pero frena mucho la velocidad.
                     Ejemplo del libro:
@@ -42,5 +45,45 @@ Optimize and Solve techniques
 
                     Buscar elementos te toma O(N) de tiempo, talvez lo puedes reducir a O(log N) o O(1).
                     *Depende de la situación, pero aquí es donde puedes aplicar binary search o hashtables.
+
+
+    *Unneccesary Work
+
+        Esto se resume en la frase "Es este trabajo necesario para conseguir el objetivo? De que manera lo puedo simplificar"
+
+        Un ejemplo de trabajo inecesario es seguir recorriendo un array cuando ya encontraste la situación.
+        Puedes poner un break, que te saque del loop.
+
+        Si tienes for loops anidados, podrias buescar otra estructura de datos o un metodo algebraico.
+        Que te haga reducir el O(N^2) a O(N).
+
+        A brute force solution will just have four nested for loops. Something like:
+        n = 1000
+        forafrom1 ton
+            forbfrom1 ton
+                forcfrom1 ton
+                    fordfrom1 ton
+                        if a3 + b3 ==c3 + d3 
+                            print a, b, c,d
+        
+
+        Example: Print all positive integer solutions to the equation a3 + b3 c3 + d3 where a, b, c, and d are integers between 1 and 1000.
+        This algorithm iterates through all possible values of a, b, c, and d and checks if that combination happens to work.
+        It's unnecessary to continue checking for other possible values of d.
+        Only one could work. We should at least break after we find a valid solution.
+
+        n=1000
+        forafrom1 ton
+            for b from1 ton
+                for cfrom1 ton
+                    fordfrom1 ton ifa3 +b3 ==c3 +d3
+                        print a, b, c,d
+                        break// break out ofd's loop
+        
+        This won't make a meaningful change to the runtime-our algorithm is still O(N4)-but it's still a good, quick fix to make.
+            
+
+
+
         
 

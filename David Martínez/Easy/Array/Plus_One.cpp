@@ -115,5 +115,8 @@ Notas:
         Una vez que estaba programando, cuando se me iba el hilo o veia que necesitaba usar algo diferente
         El paso 5 me ayudo a mantener la mente enfocada en el objetivo de ese paso y como se relaciona al resto del codigo en la solución
         El paso 5 fue como una brujula, así yo podía enfocarme en hacer que algo funcionara y al terminar tener el hilo de nuevo.
-
+    
+    -Debo de usar modulos (Write beautiful code), por ejemplo:
+        Para convertir los datos de la derecha en 0, a partir de cierto index, pude hacer una función
+        a la que solo le paso el array y el index. Ya apartir de ese index transforma todo en 0s.
 */

@@ -116,6 +116,11 @@ Notas:
         El paso 5 me ayudo a mantener la mente enfocada en el objetivo de ese paso y como se relaciona al resto del codigo en la solución
         El paso 5 fue como una brujula, así yo podía enfocarme en hacer que algo funcionara y al terminar tener el hilo de nuevo.
     
+    -Optimización:
+        Puedo hacer que se recorra y mientras encuentre 9 lo cambia a 0, si encuentra uno no-9, suma 1.
+        Si el final el primer numero es cer0, le inserto un 1 al inicio.
+        Así sería O(n), siendo siempre el worst case O(n) en lugar de O(n+n).
+
     -Debo de usar modulos (Write beautiful code), por ejemplo:
         Para convertir los datos de la derecha en 0, a partir de cierto index, pude hacer una función
         a la que solo le paso el array y el index. Ya apartir de ese index transforma todo en 0s.

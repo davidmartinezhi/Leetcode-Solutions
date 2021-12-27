@@ -1,0 +1,3 @@
+Para implementar hashtable, unordered_map
+
+Para implementar con BST, map

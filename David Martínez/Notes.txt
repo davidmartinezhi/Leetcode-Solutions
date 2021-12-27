@@ -1,8 +1,22 @@
 Checar en C++:
-    -Maps
+    -Maps (BST Implementation)
     -Sets (En c++, usan el binary tree implementation, han de ser buenos para busqueda y ordenamiento)
     -Meter mi archivo sobre practicas de apuntadores, a este repositorio
     -"auto" en el uso de variables
+    -unordered_map, se implementa como hashtable dentro de c++ (search, insert, delete. son O(1))
+
+Use std::map when 
+
+You need ordered data.
+You would have to print/access the data (in sorted order).
+You need predecessor/successor of elements.
+See advantages of BST over Hash Table for more cases.
+
+Use std::unordered_map when 
+
+You need to keep count of some data (Example – strings) and no ordering is required.
+You need single element access i.e. no traversal.
+
 
 *Puede ser utíl checar videos de gente resolviendo los problemas en el momento,
     De tal manera que pueda emular su approach a los problemas y saber identificarlos.

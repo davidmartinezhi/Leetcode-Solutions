@@ -114,12 +114,16 @@ public:
             void moveZeroes(vector<int>& nums) {
                 int j = 0;
                 // move all the nonzero elements advance
+
+                //Con este for loop, convierto voy acomodando todos los numeros no 0s
                 for (int i = 0; i < nums.size(); i++) {
                     if (nums[i] != 0) { //Si el numero es diferente a 0
                         nums[j++] = nums[i];    //nums j es igual a nums i
                                                 //Recorro nums j una
                     }
                 }
+
+                //Con este codigo dejo los numeros 0s al final
                 for (;j < nums.size(); j++) {   //Desde J, que es donde se que hay numero no 0
                                                 //Ahora combierto el resto a 0
                     nums[j] = 0;
@@ -152,4 +156,5 @@ Notas:
         Podria no regresar el apuntador auxiliar, sino mantenerlo donde se que esta el ultimo 0
         Solo usarlo para hacer switch
 
+    -Debo de dividir mi solución por partes, hacer mas explicitos los modulos y tareas
 */

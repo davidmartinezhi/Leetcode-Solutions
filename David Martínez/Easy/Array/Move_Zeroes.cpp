@@ -80,3 +80,19 @@ public:
         nums[j] = aux;
     }
 };
+
+/*
+Notas:
+    -La metodologia es eficiente para sacar resultados funcionales, de una manera rapida. Llevo 4 días resolviendo el problema a la primera
+    -La velocidad aún es un issue leve, ya que me tarde 38 minutos de principio hasta darle submit y que fuese aceptado (Haciendo Tests y todo)
+        Fue el mismo aproach que remove_duplicates, con un apuntador en lo que quiero y otro en lo que no
+        Si reconocí el patron y pude utilizar la metodologia anterior para este problema.
+
+    -Cumplí con el requisito de usar memoria O(1)
+    -Debo checar el runtime de big O. Ya que no lo pude sacar con exactitud cuando mencione mi eficiencia.
+
+    -Posible optimización:
+        Podria no regresar el apuntador auxiliar, sino mantenerlo donde se que esta el ultimo 0
+        Solo usarlo para hacer switch
+
+*/

@@ -43,20 +43,14 @@ public:
         
         //7) Test
         
-        for(int i = 0; i < nums.size(); i++){
+        for(int i = 0; i < nums.size() - 1; i++){
+
             int aux = i;
             
-            //Checo si estoy al final de la lista
-            if(i == nums.size()-1){
-                //Si estoy al final de la lista, salgo
-                break;
-                }
-            
-            if(nums[i] == 0){   //Si encuentra un 0
+            //Si encuentra un 0
+            if(nums[i] == 0){   
                 
-                //Despliego el auxiliar
-                aux++; 
-                
+                aux++; //Despliego el auxiliar
                 
                 while(aux <= nums.size()-1){ //Mientras no recorra toda la lista
                     
@@ -66,19 +60,20 @@ public:
                         break;  //Salimos
                     }
                     else{
-                        aux++; //Recorremos uno
+                        aux++; //Recorremos
                     }
-                }
-                  
+                }     
             }
             
+            //Esto es BUD, Remove unnecessary work
             if(aux == nums.size()){ //Si aux llego al final de la lista
-                    break;  //Salimos
+                    break;  //Salimos del forloop porque ahora solo quedan numeros 0
                 }
         } 
         
     }
     
+    //Creando mosulos para simplificar el codigo
     void switchNums(vector<int> & nums, int & i, int & j){
         int aux = nums[i];
         nums[i] = nums[j];

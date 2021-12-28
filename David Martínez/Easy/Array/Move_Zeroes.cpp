@@ -70,6 +70,37 @@ public:
                     break;  //Salimos del forloop porque ahora solo quedan numeros 0
                 }
         } 
+
+
+    /* Solución alterna, basado en las notas de optimización
+            if(nums.size() == 1){
+            return;
+        }
+        
+
+        int k = 0;
+        for(int i = 0; i < nums.size(); i++){
+            
+            //K siempre estará en el 0 más proximo
+            while(nums[k] != 0){
+                k++;
+                //Si k recorre toda la lista
+                if(k >= nums.size()-1){
+                    break;
+                }
+            }
+            
+            //Si k recorre toda la lista
+                if(k >= nums.size()-1){
+                    break;
+                }
+            
+            
+            if(nums[i] != 0 && i > k){
+                switchNums(nums, i, k);
+            }
+        }
+    */
         
     }
     

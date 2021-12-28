@@ -73,6 +73,8 @@ public:
 
 
     /* Solución alterna, basado en las notas de optimización
+        //Esta solución es O(N). 100% Seguro
+
             if(nums.size() == 1){
             return;
         }
@@ -100,6 +102,30 @@ public:
                 switchNums(nums, i, k);
             }
         }
+    */
+
+
+    /*
+        Luego estudiar esta solución
+        //Debo de aprender esta metodología, entender el patron
+
+        class Solution {
+        public:
+            void moveZeroes(vector<int>& nums) {
+                int j = 0;
+                // move all the nonzero elements advance
+                for (int i = 0; i < nums.size(); i++) {
+                    if (nums[i] != 0) { //Si el numero es diferente a 0
+                        nums[j++] = nums[i];    //nums j es igual a nums i
+                                                //Recorro nums j una
+                    }
+                }
+                for (;j < nums.size(); j++) {   //Desde J, que es donde se que hay numero no 0
+                                                //Ahora combierto el resto a 0
+                    nums[j] = 0;
+                }        
+            }
+        };
     */
         
     }

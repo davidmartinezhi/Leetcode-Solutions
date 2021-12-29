@@ -99,7 +99,7 @@ public:
         return result;  //Se regresa el result en caso de que no exista resultado
         */
         
-        //Resultado O(N), de las respuestas con mejor runtime en leetcode.
+        //Resultado O(N log N), de las respuestas con mejor runtime en leetcode.
         vector<int> b;
         
         int n = nums.size();
@@ -163,5 +163,10 @@ public:
 };
 /*
 Nota:
-    Terminado en menos de 20 minutos, pero se que podría mejorar la eficiencia al hacer un precompute en el array, antes de analizarlo y hacer la logica.
+    -Terminado en menos de 20 minutos, pero se que podría mejorar la eficiencia al hacer un precompute en el array, antes de analizarlo y hacer la logica.
+    -Mi solución de brute force estuvo rapida de sacar e implementar, debo recordar de aplicar hashtable seguido y checar rapido si puede aplicar
+    -Me tarde en la optimización. Si pense en hacer un sort desde el inicio pero no aterrice la idea.
+    -Resulto ser una buena idea y si valia la pena almenos adentrarme a investigar como podia funcionar
+        -Pude haber sacado el resultado más optimo en menos de 40 minutos, si hubiera investigado eso.
+        -Pude asumir que estaba ordenada la lista y aplicar el DIY technique, para ver la posibilidad de sacar el problema.
 */

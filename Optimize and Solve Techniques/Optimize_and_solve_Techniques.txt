@@ -1,10 +1,10 @@
 Optimize and Solve techniques
 
-1) BUD (Bottlenecks, Unneccesary Work, Duplicate Work)
-2) DIY (Do It Yourself)
-3) Simplify and Generalize
-4) Base Case and Build
-5) Data Structure brainstorm
+1) BUD (Bottlenecks, Unneccesary Work, Duplicate Work) pag. 67
+2) DIY (Do It Yourself) pag. 69
+3) Simplify and Generalize pag. 71
+4) Base Case and Build pag. 71
+5) Data Structure Brainstorm
 6) Best conceivable rutime
 
 1)Bud (Bottlenecks, Unneccesary Work, Duplicate Work) pag.67
@@ -136,7 +136,7 @@ Optimize and Solve techniques
             Checando el unnecessary  y duplicate work, bajamos de O(N^4) a O(N^2)
 
 
-2) DIY (Do It Yourself) libro pag. 69
+2) DIY (Do It Yourself) pag. 69
 
     "I've seen this come up countless times with candidates.Their computer algorithm is extraordinarily slow, 
     but when asked to solve the same problem manually, they immediately do something quite fast." 
@@ -156,7 +156,7 @@ Optimize and Solve techniques
 
 
 
-3) Simplify and Generalize
+3) Simplify and Generalize pag. 71
 
     Adaptas y atacas el problema de una manera que lo comprendes mejor, 
     para tener bases solidas en tu entendimiento del problema y la posible solución.
@@ -171,7 +171,9 @@ Optimize and Solve techniques
      Para primero resolver el problema de una manera comprensible y luego subir el nivel una vez ya familiarizados con el.
 
 
-        
+4) Base Case and Build pag. 71
+
+
     
 
     

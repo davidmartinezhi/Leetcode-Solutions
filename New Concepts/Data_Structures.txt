@@ -1,3 +1,8 @@
+Link hacía libreria completa de C++
+Para descubrir diferentes maneras de implementar estructuras de datos.
+https://www.geeksforgeeks.org/c-plus-plus/?ref=leftbar
+
+
 Para implementar hashtable, unordered_map
 
 Para implementar con BST, map

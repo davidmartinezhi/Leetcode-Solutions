@@ -98,6 +98,65 @@ public:
         }
         return result;  //Se regresa el result en caso de que no exista resultado
         */
+        
+        //Resultado O(N), de las respuestas con mejor runtime en leetcode.
+        vector<int> b;
+        
+        int n = nums.size();
+        
+        //O(N) memoria, O(N) runtime
+        for (int i=0;i<n;i++)   //Copia lista original
+            b.push_back(nums[i]);
+        
+        //O(N log N) runtime, O(1) memoria
+        sort(nums.begin(),nums.end());  //Hace sort de la original
+        
+        //O(N) runtime, O(1) memoria
+        vector<int> ans;//Crea vector para regresar resultado
+        int start =0;   //Apuntador a inicio del array
+        int end = n-1;  //Apuntador al final del array
+        
+        while(end>start)    //Mientras no se crucen los apuntadores
+        {
+            if(target==nums[start]+nums[end])   //Si la suma de ambos apuntadores es el target
+                                                //Se regresa el resultado
+               {
+                   ans.push_back(nums[start]);
+                   ans.push_back(nums[end]);
+                                 break;
+               }
+            
+             if (target < nums[start]+nums[end])    //Si el target es menor, decremento el apuntador
+                                                    //del final
+               {
+                   end--;
+               }
+            
+             if (target > nums[start]+nums[end])    //Si el target es mayor, incremento el apuntador
+                                                    //del inicio
+               start++;
+        }
+        
+        
+        //O(N+N) = O(N) runtime, O(1) memory
+           for(int i=0;i<n;i++) //Recorre el array copia del original antes del sort
+           {
+                if(b[i] == ans[0])  //Si el valor es el mismo que el del resultado, index se actualiza
+                    {
+                     ans[0]=i;
+                     break;
+                     }
+             }
+        for(int i=n-1;i>=0;i--) //Actualiza index al correspondiente
+        {
+            if(b[i]==ans[1])
+            {
+                ans[1]=i;
+                break;
+            }
+        }
+        return ans ;
+
     }
 };
 /*

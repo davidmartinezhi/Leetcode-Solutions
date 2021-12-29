@@ -136,4 +136,22 @@ Optimize and Solve techniques
             Checando el unnecessary  y duplicate work, bajamos de O(N^4) a O(N^2)
 
 
-2) DIY (Do It Yourself)
+2) DIY (Do It Yourself) libro pag. 69
+
+    Estes approach consiste en que tu mismo resuelvas el problema a mano y con tu mente. Sin pensar en computadoras o programación.
+        - Trata de resolverlo de manera intuitiva en un ejemplo real (que sea relevante al problema y grande).
+        - De esta manera tu cerebro encuentra patrones y approaches eficientes.
+
+    Literalmente tu ver el input y de manera intuitiva sacar el output del ejemplo que te dan(o según lo que te piden que regreses).
+        - Pensando paso a paso, que estas haciendo.
+
+    Una vez que consigues un approach que te lleva a la respuesta.
+    
+    Debes estar atent@ a la logica que esta siguiendo tu cerebro para llegar al resultado, de tal manera que puedeas replicar esa logica en tu programa.
+        - Recomiendo hacerlo en papel, ej. ver el array que tienes y con cada paso de logica lo escribes de nuevo y vez como va quedando.
+
+    
+
+    
+
+    

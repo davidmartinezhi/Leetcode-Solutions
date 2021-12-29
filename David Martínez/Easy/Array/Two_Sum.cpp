@@ -52,6 +52,10 @@ public:
             //Asumire que todas las respuestas tienen una solución y no pondre un caso de que no tenga
             
         
+        /*
+        //Resultado con eficiencia O(N^2) runtime y O(1) Memory
+        //Resuelto de manera secuencial
+        
         for(int i = 0; i < nums.size() - 1; i++){   //Recorro cada numero
             for(int j = i + 1; j < nums.size(); j++){   //Recorro el resto de numeros a su derecha
                 
@@ -64,6 +68,36 @@ public:
         }
         
         return vector<int>(0);
+        */
+        
+        /*
+        //Solución alterna usando Hashtable, usando unordered_map
+        //Recorro la lista de manera normal y para cada num hago la operación
+            //Target - num[i]
+            //Busco el resultado en la hashtable y si no se encuentra, agrego (num[i], index) al ht
+        //Así recorro toda la lista
+        
+        unordered_map<int, int> matches;
+        vector<int> result = {};
+        
+        for(int i = 0; i < nums.size(); i++){   //Recorro todos los numeros del array
+            
+            int aux = target - nums[i]; //Saco el numero que me daría el target como resultado
+            
+            if(matches.find(aux) != matches.end()){ //Si el numero aux esta en mi hashtable
+                
+                result.push_back(matches[aux]); //Agrego ese numero al vector resultado
+                result.push_back(i);    //Agrego el index i a mi vector resultado
+                return result;  //Regreso el resultado
+            }
+            else{
+                //Si no esta el valor en la hashtable, se agrega junto con su index
+                matches[nums[i]] = i; 
+            }
+            
+        }
+        return result;  //Se regresa el result en caso de que no exista resultado
+        */
     }
 };
 /*

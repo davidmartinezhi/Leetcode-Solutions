@@ -138,7 +138,12 @@ Optimize and Solve techniques
 
 2) DIY (Do It Yourself) libro pag. 69
 
+    "I've seen this come up countless times with candidates.Their computer algorithm is extraordinarily slow, 
+    but when asked to solve the same problem manually, they immediately do something quite fast." 
+                                                    - Gaylee Laakmann (Cracking The Coding Interview).
+
     Estes approach consiste en que tu mismo resuelvas el problema a mano y con tu mente. Sin pensar en computadoras o programación.
+        - Recomiendo hacerlo en papel, ej. ver el array que tienes y con cada paso de logica lo escribes de nuevo y vez como va quedando.
         - Trata de resolverlo de manera intuitiva en un ejemplo real (que sea relevante al problema y grande).
         - De esta manera tu cerebro encuentra patrones y approaches eficientes.
 
@@ -148,7 +153,6 @@ Optimize and Solve techniques
     Una vez que consigues un approach que te lleva a la respuesta.
     
     Debes estar atent@ a la logica que esta siguiendo tu cerebro para llegar al resultado, de tal manera que puedeas replicar esa logica en tu programa.
-        - Recomiendo hacerlo en papel, ej. ver el array que tienes y con cada paso de logica lo escribes de nuevo y vez como va quedando.
 
     
 

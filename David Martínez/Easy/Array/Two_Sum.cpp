@@ -57,3 +57,7 @@ public:
         return vector<int>(0);
     }
 };
+/*
+Nota:
+    Terminado en menos de 20 minutos, pero se que podría mejorar la eficiencia al hacer un precompute en el array, antes de analizarlo y hacer la logica.
+*/

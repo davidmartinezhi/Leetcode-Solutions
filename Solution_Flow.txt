@@ -55,7 +55,7 @@ Steps:
 
                 //Precompute information, is there a way to make it easier to solve and more efficient in the long run. (ej. sorting, modifying/manipulating data).
 
-                //Use hash tables (They are highly udes in interview questions and should be on top of your mind).
+                //Use hash tables (They are highly used in interview questions and should be on top of your mind).
 
                 //Think about the best conceivable runtime
 

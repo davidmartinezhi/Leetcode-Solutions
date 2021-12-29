@@ -8,43 +8,51 @@ using namespace std;
 class Solution {
 public:
     vector<int> intersect(vector<int>& nums1, vector<int>& nums2) {
-        //1) listen
-            //Recibo 2 arrays (nums1 y nums2)
-            //Debo regresar un array con sus intersecciones
-                //Cada elemento del array debe tener la misma frecuencia de apariciones de cada integer
-            //Puedo regresar el resultado en cualquier orden
-            //Arrays tienen entre 1 y 1,000 elementos
+        // Listen
+            //I receive an array (nums) with integers and a target integer
+            //I must return two indices, the numbers that add up to the target
+            //Each input has exactly one solution
+            //I can't use the same element twice
+            //I can return the answer in any order
+            //Array size varies between 2 and 10,000
             
-        //2) example
-            //Cuaderno
+        // Example
+            // nums = [1, 2, 3, 7, 10] , target = 17 -> [3, 4]
+            // nums = [0, 2, 3], target = 2 -> [0, 1] 
         
-        //3) brute force
-            //Sería recorrer ambas listas; O(n+m) runtime
-            //Puedo crear un hashtable para cada lista  O(n+m) memoria
-            //Recorrer una y si ese dato también esta en la otra lista runtime O(n+m)
-                //Agregar ese numero k veces al nuevo array memory: O(n)
-                //k veces, siendo la frecuencia menor en ambos hashtables, de el mismo numero
-            //Regresar el nuevo array
+            //Solo observo el caso de que si existe una solución
+            //Siento que no existe un special case en este problema
         
-            //Runtime overall: O(n+m)
-            //Memory overall: O(m+n)
-        
-        //4) optimize
-            //Bottleneck
-                //Recorrer ambas listas y guardarlas en un hashtable
-                
-            //Best concievable runtime sería O(n+m). porque sería recorrer ambas listas
+        // Brute Force
+            //Por cada numero, recorrer el resto de la lista para comparar la suma con el target
+            //Tendría eficiencia runtime O(N^2) y memory O(1)
             
-        //5) walthrough
-            //Recorrer ambas listas y hacer una hashtable para cada una
-            //Recorrer las hashtables y checar si existe un entero en la otra
-                //Si existe en la otra, checar cual frecuencia es menor y agregarla al array sol
-            //Regresar array solución
-            //15 minutos en sacar solución, me tardare más por tener que investigar maps
+        // Optimize
+            //Si decido iterar ambas listas, deberia almenos poner un break cuando encuentre la pareja
+                //O regresar los indices de manera directa
         
-        //6) implement
+            //Podria hacer un sort
+                //Luego usar metodo estilo binary search para comparar valores
+                //Podría sacar O(N log N) runtime y memoria O(N)
         
-        //7) test
+            //Puedo usar hashtables
+                //Meto los datos y luego al recorrer la lista
+                //Saco target - el valor en el que estoy
+                    //Lo busco en la hashtable, si existe me da el resultado
+                //Puede sacar memoria O(N) y runtime O(N) average, 
+                    //si existieran colisiones en todas las celdas del hashtable sería runtime O(N^2)
+                    //Considerando que yo fuera a usar unordered_map
+            
+        
+        // Walkthrough
+            //Primero haré el approach de O(N^2) de manera secuencial
+            //Por cada numero de la lista, recorro los numeros restantes a la derecha
+                //Si encuentro la suma que me regresa el target, regreso la respuesta
+        
+        // Implement
+        // Test
+            //Asumire que todas las respuestas tienen una solución y no pondre un caso de que no tenga
+            
         
         //Unordered map, que implementa hash tables
         

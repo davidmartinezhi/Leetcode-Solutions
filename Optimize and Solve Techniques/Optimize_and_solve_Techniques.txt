@@ -155,6 +155,7 @@ Optimize and Solve techniques
     Debes estar atent@ a la logica que esta siguiendo tu cerebro para llegar al resultado, de tal manera que puedeas replicar esa logica en tu programa.
 
     
+3) Simplify and Generalize
 
     
 

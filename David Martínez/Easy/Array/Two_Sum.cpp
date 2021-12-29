@@ -29,9 +29,18 @@ public:
             //Si decido iterar ambas listas, deberia almenos poner un break cuando encuentre la pareja
                 //O regresar los indices de manera directa
         
-            //Podría meter los datos a un BST
-                //Luego buscar datos menores al target que nos puedan dar el resultado
-                //Tendria runtime O(N) y Memory O(N)
+            //Podria hacer un sort
+                //Luego usar metodo estilo binary search para comparar valores
+                //Podría sacar O(N log N) runtime y memoria O(N)
+        
+            //Puedo usar hashtables
+                //Meto los datos y luego al recorrer la lista
+                //Saco target - el valor en el que estoy
+                    //Lo busco en la hashtable, si existe me da el resultado
+                //Puede sacar memoria O(N) y runtime O(N) average, 
+                    //si existieran colisiones en todas las celdas del hashtable sería runtime O(N^2)
+                    //Considerando que yo fuera a usar unordered_map
+            
         
         // Walkthrough
             //Primero haré el approach de O(N^2) de manera secuencial

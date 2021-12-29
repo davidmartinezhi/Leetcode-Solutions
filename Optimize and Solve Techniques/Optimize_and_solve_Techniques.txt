@@ -154,10 +154,24 @@ Optimize and Solve techniques
     
     Debes estar atent@ a la logica que esta siguiendo tu cerebro para llegar al resultado, de tal manera que puedeas replicar esa logica en tu programa.
 
- 
-    
+
+
 3) Simplify and Generalize
 
+    Adaptas y atacas el problema de una manera que lo comprendes mejor, 
+    para tener bases solidas en tu entendimiento del problema y la posible solución.
+    Luego ya lo adaptas al problema original.
+
+    Este enfoque es de varios pasos. 
+        1) Simplificamos o retocamos constrains (como los data type)
+        2) Resolvemos la versión simplificada del problema
+        3) Ahora tratamos de adaptar el algoritmo a la versión más compleja
+
+    *Un ejemplo de esto es ver problemas de leetcode como Two-Sum 4 y checar el Two-sum 2.
+     Para primero resolver el problema de una manera comprensible y luego subir el nivel una vez ya familiarizados con el.
+
+
+        
     
 
     

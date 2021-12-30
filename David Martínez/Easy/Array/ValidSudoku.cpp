@@ -79,7 +79,8 @@ public:
             }
         }
         
-        //Ahora checo las secciones 3x3
+        //Valido secciones 3x3
+        //Prueba
         if(subVectors(board, 0) == false){
             return false;
         }
@@ -90,7 +91,8 @@ public:
     
     bool subVectors(vector<vector<char>>& board, int i){
         unordered_map<char,int> valid;
-        
+        //Estoy leyendo mal los indices porque quiero recorrer el chequeo de la sub-matriz 3x3
+        //Primero debo sacar una lectura 3x3 funcional y luego checo como la puedo recorrer
         
         for(int count = 1; count <= 3; i++){   //cuenta de 3, para las subsecciones
             valid.clear();

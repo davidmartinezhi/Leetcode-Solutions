@@ -43,3 +43,4 @@ To-Do:
 
 -Debo familiarizarme en trabajar con matrices
 -Lunes practicar set y maps en c++. O ver un video de alguién resolviendo el problema y ver con que lo resuelve el hashtable
+-Investigar cuando me puede ser utíl un algoritmo recursivo y como identificarlos.

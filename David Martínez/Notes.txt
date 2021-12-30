@@ -41,4 +41,5 @@ To-Do:
 -Luego investigar bits manipulation, ejemplo el ^= en c++ que es un XOR.
 -Repasar Big O, en especial con memoria
 
+-Debo familiarizarme en trabajar con matrices
 -Lunes practicar set y maps en c++. O ver un video de alguién resolviendo el problema y ver con que lo resuelve el hashtable

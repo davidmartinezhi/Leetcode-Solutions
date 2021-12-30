@@ -115,3 +115,12 @@ public:
 
     }
 };
+
+/*
+Nota:
+    -Solución y la logica de porque es optima, lo saque rapido
+        -El problema fue el trabajar con las columnas y renglones del vector en 2-D
+        -Si creo poder la solución el primero de enero que vuelva a tratar, porque mañana es año nuevo
+
+    -Deberia familiarizarme con matrizes más. y checar diferentes approaches para soluciones en matrizes
+*/

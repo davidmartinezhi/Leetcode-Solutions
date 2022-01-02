@@ -94,3 +94,19 @@ public:
     }
 };
 
+/*
+    Notas:
+        -Lo resolví en 37 minutos el ejercicio
+        -No me gustó que apenas saque el brute force que podia darme O(1) MEMORIA y O(N) runtime
+            -Apenas lo saque y no pense en posibles iteraciones, debí almenos detenerme a pasar las "optimize and solve" technique sobre el problema.
+            -Por acelerarme no me dí cuenta que me daba los numeros de cada renglon al reves, hasta hacer el test. Debí poner el to do, antes de.
+            -Debo seguír la metodologia paso a paso. Me la quise saltar, talvez luego que ya este mucho más seguro de posibles soluciones, me puedo saltar algún paso. 
+                Pero ahorita esto es lo que ando practicando así que debo seguirla paso a paso, sin saltarme del segundo paso al 6to.
+
+        -Aún así, sacar el ejemplo me ayudo a ver el patron para resolverlo, de manera muy rapida.
+
+        -luego debo checar posibles optimizaciónes, aunque creo que N^2 es bueno para una matriz.
+
+
+
+*/

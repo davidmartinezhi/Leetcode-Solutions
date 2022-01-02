@@ -6,19 +6,6 @@ Checar en C++:
     -unordered_map, se implementa como hashtable dentro de c++ (search, insert, delete. son O(1))
         *Usado en intersection of two arrays 2
 
-Use std::map when 
-
-You need ordered data.
-You would have to print/access the data (in sorted order).
-You need predecessor/successor of elements.
-See advantages of BST over Hash Table for more cases.
-
-Use std::unordered_map when 
-
-You need to keep count of some data (Example – strings) and no ordering is required.
-You need single element access i.e. no traversal.
-
-
 *Puede ser utíl checar videos de gente resolviendo los problemas en el momento,
     De tal manera que pueda emular su approach a los problemas y saber identificarlos.
     
@@ -27,12 +14,18 @@ You need single element access i.e. no traversal.
     -Agregar descripción en optimize and solve techniques 
     -Hacer digerible o poner ejemplos en solution_flow
 
+
+
 //libro: http://englishonlineclub.com/pdf/Cracking%20the%20Coding%20Interview%20-%20189%20Programming%20Questions%20and%20Solutions%20(6th%20Edition)%20[EnglishOnlineClub.com].pdf
 //Solution flow: pagina 62 del libro.
 
 //Anotar los problemas que me salieron en la entrevista de facebooks
 
-//Siento que strings y arrays en easy, van a ser una buena introcucción a la utilización de hashtables.
+//Siento que strings y arrays en easy, van a ser una buena introcucción a la utilización de hashtables. update: es correcto
+
+//He notado que las soluciones más eficientes, son muchas veces con manipulación de bits. No debo olvidarme en checar ese tema.
+    -checar bitset y memset.
+
 
 To-Do:
 -También checar el solution flow que viene en cracking the coding interview. Terminado.
@@ -44,3 +37,4 @@ To-Do:
 -Debo familiarizarme en trabajar con matrices
 -Lunes practicar set y maps en c++. O ver un video de alguién resolviendo el problema y ver con que lo resuelve el hashtable
 -Investigar cuando me puede ser utíl un algoritmo recursivo y como identificarlos.
+-Checar memset y bitset.

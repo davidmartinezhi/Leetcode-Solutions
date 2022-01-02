@@ -26,5 +26,7 @@ Nota:
     Debo recordar, checar este tema con los demás.
 
     Debo tratar de solucionar la respuesta por mi cuenta
+    También hice el problema antes de seguir la metodología del libro. Luego debo intentarlo de nuevo
+
 
 */

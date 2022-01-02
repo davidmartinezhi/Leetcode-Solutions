@@ -1,14 +1,10 @@
 Checar en C++:
-    -Maps (BST Implementation)
     -Sets (En c++, usan el binary tree implementation, han de ser buenos para busqueda y ordenamiento)
     -Meter mi archivo sobre practicas de apuntadores, a este repositorio
     -"auto" en el uso de variables
-    -unordered_map, se implementa como hashtable dentro de c++ (search, insert, delete. son O(1))
-        *Usado en intersection of two arrays 2
-
+        
 *Puede ser utíl checar videos de gente resolviendo los problemas en el momento,
     De tal manera que pueda emular su approach a los problemas y saber identificarlos.
-    
     
 //repositorio
     -Agregar descripción en optimize and solve techniques 
@@ -28,14 +24,17 @@ Checar en C++:
 
 
 To-Do:
--También checar el solution flow que viene en cracking the coding interview. Terminado.
--Anotar las "Optimize and Solve Techniques"
--Checar si podia resolver el problema de la entrevista con pointers o linkedlists
--Luego investigar bits manipulation, ejemplo el ^= en c++ que es un XOR.
--Repasar Big O, en especial con memoria
 
--Debo familiarizarme en trabajar con matrices
--Lunes practicar set y maps en c++. O ver un video de alguién resolviendo el problema y ver con que lo resuelve el hashtable
--Investigar cuando me puede ser utíl un algoritmo recursivo y como identificarlos.
--Checar memset y bitset.
--Hacer, usando la metodologia del libro. Problemas Array easy: Single NUmber y Rotate Array.
+-Investigar cuando me puede ser utíl un algoritmo recursivo y como identificarlos. (Lo vere cuando llegue problemas de BST)
+-Hacer, usando la metodologia del libro. Problemas Array easy: Single Number y Rotate Array.
+-Luego investigar bits manipulation, ejemplo el ^= en c++ que es un XOR. Pendiente
+    -Checar memset y bitset.
+-Checar si podia resolver el problema de la entrevista con pointers o linkedlists
+
+Terminado
+-También checar el solution flow que viene en cracking the coding interview. Terminado.
+-Anotar las "Optimize and Solve Techniques". Terminado
+-Investigar unordered_map.
+-Repasar Big O, en especial con memoria. Terminado
+-Lunes practicar set y maps en c++. O ver un video de alguién resolviendo el problema y ver con que lo resuelve el hashtable. terminado
+-Debo familiarizarme en trabajar con matrices.terminado

@@ -3,8 +3,8 @@ Para descubrir diferentes maneras de implementar estructuras de datos.
 https://www.geeksforgeeks.org/c-plus-plus/?ref=leftbar
 
 
-Para implementar hashtable, unordered_map
-
+Para implementar hashtable, unordered_map (search, insert, delete. son O(1))
+*Usado en intersection of two arrays 2
     Use std::unordered_map when:
         - You need to keep count of some data (Example – strings) and no ordering is required.
         - You need single element access i.e. no traversal.

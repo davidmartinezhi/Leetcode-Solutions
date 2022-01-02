@@ -125,6 +125,8 @@ Nota:
         Podría de alguna manera checar en una recorrida todo?
         Si, podría usar el recorrido del final 3x3, y guardar en 3 hashtables los datos.
         Del tal manera recorro 1 vez la tabla en lugar de 3. Aunque siento que no sería una grn diferencia en eficiencia.
+
     
     -Deberia familiarizarme con matrizes más. y checar diferentes approaches para soluciones en matrizes
+    -Matrizes se ven más intimidantes de lo que en realidad son. No initimidarme al ver el problema, nunca.
 */

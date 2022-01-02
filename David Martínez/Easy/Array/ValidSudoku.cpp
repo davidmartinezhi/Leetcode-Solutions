@@ -80,50 +80,51 @@ public:
         }
         
         //Valido secciones 3x3
-        //Prueba
-        if(subVectors(board, 0) == false){
-            return false;
+        //Siempre va a correr la misma cantidad de veces
+        //Entonces es irrelevnte que tenga 4 for loops anidados, los de arriba siempre recorreran 3 (0, 3, 6)
+        //Al igual que los de abajo (0,1,2)
+        for(int i = 0; i < 9; i += 3){  //Salta de 3 en 3 los renglones
+            for(int j = 0; j < 9; j += 3){  //Salta de 3 en 3 las columnas
+                
+                valid.clear();  //Borra los datos en la hashtable
+                
+                //Para sacar los datos del subarray
+                for(int k = 0; k < 3; k++){ 
+                    for(int h = 0; h < 3; h++){
+                        if(board[i+k][j+h] != '.'){
+                            if(valid.find(board[i+k][j+h]) == valid.end()){
+                                valid[board[i+k][j+h]]++;
+                            }
+                            else{
+                                return false;
+                            }
+                        }        
+                    } 
+                }
+            }
         }
         
         
         return true;    //Si se cumple todo y cruza las validaciones, es true
     }
-    
-    bool subVectors(vector<vector<char>>& board, int i){
-        unordered_map<char,int> valid;
-        //Estoy leyendo mal los indices porque quiero recorrer el chequeo de la sub-matriz 3x3
-        //Primero debo sacar una lectura 3x3 funcional y luego checo como la puedo recorrer
-        
-        for(int count = 1; count <= 3; i++){   //cuenta de 3, para las subsecciones
-            valid.clear();
-            int j = i + 3; //i = 0 -> j = 3 //Saca hasta donde vamos a recorrer
-            cout << endl;
-            for(int k = 0; k < 3; k++){ //Recorro renglones 
-                for(; i < j; i++){  //Recorro columnas
-                    cout << board[i][k] << " ";
-                    
-                    if(board[k][i] != '.'){
-                        if(valid.find(board[k][i]) == valid.end()){
-                            valid[board[k][i]]++;
-                        }
-                        else{
-                            return false;
-                        } 
-                    } 
-                }
-            }
-            
-        }
-        return true;
-
-    }
 };
 
 /*
 Nota:
+    -Como la matriz siempre tendra una matriz 9x9 del tipo de dato char.
+    -El runtime siempre será de O(1) y memoria de O(1)
+
     -Solución y la logica de porque es optima, lo saque rapido
         -El problema fue el trabajar con las columnas y renglones del vector en 2-D
         -Si creo poder la solución el primero de enero que vuelva a tratar, porque mañana es año nuevo
 
+        -update: lo termine en 15 minutos, solo que por querer a fuerzas hacerlo un modulo, no pense en que lo podia sacar de manera directa.
+
+
+    -Posible optimización:
+        Podría de alguna manera checar en una recorrida todo?
+        Si, podría usar el recorrido del final 3x3, y guardar en 3 hashtables los datos.
+        Del tal manera recorro 1 vez la tabla en lugar de 3. Aunque siento que no sería una grn diferencia en eficiencia.
+    
     -Deberia familiarizarme con matrizes más. y checar diferentes approaches para soluciones en matrizes
 */

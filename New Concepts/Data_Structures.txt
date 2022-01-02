@@ -5,7 +5,18 @@ https://www.geeksforgeeks.org/c-plus-plus/?ref=leftbar
 
 Para implementar hashtable, unordered_map
 
+    Use std::unordered_map when:
+        - You need to keep count of some data (Example – strings) and no ordering is required.
+        - You need single element access i.e. no traversal.
+
 Para implementar con BST, map
+
+    Use std::map when:
+        - You need ordered data.
+        - You would have to print/access the data (in sorted order).
+        - You need predecessor/successor of elements.
+        - See advantages of BST over Hash Table for more cases.
+
 
 /*
 

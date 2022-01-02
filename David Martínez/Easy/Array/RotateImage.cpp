@@ -34,7 +34,7 @@ public:
             //Hacer un for loop anidado de i a n-1
             //Hacer switch
             //Con este approach la memoria se queda en O(1)
-            //Runtime es O(N)
+            //Runtime podria ser de O(N)
         
         //4 optimize
             //Siento que es la solución más optima
@@ -47,26 +47,41 @@ public:
         //6 implement
             
         //7 test
+            //Array de 1 elemento (1x1)
+            //Array con más de 1 elemento
+
+            //to do:
+                //Checar como quedan los datos despues de hacer swap entre columnas y renglones
         
+        //Saco el tamaño de las dimensiones en el array
         int n = matrix[0].size();
         
-        if(n == 1){
+        if(n == 1){ //Si el array es de un solo elemento, regreso de manera directa
             return;
         }
         
+        //Reacomodando los subarrays
+        //O(N)
         for(int i = 0; i < n; i++){
             for(int j = i; j < n; j++){
+
                 int aux = matrix[j][i];
-                
                 matrix[j][i] = matrix[i][j];
                 matrix[i][j] = aux;
             }
         }
         
-        for(int i = 0; i < n; i++){
+
+        //Posicionando los elementos en la posición adecuada
+        //Mi implementación fue de N*(N/2), que equivale a O(N^2).
+        //Puede ser optimizada la solución con hacer un reverse, sin usar variable auxiliares
+        for(int i = 0; i < n; i++){ //Recorro cada renglon
+
+            //Creo apuntador al inicio y al final de ese renglon
             int start = 0;
             int end = n-1;
             
+            //Hago reverse
             while(start < end){
                 int aux = matrix[i][start];
                 matrix[i][start] = matrix[i][end];
@@ -78,3 +93,4 @@ public:
         
     }
 };
+

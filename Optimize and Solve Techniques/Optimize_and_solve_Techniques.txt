@@ -4,8 +4,8 @@ Optimize and Solve techniques
 2) DIY (Do It Yourself) pag. 69
 3) Simplify and Generalize pag. 71
 4) Base Case and Build pag. 71
-5) Data Structure Brainstorm
-6) Best conceivable rutime
+5) Data Structure Brainstorm pag. 72
+6) Best conceivable rutime pag. 72
 
 1)Bud (Bottlenecks, Unneccesary Work, Duplicate Work) pag.67
 
@@ -155,7 +155,6 @@ Optimize and Solve techniques
     Debes estar atent@ a la logica que esta siguiendo tu cerebro para llegar al resultado, de tal manera que puedeas replicar esa logica en tu programa.
 
 
-
 3) Simplify and Generalize pag. 71
 
     Adaptas y atacas el problema de una manera que lo comprendes mejor, 
@@ -204,7 +203,7 @@ Optimize and Solve techniques
         Base Case and Build algorithms often lead to natural recursive algorithms.
 
 
-5) Data Structure Brainstorm
+5) Data Structure Brainstorm pag. 72
 
     -Esta approach consiste en checar una lista con estructuras de datos y observar como podemos aplicar cada una en nuestro problema.
     -Es util porque una estructura de datos puede convertir un problema en algo trivial.
@@ -238,7 +237,7 @@ Optimize and Solve techniques
               Now, with these data structures, you have the potential median elements at the roots. If the heaps are no longer the same size, you can quickly "rebalance" the heaps by popping an element off the one heap and pushing it onto the other.
 
 
-
+6) Best conceivable rutime pag. 72
 
 
     

@@ -240,6 +240,7 @@ Optimize and Solve techniques
 6) Best conceivable rutime pag. 72
 
 
+
     
 
 

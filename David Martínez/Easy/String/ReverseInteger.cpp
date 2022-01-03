@@ -132,5 +132,6 @@ Nota:
 
     -Lo saque en 40 minutos
         -El unico test que no he podido resolver y debo checar
+        -Solución funcional con todo tipo de dato, solo me sale error cuando cruzo el limite
         -Es como saber que no estoy cruzandome del limite, sin hacerlo
 */

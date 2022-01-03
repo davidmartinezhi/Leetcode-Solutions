@@ -283,7 +283,9 @@ Optimize and Solve techniques
 
        ** Note that the best conceivable runtime is not necessarily achievable, It says only that you can't do better than it.**
 
+    Ejemplo del libro sobre como usarla:
 
+        *Agregar ejemplos*
 
     
 

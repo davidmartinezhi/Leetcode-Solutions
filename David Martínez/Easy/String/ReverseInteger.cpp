@@ -127,3 +127,10 @@ public:
     }
 };
 
+/*
+Nota:
+
+    -Lo saque en 40 minutos
+        -El unico test que no he podido resolver y debo checar
+        -Es como saber que no estoy cruzandome del limite, sin hacerlo
+*/

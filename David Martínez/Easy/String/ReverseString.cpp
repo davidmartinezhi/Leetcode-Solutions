@@ -57,7 +57,7 @@ public:
 
 /*
 Nota: 
-    -Sabía como hacerlo desde el principio pero quise hacer la metodología a fuerzas
-    -Terminado en 18 minutos
+    -Sabía como hacerlo desde el principio pero quise hacer la metodología a fuerzas, para acostumbrarme a ella
+    -Terminado en 15 minutos
     -Quise practicar pointers, pero son irrelevantes para el problema, por eso esatn comentados
 */

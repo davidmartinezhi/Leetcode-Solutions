@@ -1,4 +1,4 @@
-
+1. pag 67
 ==== BUD ====
 
 Estas son las 3 cosas más comunes en las que un algoritmo pierde "tiempo" haciendo.

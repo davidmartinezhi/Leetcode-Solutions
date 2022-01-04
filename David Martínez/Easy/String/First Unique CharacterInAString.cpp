@@ -75,3 +75,10 @@ public:
         return -1;
     }
 };
+
+/*
+Nota:
+    -Saque la solución en 24 minutos
+    -Solución muy optima
+    -Siento que la puedo mejorar, debo buscar solución alterna
+*/

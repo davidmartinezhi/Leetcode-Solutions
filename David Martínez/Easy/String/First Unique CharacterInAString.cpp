@@ -57,7 +57,12 @@ public:
             //To-do:
                 //Confirmar que dict[s[i]], me regresa el value y no la key
         /*    
+        
         //Solución con hashtable
+        //RunTime: O(N) average case
+        //RunTime: O(N^2) worst case
+        //Memory: O(N)
+
         unordered_map<char, int> dict;
         
         //Agrego los characteres y la frecuencia, al hashtable
@@ -76,13 +81,22 @@ public:
         return -1;*/
         
         //Solución con array
+        //Esta solución es optima porque se pueden usar los char como indexes, pero si tuvieramos
+            //más characters, es mejor usar un approach más general como el de hashtables
+
+            //Runtime: O(n)
+            //Memory usage: O(1)
+
+        //O(1) memory
         int count[26] = {0};
         
+        //O(N) runtime 
         for(char c: s){
             //c-'a' le resta una letra a la posición en el array de minusculas
             count[c-'a']++;
         }
         
+        //O(N) runtime
         for(int i = 0; i < s.size(); i++){
             if(count[s[i] - 'a'] == 1){
                 return i;

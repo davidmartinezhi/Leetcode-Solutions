@@ -116,6 +116,6 @@ Nota:
     -Si es un problema más general, con más de 26 characters. Si es más recomendado el hashmap.
 
     -Podría pensar hacer entre un caso generalizado y uno personalizado a lo que me piden.
-        -Hahtable casi siempre es generalizado, pero es bueno
+        -Hashtable casi siempre es generalizado, pero es bueno
 
 */

@@ -57,7 +57,7 @@ public:
             //To-do:
                 //Confirmar que dict[s[i]], me regresa el value y no la key
         /*    
-        
+
         //Solución con hashtable
         //RunTime: O(N) average case
         //RunTime: O(N^2) worst case
@@ -114,5 +114,8 @@ Nota:
     -Siento que la puedo mejorar, debo buscar solución alterna
 
     -Si es un problema más general, con más de 26 characters. Si es más recomendado el hashmap.
+
+    -Podría pensar hacer entre un caso generalizado y uno personalizado a lo que me piden.
+        -Hahtable casi siempre es generalizado, pero es bueno
 
 */

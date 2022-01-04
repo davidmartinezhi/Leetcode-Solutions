@@ -56,7 +56,8 @@ public:
         
             //To-do:
                 //Confirmar que dict[s[i]], me regresa el value y no la key
-            
+        /*    
+        //Solución con hashtable
         unordered_map<char, int> dict;
         
         //Agrego los characteres y la frecuencia, al hashtable
@@ -72,6 +73,22 @@ public:
         }
         
         //Si no lo encuentra, regresa -1
+        return -1;*/
+        
+        //Solución con array
+        int count[26] = {0};
+        
+        for(char c: s){
+            //c-'a' le resta una letra a la posición en el array de minusculas
+            count[c-'a']++;
+        }
+        
+        for(int i = 0; i < s.size(); i++){
+            if(count[s[i] - 'a'] == 1){
+                return i;
+            }
+        }
+        
         return -1;
     }
 };
@@ -81,4 +98,7 @@ Nota:
     -Saque la solución en 24 minutos
     -Solución muy optima
     -Siento que la puedo mejorar, debo buscar solución alterna
+
+    -Si es un problema más general, con más de 26 characters. Si es más recomendado el hashmap.
+
 */

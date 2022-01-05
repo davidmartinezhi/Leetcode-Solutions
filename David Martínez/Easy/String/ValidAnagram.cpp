@@ -32,7 +32,7 @@ public:
             //Podría hacer un sort y comparar de manera secuencial
             //Best concievable runtime O(n+n) -> O(n)
             
-            //Con hashtables usaria de memoria O(n) y runtime O(n) average , O(n^2) worst case con collisions al usar unordered_map
+            //Con hashtables usaria de memoria O(n) y runtime O(n) worst case
             
             //Sorting usaria memoria O(1) y runtime O(n log n) worst case, ya que recorro ambos strings al mismo tiempo.
         
@@ -134,3 +134,19 @@ public:
         return true;    //Si todo el array contiene 0s, regreso true
     }
 };
+
+/*
+Notas:  
+    -Ayer hice el ejercicio de First Unique character y me fije que si conviene hacer una solución 
+        personalizada a tu problematica, en lugar de hacer una solución general
+
+    -Hoy tome 16 minutos en resolverlo, haciendo el metodo que hacía sort, con metodología y todo
+        Pero ya había pensado en que debería hacerlo con el array de 26 cuentas
+        Solo que lo quise hacer con el sort primero.
+
+    -No me canse nada, haciendo este problema. Ya siento sencillos muchos problemas y dentro de mi alcance
+     para hacerlos en menos de 20 minutos cada uno. Se que sigo en la sección facíl, pero apenas los estoy comenzando
+     a sentir faciles. Se nota que aprender de cada problema, tener una metodologia y una checklist para optimizaciones en un corto lapzo de tiempo
+     hacen un gran favor a la solución de problemas.
+
+*/

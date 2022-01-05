@@ -15,6 +15,10 @@ Checar en C++:
 //libro: http://englishonlineclub.com/pdf/Cracking%20the%20Coding%20Interview%20-%20189%20Programming%20Questions%20and%20Solutions%20(6th%20Edition)%20[EnglishOnlineClub.com].pdf
 //Solution flow: pagina 62 del libro.
 
+//Big O, resources
+https://medium.com/karuna-sehgal/a-simplified-explanation-of-the-big-o-notation-82523585e835
+
+
 //Anotar los problemas que me salieron en la entrevista de facebooks
 
 //Siento que strings y arrays en easy, van a ser una buena introcucción a la utilización de hashtables. update: es correcto
@@ -38,3 +42,9 @@ Terminado
 -Repasar Big O, en especial con memoria. Terminado
 -Lunes practicar set y maps en c++. O ver un video de alguién resolviendo el problema y ver con que lo resuelve el hashtable. terminado
 -Debo familiarizarme en trabajar con matrices.terminado
+-Poner archivos con tecnicas de optimize and solve, profundizando en los temas. terminado
+
+
+Reminder
+-Contarles de los habitos de la gente altamente efectiva, "sharpen the saw".
+    Esto para antes de introducirlos al solution flow y optimize and solve technique.

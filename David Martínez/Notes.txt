@@ -34,6 +34,7 @@ To-Do:
 -Luego investigar bits manipulation, ejemplo el ^= en c++ que es un XOR. Pendiente
     -Checar memset y bitset.
 -Checar si podia resolver el problema de la entrevista con pointers o linkedlists
+-Poner ejemplo rapido de como convertir letras de minusculas a mayusculas o como checar que algo es un numero o alphanumerico. (como en el problema easy/string/validPalindrome.cpp)
 
 Terminado
 -También checar el solution flow que viene en cracking the coding interview. Terminado.

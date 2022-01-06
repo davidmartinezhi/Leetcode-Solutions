@@ -153,3 +153,17 @@ public:
     }
 };
 
+/*
+Nota:
+    -Terminados los 45 minutos
+    -Perdí tiempo al hacer mucho pesudo codigo en el brute force, debería de hacerlo más breve
+    -Al final la versión optimizada fue la que use y fue solo basado en la idea del brute force
+        -Si debo checar cada paso, pero tampoco estancarme y trabajarlo de más.
+    -No pense en que la resta y suma iban a venir juntos
+    -Approach correcto, lo que me fallo fue pensar en pocos casos de prueba
+    -Otra perdida de tiempo es la de tratar de sacar uan solución "Ingeniosa", por no
+        querer usar el long int. y unsar un unsigned int. Mejor ir por lo seguro y que funcione.
+        Yo diria es que la prioridad es que el problema funcione
+    
+    -Problema tiene dificultad medium, no easy. 
+*/

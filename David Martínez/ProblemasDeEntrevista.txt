@@ -1,3 +1,4 @@
+====================================================
 Recibes un array con "N" elementos.
 Recibes un número "M" que representan secciones en el array donde los elementos estan ordenados.
 Cada subarray "M" puede tener distinto size
@@ -11,32 +12,23 @@ M = 3
 *Para aclarar la explicación las secciones son: [0, 1, 5] [4, 8, 10, 12] [9, 10]
 Pero el input te llega como un solo array
 
-Obvio puedes hacer un sort y ya, pero, ¿habrá una manera más eficiente? según la información que te Durante
+Obvio puedes hacer un sort y ya, pero, ¿habrá una manera más eficiente? según la información que te dan
 
-Por eso creo que es importante hacer mock interviews, lo cual no hice jajaja
-Si se me ocurrio hacer un sort y ya, pero la pense de más y quise aventarme algo más complicado
+Quetal si lo prioridad es el runtime y no la memoria?
+Puedes resolverlo en runtime O(n), aunque la memoria sea de O(n) también.
+============================================================
 
-Lo que se me ocurrio en la entrevista fue hacer una matriz
-Con una sliding window con tamaño de 2, recorro los numeros y los voy agregando al renglon en el que estoy en la matriz
-cuando en valor derecho sea menor al izquierdo, salto de renglon
+Recibes un string de una operación matematica
+La operación solo contiene simbolos de suma(+) y multiplicación(*). No incluye parentesís.
+Debes regresar un entero con ese resultado a esa operación.
 
-Ejemplo:
-array = [0, 1, 4, 2]
-matriz = [[0]]
+Ejemplo: "2+6+3*4" -> 20
 
-Valores dentro de brackets es la sliding window
-[{0, 1}, 4, 2] -> matriz = [[0, 1]]
+Existen diferentes maneras de resolver este problema. y eso es lo bonito
+Podrías hacer una función para regresar el entero, dependiendo del string
 
-[0, {1, 4}, 2] -> matriz [[0, 1, 4]] 
-
-[0, 1, {4, 2}] -> Valor derecho es menor al izquierdo 
-
-matriz = [[0, 1, 4],
-          [2]]
+Podrías meter a un stack las operacións que vas encontrando y cada entero.
+Recuerda que las multiplicación tienen mayor prioridad a una suma
 
 
 
-
-
-
-Tienes que regresar un array con todos los numeros del array ordenados.

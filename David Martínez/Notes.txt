@@ -32,20 +32,26 @@ To-Do:
 -Investigar cuando me puede ser utíl un algoritmo recursivo y como identificarlos. (Lo vere cuando llegue problemas de BST)
 -Hacer, usando la metodologia del libro. Problemas Array easy: Single Number y Rotate Array.
 -Luego investigar bits manipulation, ejemplo el ^= en c++ que es un XOR. Pendiente
-    -Checar memset y bitset.
--Checar si podia resolver el problema de la entrevista con pointers o linkedlists
--Poner ejemplo rapido de como convertir letras de minusculas a mayusculas o como checar que algo es un numero o alphanumerico. (como en el problema easy/string/validPalindrome.cpp)
+    -Checar memset y bitset en manipulación de bits.
+-Checar si podia resolver el problema de la entrevista con pointers o linkedlists.
+-Poner ayuda rapida de como convertir letras de minusculas a mayusculas o como checar que algo es un numero o alphanumerico. (como en el problema easy/string/validPalindrome.cpp)
+-Debo poner un super resumen en el archivo de optimize and solve technique. El folder solo tendra profundización y ejemplos
+-Debo terminar archivo estilo "cheatsheet" de optimize and solve technique.
+
 
 Terminado
+-Anotar problemas de mi entrevista para que los demas los tengan y lo puedan intentar. Terminado
 -También checar el solution flow que viene en cracking the coding interview. Terminado.
 -Anotar las "Optimize and Solve Techniques". Terminado
 -Investigar unordered_map.
 -Repasar Big O, en especial con memoria. Terminado
+-Poner fuentes para estudiar big O y Link del libro. En el repositorio. terminado
 -Lunes practicar set y maps en c++. O ver un video de alguién resolviendo el problema y ver con que lo resuelve el hashtable. terminado
--Debo familiarizarme en trabajar con matrices.terminado
+
 -Poner archivos con tecnicas de optimize and solve, profundizando en los temas. terminado
 
 
 Reminder
 -Contarles de los habitos de la gente altamente efectiva, "sharpen the saw".
     Esto para antes de introducirlos al solution flow y optimize and solve technique.
+-Debo familiarizarme en trabajar con matrices.terminado

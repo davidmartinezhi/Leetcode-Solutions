@@ -1,4 +1,6 @@
-====================================================
+============================================================
+facebook
+
 Recibes un array con "N" elementos.
 Recibes un número "M" que representan secciones en el array donde los elementos estan ordenados.
 Cada subarray "M" puede tener distinto size
@@ -17,6 +19,8 @@ Obvio puedes hacer un sort y ya, pero, ¿habrá una manera más eficiente? segú
 Quetal si lo prioridad es el runtime y no la memoria?
 Puedes resolverlo en runtime O(n), aunque la memoria sea de O(n) también.
 ============================================================
+facebook
+
 
 Recibes un string de una operación matematica
 La operación solo contiene simbolos de suma(+) y multiplicación(*). No incluye parentesís.
@@ -29,6 +33,21 @@ Podrías hacer una función para regresar el entero, dependiendo del string
 
 Podrías meter a un stack las operacións que vas encontrando y cada entero.
 Recuerda que las multiplicación tienen mayor prioridad a una suma
+
+============================================================
+facebook
+
+
+Similar al primer problema, pero no identica la solución.
+recibes una matriz, cada renglon de la matriz tiene los numeros ordenados.
+Regresa una array con todos los valores dentro de la matriz, ordenados
+Pueden existir renglones vacíos
+
+Ejemplo:
+input: array con arrays dentro (matriz)
+output: array ordenado
+
+[[0, 5, 7, 10],[2, 3, 4, 8],[1],[]] -> [0, 1, 2, 3, 4, 5, 7, 8, 10]
 
 
 

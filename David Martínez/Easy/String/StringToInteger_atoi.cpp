@@ -164,6 +164,7 @@ Nota:
     -Otra perdida de tiempo es la de tratar de sacar uan solución "Ingeniosa", por no
         querer usar el long int. y unsar un unsigned int. Mejor ir por lo seguro y que funcione.
         Yo diria es que la prioridad es que el problema funcione
+    -Siento que con apuntadores podría conseguir el numero que representa esa letra. Deberia investigarlo
     
     -Problema tiene dificultad medium, no easy. 
 */

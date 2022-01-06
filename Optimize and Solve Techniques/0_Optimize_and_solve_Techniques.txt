@@ -20,7 +20,7 @@ Optimize and Solve techniques
         Optimizar un cuello de botella puede hacer una gran diferencia en el runtime.
 
         2 tipos de Bottlenecks:
-        
+
             1) Tienes trabajo que se ejecuta una sola vez, pero frena mucho la velocidad.
                         Ejemplo del libro:
 
@@ -218,9 +218,6 @@ Optimize and Solve techniques
 
        ** Note that the best conceivable runtime is not necessarily achievable, It says only that you can't do better than it.**
 
-    Ejemplo del libro sobre como usarla:
-
-        *Agregar ejemplos*
 
     
 

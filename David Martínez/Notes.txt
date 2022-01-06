@@ -35,9 +35,7 @@ To-Do:
     -Checar memset y bitset en manipulación de bits.
 -Checar si podia resolver el problema de la entrevista con pointers o linkedlists.
 -Poner ayuda rapida de como convertir letras de minusculas a mayusculas o como checar que algo es un numero o alphanumerico. (como en el problema easy/string/validPalindrome.cpp)
--Debo poner un super resumen en el archivo de optimize and solve technique. El folder solo tendra profundización y ejemplos
--Debo terminar archivo estilo "cheatsheet" de optimize and solve technique.
-
+-Reverse integer y string to integer(atoi), checar como trabajar con limites.
 
 Terminado
 -Anotar problemas de mi entrevista para que los demas los tengan y lo puedan intentar. Terminado
@@ -47,8 +45,9 @@ Terminado
 -Repasar Big O, en especial con memoria. Terminado
 -Poner fuentes para estudiar big O y Link del libro. En el repositorio. terminado
 -Lunes practicar set y maps en c++. O ver un video de alguién resolviendo el problema y ver con que lo resuelve el hashtable. terminado
-
+-Debo terminar archivo estilo "cheatsheet" de optimize and solve technique. terminado
 -Poner archivos con tecnicas de optimize and solve, profundizando en los temas. terminado
+-Debo poner un super resumen en el archivo de optimize and solve technique. El folder solo tendra profundización y ejemplos
 
 
 Reminder

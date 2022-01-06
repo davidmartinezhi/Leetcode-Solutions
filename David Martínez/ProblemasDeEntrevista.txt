@@ -1,0 +1,42 @@
+Recibes un array con "N" elementos.
+Recibes un número "M" que representan secciones en el array donde los elementos estan ordenados.
+Cada subarray "M" puede tener distinto size
+Debes regresar un array con todos los numeros ordenados
+
+Ejemplo.
+N = 9
+M = 3 
+[0, 1, 5, 4, 8, 10, 12, 9, 10] -> [0, 1, 2, 4, 5, 8, 9, 10, 10, 12]
+
+*Para aclarar la explicación las secciones son: [0, 1, 5] [4, 8, 10, 12] [9, 10]
+Pero el input te llega como un solo array
+
+Obvio puedes hacer un sort y ya, pero, ¿habrá una manera más eficiente? según la información que te Durante
+
+Por eso creo que es importante hacer mock interviews, lo cual no hice jajaja
+Si se me ocurrio hacer un sort y ya, pero la pense de más y quise aventarme algo más complicado
+
+Lo que se me ocurrio en la entrevista fue hacer una matriz
+Con una sliding window con tamaño de 2, recorro los numeros y los voy agregando al renglon en el que estoy en la matriz
+cuando en valor derecho sea menor al izquierdo, salto de renglon
+
+Ejemplo:
+array = [0, 1, 4, 2]
+matriz = [[0]]
+
+Valores dentro de brackets es la sliding window
+[{0, 1}, 4, 2] -> matriz = [[0, 1]]
+
+[0, {1, 4}, 2] -> matriz [[0, 1, 4]] 
+
+[0, 1, {4, 2}] -> Valor derecho es menor al izquierdo 
+
+matriz = [[0, 1, 4],
+          [2]]
+
+
+
+
+
+
+Tienes que regresar un array con todos los numeros del array ordenados.

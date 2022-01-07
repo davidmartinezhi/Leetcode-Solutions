@@ -180,4 +180,7 @@ Nota:
 
         No import si hay más números despues, terminando de leer el primero. Ya regreso el resultado
 
+    -Debo de ser más especifico con mis preguntas y restricciones, no tener las restricciones bien definidas en este problema
+     me llevo a hacerlo bien, pero no lo que querían que yo hiciera.
+    -Lo hice para un caso más general según la descripicón, pero me lo piden más simple
 */

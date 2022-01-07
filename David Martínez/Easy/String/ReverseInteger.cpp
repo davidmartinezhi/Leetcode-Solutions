@@ -77,7 +77,7 @@ public:
         
         
         //Variable que regresa el resultado
-        int result = 0; 
+        long int result = 0; 
         
         //Bandera para saber si el valor es positivo o negativo
         bool positive = true;
@@ -85,37 +85,30 @@ public:
         //Checo si "x" negativa
         if(x < 0){
             positive = false;
+            long int aux = x;
+            aux = aux * -1;
+            if(aux > INT_MAX){  //Checo si no cruza el limite, al hacerlo positivo
+                return 0;
+            }
+            
             x *= -1;    //Lo hago positivo
         }
         
         while(x >= 1){
             int aux = x % 10;   //Saco el ultimo digito
             x /= 10;    //Actualizo variable x
-            cout << aux << endl;
+            result = result * 10 + aux;
             
-            
-            //Si es positivo x
-            if(positive){
+            //Checo que no cruce los limites
+            if(result > INT_MAX && positive){
+                return 0;
+            }
+            else if(result > INT_MAX && !positive){
                 
-                if((result * 10 + aux) > INT_MAX - aux){  //Si la operación cruza el max
-                    return 0;   //Regreso 0
-                }
-                else{   //De lo contrario
-                    result = result * 10 + aux; //Se lleva a cabo la operación
-                }
+                return 0;   
                 
             }
-            //Si es negativo x
-            else if(!positive){ 
-                
-                if(-1*(result*10+aux) < INT_MIN){ //Si la operación cruza el min
-                    return 0;   //Regreso 0
-                }
-                else{   //De lo contrario
-                    result = result * 10 + aux; //Se lleva a cabo la operación
-                }
-                
-            }
+
         }
         
         //Actualizo el simbolo

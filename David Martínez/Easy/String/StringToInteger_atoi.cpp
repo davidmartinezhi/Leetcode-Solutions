@@ -167,4 +167,17 @@ Nota:
     -Siento que con apuntadores podría conseguir el numero que representa esa letra. Deberia investigarlo
     
     -Problema tiene dificultad medium, no easy. 
+
+    -Yase como solucionarlo, hacer mi propuesta con while
+        Solo salto al inicio todo hasta encontrar un simbolo o un digito
+            Si encuentro white space o 0, no pasa nada
+            Si encuentro un char, regreso 0
+        
+        Si salto el simbolo y hay algo que no sea un digito, regreso 0
+        Ahora si leo el digito y checo los limites de minimo y maximo, todo mientras sea digito
+
+        Luego ya regreso el numero.
+
+        No import si hay más números despues, terminando de leer el primero. Ya regreso el resultado
+
 */

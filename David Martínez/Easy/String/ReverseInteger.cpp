@@ -75,7 +75,8 @@ public:
         //int limitMAX = 2147483647;
         //int limitMIN = -2147483648;
         
-        
+        //Primer resupuesta
+        /*
         //Variable que regresa el resultado
         long int result = 0; 
         
@@ -111,12 +112,72 @@ public:
 
         }
         
+        
         //Actualizo el simbolo
         if(!positive){
             result *= -1;   //Lo actualizo
         }
         
         return result;
+        */
+        
+        //Respuesta eficiente encontrada en leetcode
+        /*
+        Puedo checar que no cruce, al checar que no sea mayor a INT_MAX/10 y el dato a agregar
+        sea menor a 7
+        De igual manera con el min, pero que no cruce el -8
+        
+        int output = 0;
+        while (x != 0) {
+            int temp = x % 10;
+            if (output > INT_MAX/10 || (output == INT_MAX/10 && temp > 7)) return 0;
+            if (output < INT_MIN/10 || (output == INT_MIN/10 && temp <= -8)) return 0;
+            output *= 10;
+            output += temp;
+            x /= 10;
+        }
+    
+        return output;
+    }
+        
+        */
+        
+        //Segunda respuesta mía, ya simplificada
+        
+        //Creo variable donde creare el resultado
+        int result = 0;
+        
+        //Proceso x, hasta que sea menor a 1
+        while(x != 0){  //Mientras sea diferente a 0, así no importa si input es positivo o negativo
+            
+            int aux = x % 10; //Creo variable auxiliar con el valor a agregar
+            x /= 10;    //Actualizo x
+            
+            //Creo los filtros para no cruzar los limites
+            //INT_MAX 2,147,483,647
+            //INT_MIN -2,147,483,648
+                
+            //Filtro para que no cruze INT_MAX
+            if(((result == INT_MAX/10) && (aux > 7)) || result > INT_MAX/10){
+                //Si el resultado es igual a 214,748,364 y aux es mayor a 7
+                //O resultado ya es mayor a 214,748,364
+                return 0; //regreso 0
+            }
+            
+            //Filtro para que no cruze el INT_MIN
+            if(((result == INT_MIN/10) && (aux < -8) )|| result < INT_MIN/10){
+                ////Si el resultado es igual a -214,748,364 y aux es menor a -8
+                //O resultado ya es menor a -214,748,364
+                return 0;   //Regreso 0
+            }
+            
+
+            result = result * 10;  //Agrego un 0
+            result = result + aux;  //Le sumo el valor de aux
+        }
+        
+        return result;
+    
     }
 };
 

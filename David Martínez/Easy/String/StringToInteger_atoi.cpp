@@ -95,12 +95,15 @@ public:
 
         No importa si hay más números despues, terminando de leer el primero. Ya regreso el resultado       
         */
+       //Respuesta checada en youtube: https://www.youtube.com/watch?v=FyTpsuWAoc8
         //Puedo hacer operaciones matematicas con characters, int con numeros
         //int num2 = result * 10 + (s[0] - '0'); Así saco valor numerico con characters
+
+        //Runtime: O(n)
+        //Memory: O(1)
         
-       
+       //Apuntador
         int i = 0;
-        
         
         //Salto whitespace
         while(i < s.size() && s[i] == ' '){
@@ -133,9 +136,11 @@ public:
             result = (result * 10) + (s[i] - '0');
         }
         
-       
-        return result * sign;
+        //Nota: De manera implicita, si encuentra un valor alphabetico.Se atora ahí,nunca lee el digito y regresa 0
+       //Luego cuando hay digitos despues, ni los checa porque solo importa el numero
         
+        //Muy buena solución, debería de pensar en una manera de lograr cosas implicitamente tmbn. 
+        return result * sign;
         
         /*
         //Bandera para saber el signo que es
@@ -316,4 +321,18 @@ Nota:
     -Debo de ser más especifico con mis preguntas y restricciones, no tener las restricciones bien definidas en este problema
      me llevo a hacerlo bien, pero no lo que querían que yo hiciera.
     -Lo hice para un caso más general según la descripicón, pero me lo piden más simple
+
+    //Lecciones aprendidas
+        //Puedo hacer matematica entre chars y enteros. Obvio tienen sus limites, pero es posible.
+        //Sao un numero en char a entero escribiendo en el integer s[i] - '0'
+
+    Tengo que pensar sobre porque se me complico tanto el problema, me hice bolas
+    Ya tenía la idea de como solucionarlo, pero me metí a demasiados detalles.
+
+    Ver el big picture del problema primero.
+    Luego ver si lo puedo dividir en modulos.
+    Tambíen, en ninguna parte decía que solo se le hacía caso al primer digito encontrado.
+    Siento que el problema no fue muy especifico, pero esta bien. Trataré de hacerlo de la forma más simple a la proxima
+    Aprendí sobre convertir characteres a enteros y como se maneja casí universalmente el no cruzar los limites INT_MAX y INT_MIN
+    Aparte es muy eficiente checar el simbolo con sign siendo 1 o -1, así solo multiplicas al final. Yo lo hacía un booleano.
 */

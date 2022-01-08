@@ -110,7 +110,8 @@ Notas:
 
 
     -Es una solución bastante eficiente, ya que el mejor runtime posible es O(n) y lo tengo en O(n-window * window). Consultar este runtime.
+    - Memory usado = O(1)
 
-    Checar una posible solución más eficiente
+    Checar una posible solución más eficiente, para ver si la puedo acercar a O(n).
 
 */

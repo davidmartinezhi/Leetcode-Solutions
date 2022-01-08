@@ -46,6 +46,9 @@ public:
             //To do:
                 //Double check the condition in for loop
         
+        
+        //Creado manualmente
+        /*
         //Eficiencia de runtime: O(n-window * window)
         //Eficiencia memoria: O(1)
 
@@ -72,11 +75,37 @@ public:
         }
         
         return -1;  //If needle not found, return -1
+        */
         
-        //"stringtest"
-        //"ri"
-        //
-
+        //Solución con el nested for loop
+        
+        int window = needle.size();
+        
+        //Check if needle is empty
+        if(window == 0){ return 0; }
+        
+        //Check if needle is bigger than the haystack
+        if(window > haystack.size()){ return -1; }
+        
+        //Traverse the string
+        for(int i = 0; i <= haystack.size() - window; i++){
+            //Creo variable j
+            int j = 0;
+            
+            if(haystack[i] == needle[0]){   //Si estoy en la letra con la que inicia el needle
+                for(; j < window; j++){ //Recorro para checar los demas characters
+                    
+                    if(haystack[i+j] != needle[j]){ //Si es diferente el character, salgo
+                        break;
+                    }
+                }
+            }
+            
+            if(j == window){ return i; }    //Si J, tiene el mismo tamaño de la window. 
+                                            //Significa que encontramos el substring
+            
+        }
+        return -1;  //Si recorremos todo el string y no encontramos nada, regreso 0
     }
     
     //Helper funciton to traverse substring

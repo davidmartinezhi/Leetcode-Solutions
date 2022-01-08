@@ -24,7 +24,7 @@ public:
             //String contiene entre 0 y 200 characters
 
         // 2 example
-            //"abc-345   " -> -345
+            //"abc-345   " -> 0
             //"      00438a" -> 438
             //"0050" -> 50
             
@@ -59,9 +59,10 @@ public:
         
         // 5 walkthrough
             //Creo bandera para saber el simbolo
+            //Cuento los signos que aparecen
             //Creo variable result = 0
             //Recorro string mientras sea un non-digit y no sea un símbolo.
-                //si encuentra simbolo, updateo bandera
+                //si encuentra simbolo, updateo bandera y contador
                 //Si encuentra un punto, doy return
                 //si es entero, lo transformo y agrego al resultado
                 
@@ -81,16 +82,148 @@ public:
                 //Checar como convertir num string a int
                 //Checar como validar si me pase del INT_MAX o INT_MIN
         
+        /*
+     -Yase como solucionarlo, hacer mi propuesta con while
+        Solo salto al inicio todo hasta encontrar un simbolo o un digito
+            Si encuentro white space o 0, no pasa nada
+            Si encuentro un char, regreso 0
+        
+        Si salto el simbolo y hay algo que no sea un digito, regreso 0
+        Ahora si leo el digito y checo los limites de minimo y maximo, todo mientras sea digito
+
+        Luego ya regreso el numero.
+
+        No importa si hay más números despues, terminando de leer el primero. Ya regreso el resultado       
+        */
+        //Puedo hacer operaciones matematicas con characters, int con numeros
+        //int num2 = result * 10 + (s[0] - '0'); Así saco valor numerico con characters
+        
+       
+        int i = 0;
+        
+        
+        //Salto whitespace
+        while(i < s.size() && s[i] == ' '){
+            i++;
+        }
+        
+        //Checo si recorrí toda la lista
+        if(i >= s.size()){ return 0; }
+        
+        //Checo simbolo, en caso de haberlo encontrado
+        int sign = 1;
+        if(s[i] == '+' || s[i] == '-'){
+            sign = (s[i] == '+') ? +1 : -1;
+            i++;
+        }
+        
+        
+        //Checo si recorrí toda la lista
+        if(i >= s.size()){ return 0; }
+        
+        //Ya que esoty en el integer, lo recorro para sacar el resultado
+        int result = 0;
+        for(; i < s.size() && isdigit(s[i]); i++){
+            
+            if(result > INT_MAX/10 ||
+              (result == INT_MAX/10 && s[i] - '0' > INT_MAX % 10)){
+                return (sign == 1) ? INT_MAX : INT_MIN;
+            }
+            
+            result = (result * 10) + (s[i] - '0');
+        }
+        
+       
+        return result * sign;
+        
+        
+        /*
         //Bandera para saber el signo que es
-        bool sign = true;
+        bool sign = true;   //Podría quitar esta bandera
+        
+        //Contador para saber cuantos signos contiene el string
+        int countSimbols = 0;
         
         //Bandera para saber si ya encontre algún digit
         bool digitFound = false;
         
         //Resultado
-        long int result = 0;
+        int result = 0;
         
         for(int i = 0; i < s.size(); i++){
+            
+            //Si encontramos algún simbolo
+            if(s[i] == '-' || s[i] == '+'){
+                
+                //actualizamos cuenta
+                countSimbols++;
+                
+                //Si ya encontramos 2 simbolos
+                if(countSimbols == 2){
+                    return 0;   //Regresamos 0
+                } 
+                
+                //Si el simbolo es negativo, actualizamos el signo
+                if(s[i] == '-'){   
+                    sign = false;   //Aviso que el simbolo es negativo
+                }
+                
+            }
+            
+            //Si encontramos un punto
+            if(s[i] == '.'){
+                return result;  //Regreso el resultado, porque es entero. No float
+            }
+            
+            //Si encuentro un valor alphabetico antes de un digito
+            if(isalpha(s[i]) && digitFound == false){
+                return 0;
+            }
+            
+            //Si encuento un digito
+            if(isdigit(s[i])){
+            
+                //Saco el valor que voy a agregar
+                int aux = toInteger(s[i]);
+                
+                //Checo si ya encontre un número que no sea 0
+                if(aux != 0){
+                    digitFound = true; //Confirmo que encontre un digito
+                }
+                
+                //Si digitFound = True, Ya comienzo a agregar datos
+                if(digitFound){
+                    //Checo que el resultado no cruce los limites
+                    //INT_MAX
+                    if(sign){
+                        if((result > INT_MAX/10) || (result == INT_MAX/10 && aux > 7)){
+                            return INT_MAX;
+                        }
+                    } 
+                    //INT_MIN
+                    else {
+                        if((result > INT_MAX/10) || (result == INT_MAX/10 && aux > 8)){
+                            return INT_MIN;
+                        } 
+                    }
+                
+                    //Si no cruza los limites, agrego el digito
+                    result *= 10;
+                    result += aux;
+                }
+                else{
+                    return 0;
+                }
+            }
+        }
+        
+        if(sign == false){
+            result *= -1;
+        }
+        return result;
+        */
+        
+        /*for(int i = 0; i < s.size(); i++){
             
             //Debo poner caso en el que haya un simbolo positivo también
             if(s[i] == '-' && digitFound == false){ //Si estoy en simbolo negatico y no he encontrado
@@ -133,7 +266,7 @@ public:
             
             return (result*-1);
         }
-        return result;  //Regresamos el result
+        return result;  //Regresamos el result*/
     }
     
     //Helper function

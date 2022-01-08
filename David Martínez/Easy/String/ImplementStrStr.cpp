@@ -46,7 +46,7 @@ public:
             //To do:
                 //Double check the condition in for loop
         
-        //Eficiencia de runtime: O(n*window)
+        //Eficiencia de runtime: O(n-window * window)
         //Eficiencia memoria: O(1)
 
         
@@ -94,3 +94,23 @@ public:
         return true;
     }
 };
+
+/*
+Notas:
+    -Terminado en 32 minutos.
+    -Me tarde haciendo la helper function. La ahice para que se viera más estetico el codigo
+    -Hubiera primero creado el nested for loop.
+        y que solo entrará al loop cuando estamos en una letra igual a la primera letra del haystack
+    
+    -Se me hizo bastante sencillo el problema
+    -Noté que despues de batallar durante 2 días con String to Integer (ATOI), afecto mi confidence
+        No debería permitir que me afecte, ya aprendí a trabajar mejor y a ser más cuidadoso. 
+        Obvio no todo problema saldra rapido o con la maxima eficiencia, pero debo de esforzarme por que sea así.
+        Pero voy puliendo mi approach a la solución de problemas y estoy aprendiendo de cada uno, no hay porque desanimarse
+
+
+    -Es una solución bastante eficiente, ya que el mejor runtime posible es O(n) y lo tengo en O(n-window * window). Consultar este runtime.
+
+    Checar una posible solución más eficiente
+
+*/

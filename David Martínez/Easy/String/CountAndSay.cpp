@@ -110,3 +110,23 @@ public:
         return res; //Regresamos respuesta
     }
 };
+
+/*
+Nota:
+    -Primer ejercicio recursivo que me topo
+    -Tenía bien la idea para solucionar el problema, solo que no se me ocurrio bajar en la recursividad
+        para hacer las operacionesd e subida.
+    
+    -Primero debo definir el base case
+    -Luego ver el recorrido que debo hacer, en este caso era "lineal". Pero sacando la idea de como lo haré
+    -Para estar bien posicionado y solo preocuparme por hacer las operaciones
+
+    -Se me terminaron los 45 minutos al resolver este problema
+    -Debo practicar más problemas dond aplique recursividad
+
+    //Debo checar el big O en recursividad, pero por el momento creo que la eficiencia en este problema es de
+    Runtime: O(levels * length de string)
+    Memory: O(n)
+
+
+*/

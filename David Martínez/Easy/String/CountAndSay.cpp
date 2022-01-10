@@ -49,7 +49,10 @@ public:
         //7 test
             //Primero mandando digitos por serparados, a la recursión
         
+        //Runtime: O(n * log n)
         //Primero validamo sel input
+
+        /*
         if(n <= 0){
             return "";
         }
@@ -57,9 +60,9 @@ public:
         //Base Case
         string result = "1";
         
-        while(n > 1){
+        while(n > 1){   //Mientras n sea diferente a 1
             
-            //String auxiliar
+            //Creamos string auxiliar que estará vacío
             string curr = "";
             
             //For loop para recorrer el result
@@ -81,5 +84,29 @@ public:
         }
         
         return result;  //Regresamos el resultado
+
+        */
+
+               //Respuesta recursiva
+        
+        //Si n es igual a 1, regresa 1
+        if(n == 1) return "1";
+        
+        string s = countAndSay(n-1);   //Recursivamente bajamos hasta que nos de "1"
+        string res = "";    //String donde guardamos el resultado
+        
+        int i = 0;  //Index
+        while(i < s.length())   //Mientras no recorramos el string auxiliar
+        {
+            int l = i;  //Index para recorrer las letras
+            while(l < s.length() && s[i] == s[l])
+            l++;    //Recorro el indice
+            int count = l-i;    //Cuenta es lo recorrido - el indice en el que estamos
+            char c = count + '0';   //Char con la cuenta
+            res += c;   //Sumamos al resultado
+            res += s[i];    //Agregamos el sigito
+            i = l;  //I ahora es igual a la posición del nuevo digito
+        }
+        return res; //Regresamos respuesta
     }
 };

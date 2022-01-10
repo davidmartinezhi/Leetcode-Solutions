@@ -69,17 +69,17 @@ public:
                 
                 //Mientras el numero sea el mismo y no lleguemos al final de la lista
                 while(i+1 < result.size() && result[i] == result[i+1]){
-                    count++;
-                    i++;
+                    count++;    //Aummentamos la cuenta
+                    i++;    //Seguimos recorriendo
                 }
                 
-                curr += to_string(count) + result[i];
+                curr += to_string(count) + result[i];   //Sumamos al string auxiliar la cuenta y el digito
             }
-            result = curr;
+            result = curr;  //El string auxiliar se convierte en nuestro resultado
             
-            n--;
+            n--;    //Restamos uno a n
         }
         
-        return result;
+        return result;  //Regresamos el resultado
     }
 };

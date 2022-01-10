@@ -26,7 +26,6 @@ https://medium.com/karuna-sehgal/a-simplified-explanation-of-the-big-o-notation-
 //He notado que las soluciones más eficientes, son muchas veces con manipulación de bits. No debo olvidarme en checar ese tema.
     -checar bitset y memset.
 
-
 To-Do:
 
 -Investigar cuando me puede ser utíl un algoritmo recursivo y como identificarlos. (Lo vere cuando llegue problemas de BST)
@@ -35,7 +34,7 @@ To-Do:
     -Checar memset y bitset en manipulación de bits.
 -Checar si podia resolver el problema de la entrevista con pointers o linkedlists.
 -Poner ayuda rapida de como convertir letras de minusculas a mayusculas o como checar que algo es un numero o alphanumerico. (como en el problema easy/string/validPalindrome.cpp)
-
+-Poner ayuda rapida para trabajar con limites cuando solo tenemos 32 bits. (Ya lo solucione, pero para que los demas no batallen)
 
 Terminado
 -Anotar problemas de mi entrevista para que los demas los tengan y lo puedan intentar. Terminado

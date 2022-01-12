@@ -62,6 +62,40 @@ public:
         //Runtime: O(n * m) n: elementos en la lista, m: tamaño de prefix
         //Memory: O(1)
 
+        //Solución 1 : O(n*tamaño de la palabra más pequeña)
+        //O(n)
+        //Podría recorrer todo una vez y sacar el size de la palabra más pequeña
+            //De esta manera nunca me pasare de index en las palabras
+            //Si encuentro un string vacío, regreso un string vacío
+
+        //O(n* tamaño de palabra más pequeña)
+        //Luego siempre comparo el tamaño de la palabra más pequeá con el del prefix
+        //Recorro eso en todas las palabras y modifico el prefix de acuerdo a prefix
+
+        //Solución 2
+        //O(n log n)
+        //Hago un sort por tamaño de palabras
+
+            //Si tenemos un string vacío al inicio, regresamos un string vacío
+
+        //Prefix es la primer palabra
+        //Recorro el resto de palabras y solo modifico el prefix cuando no coincidan los char
+            //Cuando no coincida el char, reduzco el prefix con la función substr
+
+        //Solución que yo hice
+            //La primer palabra es el prefix
+
+            //O(n*prefix)
+            //Recorro todas las palabras con un sliding window technique de tamaño 2
+                //Creo un string auxiliar que está vacío
+                //Saco el tamaño más pequeño entre las 2 palabras y el prefix
+
+                //Recorro ambas palabras y sumo cada letra, hasta que ya no coincidan
+
+                //Si el string auxiliar está vacío, no tenemos ninguna coincidencia y regreso un string vacío
+
+                //El prefix se establece como el string de menor tamaño entre el string auxiliar y el prefix
+
 
         
         //Checo el size del array

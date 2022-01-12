@@ -57,32 +57,29 @@ public:
                 //Palabras que no coinciden
                 //Strs con strings vacíos
         
-        
-        
-        //Runtime: O(n * m) n: elementos en la lista, m: tamaño de prefix
-        //Memory: O(1)
+
 
         //Solución 1 : O(n*tamaño de la palabra más pequeña)
-        //O(n)
-        //Podría recorrer todo una vez y sacar el size de la palabra más pequeña
-            //De esta manera nunca me pasare de index en las palabras
-            //Si encuentro un string vacío, regreso un string vacío
+            //O(n)
+            //Podría recorrer todo una vez y sacar el size de la palabra más pequeña
+                //De esta manera nunca me pasare de index en las palabras
+                //Si encuentro un string vacío, regreso un string vacío
 
-        //O(n* tamaño de palabra más pequeña)
-        //Luego siempre comparo el tamaño de la palabra más pequeá con el del prefix
-        //Recorro eso en todas las palabras y modifico el prefix de acuerdo a prefix
+            //O(n* tamaño de palabra más pequeña)
+            //Luego siempre comparo el tamaño de la palabra más pequeá con el del prefix
+            //Recorro eso en todas las palabras y modifico el prefix de acuerdo a prefix
 
-        //Solución 2
-        //O(n log n)
-        //Hago un sort por tamaño de palabras
+        //Solución 2 : O(n log n)
+            //O(n log n)
+            //Hago un sort por tamaño de palabras
 
-            //Si tenemos un string vacío al inicio, regresamos un string vacío
+                //Si tenemos un string vacío al inicio, regresamos un string vacío
 
-        //Prefix es la primer palabra
-        //Recorro el resto de palabras y solo modifico el prefix cuando no coincidan los char
-            //Cuando no coincida el char, reduzco el prefix con la función substr
+            //Prefix es la primer palabra
+            //Recorro el resto de palabras y solo modifico el prefix cuando no coincidan los char
+                //Cuando no coincida el char, reduzco el prefix con la función substr
 
-        //Solución que yo hice
+        //Solución que yo hice O(n * prefix)
             //La primer palabra es el prefix
 
             //O(n*prefix)
@@ -90,14 +87,16 @@ public:
                 //Creo un string auxiliar que está vacío
                 //Saco el tamaño más pequeño entre las 2 palabras y el prefix
 
-                //Recorro ambas palabras y sumo cada letra, hasta que ya no coincidan
+                //Recorro (con el tamaño más pequeño) ambas palabras y sumo cada letra, hasta que ya no coincidan
 
                 //Si el string auxiliar está vacío, no tenemos ninguna coincidencia y regreso un string vacío
 
                 //El prefix se establece como el string de menor tamaño entre el string auxiliar y el prefix
 
 
-        
+        //Runtime: O(n * m) n: elementos en la lista, m: tamaño de prefix
+        //Memory: O(1)
+
         //Checo el size del array
         //Si es de un elemento, regreso ese elemento
         if(strs.size() == 1){ return strs[0]; }

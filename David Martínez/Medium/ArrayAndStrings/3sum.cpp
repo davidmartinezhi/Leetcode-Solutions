@@ -172,4 +172,8 @@ Notas:
     -Pude sacar rapido utilizar sort y un set. con eso ya tenía runtime:0(n2) y memory: O(n)
 
     -La solución más optima yp creo si me hubiera llevado un poco más de tiempo sacarla, pero aúna así ya estaba cerca.
+
+    -Debería de seguir haciendo ejemplos en mi cuaderno, desde que deje de hacerlos, he estado teniendo fallas. 
+    Es mejor no dejarlo todo mental. Esta incomodo hacer ejemplos en la laptop, pero en una entrevista creo que hasta puedo usar un ipad
+    para poner mis ejemplos y logica. Entonces si debería hacer los ejemplos en cuaderno.
 */

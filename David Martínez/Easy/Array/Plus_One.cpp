@@ -100,7 +100,6 @@ public:
             digits[size-1]++;
         }
         return digits;
-        
     }
 };
 

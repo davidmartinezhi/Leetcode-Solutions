@@ -158,3 +158,18 @@ Luego ya meto el valor
 //Aún así sigue siendo más eficiente las solución con sort
 
 */
+
+/*
+Notas:
+    -La verdad comence muy bien el problema, sacando soluciones optimaz con buena eficiencia
+        Solo que me tarde unr rato en sacar la solución y saque de más.
+        Después de esto solo me quedaron 9 minutos para hacer el codigo y por sacar varias soluciones con un "Flex" de diferentes maneras de resolverlo
+        No vi que el metodo que saque con hashtables, en realidad no podía implementarlo como yo lo había visualizado, Hubo una falla por mi parte en la planeación
+       
+       Fue util el data structure brainstorm, solo que no pense explicitamente en las caracteristicas de la data structure y como aplicarlo.
+       Debería ser más cuidadoso. Y enfocarme en una solución eficiente a la vez y también no en tantas soluciones.
+
+    -Pude sacar rapido utilizar sort y un set. con eso ya tenía runtime:0(n2) y memory: O(n)
+
+    -La solución más optima yp creo si me hubiera llevado un poco más de tiempo sacarla, pero aúna así ya estaba cerca.
+*/

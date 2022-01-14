@@ -56,7 +56,10 @@ public:
         //Es más eficiente que no se repitan, usaré set pero dejo comentada opción vectores
         //Da igual si uso set o unorderes_set. La busqueda sera O(1), no n(log n). porque los index
             //Index son numeros ordenados
-        
+
+    //Respuesta original
+
+        /*
         //runtime: O(n*m)
         //Memory: O(n)
         
@@ -110,11 +113,6 @@ public:
                 for(auto it = columnas.begin(); it != columnas.end(); it++){
                     matrix[i][*it] = 0;
                 }
-                /*
-                for(int j = 0; j < columnas.size(); j++){
-                    matrix[i][columnas[j]] = 0;   //Igualo a cero esos valores
-                }
-                */
             }
         
             //Renglones
@@ -125,14 +123,88 @@ public:
                 
                 matrix[*it] = aux;
             }
-            /*
-            for(int i = 0; i < renglones.size(); i++){
-                int renglon = renglones[i];
-                vector<int> aux(n) = {0};
+        }
+
+        */  
+
+    //Respuesta original, optimizada. Pero sigue siendo de la misma eficiencia
+        //runtime: O(n*m)
+        //Memory: O(n)
+        
+        //Set de renglones y columnas
+        //set<int> renglones = {};
+        set<int> columnas = {};
+        
+        int renglones = 0;
+        
+        //Saco el numero de 
+        int m = matrix.size();  //Renglones
+        int n = matrix[0].size();   //Columnas
+        
+        //Checo si ambos son de size 1
+        if(n == 1 && m == 1){ return; }
+        
+        //Comienzo la lectura de la matriz. runtime: O(n*m)
+        //Recorro renglones
+        for(int i = 0; i < m; i++){
+            
+            bool foundZero = false; //Checo si el renglon tiene 0
+            
+            //Recorro columnas
+            for(int j = 0; j < n; j++){
+                //Si encuentro un 0
+                if(matrix[i][j] == 0){
+                    foundZero = true;
+                    columnas.emplace(j);  //Agrego la columna a columnas
+                }
+            }
+            
                 
-                matrix[renglon] = aux;
-            }  
+            if(foundZero){  //Si tiene 0 el renglon, lo convierto en 0s todo
+                matrix[i] = vector<int>(n, 0);
+                renglones++;
+            }
+        }
+        
+        
+        //Ahora comienzo el proceso de eliminación. runtime: O(n*m)
+        
+        //Checo size de renglon y de columnas
+        //Si renglones == m o columnas == n
+        //Ahora todo lo hago 0
+        if(renglones == m){
+                return;
+        }
+        else if(n == columnas.size()){
+            /*
+            vector<int> auxCol(n, 0);
+            vector<vector<int>>auxRen(m, auxCol);
+            matrix = auxRen;
             */
+            //Es mejor dejar el memory en O(n)
+            //Runtime overall ya es O(n*m). Usarlo
+            for(int i = 0; i < m; i++){
+                for(int j = 0; j < n; j++){
+                    matrix[i][j] = 0;
+                }
+            }
+        }
+        //Si no
+        else{        
+            //columnas
+            //Recorro todos los renglones
+            for(int i = 0; i < m; i++){
+                //Recorro las columnas a borrar
+                for(auto it = columnas.begin(); it != columnas.end(); it++){
+                    matrix[i][*it] = 0;
+                }
+                
+                /*
+                for(int j = 0; j < columnas.size(); j++){
+                    matrix[i][columnas[j]] = 0;   //Igualo a cero esos valores
+                }
+                */
+            }
         }        
     }
 };

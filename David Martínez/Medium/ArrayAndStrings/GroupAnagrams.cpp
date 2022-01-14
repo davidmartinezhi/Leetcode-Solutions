@@ -58,7 +58,8 @@ public:
         // 7 test
         // Special cases, empty string
         // Strs size 1
-
+        
+        //O(k) k siendo los grupos de anagramas
         vector<vector<string>> result;
 
         if (strs.size() == 1)
@@ -67,8 +68,10 @@ public:
             return result;
         }
 
+        //O(j) j siendo el numero de frecuencias en palabras
         set<string> anagrams;
 
+        //O(n*m log m)
         for (int i = 0; i < strs.size(); i++)
         {
             string aux = strs[i];
@@ -76,6 +79,7 @@ public:
             anagrams.emplace(aux);
         }
 
+        //O(n^2*m)
         for (auto it = anagrams.begin(); it != anagrams.end(); it++)
         {
             vector<string> aux;
@@ -95,6 +99,8 @@ public:
     }
 
     // Comparación de palabras
+    //runtime: O(m)
+    //memory: O(1)
     bool isValidAnagram(string s, string &t)
     {
         // Checo que tengan el mismo size

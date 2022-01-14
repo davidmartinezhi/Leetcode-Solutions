@@ -122,3 +122,11 @@ public:
     }
 };
 
+/*
+Codigo funcional y terminado en 43 minutos, ando terminandolos al borde.
+Pero no es muy eficiente, con grandes arrays de palabras largas, marca error de runtime
+
+Debo optimizarlo a fuerzas
+
+*/
+

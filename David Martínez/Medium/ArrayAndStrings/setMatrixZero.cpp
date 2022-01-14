@@ -132,3 +132,23 @@ public:
         }        
     }
 };
+
+/*
+    -Me salio, segundos antes de que se acabaran los 45 minutos
+        -Runtime: O(n*m)
+        -Memory: O(n)
+
+    -Yo pienso que para sacar los 0s, afuerzas debes recorrer toda la matríz, haciendo el runtime: O(n*m)
+        pero en el followup dice:
+            * A straightforward solution using O(mn) space is probably a bad idea.
+            * A simple improvement uses O(m + n) space, but still not the best solution.
+            * Could you devise a constant space solution?
+        
+        Entonces voy a investigar si existe una manera más eficiente de hacerlo.
+
+    -Debo investigar más sobre matrices para sentirme más comodo al moverme por renglones y columnas
+
+    -Para ser el 3er ejercicio que hago con matrices, siento que mi perfomance estuvo bien.
+        Buen inicio, aún debo mejorar para sacarlo más rapido.
+
+*/

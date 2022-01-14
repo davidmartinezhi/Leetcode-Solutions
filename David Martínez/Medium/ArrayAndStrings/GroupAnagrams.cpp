@@ -143,5 +143,26 @@ Codigo funcional y terminado en 43 minutos, ando terminandolos al borde.
 Pero no es muy eficiente, con grandes arrays de palabras largas, marca error de runtime
 
 Debo optimizarlo a fuerzas
+Esta solución debe estar compuesta por los 2 easy: isValidAnagram y tecnica de remove duplicates from sorted array(tecnica adaptada para agrupar).
+O(n*m)
+Acomodar
+Yase como incrementar la eficiencia, Uso la tecnica de 2 pointers
+    Pointer que se queda al frente de los anagrams con la palabra que estamos checando
+    De esta manera agrupamos los datos
 
+    Hago bandera para saber que encontramos un anagram
+
+Si no encuentra anagram, regresa la lista original, dentro de result
+
+O(n*m)
+Si encuentra anagram
+    Dynamic sliding window technique
+    Agrego los datos dentro de la window al vector<string> aux;
+
+    agrego el aux a result
+
+regreso el result
+
+runtime: O(n*m)
+memory: O(result)
 */

@@ -10,7 +10,17 @@ Checar en C++:
     -Agregar descripción en optimize and solve techniques 
     -Hacer digerible o poner ejemplos en solution_flow
 
+*Escribir for loops de manera limpia
+    x es el entero donde quiero que comience
+    #define len(x) x.size()
+    #define bf(i, x, n) for(int i = x; i < n; i++) //basic for (<)
 
+    ahora for loop se escribe como 
+    bf(i, 0, n){
+        bf(j, 0, n){
+            blablabla
+        }
+    }
 
 //libro: http://englishonlineclub.com/pdf/Cracking%20the%20Coding%20Interview%20-%20189%20Programming%20Questions%20and%20Solutions%20(6th%20Edition)%20[EnglishOnlineClub.com].pdf
 //Solution flow: pagina 62 del libro.

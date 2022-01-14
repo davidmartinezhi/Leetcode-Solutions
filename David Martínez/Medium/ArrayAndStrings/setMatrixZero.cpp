@@ -229,4 +229,9 @@ public:
     -Para ser el 3er ejercicio que hago con matrices, siento que mi perfomance estuvo bien.
         Buen inicio, aún debo mejorar para sacarlo más rapido.
 
+    -Manera de definir el for loop para que se vea más limpio el codigo
+    
+    x es el entero donde quiero que comience
+    #define len(x) x.size()
+    #define bf(i, x, n) for(int i = x; i < n; i++) //basic for (<)
 */

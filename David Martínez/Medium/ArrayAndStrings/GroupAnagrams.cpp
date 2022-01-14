@@ -68,7 +68,7 @@ public:
             return result;
         }
 
-        //O(j) j siendo el numero de frecuencias en palabras
+        //O(n) n siendo el numero de frecuencias en palabras
         set<string> anagrams;
 
         //O(n*m log m)
@@ -79,7 +79,7 @@ public:
             anagrams.emplace(aux);
         }
 
-        //O(n^2*m)
+        //O(n^2*m) = Podría llegar a ser 100,000,000,000 (Horrible)
         for (auto it = anagrams.begin(); it != anagrams.end(); it++)
         {
             vector<string> aux;
@@ -163,6 +163,6 @@ Si encuentra anagram
 
 regreso el result
 
-runtime: O(n*m)
+runtime: O(n*m) Podría llegar a ser 1,000
 memory: O(result)
 */

@@ -80,7 +80,11 @@ public:
                 if(matrix[i][j] == 0){
                     renglones.emplace(i); //Agrego el renglon a renglones
                     columnas.emplace(j);  //Agrego la columna a columnas
-                }    
+                }
+                //Podria poner bandera para saber si encontre 0, si encontré 0.
+                //Convierto todo el renglon a 0, en este lugar matrix[i] = vector<int>(n, 0);
+                //Así ya no utilizo ese set y solo busco los renglones con 0
+                    //Si el set de columnas == n, regreso matriz con puro 0    
             }
         }
         
@@ -137,6 +141,8 @@ public:
     -Me salio, segundos antes de que se acabaran los 45 minutos
         -Runtime: O(n*m)
         -Memory: O(n)
+
+    -Siento que una solución mucho más eficiente sería recursiva, debería investigarlo
 
     -Yo pienso que para sacar los 0s, afuerzas debes recorrer toda la matríz, haciendo el runtime: O(n*m)
         pero en el followup dice:

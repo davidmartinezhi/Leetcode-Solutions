@@ -57,11 +57,11 @@ public:
         //Da igual si uso set o unorderes_set. La busqueda sera O(1), no n(log n). porque los index
             //Index son numeros ordenados
 
-    //Respuesta original
+//Respuesta original
 
         /*
         //runtime: O(n*m)
-        //Memory: O(n)
+        //Memory: O(n+m)
         
         //Set de renglones y columnas
         set<int> renglones = {};
@@ -128,7 +128,7 @@ public:
         */  
 
 /*
-    //Respuesta original, optimizada. Pero sigue siendo de la misma eficiencia
+//Respuesta original, optimizada.
         //runtime: O(n*m)
         //Memory: O(n)
         

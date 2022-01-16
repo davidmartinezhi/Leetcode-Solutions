@@ -30,7 +30,7 @@ public:
         //4 optimize
             /*
             Check until we reach the last element, then break.
-            Runtime: O(n)
+            Runtime: O(n log n)
             Memory: O(n)
             
             BCR: O(n)
@@ -97,3 +97,14 @@ public:
         
     }
 };
+
+/*
+
+Solución creada paso todas las pruebas y es aceptada. Pero se puede optimizar bastante
+
+Siento que se podría hacer en solo una recorrida, pero debo repasar la dynamic window. 
+Para que la ventana se mueva como una oruga arrastandose, en lugar de una ventana nueva que se abre en cada index.
+
+También tratar de hacerlo todo, pensando en ingles. Para no batallar en traducir cuando este en la entrevista
+
+*/

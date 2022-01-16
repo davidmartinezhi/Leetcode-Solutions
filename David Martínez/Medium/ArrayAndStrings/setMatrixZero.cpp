@@ -201,6 +201,8 @@ public:
 
     //Approach muy inteligente, tirangula como si fuera un excel. Checado la columna y renglon.
     //Si alguno tiene un 0, ese valor debe ser 0
+    //Como mi primer approach, pero en lugar de crear vectores con los indices con 0 guardado
+    //Utilizo el primer renglon y primera columna como vectors. En esos indices coloco 0
         
     //En este approach, el row[0] y col[0]. Son dummies primero.
         int col0 = 1;   //Indica si la primer columna debe ser convertida a 0. Al final (es una flag)

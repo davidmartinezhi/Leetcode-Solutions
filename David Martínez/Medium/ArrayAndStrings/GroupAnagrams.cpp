@@ -59,6 +59,9 @@ public:
         // Special cases, empty string
         // Strs size 1
         
+
+        //Solución funcional, pero inservible por la mala eficiencia en rutnime
+        /*
         //O(k) k siendo los grupos de anagramas
         vector<vector<string>> result;
 
@@ -135,6 +138,46 @@ public:
         }
 
         return true;
+    */
+
+//Solución basada en codigo que hice en python
+        //Podría usar la tecnica que hice en el ejercicio esay de strings en "isValid Anagram"
+        //Y que las keys sean esos arrays. De esa manera en lugar de hacer mlogm ordenando las letras
+        //Solo tomaria m, en sacar el array de palabras y ver si ya existe como key
+        
+        //Runtime: O(n*mlogm) n:recorremos "n" elementos m: las letras de la palabra, mlogm: runtime para ordenar
+        //Memory: O(n)
+        
+        //creo hashtable que va a agrupar los anagramas
+        unordered_map<string, vector<string>> hashtable;    //O(n) memory
+        
+        //Creo vector que tendrá el resultado final
+        vector<vector<string>> result;
+        
+        //Recorro todas las palabras
+        for(int i = 0; i < strs.size(); i++){   //O(n) runtime
+            
+            //Ordeno letras de la palabra
+            string aux = strs[i];
+            sort(aux.begin(), aux.end());   //O(m log m)
+            
+            //La palabra sorted, es la key y el value es el vector con las palabras que tienen la misma palabra con ltras ordenadas
+            if(hashtable.find(aux) != hashtable.end()){ //Si ya tiene palabras en esa key, hacemos pushback
+                hashtable[aux].push_back(strs[i]);
+            }
+            else{   //Si no tiene palabras, agregamos el vector con una sola palabra
+                vector<string> auxVector = {strs[i]};
+                hashtable[aux] = auxVector;
+            }
+        }
+        
+        //Ahora agrego cada grupo de anagramas al vector con el resultado
+        for(auto x: hashtable){ //O(n)
+            result.push_back(x.second);
+        }
+        
+        return result;  //Regreso el resultado
+
     }
 };
 

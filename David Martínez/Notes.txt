@@ -29,7 +29,6 @@ Checar en C++:
 https://medium.com/karuna-sehgal/a-simplified-explanation-of-the-big-o-notation-82523585e835
 
 
-//Anotar los problemas que me salieron en la entrevista de facebooks
 
 //Siento que strings y arrays en easy, van a ser una buena introcucción a la utilización de hashtables. update: es correcto
 

@@ -171,6 +171,9 @@ public:
             }
         }
         
+        //No olvidar que es como un diccionario en python. Recorro la lista, si no existe el valor creo la key para agregarlo
+            //si el valor existe, lo agrego al value
+
         //Ahora agrego cada grupo de anagramas al vector con el resultado
         for(auto x: hashtable){ //O(n)
             result.push_back(x.second);

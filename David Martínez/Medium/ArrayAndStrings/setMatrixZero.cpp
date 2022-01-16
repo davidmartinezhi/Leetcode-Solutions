@@ -127,6 +127,7 @@ public:
 
         */  
 
+/*
     //Respuesta original, optimizada. Pero sigue siendo de la misma eficiencia
         //runtime: O(n*m)
         //Memory: O(n)
@@ -176,17 +177,11 @@ public:
                 return;
         }
         else if(n == columnas.size()){
-            /*
-            vector<int> auxCol(n, 0);
-            vector<vector<int>>auxRen(m, auxCol);
-            matrix = auxRen;
-            */
+        
             //Es mejor dejar el memory en O(n)
             //Runtime overall ya es O(n*m). Usarlo
             for(int i = 0; i < m; i++){
-                for(int j = 0; j < n; j++){
-                    matrix[i][j] = 0;
-                }
+                matrix[i] = vector<int>(n, 0);
             }
         }
         //Si no
@@ -198,14 +193,55 @@ public:
                 for(auto it = columnas.begin(); it != columnas.end(); it++){
                     matrix[i][*it] = 0;
                 }
-                
-                /*
-                for(int j = 0; j < columnas.size(); j++){
-                    matrix[i][columnas[j]] = 0;   //Igualo a cero esos valores
-                }
-                */
             }
-        }        
+        } 
+*/
+    //https://www.youtube.com/watch?v=M65xBewcqcI
+    //Approach con O(1) memory y O(n*m) runtime
+
+    //Approach muy inteligente, tirangula como si fuera un excel. Checado la columna y renglon.
+    //Si alguno tiene un 0, ese valor debe ser 0
+        
+    //En este approach, el row[0] y col[0]. Son dummies primero.
+        int col0 = 1;   //Indica si la primer columna debe ser convertida a 0. Al final (es una flag)
+        int rows = matrix.size();
+        int columns = matrix[0].size();
+        
+    //Recorro toda la matriz para saber marcar los dummies
+        for(int i = 0; i < rows; i++){
+            
+            //Checo el valor de la primer columnas, dummi
+            if(matrix[i][0] == 0){ col0 = 0; }
+            
+            for(int j = 1; j < columns; j++){   //Comienza de 1, para saltar el dummie
+                //Si ese valor de la matriz tiene un valor de 0
+                if(matrix[i][j] == 0){
+                    //Ahora en los dummies tendra ese valor
+                    matrix[0][j] = 0; //Columnas
+                    matrix[i][0] = 0; //Renglones
+                }
+            }
+        }
+        
+    //Recorro en reversa la matrix
+        for(int i = rows-1; i >= 0; i--){
+            
+            for(int j = columns - 1; j >= 1; j--){
+                
+                //Si el dummie de renglones o el de columnas tiene un valor 0
+                if(matrix[i][0] == 0 || matrix[0][j] == 0){
+                    matrix[i][j] = 0;
+                }
+                
+            }
+            
+            //Si alguno de los renglones en la primer col, tenian un 0
+            //Ahora en todos les pondremos un 0
+            if(col0 == 0){
+                matrix[i][0] = 0;
+            }
+            
+        }      
     }
 };
 

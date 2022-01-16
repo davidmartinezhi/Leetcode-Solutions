@@ -161,7 +161,7 @@ public:
             string aux = strs[i];
             sort(aux.begin(), aux.end());   //O(m log m)
             
-            //La palabra sorted, es la key y el value es el vector con las palabras que tienen la misma palabra con ltras ordenadas
+            //La palabra con letras ordenadas es la key y el value es el vector con las palabras que tienen la misma palabra con ltras ordenadas
             if(hashtable.find(aux) != hashtable.end()){ //Si ya tiene palabras en esa key, hacemos pushback
                 hashtable[aux].push_back(strs[i]);
             }

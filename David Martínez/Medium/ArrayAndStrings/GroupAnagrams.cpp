@@ -192,4 +192,7 @@ Debo optimizarlo a fuerzas
 
 La idea principal sobre como resolverlo, fue bueno. Pero hacía mucho duplicate y uneccesary work.
 Un hashtable me hubiera hecho la vida mucho más sencillo.
+
+Hashtable convinado con vectores hace la vida muy sencilla.
+En 3 sum, si pude haer mi approach con hashtables, poniendo el numero y los indices que tienen el valor
 */

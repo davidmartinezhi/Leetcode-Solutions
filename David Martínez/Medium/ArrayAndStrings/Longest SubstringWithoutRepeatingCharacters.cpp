@@ -107,4 +107,19 @@ Para que la ventana se mueva como una oruga arrastandose, en lugar de una ventan
 
 También tratar de hacerlo todo, pensando en ingles. Para no batallar en traducir cuando este en la entrevista
 
+
+Haciendo enfasís en esta parte del brute force
+"Sliding window technique with a dynamic window and a hashtable that checks char frequency
+If a char repeats, we compare de dynamic window count, with the maxCount"
+
+Puedo hacer la window más pequeña desde la izquierda hasta que esa letra que se repitio solo tenga valor de 1
+Sería remover esos valores de la hashtable
+
+Así ya avancé i, hasta un punto donde no se estan repitiendo los valores. Haciendo que ahora si sea un solo recorrido como oruga.
+En lugar de checar Para cada letra, hasta que char ya no se repite.
+//O(n) runtime
+//O(n) hashtable 
+
+*Debo ser capaz de sacar estas ideas a la primera, debería buscar alguna manera de recordar o repasar conceptos.
+
 */

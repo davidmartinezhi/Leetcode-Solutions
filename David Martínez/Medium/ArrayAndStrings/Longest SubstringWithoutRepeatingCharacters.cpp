@@ -30,7 +30,7 @@ public:
         //4 optimize
             /*
             Check until we reach the last element, then break.
-            Runtime: O(n log n)
+            Runtime: O(n log n) - O(n^2)
             Memory: O(n)
             
             BCR: O(n)
@@ -56,7 +56,9 @@ public:
         
             //Special cases:
                 //String vacío
-                
+
+
+     /*           
         int maxCount = 0;
         
         
@@ -94,6 +96,64 @@ public:
         }
         
         return maxCount;
+    */
+
+   //Dynamic Window, Slidin window technique
+    //Runtime: O(n + n)
+    //Memory: O(n)
+        
+        int maxCount = 0;   //Contador con palabras
+        
+        unordered_map<char, int> ht;    //Hashtable, repositorio de palabras O(n) memory
+        
+        //Comienzo de i
+        //Muevo j hasta que se repita un character
+        //Comparo la cuenta actual con el maxCount
+        
+        //Agrego todas las letras existentes y les pongo contador de 0
+        for(int i = 0; i < s.size(); i++){  //O(n) runtime
+            if(ht.find(s[i]) == ht.end()){
+                ht[s[i]] = 0;
+            }
+        }
+        
+        //Recorro i, hasta que no se repita la letra que se repitió
+        
+        int i = 0;
+        int j = 0;
+        
+        //Proceso de agregar al hashtable las letras
+        //Mientras j sea menor a s.size() y la letra no esté en 0
+        int windowCount = 0;
+        while(j<s.size() && (ht[s[j]] <= 1)){   //O(n) runtime
+                
+            //Sumamos uno a esa letra
+            ht[s[j]]++;
+            windowCount++;  //Sumo esa palabra en la cuenta de la ventana actual
+            
+            if(ht[s[j]] > 1){   //Si esa key tiene un valor mayor a 1
+
+                //Comparo la ventana, restandole el 1 a la letra que se acaba de repetir
+                maxCount = (windowCount - 1 > maxCount) ? windowCount - 1 : maxCount;
+
+                while(ht[s[j]] != 1 && i < j){  //Mientras esa letra tenga un valor diferente a 1
+                                                //Sabemos que se repitio, por eso sabemos que es más que 1
+                    ht[s[i]]--; //La letra en i, la disminuyo
+                    i++;    //Recorro i
+                    windowCount--;  //Actualizo la ventana
+                }    
+            }
+                
+            j++; //Recorremos al siguiente dato
+        }
+            
+        //Proceso de comparación, en el caso de que j haya llegado al final. Para que haga comparación
+            //Con la ultima window Activa
+        if(j == s.size()){ 
+            maxCount = (windowCount > maxCount) ? windowCount : maxCount;
+        }
+
+    return maxCount;
         
     }
 };

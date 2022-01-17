@@ -3,6 +3,7 @@
         "*.rmd": "markdown",
         "*.py": "python",
         "new": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "__config": "cpp"
     }
 }

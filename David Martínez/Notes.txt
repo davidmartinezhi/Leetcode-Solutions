@@ -62,3 +62,4 @@ Reminder
 -Contarles de los habitos de la gente altamente efectiva, "sharpen the saw".
     Esto para antes de introducirlos al solution flow y optimize and solve technique.
 -Debo familiarizarme en trabajar con matrices.terminado
+-Sliding Window Technique: https://youtu.be/dQw4w9WgXcQ

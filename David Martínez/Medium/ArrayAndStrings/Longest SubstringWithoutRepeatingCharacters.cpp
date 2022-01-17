@@ -206,7 +206,7 @@ public:
             //Si no se pudo comparar la ultima cuenta activa, la commparo aquí
             maxCount = (windowCount > maxCount) ? windowCount : maxCount;
         }
-        
+
         return maxCount;
     }
 };
@@ -234,5 +234,8 @@ En lugar de checar Para cada letra, hasta que char ya no se repite.
 //O(n) hashtable
 
 *Debo ser capaz de sacar estas ideas a la primera, debería buscar alguna manera de recordar o repasar conceptos.
+
+
+*Cada cierto tiempo debo de repasar techniques como sliding window technique.
 
 */

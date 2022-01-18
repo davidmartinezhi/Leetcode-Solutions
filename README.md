@@ -1,4 +1,4 @@
-LeetCode Solutions
+Road To Internships
 ==================
 There are 3 folders, each folder represents the level of difficulty the leetcode problems has.
 

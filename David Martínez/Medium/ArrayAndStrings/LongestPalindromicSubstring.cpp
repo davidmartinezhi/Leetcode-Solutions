@@ -149,3 +149,20 @@ public:
     }
     
 };
+
+/*
+Al final del día lo que importaba no era el tamaño del string, sino el tamaño del palindromo
+Si tuve la idea de comenzar desde en medio pero no descrubrí ese patron.
+
+Siento que debería de quedarme más tiempo trabajando sobre yo entender el patron en el ejemplo. Antes de si quiera sacar el brute force, porque me estanque con el approach que saque como brute force y apenas lo escribí y salte a diferentes maneras de resolverlo con optimmización.
+
+Si antes se me ocurrian maneras diferentes de resolverlo mientras programaba y perdía tiempo. Ahora estoy haciendo lo mismo, pero antes de. Siento que es bueno para sacar un buen approach, pero es de suma importancia entender el patron primero al igual que saber bien la información.
+
+Otra cosa es que me limite a querer hacer uns tring auxiliar siempre, en lugar de querer guardar un index donde comienza el palindromo y usar substring junto con la longitud del palindromo, para sacar el substring de manera directa desde el string.
+
+Siento que estuvo bajo mi nariz, la solución optima y si pense en maneras de hacerlo así. Pero por no sacar el patron de que es muy importante el tamaño del palindromo, es que me desvie a soluciones más complejas y menos eficientes.
+
+Resumen:
+    -Entender bien el patron entre input y output. Al igual que la info dentro del input y como se posría relacionar al output.
+    -No limitarme a querer tener una variable con la respuesta, puedo tener solo un apuntador al inicio de la respuesta y de ahí saco el resto.
+*/

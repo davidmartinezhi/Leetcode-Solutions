@@ -76,10 +76,23 @@ public:
         */
         
         /*
-        //Brute force approach O(n^3)
+        //Brute force approach O(n^3) runtime y O(n) memory
         //Respuestas correctas pero time limit exceeded
         //Checo el tamaño de la lista
         if(nums.size() < 3) return false;
+
+        //Recorro el hashtable para saber si tiene 3 elementos diferentes
+        unordered_map<int, int> numbers;
+        for(int i = 0; i < nums.size(); i++){
+            if(numbers.find(nums[i]) == numbers.end()){
+                numbers[nums[i]]++;
+            }
+        }
+        
+        //Checo que existan más de 3 elementos unicos en nums
+        if(numbers.size() < 3){
+            return false;
+        }
         
         //Recorro cada numero
         for(int i = 0; i < nums.size() - 1; i++){

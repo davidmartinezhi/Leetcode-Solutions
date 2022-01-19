@@ -76,23 +76,10 @@ public:
         */
         
         /*
-        //Brute force approach O(n^3) runtime y O(n) memory
+        //Brute force approach O(n^3)
         //Respuestas correctas pero time limit exceeded
         //Checo el tamaño de la lista
         if(nums.size() < 3) return false;
-
-        //Recorro el hashtable para saber si tiene 3 elementos diferentes
-        unordered_map<int, int> numbers;
-        for(int i = 0; i < nums.size(); i++){
-            if(numbers.find(nums[i]) == numbers.end()){
-                numbers[nums[i]]++;
-            }
-        }
-        
-        //Checo que existan más de 3 elementos unicos en nums
-        if(numbers.size() < 3){
-            return false;
-        }
         
         //Recorro cada numero
         for(int i = 0; i < nums.size() - 1; i++){
@@ -113,6 +100,7 @@ public:
         return false;
         */
         
+        /*
         //Optimized Brute Force
         //Runtime: O(n^2)
         //Memory: O(n) n siendo los diferentes numeros dentro de nums
@@ -162,5 +150,38 @@ public:
         }
         
         return false;
+        
+        */
+        /*
+        //Respuesta optima encontrada en leetcode
+        //Es muy simple la respuesta, si me lo complique de más
+        
+        //Creo enteros que tengan el valor maximo que un entero pueda tener
+        int l = INT_MAX, r = INT_MAX;
+        
+        //Recorro todos los numeros
+        for(auto num : nums) {
+            
+            //Primero checo j, que en este caso es l. 
+            if(num <= l) l = num; //Si el numero es menor o igual a j, j es ese numero
+            else if(num <= r) r = num;  //Si el numero es menor o igual a k, k es ese numero
+            else return true;   //Si no se cumple, es porque i < j < k y nums[i] < nums[j] < nums[k]
+        }
+        return false;
+        */
+    
+        //Mismo, pero con mejor explicación
+
+        int c1 = INT_MAX, c2 = INT_MAX;
+        for (int x : nums) {
+            if (x <= c1) {
+                c1 = x;           // c1 is min seen so far (it's a candidate for 1st element)
+            } else if (x <= c2) { // here when x > c1, i.e. x might be either c2 or c3
+                c2 = x;           // x is better than the current c2, store it
+            } else {              // here when we have/had c1 < c2 already and x > c2
+                return true;      // the increasing subsequence of 3 elements exists
+            }
+        }
+    return false;
     }
 };

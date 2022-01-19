@@ -165,4 +165,6 @@ Siento que estuvo bajo mi nariz, la solución optima y si pense en maneras de ha
 Resumen:
     -Entender bien el patron entre input y output. Al igual que la info dentro del input y como se posría relacionar al output.
     -No limitarme a querer tener una variable con la respuesta, puedo tener solo un apuntador al inicio de la respuesta y de ahí saco el resto.
+https://www.youtube.com/watch?v=ZJUGtWObroc solución
+
 */

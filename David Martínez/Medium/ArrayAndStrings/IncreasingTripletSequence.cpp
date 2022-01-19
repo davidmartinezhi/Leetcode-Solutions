@@ -13,7 +13,7 @@ public:
             return true if there exists a triple of indices (i, j, k)
                 such that i < j < k and nums[i] < nums[j] < nums[k]
             
-            Nums: puede tener longitud entre 1 y 500,00
+            Nums: puede tener longitud entre 1 y 500,000
             
         2. example
             [1,2,3,4,5] -> true
@@ -185,3 +185,24 @@ public:
     return false;
     }
 };
+
+/*
+Tengo buena intuición y ya sabía que era con 3 pointers la mejor solución. 3 pointers usandolos como estadas
+Es lo que hice en la optimización de mi brute force. runtime O(n+n^2), memory O(n)
+Solo por el penultimo test, donde se hace un recorrido de los 500,000 elementos, pero solo existen 2 elementos unicos
+    es que puse el hashtable. 
+
+No se me ocurrío al inicio pensar en la posibilidad de que solo existieran 2 elementos unicos en la lista.
+
+Me gusto el approach de la solución más optima, siento que es el mismo ya visto en otros ejercicios, pero aplicado diferente.
+Ya vi porque es muy util cuando me dicen de que rango a que rango pueden ser los numeros.Vi que eran para 32 bits, 
+    pero no imagine poder usarlo en la solución, porque no existía un limite en los numeros.
+
+Sirve mucho el hacer estacas que apunten a un valor infinito, como en grafos antes de sacar el Djikstra, hacer los arcos con distancia infinita(Max).
+Luego cuando se vayan cumpliendo las condiciónes, los bajo a su valor.
+Poruqe yo usé estacas que comenzaban desde 0 y tuve que comparar mucho para que saliera el resultado.
+
+Cuando usas estacas, pensar en comenzarlas desde el valor maximo. No limitarse. Pueden ser estacas que comienzan desde 0, que no tienen valor aún o que tengan valor max.
+Todo depende del problema y el contexto.
+
+*/

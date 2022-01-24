@@ -190,3 +190,18 @@ public:
         return headResult;
     }
 };
+
+/*
+Tarde 1 hora en terminarlo.
+
+Fue buena idea seccionarlo, hice buen trabajo en saber lo que iba a hacer y como lo iba a hacer.
+Otra cosa que me ayudo fue el walkthrough, porque me di cuenta que si una lista tiene muchos nodos, no cabe la info en un integer
+    Pude buscar una alternativa, de manera rapida
+
+Un tip que me pudo hacer más rapido, fue pensar en la data structure y en que puedo hacer un add first o un add last
+Me di cuenta tarde, pero antes de hacer el reverse linked list, lo cual fue bueno.
+
+Si lo hubiera pensado antes, hubiera pensado antes la logica sobre como hacer el return.
+
+Overall, buena performance para ser el primer ejercicio de LinkedLists
+*/

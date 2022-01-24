@@ -193,6 +193,8 @@ public:
 
 /*
 Tarde 1 hora en terminarlo.
+Runtime O(n), n siendo la lista más larga
+memory O(1), la memoria es constante
 
 Fue buena idea seccionarlo, hice buen trabajo en saber lo que iba a hacer y como lo iba a hacer.
 Otra cosa que me ayudo fue el walkthrough, porque me di cuenta que si una lista tiene muchos nodos, no cabe la info en un integer

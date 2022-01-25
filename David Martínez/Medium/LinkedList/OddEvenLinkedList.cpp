@@ -140,6 +140,11 @@ public:
     */
         
     /*
+    //Solución con apuntador auxiliar
+        //Apuntador auxiliar decide hacía donde enviar el nodo en el que esta, si a par o a non
+        //Runtime: O(n)
+        //Memory: O(1)
+
         //Checo si la lista tiene 2 elementos o menos
         if(head == nullptr || head->next == nullptr){
             return head;

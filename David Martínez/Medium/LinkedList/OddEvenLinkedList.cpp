@@ -199,5 +199,5 @@ Nota:
     Saqué el brute force y como se me hizo bueno, lo mande a optimize y lo establecí como el algoritmo optimizado en lugar de establecerlo como brute force y luego repasarlo
 
     No brincar un algoritmo de una etapa a otra, etapa 4 es optimize en base al algoritmo de la etapa 3. De Brute Force a Optimize
-
+    Detenerme a respirar y sacar logicamente la solución, sin problemas.
 */

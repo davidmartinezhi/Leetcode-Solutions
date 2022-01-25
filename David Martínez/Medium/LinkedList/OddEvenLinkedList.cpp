@@ -187,3 +187,17 @@ public:
         
     }
 };
+
+/*
+Nota:
+    -Me tarde una hora en hacerlo, sentí que estaba muy sencillo y la pense de más
+    -Me acelere y no pude pensar claro, sabía que el rumbo de mi solución era correcto pero no me frene a pensar bien en como hacer la asignoación de aux. Asumí que iba a jalar y no fue así
+
+    -Al hacer el walkthrough con el que no servía, se me ocurrío hacer el de tener un nodo auxiliar solamente y que ese nodo determinara cual nodo iba en que lista
+    -La solución con un nodo la saque bastante rapida y todavía se puede eficientar al usar menos variables.
+    
+    Saqué el brute force y como se me hizo bueno, lo mande a optimize y lo establecí como el algoritmo optimizado en lugar de establecerlo como brute force y luego repasarlo
+
+    No brincar un algoritmo de una etapa a otra, etapa 4 es optimize en base al algoritmo de la etapa 3. De Brute Force a Optimize
+
+*/

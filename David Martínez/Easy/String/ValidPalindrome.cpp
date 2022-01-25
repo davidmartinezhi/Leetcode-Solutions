@@ -86,12 +86,45 @@ public:
             end--;
             
         }
-        
+
         //Ya se recorríeron todos los caracteres y no se encontraron caracteres diferentes
         //Ahora checo si existían caracteres en el string
         return true;
     
+    /*
+        Gran idea de Alexa usar tolower(), para comparar en el momento. En lugar de convertir
+
+        //Declarar mis dos apuntadores
+        int start = 0;
+        int end = s.size() -1;
         
+        //Mientras no se crucen en medio
+        while(start < end){
+            
+            //Mientras s[start] no sea alphanumerico, avanzo
+            while(!isalnum(s[start]) && start < end){
+                start++;
+            }
+            
+            //Recorremos el apuntador del final hasta encontrar un valor que es alphanum
+            while(!isalnum(s[end]) && start < end){
+                end--;
+            }
+            
+            //Comparar que las letras sean iguales
+            if(tolower(s[start]) != tolower(s[end])){
+                return false;
+            }
+            
+            //Para que sigan el recorrido
+            start++;
+            end--;
+            
+        }
+        
+
+        return true;
+        */
                 
     }
 };

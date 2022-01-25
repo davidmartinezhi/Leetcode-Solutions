@@ -139,7 +139,7 @@ public:
         nonAux->next = even;
     */
         
-        
+    /*
         //Checo si la lista tiene 2 elementos o menos
         if(head == nullptr || head->next == nullptr){
             return head;
@@ -184,6 +184,40 @@ public:
         non->next = evenHead;   //Conecto los pares al final de los nones
         
         return head;    //Regreso el head original
+        
+    */
+    
+    //Solución sin apuntador auxiliar
+        //Non y par se van entrelazando hasta el final
+        //runtime: O(n)
+        //memory: O(1)
+        
+        //Checo si la lista tiene 2 elementos o menos
+        if(head == nullptr || head->next == nullptr){
+            return head;
+        }
+        
+        //Apuntadores
+        ListNode * non = head;  //Non
+        ListNode * even = head->next; //Par
+        
+        ListNode * evenHead = head->next; //Inicio de Par
+        
+        while(even != nullptr && even->next != nullptr){
+            
+            //Non apunta al siguiente de even y se recorre
+            non->next = even->next;
+            non = non->next;
+            
+            //Even apunta al siguiente de non y se recorre 
+            even->next = non->next;
+            even = even->next;
+            
+        }
+        //Conecto non con el inicio de even
+        non->next = evenHead;
+        
+        return head;
         
     }
 };

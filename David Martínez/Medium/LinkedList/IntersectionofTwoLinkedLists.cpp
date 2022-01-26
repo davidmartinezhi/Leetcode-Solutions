@@ -161,3 +161,18 @@ public:
         
     }
 };
+
+/*
+Puedo y debería de hacer una helper function para sacar el size. Así solo paso el head y me lo regresa
+Sin hacer mucho show en el codigo.
+
+Me tarde mucho en la solución no optima, porque no me puse a pensar en los valores de las key en hashtable
+Estaba poniendo el value, en lugar del apuntador. Si lo pude haber sacado a los 30 minutos esa solución.
+
+La solución más optima se me ocurrio solo cuando hice el ejemplo en el cuaderno, debo ver como hacer eso en la entrevista.
+Podría usar un whiteboard o algo por el estilo. La respuesta más optimas, por lo general las saco siempre con un DIY cuando batallo
+
+Debo pensar en como voy a usar las data structures, que data va a entrar y como, en hashtables debo pensar en el valor unico(key)
+que sea relevante.
+
+*/

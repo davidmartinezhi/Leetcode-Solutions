@@ -177,4 +177,6 @@ Podría usar un whiteboard o algo por el estilo. La respuesta más optimas, por 
 Debo pensar en como voy a usar las data structures, que data va a entrar y como, en hashtables debo pensar en el valor unico(key)
 que sea relevante.
 
+Usar cuaderno siempre y en la entrevista usar un pizarron
+
 */

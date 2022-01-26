@@ -65,6 +65,8 @@ public:
             
             //Possibly a slow pointer and a fast pointer
                 Debo pensar en las propiedades de linked lists, no me salío por no pensar eso
+
+            //DIY on notebook
                 
         // 5. walkthrough
         // 6. implement

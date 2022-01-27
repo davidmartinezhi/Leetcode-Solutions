@@ -63,4 +63,5 @@ Terminado en 13 minutos.
 
 Aún tengo buen entendimiento de lo basic de binary search tree y como recorrerlo. 
 
+Investigar Big O en recursicidad
 */

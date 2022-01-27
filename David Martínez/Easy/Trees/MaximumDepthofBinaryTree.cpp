@@ -42,13 +42,18 @@ public:
             return 0;
         }
         
+        return 1 + max(maxDepth(root->left), maxDepth(root->right));
+        
+       /*
         //Comparison
         int leftSide = maxDepth(root->left);
         int rightSide = maxDepth(root->right);
         
         //Returns the biggest side
         return (leftSide > rightSide) ? leftSide + 1 : rightSide + 1;
+        */
     }
+    
 };
 
 /*

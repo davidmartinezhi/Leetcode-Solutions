@@ -45,4 +45,8 @@ Notas:
     La Helper function agarra 2 valores y simplemente los compara para saber si tienen el mismo dato
     Luego en la llamada recursiva mando explicitamente cuales son los siguientes nodos a comparar.
 
+    Para resolverlo de manera recursiva puedo acomodar los valores en un vector, igual que en una priority queue
+    Luego comparo los indices.
+
+    Debo intentar esta solución.
 */

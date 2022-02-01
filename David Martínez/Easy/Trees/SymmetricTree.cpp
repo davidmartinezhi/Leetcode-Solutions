@@ -47,6 +47,7 @@ Notas:
 
     Para resolverlo de manera recursiva puedo acomodar los valores en un vector, igual que en una priority queue
     Luego comparo los indices.
+    Para solución iterativa podría utilizar un recorrido ahora si y agrego cada valor al vector de esta manera.
 
     Debo intentar esta solución.
 */

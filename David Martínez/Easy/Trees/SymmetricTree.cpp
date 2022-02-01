@@ -12,14 +12,14 @@ struct TreeNode {
 
 class Solution {
 public:
+
     bool isSymmetric(TreeNode* root) {
-        
         return isSymmetricHelper(root->left, root->right);
     }
     
     bool isSymmetricHelper(TreeNode * left, TreeNode * right){
         
-        //Si alguno de ambos lados es nullptr
+        //Si alguno de los lados es nullptr
         if(left == nullptr || right == nullptr){
             return left == right;   //Regreso si son iguales
         }
@@ -34,3 +34,15 @@ public:
         
     }
 };
+
+/*
+Notas:
+    Pense en recorrer como si fuera un array o vector. 
+
+    Pero la solución se encontraba en recorrerlo como si fuera una linked list donde
+    se debe ser explicito sobre que se compara y como.
+
+    La Helper function agarra 2 valores y simplemente los compara para saber si tienen el mismo dato
+    Luego en la llamada recursiva mando explicitamente cuales son los siguientes nodos a comparar.
+
+*/

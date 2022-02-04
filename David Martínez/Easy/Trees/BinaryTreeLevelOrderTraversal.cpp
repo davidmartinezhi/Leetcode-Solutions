@@ -91,3 +91,22 @@ public:
         return result;     
     }
 };
+
+/*
+Nota:
+
+    -Los recorridos lo son todo.
+
+    -Recorrido BFS es con Queue y DFS es con Recursividad, en Trees(arboles).
+    BFS es para checar cada renglon en lo que llegas al final.
+
+    BFS, checas cada renglon y luego si tiene nodos los agregas al queue. 
+    El count es muy util para saber las operaciones que hacer y sobre que nodos hacerlo.
+
+    DFS es para checar desde el final para arriba.
+    Aquí se checa 1 o mas base cases, llamamos la función en subarbol iz, luego en subarbol der
+    Unimos los resultados al regresar.
+    
+    Con recursividad también podría hacer el inorder, postorder y preorder-
+
+*/

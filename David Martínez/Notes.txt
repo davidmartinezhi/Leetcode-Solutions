@@ -117,3 +117,5 @@ Integers:
 
 Chars:
         Hacer operaciones matematicas con los chars.
+
+Investigar backtracking y bit manipulation

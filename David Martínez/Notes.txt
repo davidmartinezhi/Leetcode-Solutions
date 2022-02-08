@@ -88,3 +88,22 @@ Trees:
         -level by level (bfs)
         -dfs (recursividad)
     Esto es lo basic que todos deben de saber antes de siquiera comenzar a hacer los ejercicios al 100.
+
+
+    La clave en arrays y string:
+
+    Usar Hashtables.
+
+    Two pointer technique y sus derivados.
+        -Uno al inicio y otro al final (-> <-)
+        -Ambos enmedio y crecen hasta llegar a los extemos ( <- ->)
+        -Pointer fijo y pointer iterativo
+    
+    Sliding Window Technique
+        -Fixed Window
+        -Dynamic Window
+
+    Matrices:
+
+    Usar vectores auxiliares que representan renglon y col.
+    Familiareizarse con moverse fluido a traves de la matriz.

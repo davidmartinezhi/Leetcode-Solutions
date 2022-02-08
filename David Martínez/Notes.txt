@@ -99,7 +99,7 @@ La clave en arrays y string:
         -Ambos enmedio y crecen hasta llegar a los extemos ( <- ->)
         -Pointer fijo y pointer iterativo
     
-    Sliding Window Technique
+    Sliding Window Technique.
         -Fixed Window
         -Dynamic Window
 
@@ -107,6 +107,9 @@ Matrices:
 
     Usar vectores auxiliares que representan renglon y col.
     Familiareizarse con moverse fluido a traves de la matriz.
+        Siempre recorres con 2 for loops, i y j. Depende como lo acomodes
+        [i][j] estas recorriendo el renglon
+        [j][i] estas recorriendo la columna 
 
 Linked Lists:
     Slow & Fast pointers

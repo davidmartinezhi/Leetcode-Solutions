@@ -81,3 +81,10 @@ Trees:
     Con recursividad también podría hacer el inorder, postorder y preorder-
 
 
+    La clave para los árboles es enteder las maneras de recorrerlo primero.
+        -preorder
+        -inorder
+        -postorder
+        -level by level (bfs)
+        -dfs (recursividad)
+    Esto es lo basic que todos deben de saber antes de siquiera comenzar a hacer los ejercicios al 100.

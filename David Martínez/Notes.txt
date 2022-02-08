@@ -81,7 +81,7 @@ Trees:
     Con recursividad también podría hacer el inorder, postorder y preorder-
 
 
-    La clave para los árboles es enteder las maneras de recorrerlo primero.
+La clave para los árboles es enteder las maneras de recorrerlo primero.
         -preorder
         -inorder
         -postorder
@@ -90,7 +90,7 @@ Trees:
     Esto es lo basic que todos deben de saber antes de siquiera comenzar a hacer los ejercicios al 100.
 
 
-    La clave en arrays y string:
+La clave en arrays y string:
 
     Usar Hashtables.
 
@@ -103,7 +103,14 @@ Trees:
         -Fixed Window
         -Dynamic Window
 
-    Matrices:
+Matrices:
 
     Usar vectores auxiliares que representan renglon y col.
     Familiareizarse con moverse fluido a traves de la matriz.
+
+    Integers:
+        Construir y deconstruir integers.
+        Reverse an integer.
+
+    Chars:
+        Hacer operaciones matematicas con los chars.

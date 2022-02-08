@@ -108,9 +108,12 @@ Matrices:
     Usar vectores auxiliares que representan renglon y col.
     Familiareizarse con moverse fluido a traves de la matriz.
 
-    Integers:
+Linked Lists:
+    Slow & Fast pointers
+
+Integers:
         Construir y deconstruir integers.
         Reverse an integer.
 
-    Chars:
+Chars:
         Hacer operaciones matematicas con los chars.

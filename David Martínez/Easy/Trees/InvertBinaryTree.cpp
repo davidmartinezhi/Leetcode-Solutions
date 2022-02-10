@@ -44,17 +44,34 @@ public:
         4. optimize
         */
         
+        //Si el root es nullptr, regreso nullptr como valor
         if(root == nullptr){
             return nullptr;
         }
         
+        //LLamo el invert Tree de cada lado para hacer el dfs
         invertTree(root->left);
         invertTree(root->right);
         
-        TreeNode * aux = root->left;
-        root->left = root->right;
-        root->right = aux;
+        //Creo nodo auxiliar
+        TreeNode * aux = root->left;    //Guardo el nodo del lado izquierdo
+        root->left = root->right;   //Apuntador del lado izquierdo ahora apunta al lado derecho
+        root->right = aux;  //Apuntador de lado derecho ahora apunta a lado izquierdo
         
-        return root;
+        return root;    //Regreso el root en el que me encuentro
     }
 };
+
+/*
+Una vez que me di cuenta de que es primordial saber como se recorren los arboles, antes de hacer cualquier ejercicio
+Lo sentí mucho más sencillo que el resto de ejercicios de ahora.
+
+Ahora si examine cual sería la manera más optima de hacer el traversal para lograr lo que quiero.
+
+Como se comportarian los nodo si lo hago de "x" o "y" manera.
+
+Resuelto en poco menos de 22 minutos.
+
+runtime: O(n) porque visitamos cada nodo
+memory: creo que O(n) pero no estoy seguro. Debo de repasar big O data structures no lineales y recursividad
+*/

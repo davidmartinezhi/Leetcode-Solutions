@@ -42,6 +42,13 @@ public:
             return root;
 
         4. optimize
+
+        5.walkthrough
+        6.implement
+        7. test
+            Arboles binarios balanceados y de la misma altura de cada lado
+            root vacío
+            Árbol binario con desbalanceado
         */
         
         //Si el root es nullptr, regreso nullptr como valor

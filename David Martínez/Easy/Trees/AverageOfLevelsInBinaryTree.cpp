@@ -90,3 +90,14 @@ public:
         return result;
     }
 };
+
+/*
+Terminado en 27 minutos.
+
+Chulada el haber entendido que casí toda la solución se encuentra en como harás el traversal de la infor
+Fue bastante rapido
+
+Al inicio anote todos los pasos de la metodología. Pero los borre y trate de hacerlo ya todo mental pero acordandome de ir paso por paso
+
+
+*/

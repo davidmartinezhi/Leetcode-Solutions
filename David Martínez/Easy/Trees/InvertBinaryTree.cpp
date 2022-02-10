@@ -36,8 +36,8 @@ public:
             
             treenode * aux -> root->left;
             
-            root->left = F(root->right);
-            root->right = F(root->left);
+            root->left = root->right;
+            root->right = aux;
             
             return root;
 

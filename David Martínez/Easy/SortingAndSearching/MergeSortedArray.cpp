@@ -61,7 +61,7 @@ public:
         */
         
         //Brute force. Salio en menos de 20 minutos
-        /*
+        
         //Traverse n
         for(int i = 0; i < n; i++){
             
@@ -70,3 +70,5 @@ public:
         }
         
         sort(nums1.begin(), nums1.end());
+    }
+};

@@ -61,7 +61,7 @@ public:
         */
         
         //Brute force. Salio en menos de 20 minutos
-        
+        /*
         //Traverse n
         for(int i = 0; i < n; i++){
             
@@ -70,5 +70,40 @@ public:
         }
         
         sort(nums1.begin(), nums1.end());
+        */
+
+       //Optimal Solution
+
+       //Creo pointer fijo
+       int index = m+n-1;
+
+       //Creo pointers que van a recorrer ambos arrays
+       int i = m-1;
+       int j = n-1;
+
+       //Recorro ambos arrays 
+       while( i >= 0 && j >= 0){
+
+           //Checamos cual es el valor más grande entre ambos arrays
+           //El valor más grande se coloca en el poniter fijo y se recorre el pointer
+           if(nums1[i] > nums2[j]){
+               nums1[index] = nums1[i];
+               index--;
+               i--;
+           }
+           else{
+               nums1[index] = nums2[j];
+               index--;
+               j--;
+           }
+
+       }
+
+       //Checamos que se recorra todo el segundo array
+       while( j >= 0){
+           nums1[index] = nums2[j];
+           index--;
+           j--;
+       }
     }
 };

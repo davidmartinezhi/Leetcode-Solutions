@@ -160,4 +160,10 @@ Nota:
     Siento que debe existir una solución más optima al moverle a la manera en la que metemos los nodos al queue.
 
     Lo probaré.
+
+    Si existe una solución más optima.
+    Me gustó descubrir que puedo rellenar un vector ya existente de izquierda a derecha con solo i
+    Pero que para rellenarlo de derecha a izquierda se usa size - i - 1.
+
+    Siento que es conocimiento muy util para futuros problemas
 */

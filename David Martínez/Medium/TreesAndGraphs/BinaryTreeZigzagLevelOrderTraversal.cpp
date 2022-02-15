@@ -105,22 +105,24 @@ public:
             
             int nodes = Q.size();    //Nodes on the current level
             counter++;  //Increment counter
-            vector<int> auxVector = {};
+            vector<int> auxVector(nodes);   //Inicializamos vector con el size del nivel en el que estamos
             
-            //Recorre los nodos en el nivel actual
             for(int i = 0; i < nodes; i++){
+                
                 TreeNode *aux = Q.front();
                 Q.pop();
-                auxVector.push_back(aux->val);  //Agrega el valor del nodo al vector auxiliar
-            
-                if(aux->left) {Q.push(aux->left);}  //Agrega nodo izquierdo
-                if(aux->right) {Q.push(aux->right);}    //Agrega nodo derecho            
+                
+                int index = (counter % 2 != 0) ? i : nodes-i-1; //Rellenamos el left->right right->left
+                auxVector[index] = aux->val;
+                
+                if(aux->left) {Q.push(aux->left);}
+                if(aux->right) {Q.push(aux->right);}                      
+  
             }
             
-            //Gira el vector auxiliar cuando estamos en niveles par
-            if(counter % 2 == 0){
-                reverseVector(auxVector);
-            }
+            //if(counter % 2 == 0){
+              //  reverseVector(auxVector);
+            //}
             
             result.push_back(auxVector);   
                 
@@ -129,6 +131,7 @@ public:
         return result;
         
     }
+    
     
     //Runtime: O(m) elementos en el nivel
     void reverseVector(vector<int> & list){

@@ -118,17 +118,8 @@ public:
             }
             
             //Gira el vector auxiliar cuando estamos en niveles par
-            //Runtime: O(m) elementos en el nivel
             if(counter % 2 == 0){
-                int start = 0;
-                int end = auxVector.size() - 1;
-                while(start < end){
-                    int auxIndex = auxVector[start];
-                    auxVector[start] = auxVector[end];
-                    auxVector[end] = auxIndex;
-                    start++;
-                    end--;
-                }
+                reverseVector(auxVector);
             }
             
             result.push_back(auxVector);   
@@ -137,6 +128,21 @@ public:
         
         return result;
         
+    }
+    
+    //Runtime: O(m) elementos en el nivel
+    void reverseVector(vector<int> & list){
+        //Reverses vector
+        int start = 0;
+        int end = list.size() - 1;
+        
+        while(start < end){
+            int aux = list[start];
+            list[start] = list[end];
+            list[end] = aux;
+            start++;
+            end--;
+        }
     }
 };
 

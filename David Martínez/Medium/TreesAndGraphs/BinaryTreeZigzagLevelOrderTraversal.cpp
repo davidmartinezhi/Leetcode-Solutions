@@ -69,8 +69,8 @@ public:
             
             for loop of nodes on that level
                 add left and right child if they exist, to the queue
-                    odd: left->right
-                    even: right->left
+                    even: left->right
+                    odd: right->left
                 
                 add node value to the aux vector
             
@@ -107,15 +107,18 @@ public:
             counter++;  //Increment counter
             vector<int> auxVector = {};
             
+            //Recorre los nodos en el nivel actual
             for(int i = 0; i < nodes; i++){
                 TreeNode *aux = Q.front();
                 Q.pop();
-                auxVector.push_back(aux->val);
+                auxVector.push_back(aux->val);  //Agrega el valor del nodo al vector auxiliar
             
-                if(aux->left) {Q.push(aux->left);}
-                if(aux->right) {Q.push(aux->right);}                
+                if(aux->left) {Q.push(aux->left);}  //Agrega nodo izquierdo
+                if(aux->right) {Q.push(aux->right);}    //Agrega nodo derecho            
             }
             
+            //Gira el vector auxiliar cuando estamos en niveles par
+            //Runtime: O(m) elementos en el nivel
             if(counter % 2 == 0){
                 int start = 0;
                 int end = auxVector.size() - 1;
@@ -136,3 +139,16 @@ public:
         
     }
 };
+
+/*
+Nota:
+
+    Terminado en 35 minutos.
+    Asegurarme de escribir bien los tipos de datos. Perdí mucho tiempo al final buscando un error
+        que resulto ser porque no hice la variable result un vector de vectores que tienen enteros.
+
+    Apenas supe que tenía que hacer un level by level traversal y se me hizo muy sencilla la solución.
+    Siento que debe existir una solución más optima al moverle a la manera en la que metemos los nodos al queue.
+
+    Lo probaré.
+*/

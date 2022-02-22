@@ -103,3 +103,17 @@ public:
         */   
     }
 };
+/*
+Nota:
+
+    -Se resuelve con sliding window technique pero tengo duda sobre que condiciones utilizar
+     para saber si debo recorrer i o no.
+
+    -Brute force salio en 5 minutos
+
+    -Optimized Solution no pasaba todos los casos de prueba y me consumio todo el tiempo restante
+
+    -Debo volver a checar la logica del optimizedd solution, sino buscarla en youtube y poner atención en la comparación.
+
+    Ya soy bueno para saber el recorrido que se necesita en cada tipo de problema, en este caso la logica fue lo que me confundio, pero voy muy bien.
+*/

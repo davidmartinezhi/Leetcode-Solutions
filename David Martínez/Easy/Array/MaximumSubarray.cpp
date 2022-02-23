@@ -106,12 +106,13 @@ public:
         int maxSum = nums[0];  
         int sum = 0;
         
+        //runtime: O(n)
         for(int i = 0; i < nums.size(); i++){
             sum += nums[i]; //Agrego nuevo valor a la suma
             if(sum > maxSum) maxSum = sum;  //Si sum es mayor, actualizo maxSum
             if(sum < 0) sum = 0;    //Si sum es negativo, lo cambio a 0, para comenzar a contar de nuevo con el siguiente dato
             
-            //Si sum es positivo, se queda como está
+            //Si sum es positivo, se queda como está. Sin importar si es mayo a maxSum o no
         }
         
         return maxSum;
@@ -136,5 +137,5 @@ Nota:
     //Despues de solución optima
     -Si es complicado conseguir la respuesta con sliding window technique.
     -Después de investigar la respuesta más optima descubrí que es con un algoritmo que se llama Kadane's Algorithm)
-    
+
 */

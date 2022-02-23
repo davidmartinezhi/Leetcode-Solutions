@@ -73,11 +73,10 @@ public:
         
         
         //Create fixed pointers for values not equal to val
-        int k = 0;  //memory: O(1)
+        int k = 0;
         
         //Traverse the vector
-        //Runtime: O(n)
-        for(int i = 0; i < nums.size(); i++){   //Comenzar de 0 es lo ideal, luego si solo tengo un elemento había problema
+        for(int i = 0; i < nums.size(); i++){
             
             if(nums[k] == val && nums[i] != val){ //If nums[k] is val and nums[i] isn't
                 swap(nums, i, k);
@@ -88,6 +87,18 @@ public:
             }
         }
         return k;   //Return k
+        
+        //También pudo ser y así no utilizo el swap
+        /*
+        int k = 0;
+        for(int i = 0; i < nums.size(); i++){
+            if(nums[i] != val){
+                nums[k] = nums[i];
+                k++;
+            }
+        }
+        return k;
+        */
     }
     
     void swap(vector<int> & nums, int i, int j){
@@ -97,6 +108,7 @@ public:
         nums[j] = aux;
     }
 };
+
 
 /*
 Nota:

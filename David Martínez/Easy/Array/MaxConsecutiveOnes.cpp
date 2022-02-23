@@ -37,10 +37,38 @@ public:
             array con puros 1
         
         */
-        
+    
+        //memory: O(1)
         int maxCount = 0;
         int currCount = 0;
         
+        //runtime: O(n)
+        for(int i = 0; i < nums.size(); i++){
+
+            //Condiciones si se encuentra un 1 o un 0
+            if(nums[i] == 1){   //Si encuentro un 1
+                currCount++;    //Sumo uno al currCount
+            }
+            else{   //Si encuentra 0
+                currCount = 0;  //CurrCount regresa a ser 0
+            }
+            
+            //Cada iteración comparo current count con maxCount
+            if(currCount > maxCount){   //si currCount es mayor a maxCount
+                maxCount = currCount;   //Ahora ese es el valor de maxCount
+            }
+
+        }
+        
+        return maxCount;
+        
+
+        //Primer codigo, sin simplificar
+        /*
+        int maxCount = 0;
+        int currCount = 0;
+        
+        //runtime: O(n)
         for(int i = 0; i < nums.size(); i++){
             if(nums[i] == 1){   //Si encuentro un 1
                 currCount++;    //Sumo uno al currCount
@@ -53,12 +81,15 @@ public:
             }
         }
         
-        //Compara currCount por ultima vez
+        //Compara currCount por ultima vez, en caso de de que termine el ciclo y no haya checado el ultimo
+        //Podría quitar esta parte y la comparación en el "else", para hacerlo en todas las travesias
         if(currCount > maxCount){
             maxCount = currCount;
         }
         
         return maxCount;
+
+        */
     }
 };
 

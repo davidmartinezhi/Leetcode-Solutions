@@ -73,9 +73,10 @@ public:
         
         
         //Create fixed pointers for values not equal to val
-        int k = 0;
+        int k = 0;  //memory: O(1)
         
         //Traverse the vector
+        //Runtime: O(n)
         for(int i = 0; i < nums.size(); i++){
             
             if(nums[k] == val && nums[i] != val){ //If nums[k] is val and nums[i] isn't
@@ -96,3 +97,10 @@ public:
         nums[j] = aux;
     }
 };
+
+/*
+Nota:
+    -Terminado en 28 minutos.
+    -No dudar de mi mismo, la logica estaba bien pero aún así me daba miedo probarla. Eso me hizo perder tiempo
+    -Solución optima para el problema y sacada rapido.
+*/

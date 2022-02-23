@@ -77,7 +77,7 @@ public:
         
         //Traverse the vector
         //Runtime: O(n)
-        for(int i = 0; i < nums.size(); i++){
+        for(int i = 0; i < nums.size(); i++){   //Comenzar de 0 es lo ideal, luego si solo tengo un elemento había problema
             
             if(nums[k] == val && nums[i] != val){ //If nums[k] is val and nums[i] isn't
                 swap(nums, i, k);

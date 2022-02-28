@@ -185,4 +185,8 @@ public:
     Es metodo similar a "Easy/Trees/Convert Sorted Array to Binary Search Tree"
     Solo que ahora es con 2 listas al mismo tiempo
 
+    Esta pesada conseguír la solución a este, pero se puede sacar.
+    -Investigar porque funciono con un map y no con un unordered_map
+    -Checar logica
+
 */

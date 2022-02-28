@@ -152,3 +152,15 @@ public:
         //Siento que recursividad puede hacer el truco
     }
 };
+
+/*
+    Solución checada en internet: https://www.youtube.com/watch?v=aZNaLrVebKQ
+
+    La clave es, en cada iteración sacar la posición del root en ambas listas.
+    Mandar al lado izquierdo a conectar con left.
+    Mandar al lado derecho a conectar con right.
+
+    Es metodo similar a "Easy/Trees/Convert Sorted Array to Binary Search Tree"
+    Solo que ahora es con 2 listas al mismo tiempo
+
+*/

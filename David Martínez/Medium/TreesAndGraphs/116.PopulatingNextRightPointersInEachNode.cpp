@@ -99,3 +99,9 @@ public:
 };
 
 
+/*
+Nota:
+    -Terminado iterativamente en 17 minutos, pero siento que puede ser más eficiente con recursividad.
+    -Debo de repasar big O cuando tengo recursividad para saber bien 
+        la complejidad y cuál approach es más apropiado para la situación.
+*/

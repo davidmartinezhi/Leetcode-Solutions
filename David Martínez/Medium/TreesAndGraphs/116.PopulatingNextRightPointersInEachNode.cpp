@@ -18,7 +18,8 @@ struct Node
 
 class Solution {
 public:
-    Node* connect(Node* root) {
+    Node* connect(Node* root) 
+    {
         /*
         1. listen
             input: prefect binary tree, all leaves are on the same level and parents have 2 children
@@ -66,7 +67,7 @@ public:
             Test on empty root
         */
         
-        
+        /*
         //Check if root is nullptr
         if(root == nullptr) return root;
         
@@ -95,6 +96,33 @@ public:
         }
         
         return root;    //Return the root
+        */
+        
+        if(root == nullptr) return nullptr;
+        recursion(root);
+        return root;
+    }
+    
+    void recursion(Node* node)
+    {
+        // reach the leaf node (no child), return
+        if (node->left == nullptr)
+        {
+            return;
+        }
+        
+        // case 1: same parent connection
+        node->left->next = node->right;
+        
+        // case 2: different parent connection
+        if (node->next != nullptr)
+        {
+            node->right->next = node->next->left;
+        }     
+        
+        // branching left and right
+        recursion(node->left);
+        recursion(node->right);
     }
 };
 

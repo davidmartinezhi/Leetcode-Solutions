@@ -75,26 +75,26 @@ public:
         Q.push(root);
         
         while(!Q.empty()){
-            int n = Q.size();
-            vector<Node *> aux;
+            int n = Q.size();   //Get the size of the queue
+            vector<Node *> aux; //Auxiliary vector
             
-            for(int i = 0; i < n; i++){
-                Node * auxNode = Q.front();
+            for(int i = 0; i < n; i++){ //Traverse the nodes on that level
+                Node * auxNode = Q.front(); //Save and pop out the node at the front
                 Q.pop();
                 
-                aux.push_back(auxNode);
+                aux.push_back(auxNode); //Add that node to the vector
                 
-                if(auxNode->left) Q.push(auxNode->left);
+                if(auxNode->left) Q.push(auxNode->left);    //Add children
                 if(auxNode->right) Q.push(auxNode->right);
             }
             
-            for(int i = 1; i < aux.size(); i++){
-                aux[i-1]->next = aux[i];
+            for(int i = 1; i < aux.size(); i++){    //Traverse the auxiliary list to connect each node with his neighbour
+                aux[i-1]->next = aux[i];    
             }
-            aux[aux.size()-1]->next = nullptr;
+            aux[aux.size()-1]->next = nullptr;  //The node in the righ limit will always have a nullptr as next
         }
         
-        return root;
+        return root;    //Return the root
     }
 };
 
@@ -104,4 +104,6 @@ Nota:
     -Terminado iterativamente en 17 minutos, pero siento que puede ser más eficiente con recursividad.
     -Debo de repasar big O cuando tengo recursividad para saber bien 
         la complejidad y cuál approach es más apropiado para la situación.
+
+    -Debo investigar complejidad de solución iterativa también
 */

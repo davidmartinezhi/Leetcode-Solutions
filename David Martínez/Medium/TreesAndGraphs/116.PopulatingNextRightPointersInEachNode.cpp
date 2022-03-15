@@ -134,4 +134,5 @@ Nota:
         la complejidad y cuál approach es más apropiado para la situación.
 
     -Debo investigar complejidad de solución iterativa también
+    -Debo entender bien la solución iterativa
 */

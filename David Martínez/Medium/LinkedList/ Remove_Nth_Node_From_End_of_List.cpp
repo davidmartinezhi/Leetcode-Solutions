@@ -210,7 +210,7 @@ public:
 
 //Optimización de memoria utilizada
 
-/*
+
 //Runtime: 3 ms, faster than 82.23% of C++ online submissions for Remove Nth Node From End of List.
 //Memory Usage: 10.7 MB, less than 73.08% of C++ online submissions for Remove Nth Node From End of List.
 
@@ -301,7 +301,7 @@ public:
 };
 
 
-*/
+
 
 /*
 

@@ -61,3 +61,17 @@ public:
 
     }
 };
+
+/*
+Terminado en 40 minutos, la manera de solucionarlo la saque en 10 minutos. 
+    runtime: O(n)
+    space: O(n)
+    
+Pero batalle en la implementación del inorder traversal, debo familiarizarme con eso.
+
+Recursive: O(n) space O(n)
+Iterative with stack: runtime: O(n) space O(n)
+Morris Traversal: runtime O(n) space O(1)
+
+Checar el Morris traversal
+*/

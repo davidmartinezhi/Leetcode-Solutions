@@ -43,7 +43,10 @@ To-Do:
     -Checar memset y bitset en manipulación de bits.
 -Checar si podia resolver el problema de la entrevista con pointers o linkedlists.
 -Poner ayuda rapida de como convertir letras de minusculas a mayusculas o como checar que algo es un numero o alphanumerico. (como en el problema easy/string/validPalindrome.cpp)
--Poner ayuda rapida para trabajar con limites cuando solo tenemos 32 bits. (Ya lo solucione, pero para que los demas no batallen)
+-Checar el Morris traversal
+-Construct binary tree from inorder and preorder traversal array
+    -Investigar porque funciono con un map y no con un unordered_map
+    -Checar logica
 
 Terminado
 -Anotar problemas de mi entrevista para que los demas los tengan y lo puedan intentar. Terminado
@@ -59,8 +62,6 @@ Terminado
 -Reverse integer y string to integer(atoi), checar como trabajar con limites. terminado
 
 Reminder
--Contarles de los habitos de la gente altamente efectiva, "sharpen the saw".
-    Esto para antes de introducirlos al solution flow y optimize and solve technique.
 -Debo familiarizarme en trabajar con matrices.
 -Sliding Window Technique: https://youtu.be/dQw4w9WgXcQ
 

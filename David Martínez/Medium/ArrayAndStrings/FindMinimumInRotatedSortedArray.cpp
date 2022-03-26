@@ -57,10 +57,10 @@ public:
         //Check if the array is of size 1
         if(nums.size() == 1) return nums[0];
         
-        //Check if the array has not been rotated
+        //Check if the array has not been rotated (has been rotated n times)
         if(nums[0] < nums[nums.size()-1]) return nums[0];
         
-        //Index of the smallest value in the array
+        //Index of the smallest value in the array, runtime O(n log n)
         int smallestValueIdx = binarySearchSmallestIdx(nums, 0, nums.size()-1);
         
         return nums[smallestValueIdx];
@@ -70,16 +70,23 @@ public:
         
         int pivot = (i+j)/2;
         
-        if(i == j) return pivot;
-        
+        //if the right extreme number is bigger than pivot
         if(nums[pivot] < nums[j]){
-            return binarySearchSmallestIdx(nums, i, pivot);
+            return binarySearchSmallestIdx(nums, i, pivot); //Check left including the pivot
         }
-        else if(nums[pivot] > nums[j]){
-            return binarySearchSmallestIdx(nums, pivot+1, j);
+        else if(nums[pivot] > nums[j]){ //If the right extreme number is smaller than pivot
+            return binarySearchSmallestIdx(nums, pivot+1, j);   //Check right
         }
         
-        return pivot;
-
+        return pivot;   //pivot equals the right extreme number, return pivot
     }
 };
+/*
+Nota:
+    La idea de como resolverlo la tuve a los 5 minutos
+    Batalle en definir las condiciones del binary search
+
+    Me sirvío muchisimo hacer el DIY, pude saber que era util tomar como base solo un extremo, en lugar de ambos
+
+
+*/

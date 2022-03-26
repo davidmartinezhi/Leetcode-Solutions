@@ -48,6 +48,10 @@ public:
         memory: O(n)
         
         */
+        
+        //Runtime: O(n)
+        //Memory: O(n)
+        /*
         int n = nums.size();
         vector<int> left(n, nums[0]);
         vector<int> right(n, nums[n-1]);
@@ -78,5 +82,31 @@ public:
         }
 
         return result;
+        */
+        
+        //Runtime O(n)
+        //Space O(1)
+        
+        //Vector answer
+        vector<int> ans = nums;
+        
+        int product = 1;    //Product
+        
+        //traverse from left to right
+        for(int i = 0; i < nums.size(); i++){
+            product *= nums[i]; //Product is multiplied by the value at i
+            ans[i] = product;   //value at i is the current product
+        }
+        
+        product = 1;
+        //traverse from right to left
+        for(int i = nums.size()-1; i > 0; i--){
+            ans[i] = ans[i-1] * product;    //Answer at i is equal to his previous values * product
+            product *= nums[i];     //Product is multiplied by that value at nums[i]
+        }
+        
+        ans[0] = product;
+        
+        return ans;
     }
 };

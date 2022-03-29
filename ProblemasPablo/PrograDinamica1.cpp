@@ -28,7 +28,21 @@ class Solution{
             //Get the value from the pairs index
             for(int i = 0; i < n.size(); i++){
                 int sum;
-                if(n[i][0] == 0){
+
+                //Checo si el index izq es mayor al derecho
+                if(n[i][0] > n[i][1]){
+                    sum = 0;
+                }
+                //Checo si son el mismo index
+                else if(n[i][0] == n[i][1]){
+                    if(n[i][0] == 0){
+                        sum = m[n[i][0]];
+                    }
+                    else{
+                        sum = m[n[i][0]] - m[n[i][0] - 1];
+                    }  
+                }
+                else if(n[i][0] == 0){
                     //If the first index is 0, return the sum at the next index
                     sum = m[n[i][1]];
 
@@ -50,7 +64,7 @@ int main()
 {
 
 
-    vector<vector<int>> pruebas = {{2,3},{0,4},{1,4},{3,4}};
+    vector<vector<int>> pruebas = {{2,3},{0,4},{1,4},{3,4}, {3,1}, {3,3}};
     vector<int> arrayOriginal = {4,27,8,100,9};
     Solution prueba(pruebas, arrayOriginal);
     vector<int> result = prueba.pablo1(prueba.pares, prueba.array);

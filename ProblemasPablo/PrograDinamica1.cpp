@@ -64,3 +64,10 @@ int main()
     cout << endl;
     return 0;
 }
+/*
+Notas:
+
+    Tarde alrededor de 1 hora
+    Lo que he notado sobre dynamic programming es que haces un setup de los datos, para poder sacar más info
+    sobre el precompute que ya hiciste
+*/

@@ -5,6 +5,14 @@ using namespace std;
 class Solution{
     public:
 
+        vector<vector<int>> pares;
+        vector<int> array;
+
+        Solution(vector<vector<int>> pares, vector<int> array){
+            this->pares = pares;
+            this->array = array;
+        }
+
         vector<int> pablo1(vector<vector<int>> & n, vector<int>  & m){
 
             //actual sum
@@ -35,3 +43,22 @@ class Solution{
             return sums;
         }
 };
+
+int main()
+{
+
+
+    vector<vector<int>> pruebas = {{2,3},{0,4},{1,4},{3,4}};
+    vector<int> arrayOriginal = {4,27,8,100,9};
+    Solution prueba(pruebas, arrayOriginal);
+    vector<int> result = prueba.pablo1(prueba.pares, prueba.array);
+
+    cout << endl;
+
+    for(int i = 0; i < result.size(); i++){
+        cout << result[i] << endl;
+    }
+
+    cout << endl;
+    return 0;
+}

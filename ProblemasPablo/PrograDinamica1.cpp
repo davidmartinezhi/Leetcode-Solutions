@@ -14,6 +14,8 @@ class Solution{
         }
 
         vector<int> pablo1(vector<vector<int>> & n, vector<int>  & m){
+            //runtime: O(n)
+            //Space: O(1)
 
             //actual sum
             vector<int> sums;

@@ -64,18 +64,20 @@ public:
                 inorder.push_back(curr->val);   //He is the root, so we add it to the vector
                 curr = curr->right; //Move to the right
             }
-            //second edge case, left
+
+            //second edge case, left exists
             else{
-                TreeNode * prev = curr->left;
+                TreeNode * prev = curr->left;   //marcamos el subarbol izquierdo
+
                 while(prev->right && prev->right != curr){  //If it has a right and is not curr
-                    prev = prev->right;
+                    prev = prev->right; //Nos movemos hasta el predecesor
                 }
                 
                 if(prev->right == nullptr){
                     prev->right = curr; //Create thread
-                    curr = curr->left;
+                    curr = curr->left;  //Move to the left subtree
                 }else{
-                    prev->right = nullptr;
+                    prev->right = nullptr;  //Remove thread
                     inorder.push_back(curr->val);
                     curr = curr->right;
                 }

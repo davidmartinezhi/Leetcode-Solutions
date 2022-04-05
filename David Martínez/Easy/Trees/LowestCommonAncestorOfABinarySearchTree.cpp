@@ -36,7 +36,7 @@ public:
         4. optimize
             Move two pointers one spot at the time, if they are in the same node, that's the lowest
 
-            Runtime :O(n)
+            Runtime :O(log n)
             Space: O(1)
         
         */
@@ -74,5 +74,6 @@ public:
     Fue sencillo el problema, solo que no había entendido que querían el más bajo en el árbol
     Yo había entendido que el más bajo en valor
 
-
+    Runtime: O(log n) Solo es la busqueda de los valores
+    Space: O(1)
 */

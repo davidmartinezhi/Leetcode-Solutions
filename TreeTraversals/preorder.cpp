@@ -50,7 +50,7 @@ public:
     }
     */
         //Morris Traversal, inorder 
-        //O(n) runtime
+        //O(n) amortized runtime
         //O(1) space
         
         //Whenever I'm in the root, I add it to the inorder vector
@@ -79,7 +79,7 @@ public:
                     preorder.push_back(curr->val);
                     curr = curr->left;
                 }else{
-                    prev->right = nullptr;
+                    prev->right = nullptr;  //Remove thread
                     curr = curr->right;
                 }
             }

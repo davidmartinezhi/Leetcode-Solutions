@@ -81,4 +81,6 @@ Resuelto en poco menos de 22 minutos.
 
 runtime: O(n) porque visitamos cada nodo
 memory: creo que O(n) pero no estoy seguro. Debo de repasar big O data structures no lineales y recursividad
+
+Space in memory es log n, porque lo que se guarda es la llamada a la función. Osea una llamada por piso, no por nodo
 */

@@ -107,8 +107,8 @@ public:
 /*
 Notas:
     -Tiempor 21 minutes
-    -runtime: O(n*m)    Creo que es porque recorre todo el árbol
-    -space: O(n) las llamadas a la función
+    -runtime: O(n*m)    Porque recorre todo el árbol y subarbol
+    -space: O(n) minimum between m and n. wichever tree has less nodes
     (Investigar sobre big o con árboles)
 
     -Al inicio batalle en descubrír como hacer el recorrido, la lógica la saque relativamente rapido
@@ -118,6 +118,8 @@ Notas:
     -Fue buena idea la de meter una función dentro de esa función.
 
     -Debería de recordar en que es posible y no intimidarme cuando no estoy seguro sobre donde comenzar.
-    
+
+
+    -Investigar otra posible solución
 
 */

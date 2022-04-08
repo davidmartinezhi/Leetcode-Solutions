@@ -53,3 +53,10 @@ public:
 };
 
 //45 miuntes+
+/*
+Nota:
+    Batalle mucho con este problema, debo de repasarlo el lunes
+    runtime: O(!n)
+    space(n)
+
+*/

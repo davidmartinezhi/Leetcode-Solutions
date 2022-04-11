@@ -106,6 +106,42 @@ public:
         
         return maxProduct;
 
+/*
+        //Solution from youtube
+        
+            //tener variablemaxProduct
+            //tener variable max-end y min-end
+            //siempre comparo el numero actual, mex-end y min-end
+            
+            //Así siempre se el valor 
+        
+        int maxProduct = nums[0];
+        int maxEnd = nums[0]; 
+        int minEnd = nums[0];
+        
+        for(int i = 1; i < nums.size(); i++){
+            //Recorres
+
+            int temp = maxEnd; 
+            
+            //Sacas el valor mayor entre el numero actual, el más pequeño y el más grande
+            maxEnd = max(nums[i], nums[i] * maxEnd);
+            maxEnd = max(maxEnd, nums[i] * minEnd);
+
+
+            //Sacas el valor menor entre el numero actual, el más pequeño y el más grande
+            minEnd = min(nums[i], nums[i] * minEnd);
+            minEnd = min(minEnd, nums[i] * temp);
+            
+            //Del valor más grande, lo comparas con el producto maximo
+            maxProduct = max(maxProduct, maxEnd);
+            
+        }
+        
+        return maxProduct;
+
+*/
+
     }
 };
 

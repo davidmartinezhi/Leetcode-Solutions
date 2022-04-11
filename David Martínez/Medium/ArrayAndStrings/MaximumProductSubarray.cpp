@@ -111,6 +111,11 @@ public:
 
 /*
 nota:
+
+    Complejidad
+        time: O(n)
+        space: O(1)
+
     -Kadane's algorithm era el truco en este problema
     -Saque la respuesta para numeros positivos en 18 minutos, 
         pero me tarde 39 minutos en total para que funcionara con cualquier tipo de numero
@@ -121,5 +126,13 @@ nota:
 
     - Sin kadane's algorithm, nose que habría hecho, es bueno ser constante con la practica. Saque el problema en buen tiempo
         si se siente la mejora con los meses y con los nuevos conceptos vistos.
+
+    - Invertir un poco más de tiempo en crear los test cases sería una buena opción.
+
+Intento de explicación para el movimiento hacía adelante y hacía atras
+
+    If the first number is negative, it has a lot of influence on the total product of the traversal
+    If the current number is 0, the product is set to the next number and starts multiplying again, else everything will be 0
+
 
 */

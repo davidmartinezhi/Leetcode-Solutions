@@ -109,3 +109,17 @@ public:
     }
 };
 
+/*
+nota:
+    -Kadane's algorithm era el truco en este problema
+    -Saque la respuesta para numeros positivos en 18 minutos, 
+        pero me tarde 39 minutos en total para que funcionara con cualquier tipo de numero
+
+    -Con los test cases que hice, pude darme cuenta de hacer un recorrido en reversa era buena opción
+
+    -Se que funciona y con los test cases me di cuenta que funciona, pero no estoy seguro sobre como explicaría que si funciona
+
+    - Sin kadane's algorithm, nose que habría hecho, es bueno ser constante con la practica. Saque el problema en buen tiempo
+        si se siente la mejora con los meses y con los nuevos conceptos vistos.
+
+*/

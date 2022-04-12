@@ -170,5 +170,11 @@ Intento de explicación para el movimiento hacía adelante y hacía atras
     If the first number is negative, it has a lot of influence on the total product of the traversal
     If the current number is 0, the product is set to the next number and starts multiplying again, else everything will be 0
 
+    Ya entendí el algoritmo del video de youtube:
+        Lo que hace es siempre tener a la mano el extremo superior y el extremo inferior de los posibles valores.
+        Así en cada momento, sin importar el numero siguiente, siempre podemos sacar el mayor
 
+        Así si sale un numero negativo, puede convertir al extremo minimo en el nuevo extremo maximo
+
+        Luego comparamos.
 */

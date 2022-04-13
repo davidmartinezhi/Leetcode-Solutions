@@ -37,7 +37,6 @@ https://medium.com/karuna-sehgal/a-simplified-explanation-of-the-big-o-notation-
 
 To-Do:
 
--Investigar cuando me puede ser utíl un algoritmo recursivo y como identificarlos. (Lo vere cuando llegue problemas de BST)
 -Hacer, usando la metodologia del libro. Problemas Array easy: Single Number y Rotate Array.
 -Luego investigar bits manipulation, ejemplo el ^= en c++ que es un XOR. Pendiente
     -Checar memset y bitset en manipulación de bits.
@@ -60,6 +59,7 @@ Terminado
 -Debo poner un super resumen en el archivo de optimize and solve technique. El folder solo tendra profundización y ejemplos
 -Reverse integer y string to integer(atoi), checar como trabajar con limites. terminado
 -Checar el Morris traversal
+-Investigar cuando me puede ser utíl un algoritmo recursivo y como identificarlos. (Lo vere cuando llegue problemas de BST)
 
 Reminder
 -Debo familiarizarme en trabajar con matrices.

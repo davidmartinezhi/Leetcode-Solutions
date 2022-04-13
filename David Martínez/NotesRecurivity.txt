@@ -1,0 +1,13 @@
+Video: 5 steps for solving any recursive problem
+https://www.youtube.com/watch?v=ngCos392W4w
+
+1. Write the simplest possible input and it's base cases
+2. Play around with examples and visualize
+3. Relate hard cases to simpler cases (if i was given the anwser to f(2) can I come out with the answer for f(5)?)
+4. Generalize the pattern
+5. Write the code by combining recursive pattern with base cases
+
+Recursive leap of faith?
+    It's about assuming that easier versions of the problem will be correct.
+
+Practicar más recursividad. En un trabajo real casí no se usa, pero si para entrevistas.

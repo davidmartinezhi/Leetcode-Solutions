@@ -53,6 +53,8 @@ public:
             -pointers have different values
         */
         
+        //runtime: O(n)
+        //space: O(1)
         
         //pointers
         int start = 0;
@@ -118,6 +120,76 @@ public:
         }
         
         return maxContainer;
+
+/*
+        //Another solution with just one traversal
+        //runtime: O(n)
+        //space: O(1)
+
+        //pointer to indexes
+        int minIdx = 0;
+        int maxIdx = height.size() -1;
+        
+        //values of indexes
+        int minLine = height[minIdx];
+        int maxLine = height[maxIdx];
+        
+        //window
+        int window = height.size() -1;
+        
+        //Set values in case maxLine is shorter than minLine at the beginning
+        if(minLine > maxLine){
+            minIdx = maxIdx;
+            minLine = maxLine;
+            
+            maxIdx = 0;
+            maxLine = height[0];
+        }
+
+        //Result variable
+        int maxContainer = window * minLine;
+        
+        //Traverse the array
+        while(window > 0){
+            
+            //Pointer to index with the shortest line
+            int idx = minIdx;
+            
+            //Move to a greater value
+            while(height[idx] <= minLine){
+
+                if(minIdx < maxIdx ){
+                    idx++;
+                }
+                else{
+                    idx--;
+                }
+                
+                window--;
+                
+                if(window < 1) break;
+            }
+            
+            //Set variables again 
+            if(height[idx] > maxLine){
+                minIdx = maxIdx;
+                minLine = maxLine;
+
+                maxIdx = idx;
+                maxLine = height[idx];
+            }        
+            else{
+                minIdx = idx;
+                minLine = height[idx];
+            }
+            
+            //Compare previous container to the new container
+            maxContainer = max(maxContainer, window * minLine);
+            
+        }
+        
+        return maxContainer;
+*/
     }
 };
 

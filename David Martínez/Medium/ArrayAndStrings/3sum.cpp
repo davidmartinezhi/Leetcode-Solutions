@@ -6,144 +6,211 @@ using namespace std;
 class Solution {
 public:
     vector<vector<int>> threeSum(vector<int>& nums) {
-        //1. Listen
-            //Recibo un array con numeros enteros
-            //Números tienen valores entre -100,000 y 100,000
-            //El array tiene un tamaño entre 0 y 3,000
-            
-            //Debo regresar una matriz, donde cada renglon tenga:
-                //Una tripleta donde el valor de nums[i], nums[j] y nums[k]. Sea igual a 0
-                //i, j y k. No pueden repetir index
-                //El set que regreso no puede tener tripletas repetidas
-        
-        //2. Example
-            /*
-                [0, 1, -1, 2, -1, 0, 34, 0] -> [ [0, 0, 0], [2, -1, -1], [1, -1, 0] ]
+        /*
+            info
+                input: integer array "nums"
+                output: array with all triplets nums[i], nums[j] and nums[k] such that:
+                    i != k, i != j, j != k, and nums[i] + nums[j] + nums[k] = 0
+                    
+                array size varies from 0 to 3,000
+                nums[i] value varies from -100,000 to 100,000
                 
-            
-            */
-        //3. Brute Force
-            //Tener 3 apuntadores
-                //Uno al elemento que estamos checando
-                //Otro al siguiente elemento
-                //Los sumamos y el resultado, es el otro valor que buscaremos
-                //Recorro para encontrar ese número
-            //Este aproach tendría runtime de O(n^2 log n)
-        
-        //4. Optimize
-        
-            //Dividir por modulos
-                //Sacar los datos con 3 sumas
-                //Evitar sumas repetidas
-        
-            //Data structure brainstorm
-                //Hashtables
-                    //Puedo guardar cada elemento en la hashtable, key: index y value: numero
-                //Puedo usar 2 apuntadore ahora, uno para checar un elemento
-                //El segundo apuntador va recorriendo la lista, con los otros indices
-                //Sacamos la suma de ambos y ese valor lo buscamos en la hashtable.
+            example
+                [-1,0,1,2,-1,-4]
+                -> [[-1, 0, 1], [2,-1,-1]]
                 
-                //Set
-                    //Podría servirme para guardar convinaciones, sin que se repitan
+                [3,-3,0,2,1]
+                ->[[-3,3,0], [-3,2,1]]
+                
+                []
+                ->[]
+                
+                [0]
+                ->[]
+                
+            brute force
+                3 nested for loops to check for all possible triplets and find matches
+                runtime: O(n^3)
+                space: O(1)
             
-            //Precompute
-                //Podria hacer un sort en los numeros
-                //Luego tener 2 apuntadores 
-                //Sacamos la suma y con eso, el num para cumplir con la tripleta
-                //Si el indice es igual a i o j. Checamos a izquierda y derecha. Si no esta el num. 
-                    //No lo metemos
+            optimize
+                options:
+                    *precompute the array
+                        sort. n log n
+                        [-1,0,1,2,-1,-4]
+                        
+                        [-4,-1,-1,0,1,2]
+                        -> [[-1, 0, 1], [2,-1,-1]]
+  
+                        runtime: O( n^2 + n log n )
+                        extra space: O(1)
+                        
+                        
+                7. test
+                    special cases:
+                        array of size 2 or less
+                        no valid triplets
+                            
+        */
         
-        //Hashtables funciona para hacer busqueda en O(1), entonces runtime:O(n^2), pero memory:O(n)
-        //Update: No se puede usar hashtable, porque solo puedo buscar con la key y no puedo sacar las keys directo del valor sin recorrer. Sería On^3 casí casí-
+        /*
+        //Check for array with size less than 3
+        if(nums.size() < 3) return {};
         
-        //Sort funciona para poder implementar binary search, memory:O(n), pero runtime:O(n log n * log n)
-        //Es más eficiente el metodo con sort
-        
-            //A este punto ya gaste 25 minutos de los 45
-        
-        //5. Walkthrough
-            //Meto todos los datos a la hashtable
-            //Por cada numero[i], checo los demas numeros numeros[j]
-            //Numero a buscar = (numero[i] + numero[j]) * -1;
-            //Si lo encuentra
-                //Agrego al set, la tripleta
-            //Despues de recorrer toda la lista, regreso el vector con las tripletas
-            
-        //Podría usar heaps y heapsort?
-            
-        //Llevo 32 minutos
-        
-        //6. Implement
-        //7. Test
-            
-            //Checar como funcionan set en c++
-                //emplace()
-                //This function is used to insert a new element into the set container, only if the element to be inserted is unique and does not already exist in the set.
-        
-        //Ahora inicio implementación
-        //Llevo 36 minutos utilizados
-      
-        //Vector que regresa el resultado
-        vector<vector<int>> result = {};
-        
-        //Saco el size
-        int n = nums.size();
-        
-        //Si el size es menor a 3, regreso el resultado
-        if(n < 3){ return result;}
-        
-        //Ordeno los numeros en el vector
+        //sort
         sort(nums.begin(), nums.end());
         
-        //Recorro cada numero de la lista
+        //result array
+        vector<vector<int>> result;
+        
+        //create pointers
+        int start = 0;
+        int end = nums.size() - 1;
+        
+        //Sum and needed
+        int sum;
+        int needed;
+        
+        //traverse until pointers meet
+        while(start < end){
+            sum = nums[start]+nums[end];
+            needed = sum * -1;
+            
+            int aux;
+            
+            if(sum == 0){
+                aux = start+1;
+                while(nums[aux] <= 0 && aux < end){
+                    if(nums[aux] == 0 && aux != end){
+                        vector<int> auxVector = {nums[start], nums[aux], nums[end]};
+                        result.push_back(auxVector);
+                    }
+                    aux++;
+                }
+            }
+            else if(needed < 0){
+                aux = start + 1;
+                while(nums[aux] < 0 && aux < end){
+                    //if lesser + 1 is equal
+                    if(nums[aux] == needed && aux != end){
+                        vector<int> auxVector = {nums[start], nums[aux], nums[end]};
+                        result.push_back(auxVector);    
+                        break;
+                    }
+                    else if(nums[aux] > needed){
+                        break;
+                    }
+                    aux++;
+                }
+            }
+            else{
+                aux = end-1;
+                while(nums[aux] > 0 && aux < end){
+                    if(nums[aux] == needed && aux != start){
+                        vector<int> auxVector = {nums[start], nums[aux], nums[end]};
+                        result.push_back(auxVector);    
+                        break;                        
+                    }
+                    else if(nums[aux] < needed){
+                        break;
+                    }
+                    aux--;
+                } 
+            }
+                
+            while(start < end){
+                if(nums[start] == nums[start+1] && nums[end] == nums[end-1]){
+                    start++;
+                    end--;
+                }else if(nums[start] != nums[start+1]){
+                    start++;
+                    break;
+                }else if(nums[end] != nums[end-1]){
+                    end--;
+                    break;
+                }
+            }
+        }
+        
+        return result;
+        */
+        
+        /*
+        Primer pointer siempre ser un valor diferente
+        A partir de ahí, se crea el pointer low & high, i+1 & nums.size()-1
+    
+            check for possible error in if statement
+        */
+        
+        //Check for array with size smaller than 3
+        if(nums.size() < 3) return {};
+        
+        //size variable and result vector
+        vector<vector<int>> result;
+        int n = nums.size();
+        
+        //sort the original array
+        sort(nums.begin(), nums.end());
+        //traverse the array
         for(int i = 0; i < n; i++){
             
-            //Si el numero anterior es diferente a el que estoy actualmente
-            //O estoy en el primer indice
-            if(i == 0 || nums[i] != nums[i-1]){
-                //Creo apuntador de j y de k
+            //If we are at the first index or in an index where that number is its first ocurrance
+            if(i == 0 || (nums[i] != nums[i-1])){
+                //set pointers for two pointer technique starting from extremes
                 int j = i+1;
                 int k = n-1;
                 
-                //mientras j sea menor a k
                 while(j < k){
-                    //Saco la suma de los 3 numeros
-                    int sum = nums[i] + nums[j] + nums[k];
+                    int sum = nums[i] + nums[j]+ nums[k];   //Get the sum
                     
-                    //Si la suma me da igual a cero
+                    //If the sum is equal to 0
                     if(sum == 0){
-                        //Agrego la tripleta al resultado
-                        result.push_back({nums[i], nums[j], nums[k]});
+                        //add resulting vector
+                        vector<int> auxVector = {nums[i], nums[j], nums[k]};
+                        result.push_back(auxVector);
                         
-                        //Ahora recorro los apuntadores para que salten a su siguiente num
-                        //Para que no se repitan combinaciones
-                        //Esto los deja en el ultimo numero con ese valor
-                        while(j < k && nums[j] == nums[j+1]){j++;}
-                        while(j < k && nums[k] == nums[k-1]){k--;}
+                        //Move pointers to their next number to avoid repeating triplets
+                        while(j < k && nums[j] == nums[j+1]) j++;
+                        while(j < k && nums[k] == nums[k-1]) k--;
                         
-                        //Para el cambio de numero
                         j++;
                         k--;
                     }
-                    //Si la suma es mayor a cero
+                    //if the sum is greater than 0
                     else if(sum > 0){
-                        //Reduzco K
+                        //we lower k
                         k--;
                     }
-                    //Si la suma es menor a cero
+                    //if the sum is lesser than 0
                     else if(sum < 0){
-                        //aumento j
+                        //we increment j
                         j++;
                     }
                 }
-                
             }
             
         }
-
+        
         return result;
     }
 };
+
+
+//45+ minutes
+/*
+Lo que me descarrilo en el problema es el haber sacado un mal bcr, el querer siempre sacar un bcr es bueno.
+Pero clavarme ahí me hace perder mucho tiempo y darle muchas vueltas al asunto.
+Me hizo tener tunnel vision y no buscar ningún approach diferente. Me quito mucha flexibilidad.
+
+El approach de sort y luego 2 pointer technique, se me hizo muy bueno y cumple con memory: O(1)
+time complecity lo mantiene estable en n log n + n^2 = n^2
+
+El approach en por cada numero, hacer el two pointer technique, se me hizo muy inteligente.
+Pero lo descarte porque no me iba a dar O(n) runtime. Lo cual ni es posible.
+
+Debo de sacar un bcr. Pero desarrollar desde una solución que ya tenga yo pensado.
+Podría ser, sacar la solución más optima y funcional que pueda. Luego cuando me queden 15 minutos, si no he sacado algo más, programarla.
+*/
 
 /*
 Si no encuentro manera de sacar la key, con el value. Tengo que usar sort afuerzas

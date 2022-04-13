@@ -244,4 +244,6 @@ Pero en overall
 
     Si estaba bien yo, pude haber no sido explicito con el "si son iguales" y salia el codigo bien.
 
+Al final del día no importa que pointer mueva cuando ambos son iguales, sigo necesitando 2 paredes mayores.
+Por eso no es relevante saber cual pointer mover, con que no sean iguales
 */

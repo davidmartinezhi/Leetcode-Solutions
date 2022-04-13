@@ -122,6 +122,42 @@ public:
         return maxContainer;
 
 /*
+        //Mi solución, pero con un solo traversal
+        
+        //pointers
+        int start = 0;
+        int end = height.size() - 1;
+        
+        //max cointainer variable
+        int maxContainer = INT_MIN;
+        
+        //window variable
+        int window = height.size() - 1;
+        
+        //traversal moving start when both indexes have the same number
+        while(start < end){
+            
+            //Calculate current container and compare with maxContainer
+            int minLine = min(height[start], height[end]);
+            int currContainer = window * minLine;
+            
+            if(currContainer > maxContainer) maxContainer = currContainer;
+            
+            //Move shortest pointer
+            if(height[start] < height[end]){
+                start++;
+            }
+            else{
+                end--;
+            }
+            
+            window--;
+        }
+        
+        return maxContainer;
+*/
+
+/*
         //Another solution with just one traversal
         //runtime: O(n)
         //space: O(1)
@@ -205,5 +241,7 @@ Pero en overall
     space: O(1)
 
     Buena solución, solo debo investigar la parte "dinamica del approach"
+
+    Si estaba bien yo, pude haber no sido explicito con el "si son iguales" y salia el codigo bien.
 
 */

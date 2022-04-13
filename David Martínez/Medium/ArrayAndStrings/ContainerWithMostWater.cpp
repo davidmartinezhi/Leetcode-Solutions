@@ -120,3 +120,18 @@ public:
         return maxContainer;
     }
 };
+
+/*
+A los 20 minutos ya sabía como lo iba a solucionar
+Pero me tarde mucho en sacar la la acción si es que ambos pointer apuntan al mismo valor
+    siento que esa parte es la que es relacionada a dynamic programming.
+    En total me tarde 43 minutos con pruebas y todo.
+
+Saque una buena solución con O(n+n) runtime. Porque hago 2 traversals de la lista
+Pero en overall
+    runtime: O(n)
+    space: O(1)
+
+    Buena solución, solo debo investigar la parte "dinamica del approach"
+
+*/

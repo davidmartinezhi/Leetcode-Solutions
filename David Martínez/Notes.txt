@@ -45,6 +45,7 @@ To-Do:
     -Investigar porque funciono con un map y no con un unordered_map
     -Checar logica
 -Investigar sobre dynammic programming, que hace que algo sea dynamic y como identificarlo
+-Esto es más intenso y no afuerzas, pero checar como crear una función o struct para hacer hasing rapido, como en problema group anagrams.
 
 Terminado
 -Anotar problemas de mi entrevista para que los demas los tengan y lo puedan intentar. Terminado

@@ -1,188 +1,108 @@
 #include <iostream>
 #include <vector>
-#include <set>
+#include <unordered_map>
 using namespace std;
 
-class Solution
-{
+
+class Solution {
 public:
-    vector<vector<string>> groupAnagrams(vector<string> &strs)
-    {
-        // 1 listen
-        // Recibo un array de strings llamado "strs"
-        // Regreso una matriz donde cada renglon tenga anagramas juntos
-        // Array puede tener hasta 10,000 strings
-        // String puede tener entre 0 y 100 characters
-        // String consisten solamente de letras minusculas
-
-        // 2 example
+    vector<vector<string>> groupAnagrams(vector<string>& strs) {
         /*
-        ["eat","tea","tan","ate","nat","bat"] -> ["bat"],["nat","tan"],["ate","eat","tea"]]
+        1. info
+            input: array of strings
+            output: grouped anagrams (any order)
+            
+            anagram is a word/phrase fromed by rearranging the letters of a different word/phrase
+            
+            the array has between 1 and 10,000 words
+            word has between 0 and 100 characters
+            each word consists only of lowercase english letters
+            
+            *in interview ask about phrases in array or just words. to know if I shoyld care about
+                whitespace and special characters
+            
+        2. example
+        
+        ["eat", "tea", "tan", "ate", "nat", "bat"]
+        -> [["eat", "tea", "ate"], ["tan", "nat"], ["bat"]]
+        
+        [""]
+        ->[[""]]
+        
+        ["a"]
+        ->[["a"]]
+        
+        3. brute force
+            traverse to create an array with hashtables that don't repeat   time:0(n*m) space:(n*m)
+            traverse the hashtables array and add to a vector, each word that matches in strs time(n*m)
+            Then add the vector to the resulting vector
+            
+        4. optimize
+            bcr: O(n*m) I need to forcefully traverce the words array and each char
+            
+            Can I optimize the memory usage?
+            
+            precompute?
+                sort each word: n * (m log m) while comparing
+                then compare O(m)
+            
+
+            create a hashtable with sorted word as key and vector as value
+            if a word matches, it's added to the vector in the array
+            
+            at last, add all vectors to resulting array
+                
+        
+        5. walkthrough
+            
+        6. implement
+        
+        7. test
+            empty array
+            no anagrams
+            anagrams
+
         */
-
-        // 3 brute force
-        // Recorrer toda la lista, meter letra y frecuencia(hashtable) de cada palabra en un set.
-        // De tal modo ya tengo las hashtables de todos los anagramas existentes.
-        // Ahora recorro la lista de anagramas y por cada palabra en strs, checo su hashtable
-        // Si es igual a la que tenemos en la lista de anagramas, la meto al vector y regreso
-
-        // runtime: (O(n*m)) n: strs.size(), m: characters en las palabras
-        // memory: O(n)
-
-        // 4 optimize
-        // Puedo en lugar de hacer hashtable, tener un vector con cuenta en las letras
-        // Luego hacer la mate en las palabras cuando las recorremos
-        // Si toda la lista da igual a 0, agregamos la palabra. Sino saltamos
-
-        // Puedo hacer helper function de isValidAnagram, luego recorro la lista para hacer
-        // hacer set de palabras anagram
-        // Luego comparo paralbras en el set con las del array y las hunto
-
-        // 5 walkthrough
-        // Creo matriz set con los contadores
-        // Creo matriz con los resultados
-
-        // relleno los contadores
-
-        // Por cada contador, recorro el vector
-        // Creo vector<string> auxiliar
-        // Recorro el vector de strings
-        // vector auxiliar que es igual al contador
-        // Hago la mate con la palabra
-        // Si aplica, la agrego al vector
-        // Pushback del vector string auxiliar
-        // regreso el resultado
-
-        // 6 implement
-
-        // 7 test
-        // Special cases, empty string
-        // Strs size 1
         
-
-        //Solución funcional, pero inservible por la mala eficiencia en rutnime
-        /*
-        //O(k) k siendo los grupos de anagramas
+        //first version
+        //runtime: O(n* k log k)
+        //space: O(n)
+        
         vector<vector<string>> result;
-
-        if (strs.size() == 1)
-        {
-            result.push_back(strs);
-            return result;
-        }
-
-        //O(n) n siendo el numero de frecuencias en palabras
-        set<string> anagrams;
-
-        //O(n*m log m)
-        for (int i = 0; i < strs.size(); i++)
-        {
+        if(strs.size() == 0) return result;
+        
+        unordered_map<string, vector<string>> ht;   //space: O(n)
+        
+        //runtime: O(n)
+        for(int i = 0; i < strs.size(); i++){
             string aux = strs[i];
-            sort(aux.begin(), aux.end());
-            anagrams.emplace(aux);
+            sort(aux.begin(), aux.end());   //runtime: O(m log m)
+            
+            ht[aux].push_back(strs[i]); //runtime: O(1)
         }
-
-        //O(n^2*m) = Podría llegar a ser 100,000,000,000 (Horrible)
-        for (auto it = anagrams.begin(); it != anagrams.end(); it++)
-        {
-            vector<string> aux;
-            for (int i = 0; i < strs.size(); i++)
-            {
-
-                if (isValidAnagram(*it, strs[i]))
-                {
-                    aux.push_back(strs[i]);
-                }
-            }
-
-            result.push_back(aux);
+        
+        //runtime: O(n)
+        for(auto word: ht){
+            result.push_back(word.second);
         }
-
+        
+        
         return result;
-    }
-
-    // Comparación de palabras
-    //runtime: O(m)
-    //memory: O(1)
-    bool isValidAnagram(string s, string &t)
-    {
-        // Checo que tengan el mismo size
-        if (s.size() != t.size())
-        {
-            return false;
-        }
-
-        // Array para las veces letras del alphabeto ingles
-        int count[26] = {0};
-
-        // Recorro ambas arrays para sacar cuentas en count
-        // Si count esta llena de 0 al final, la palabra es anagram
-
-        for (char c : s)
-        {
-            count[c - 'a']++;
-        }
-
-        for (char c : t)
-        {
-            count[c - 'a']--;
-        }
-
-        // Recorro la cuenta para saber si todo es 0
-        for (int i = 0; i < 26; i++)
-        {
-            if (count[i] != 0)
-            {
-                return false;
-            }
-        }
-
-        return true;
-    */
-
-//Solución basada en codigo que hice en python
-        //Podría usar la tecnica que hice en el ejercicio esay de strings en "isValid Anagram"
-        //Y que las keys sean esos arrays. De esa manera en lugar de hacer mlogm ordenando las letras
-        //Solo tomaria m, en sacar el array de palabras y ver si ya existe como key
         
-        //Runtime: O(n*mlogm) n:recorremos "n" elementos m: las letras de la palabra, mlogm: runtime para ordenar
-        //Memory: O(n)
-        
-        //creo hashtable que va a agrupar los anagramas
-        unordered_map<string, vector<string>> hashtable;    //O(n) memory
-        
-        //Creo vector que tendrá el resultado final
-        vector<vector<string>> result;
-        
-        //Recorro todas las palabras
-        for(int i = 0; i < strs.size(); i++){   //O(n) runtime
-            
-            //Ordeno letras de la palabra
-            string aux = strs[i];
-            sort(aux.begin(), aux.end());   //O(m log m)
-            
-            //La palabra con letras ordenadas es la key y el value es el vector con las palabras que tienen la misma palabra con ltras ordenadas
-            if(hashtable.find(aux) != hashtable.end()){ //Si ya tiene palabras en esa key, hacemos pushback
-                hashtable[aux].push_back(strs[i]);
-            }
-            else{   //Si no tiene palabras, agregamos el vector con una sola palabra
-                vector<string> auxVector = {strs[i]};
-                hashtable[aux] = auxVector;
-            }
-        }
-        
-        //No olvidar que es como un diccionario en python. Recorro la lista, si no existe el valor creo la key para agregarlo
-            //si el valor existe, lo agrego al value
-
-        //Ahora agrego cada grupo de anagramas al vector con el resultado
-        for(auto x: hashtable){ //O(n)
-            result.push_back(x.second);
-        }
-        
-        return result;  //Regreso el resultado
-
     }
 };
+/*
+runtime: O(n*(m log m))
+space: O(n)
+Terminado en 45 minutos, pero ahora la soluciçon fue originalmente mia y fue la solución más eficiente
+para alguién que no esté en programación competitiva.
+
+La solución más eficiente es creando tu propia función de hashing, lo hace:
+    runtime: O(n*k)
+    space: O(n)
+
+
+*/
 
 /*
 Codigo funcional y terminado en 43 minutos, ando terminandolos al borde.

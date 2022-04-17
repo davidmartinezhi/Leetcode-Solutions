@@ -157,7 +157,7 @@ public:
 
     return maxCount;
     */
-
+    /*
         // El mismo codigo pero más simplificado
         // Dynamic Window, Slidin window technique
         // Runtime: O(n)
@@ -208,6 +208,65 @@ public:
         }
 
         return maxCount;
+        */
+
+
+        /*
+        //Solución haciendolo de 0, 2 meses despues
+        
+        */
+        /*
+        1. listen
+            input: string "s"
+            output: longest substring without repeating characters
+            
+            string has between 0 and 50,000 characters
+            s consists of english letters, digits, symbols and spaces
+        
+        2. example
+            "abcabcbb" -> 3
+            "bbbb" -> 1
+            "pwwkew" -> 3
+            
+        3. brute force/optimal solution
+            BCR: O(n)
+            
+            sliding window technique
+            
+            Use a hashtable
+            traverse and add 1 to each character found
+            if a character becomes 2
+            move starting pointer until it's valid to move foward
+            
+            runtime: O(n)
+            space: O(n)
+        
+        7. test
+            empty string
+            all characters are repeating characters
+            all characters are non repeating characters
+            mixed
+        */
+        
+        int n = s.size();
+        int longestSub = 0;
+        
+        unordered_map<char, int> charHt;
+        int windowStart = 0;
+        
+        for(int windowEnd = 0; windowEnd < n; windowEnd++){
+            
+            charHt[s[windowEnd]]++;
+            
+            while(charHt[s[windowEnd]] > 1){
+                charHt[s[windowStart]]--;
+                windowStart++;
+            }
+            
+            longestSub = max(longestSub, windowEnd - windowStart + 1); 
+        }
+        
+        return longestSub;
     }
 };
 

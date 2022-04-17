@@ -69,3 +69,19 @@ public:
 
     }
 };
+
+/*
+-45+ minutes
+-Estuve bien desde el inicio con la idea de hacer un dynamic sliding window technique
+-Pero la implementación fue la que me fallo, la complique de más
+
+-Solo es agregar mientras la condición se cumpla, si se deja de cumplir, restar.
+
+He notado que estoy confundiendo muy seguido, cuando utilizar kadane's algorithm y sliding window technique.
+    Debería de pensar bien en cual utilizar primero.
+
+Complejidad:
+    runtime: O(n)
+    memory: O(1)
+
+*/

@@ -44,7 +44,7 @@ public:
         //count
         int substrings = 0;
         
-        //check odd size palindrome
+        //check odd size palindrome, runtime: O(n^2)
         for(int i = 0; i < n; i++){
             int j = i;
             int k = i;
@@ -56,7 +56,7 @@ public:
             }
         }
         
-        //check even size palindrome
+        //check even size palindrome, runtime: O(n^2)
         for(int i = 0; i < n-1; i++){
             int j = i;
             int k = i + 1;
@@ -71,3 +71,19 @@ public:
         return substrings;
     }
 };
+/*
+Notas:
+    Terminado en 15-20 minutos
+
+    runtime: O(n^2)
+    space: O(1)
+*/
+
+int main(){
+
+    Solution test;
+
+    cout << test.countSubstrings("aaa") << endl;
+
+    return 0;
+}

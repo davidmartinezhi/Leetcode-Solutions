@@ -1,0 +1,40 @@
+What is dynammic programming and how to use it
+https://www.youtube.com/watch?v=vYquumk4nWw
+
+What is it?
+    A way to make your algorithm more efficient by storing some of the intermmediate results
+
+When does it work well?
+    When your algorithm has a lot of repetitive computations
+
+Typical 3 steps in dynammic programming.
+    1. recursion
+    2. store (memoize)
+    3. bottom-up
+
+
+Learn to write 1D Recurrence Relations
+https://www.youtube.com/watch?v=mLfjzJsN8us
+
+Understand a DP problem:
+    when a question has: 
+                "Count the total number of ways"
+                "Multiple ways of doing things, give me the min and/or max output"
+    
+    Whenever the concept of "Try all  possible ways: count or the best way"
+        In this cases we apply recursion
+
+    Shortcut for Recurrence Relations   
+        1. try to represent problem in terms of index
+        2. do all possible stuffs on that index according to problem statement
+        3. if the questions says "count all ways", sum up all stuff
+            if it says count minimum, take min of all stuffs
+            same with maximum
+
+
+https://www.youtube.com/watch?v=tyB0ztf0DNY&list=PLgUwDviBIf0qUlt5H_kiKYaNSqJ81PMMY&index=2
+https://www.youtube.com/watch?v=FfXoiwwnxFw&list=PLgUwDviBIf0qUlt5H_kiKYaNSqJ81PMMY&t=0s
+Dynammic Programming series
+
+4 principles of optimality in dynammic programming
+https://www.youtube.com/watch?v=5dRGRueKU3M

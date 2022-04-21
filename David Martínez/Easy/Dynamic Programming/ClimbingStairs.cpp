@@ -86,4 +86,6 @@ notas:
     -runtime: O(n)
     -space: O(1)
 
+    Matrix exponentiation me ayudaría a hacerlo en runtime O(log n)
+
 */

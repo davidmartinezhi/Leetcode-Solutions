@@ -78,3 +78,12 @@ public:
         return steps[1];
     }
 };
+
+/*
+notas:
+    -terminado 19 minutos
+
+    -runtime: O(n)
+    -space: O(1)
+
+*/

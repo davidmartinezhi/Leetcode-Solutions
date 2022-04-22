@@ -135,3 +135,12 @@ public:
 };
 
 //50 minutes
+
+/*
+
+    -Solución optima diseñada en 20 minutos
+    -Implementación fue lo tardado, pero si estaba para terminar a tiempo en 40 minutos total
+
+    -Mi error fue no poner que el ultimo nodo a nullptr, debo ser explicito.
+
+*/

@@ -143,4 +143,13 @@ public:
 
     -Mi error fue no poner que el ultimo nodo a nullptr, debo ser explicito.
 
+    -Otra manera de llegar a la mitad de la lista es con un apuntador fast y otro slow
+        slow recorre la lista 1 x 1
+        fast recorre la lista 2 x 2
+
+        cuando fast sea nullptr o fast->next sea nullptr, slow estará en la mitad
+        Esto quiere decir que así sabemos si la length es size even or non
+
+        El reverse sería en el slow pointer, que es la mitad
+
 */

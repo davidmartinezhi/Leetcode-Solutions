@@ -70,3 +70,15 @@ public:
         }  
     }
 };
+
+/*
+Me tarde 40 minutos en resolverlo, pero las condiciones ya las tenía desde los primeros 10 minutos.
+complejidad: runtime: O(n), time: O(n)
+
+
+Mi error en el que me tarde, fue en que la función debía de regresar a fuerzas un valor y ese return afectaba todo
+Lo que debo de hacer con este tipo de problemas es que no poner varios if's sueltos, mejor, si el problema aplica,
+poner if else is else, porque eso hace la estructura más lógica.
+
+
+*/

@@ -125,3 +125,17 @@ public:
     }
 };
 
+/*
+Nota:
+    Tiempo: +45
+
+    Saque el diseño de la solución desde el principio, pero me tarde con la logica y los tests de los pointers
+    Talvez checar la lógica un poco más y asegurarme de como funcionará, sea mejor a hacer más esfuerzo metnal
+
+    Si es mejor en papel asegurarme de que estoy haciendo y como lo haré. En lugar
+    de estar a medio codigo y estar trabajando la lógica.
+
+    Solo improvisar y sacar la solución a medio sprint, cuando no exista alternativa. No apresurarme
+    Si no hay razón para apurarme de la manera en la que me apuré, debo de no apurarme
+
+*/

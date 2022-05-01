@@ -11,3 +11,18 @@ Recursive leap of faith?
     It's about assuming that easier versions of the problem will be correct.
 
 Practicar más recursividad. En un trabajo real casí no se usa, pero si para entrevistas.
+
+
+https://www.youtube.com/watch?v=yVdKa8dnKiE&list=PLgUwDviBIf0rGlzIn_7rsaR2FQ5e6ZOL9
+recursion
+
+Introduction to recursion
+Recursion: When a function calls itself until a specifical condition is met.
+
+Stack overflow: cuando la llamada recursiva llena la memoria y no puede llamar la función otra vez
+
+Stack space: where the yet to be completed calls are stored, waiting
+
+Base condition: Condition where the recursion calls stop
+
+Recursion Tree: How the recursion calls are called

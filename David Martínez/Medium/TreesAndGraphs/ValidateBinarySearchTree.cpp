@@ -104,3 +104,22 @@ public:
         return true;
     }
 };
+
+/*
+Notas:
+    -Me tarde más de 45 minutos. Pero porfín lo terminé
+
+    -Curiosamente nunca había entregado la respuesta a este problema y la ultima vez que lo intente fue
+    en enero cuando apenas iba comenzando.
+
+    -Algo que puedo comenzar a hacer es en la parte del diseño, no querer irme por la primera solución que se me ocurre.
+     Afuerzas repasar las diferentes alternativas una vez. Si me hubiera puesto a pensar en los tipos de traversals,
+        me hubiera dado cuenta que inorder me rgresa los valores en orden y que tenía que hacerlo con inorder.
+
+    -Otra tecnica que fue de mucha ayuda es la de tener una variable que funcione como estaca, en este caso es la de left Child.
+     Con esa estaca siempre tengo presente el valor del hijo más pequeño. Si el dato actual llega a ser menor o igual, regreso false.
+
+    -Este fue un gran ejercicio que me dejo claro que no hay porque alarmarse con un problema. Solo debo checar 
+     cual es el bcr y repasar todos los tipos de traversals para saber cual puede ser el más eficiente.
+
+*/

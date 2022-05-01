@@ -79,11 +79,11 @@ public:
 
         */
 
-        stack<TreeNode *> stack;
+        stack<TreeNode *> stack; //space: O(n)
 
-        long leftChild = LONG_MIN;
+        long leftChild = LONG_MIN;  //space: O(1)
 
-        while (!stack.empty() || root != nullptr)
+        while (!stack.empty() || root != nullptr)   //runtime: O(n)
         {
             while (root != nullptr)
             {

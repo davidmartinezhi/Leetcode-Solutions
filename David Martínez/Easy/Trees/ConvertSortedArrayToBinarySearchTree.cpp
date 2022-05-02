@@ -14,122 +14,78 @@ struct TreeNode {
 class Solution {
 public:
     TreeNode* sortedArrayToBST(vector<int>& nums) {
-        /*
-        1. listen
-            
-            input: integer array "nums" where elements are sorted in ascending order
-            output: height balanced binary search tree
+    /*
+    info
+        input: integer array "nums" where elements are sorted in ascending order
         
-            nums.length is bewtween 1 and 10,000
-            nums is sorted in a strictly increasing order
-            
-        2. example
-            cuaderno 
-            
-        3. brute force
-            pivot = size/2
-            Traverse the vector
-            before pivot, arreanges the values on the left side
-            after pivot, arranges the values on the right side
+        convert it to a height balanced binary search tree
         
-        4. optimize
-            BCR: O(n) traverse vector O(log n) inserting values on BST
-            BCR: O(n log n)
+            height balanced bst:
+                depth of subtrees of every node never differs by more than one
+        
+        constraints:
+            nums length ranges from 1 to 10,000
+            nums[i] ranges from -10,000 to 10,000
+            strictly sorted in increasing order
+    
+    example
+    
+    [1, 3] -> [3, 1]
+    
+    cuaderno
+    
+    brute force:
+    
+        traverse the list though a binary search andset that value as the root, then left child
+        and right child come from doing binary search on both extremes
+        
+        runtime: O(log n)
+        space: O(n) for the creatin of the bst
+        extra space:O(1)
+        
+    optimize:
+        
+        BCR: log n
+        
+        I think my approach is the most efficient way of creating the bst
+    
+    walkthrough:
+        
+    
+    test:
+        array of size 1
+        array of odd size
+        array of even size
 
-            Pense que el BCR era n log n, pero en realidad es n. construyo con dfs el arbol de abajo 
-            hacía arriba. Pero el memory es de O(n) siempre por la creación de nuevos nodos
-            
-            Brute force is optimal, since it uses O(1) memory
-        
-        5. walkthrough
-            Check that the list has more than 1 element
-            Find the pivot
-            the pivot is the root.
-            
-            For each element in the vector 
-                Elements before the pivot fit on the left side
-                Create aux pointer for left side insert the value on that left side
-                
-                Elements after the right pivot
-                create aux pointer for right side inser the value on that right side
-
-        6. implement
-        7. test
-        */
-        
-        
-        /*
-        Intento secuencial
-        
-        int pivot = nums.size()/2; //Pivot Index
-        TreeNode * root = new TreeNode(nums[pivot]);   //Root
-
-        //Check that the list has more than 1 value
-        if(nums.size() == 1){
-            return root;
-        }
-
-        //Normal insertion
-        
-        //Traverse the list
-        for(int i = 0; i < nums.size(); i++){
-            
-            TreeNode * father = root;
-            TreeNode * curr = root;
-            
-            //check if we are on the pivot
-            
-            //Check left side
-            if(i < pivot){
-                curr = curr->left;
-            }
-            
-            //Check right side
-            if(i > pivot){
-                curr = curr->right;
-            }
-            
-            
-            if(i != pivot){
-                while( curr != nullptr){
-                
-                    father = curr;
-                    curr = (curr->val > nums[i]) ? curr->left : curr->right;
-                }
-                
-                
-                if(father->val > nums[i]){
-                    father->left = new TreeNode(nums[i]);
-                }
-                else{
-                    father->right = new TreeNode(nums[i]);
-                }
-            }
-            
-        }
-        
-        return root;
     */
         
-        //Sabía que era con busqueda binaria, solo no había pensado en como aplicar el concepto con
-            //Recursividad
-        return dfs(nums, 0, nums.size()-1);
+        return binaryBSTConstruction(nums, 0, nums.size()-1);
     }
-
-    //Función recursiva que hace mi solución propuesta 
-        //de hacerlo implementando el concepto de binary search
-    TreeNode* dfs(vector<int> & nums, int start, int end){  //Recibe index start y end
-        
-        if(end < start){    //Si end no sea mayor a start (no se crucen los pointers)
-            return nullptr; //Regreso nullptr
-        }
     
-        int mid = (start+end) / 2;  //Saco el index de enmedio
-        TreeNode * root = new TreeNode(nums[mid]);  //Creo un nodo con ese valor
+    TreeNode * binaryBSTConstruction(const vector<int> & nums, int i, int j){
         
-        root->left = dfs(nums, start, mid-1);//El lado izquierdo lo apunto de start a mitad-1
-        root->right = dfs(nums, mid+1, end); //El lado derecho lo apunto de mitad+1 a end
-    
-        return root; //Regreso el root
+        int mid = i + (j-i) / 2;
+        
+       //base case
+        if(i > j) return nullptr;
+        
+        TreeNode * aux = new TreeNode(nums[mid]);
+        
+        //left
+        aux->left = binaryBSTConstruction(nums, i, mid-1);
+        aux->right = binaryBSTConstruction(nums, mid+1, j);
+        
+        return aux;
     }
+    
 };
+
+/*
+Solución elaborada 100% por mi
+
+Me tarde 15 minutos en sacar el aproach más optimo
+Pero si me tarde los 45 minutos porque se me olvido que el mid es i + (j-i) / 2. Yo estaba poniendo solo (j-i) / 2
+
+Aún así si hice una buena implementación del binary search y crear un arbol balanceado
+
+*/

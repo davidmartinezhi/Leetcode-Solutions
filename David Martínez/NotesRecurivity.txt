@@ -26,3 +26,8 @@ Stack space: where the yet to be completed calls are stored, waiting
 Base condition: Condition where the recursion calls stop
 
 Recursion Tree: How the recursion calls are called
+
+The base case is decided by the problem statement
+
+Backtracking es cuando en el regreso de las llamadas recursivas, tomas otro camino u otra acción
+    -Se regrea para luego probar otro camino

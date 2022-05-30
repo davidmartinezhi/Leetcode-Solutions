@@ -16,18 +16,33 @@ Practicar más recursividad. En un trabajo real casí no se usa, pero si para en
 https://www.youtube.com/watch?v=yVdKa8dnKiE&list=PLgUwDviBIf0rGlzIn_7rsaR2FQ5e6ZOL9
 recursion
 
-Introduction to recursion
-Recursion: When a function calls itself until a specifical condition is met.
+** Introduction to recursion **
+    Recursion: When a function calls itself until a specifical condition is met.
 
-Stack overflow: cuando la llamada recursiva llena la memoria y no puede llamar la función otra vez
+    Stack overflow: cuando la llamada recursiva llena la memoria y no puede llamar la función otra vez
 
-Stack space: where the yet to be completed calls are stored, waiting
+    Stack space: where the yet to be completed calls are stored, waiting
 
-Base condition: Condition where the recursion calls stop
+    Base condition: Condition where the recursion calls stop
 
-Recursion Tree: How the recursion calls are called
+    Recursion Tree: How the recursion calls are called
 
-The base case is decided by the problem statement
+    The base case is decided by the problem statement
 
-Backtracking es cuando en el regreso de las llamadas recursivas, tomas otro camino u otra acción
-    -Se regrea para luego probar otro camino
+    Backtracking es cuando en el regreso de las llamadas recursivas, tomas otro camino u otra acción
+        -Se regresa para luego probar otro camino
+
+        Backtracking cuando hace algo despues de la llamada de la función
+
+
+** Parametized And Functional Recursion **
+
+    Ex. sum of first N numbers
+
+        Parametized and Functional ways
+
+        N = 3 -> 6 = 1 + 2 + 3
+
+        Parametized means, it all depends on parameters passed to the function, manipulate but don't return a value
+        Functional, we want to return a value
+

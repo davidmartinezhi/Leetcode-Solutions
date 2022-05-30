@@ -91,3 +91,21 @@ public:
         return false;
     }
 };
+
+/*
+Notes:
+
+    time: 32 minute
+
+    complecity: O(n) runtime y O(1) space
+
+    -Cuando sabes que el problema tiene una solcuión recursiva, es bastante facíl
+     porque ya sabes el camino que debes de tomar, aún debes de pensarle, pero ya sabes por donde dirigirte.
+
+    -Siento que mi solución fue muy elegante y simple.
+
+    -Creí que iba a sentirme lento por no haber practicado en 2-3 semanas. 
+        Pero me sentí incluso más fresco. Haré toda la seríe de estos problemas
+
+
+*/

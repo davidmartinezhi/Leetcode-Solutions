@@ -36,5 +36,17 @@ https://www.youtube.com/watch?v=tyB0ztf0DNY&list=PLgUwDviBIf0qUlt5H_kiKYaNSqJ81P
 https://www.youtube.com/watch?v=FfXoiwwnxFw&list=PLgUwDviBIf0qUlt5H_kiKYaNSqJ81PMMY&t=0s
 Dynammic Programming series
 
+-Those who cannot remember the past, are condomned to repeat it. -DP
+
+Ways to solve it:
+    -Tabulation
+    -Memoization
+
+Tabulation:
+    Bottom-up dynamic programming
+
+Memoization:
+    Top-down dynamic programming
+
 4 principles of optimality in dynammic programming
 https://www.youtube.com/watch?v=5dRGRueKU3M

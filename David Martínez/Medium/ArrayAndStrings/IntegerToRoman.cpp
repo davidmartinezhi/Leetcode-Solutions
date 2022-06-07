@@ -37,6 +37,8 @@ public:
             
         */
         
+        //time: O(n)
+        //extra space: O(1)
         
         //variables
         int aux = num; //number
@@ -48,7 +50,6 @@ public:
             aux -= aux%decimals;    //Remove digits
             decimals *= 10; //Increase decimal
         }
-        
         
         return result;
     }

@@ -101,3 +101,13 @@ public:
         }
     }
 };
+
+/*
+Nota:
+    Casí termino de descifrar la solución a los 20 minutos
+    Pero por dudar, tarde mucho en comenzar a hacer el programa y resulto salir a la primera.
+
+    Aún así tarde 45+ minutos. Pero de manera innecesaria.
+    No debo de hesitar tanto, debo de sacar alguna solución y actuar antes.
+
+*/

@@ -104,3 +104,9 @@ public:
         return result;
     }
 };
+
+/*
+notas:
+    terminado en 28 minutos
+    Se puede optimizar la memoria para no utilizar el vector y ser O(1) extra space
+*/

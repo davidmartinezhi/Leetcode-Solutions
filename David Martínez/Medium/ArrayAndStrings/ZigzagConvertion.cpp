@@ -110,3 +110,15 @@ notas:
     terminado en 28 minutos
     Se puede optimizar la memoria para no utilizar el vector y ser O(1) extra space
 */
+
+int main(){
+
+    Solution solution;
+    string test = "PAYPALISHIRING";
+
+    string result = solution.convert(test, 4);
+
+    cout << result << endl;
+
+    return 0;
+}

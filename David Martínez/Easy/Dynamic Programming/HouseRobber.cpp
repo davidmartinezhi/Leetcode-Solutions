@@ -137,4 +137,9 @@ Notas:
         time: O(n)
         extra space: O(1)
 
+    Ya sabía que era un problema de programación dinamica, pero tarde en obtener una solución
+    Debo precticar más tecnicas para resolver este tipo de problemas
+    Este problema lo resolcí al ir guardando siempre valores previos en variables diferentes. 
+    Debo de aplicar tecnica y formalizarla para mi kit de dynammic problems problem solving.
+
 */

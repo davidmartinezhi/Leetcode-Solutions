@@ -92,7 +92,6 @@ class Solution{
         if(asc == false && desc == false){
             int prev = nums[0];
             int prevNoLast = 0;
-            int maxNum = prev;
             /*
             [100, 20, 3, 400]
             prev:103
@@ -140,6 +139,6 @@ Notas:
     Ya sabía que era un problema de programación dinamica, pero tarde en obtener una solución
     Debo precticar más tecnicas para resolver este tipo de problemas
     Este problema lo resolcí al ir guardando siempre valores previos en variables diferentes. 
-    Debo de aplicar tecnica y formalizarla para mi kit de dynammic problems problem solving.
+    Debo de aplicar tecnica y formalizarla para mi kit de dynammic programming problem solving.
 
 */

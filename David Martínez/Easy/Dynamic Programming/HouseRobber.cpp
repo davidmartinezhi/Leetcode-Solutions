@@ -129,3 +129,12 @@ class Solution{
         return 0;
     }
 };
+
+/*
+Notas:
+    terminado en + de 45 minutos
+    complejidad:
+        time: O(n)
+        extra space: O(1)
+
+*/

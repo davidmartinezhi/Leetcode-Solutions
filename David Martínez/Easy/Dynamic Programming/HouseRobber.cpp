@@ -5,7 +5,7 @@ using namespace std;
 
 class Solution{
     public:
-        int rob(vector<int> & nums){
+    int rob(vector<int>& nums) {
         /*
         1. listen
             input: integers array "nums", representing the amount of money on each house
@@ -74,8 +74,29 @@ class Solution{
                 mixed number values
                 array with all values the same
         */
+            int prev = nums[0];
+            int prevNoLast = 0;
+            /*
+            [100, 20, 3, 400]
+            prev:103
+            prevNoLast:100
+            max:100
+            */
+            
+            for(int i = 1; i < nums.size(); i++){
+                if(prevNoLast+nums[i] > prev){
+                    int aux = prev;
+                    prev = prevNoLast+nums[i];
+                    prevNoLast = aux;
+                }
+                else{
+                    prevNoLast = prev;
+                }
+            }
+            
+            return max(prev, prevNoLast);
         
-        
+        /*
         //variables to know if array is sorted
         bool asc = true;
         bool desc = true;
@@ -92,12 +113,7 @@ class Solution{
         if(asc == false && desc == false){
             int prev = nums[0];
             int prevNoLast = 0;
-            /*
-            [100, 20, 3, 400]
-            prev:103
-            prevNoLast:100
-            max:100
-            */
+
             
             for(int i = 1; i < nums.size(); i++){
                 if(prevNoLast+nums[i] > prev){
@@ -126,6 +142,7 @@ class Solution{
         }
         
         return 0;
+    */
     }
 };
 
@@ -135,6 +152,8 @@ Notas:
     complejidad:
         time: O(n)
         extra space: O(1)
+
+    Pude solo utilizar la comparación dinamica para sacar el resultado
 
     Ya sabía que era un problema de programación dinamica, pero tarde en obtener una solución
     Debo precticar más tecnicas para resolver este tipo de problemas

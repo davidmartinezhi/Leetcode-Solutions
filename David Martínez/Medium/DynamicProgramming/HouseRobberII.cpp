@@ -89,7 +89,6 @@ class Solution{
         maxMoney = dp[n-1];
 
         
-        
         //traverse the list from index 1
         dp[1] = nums[1];
         //[1,2,3,4]
@@ -98,12 +97,24 @@ class Solution{
             dp[i+1] = max(nums[i+1]+dp[i-1], dp[i]);
         }
 
-        
         //Return
-        return max(maxMoney, dp[n-1]);
-        
+        return max(maxMoney, dp[n-1]); 
     }
 };
+
+/*
+Notas:
+    terminado en 43 minutos
+    Me tarde con la logica en el traversal comenzando del 1er index, tener una manera de sibujar en la pantalla
+    será muy eficiente y yo diría es un must, el utilizarlo.
+
+    En general, buena performance y buen razonamiento para la respuesta optima. Se puede optimizar, pero el approach
+    es el ideal.
+
+    Fue de mucha aayuda el video de nick, explicando house robber 1, me hizo formalizar el pensamiento en dp
+    cuando quieres sacar un valor maximo.
+
+*/
 
 int main(){
     return 0;

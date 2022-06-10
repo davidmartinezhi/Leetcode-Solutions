@@ -117,5 +117,8 @@ Notas:
 */
 
 int main(){
+    Solution solution;
+    vector<int> test = {1,2,3,100};
+    cout << solution.rob(test) << endl;
     return 0;
 }

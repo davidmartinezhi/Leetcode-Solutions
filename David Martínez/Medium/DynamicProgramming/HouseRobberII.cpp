@@ -4,7 +4,7 @@
 using namespace std;
 
 class Solution{
-    public:
+public:
     int rob(vector<int>& nums) {
         /*
         1. listen:
@@ -72,7 +72,7 @@ class Solution{
         //check for array of size 2
         if(n == 2) return max(nums[0],nums[1]);
         
-        
+        /*
         //aux vector for dp
         vector<int> dp(n,0);
         dp[0] = 0;
@@ -89,6 +89,7 @@ class Solution{
         maxMoney = dp[n-1];
 
         
+        
         //traverse the list from index 1
         dp[1] = nums[1];
         //[1,2,3,4]
@@ -97,11 +98,47 @@ class Solution{
             dp[i+1] = max(nums[i+1]+dp[i-1], dp[i]);
         }
 
+        
         //Return
-        return max(maxMoney, dp[n-1]); 
+        return max(maxMoney, dp[n-1]);
+        
+        */
+        int prev = nums[0];
+        int prevNoLast = 0;
+        int maxMoney;
+            
+        for(int i = 1; i < nums.size()-1; i++){
+            if(prevNoLast+nums[i] > prev){
+                int aux = prev;
+                prev = prevNoLast+nums[i];
+                prevNoLast = aux;
+            }
+            else{
+                prevNoLast = prev;
+            }
+        }
+            
+        maxMoney = max(prev, prevNoLast);
+
+        prev = nums[1];
+        prevNoLast = 0;
+            
+        for(int i = 1; i < nums.size()-1; i++){
+            if(prevNoLast+nums[i+1] > prev){
+                int aux = prev;
+                prev = prevNoLast+nums[i+1];
+                prevNoLast = aux;
+            }
+            else{
+                prevNoLast = prev;
+            }
+        }
+        
+        int aux = max(prev, prevNoLast);
+        
+        return max(aux, maxMoney);
     }
 };
-
 /*
 Notas:
     terminado en 43 minutos
@@ -113,6 +150,14 @@ Notas:
 
     Fue de mucha aayuda el video de nick, explicando house robber 1, me hizo formalizar el pensamiento en dp
     cuando quieres sacar un valor maximo.
+
+    complejidad con vector aux
+        time: O(n)
+        extra-space: O(n)
+
+    complejidad sin vector aux
+        time: O(n)
+        extra-space: O(1)
 
 */
 

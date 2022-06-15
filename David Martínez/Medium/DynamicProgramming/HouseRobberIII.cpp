@@ -16,3 +16,70 @@ struct TreeNode{
     TreeNode(int x, TreeNode* leftP, TreeNode *rightP): val(x), left(leftP), right(rightP) {};
 };
 
+class Solution{
+    int rob(TreeNode* root) {
+    /*
+    1. listen
+    
+        input: only one entrance, which is the "root"
+            each house has only one parent house, forming a binary tree
+            
+        output: max amount of money that can be robbed without alerting the police
+        
+        contraints: nodes in the binary tree are between 1 and 10,000
+                    node values are between 0 and 10,000 also
+    
+    2. example
+        notebook
+        
+        [3,2,3,null,3,null,1]
+        -> 7
+        
+    3. brute force
+        dfs and compare returning values
+        O(n) time
+        O(n) extra space
+    
+    4.optimize
+        bcr: O(n)
+        
+    5. walkthrough
+        dfs left and right
+        
+        compare fathe + prevleft + prevright and actual left+ actual right
+        return the max
+        
+        if father + prevs is bigger, the actuals become prev
+        if actuals are bigger, actuals become the prev
+        
+    7. test
+        tree of one node
+        
+    */
+        return robHelper(root, {0,0})[1];
+        
+    }
+    
+    vector<int> robHelper(TreeNode* root, vector<int> money) {
+        
+        //base case
+        if(root == nullptr) return {0,0};
+        
+        //values variables
+        vector<int> left = robHelper(root->left, {0,0});
+        vector<int> right = robHelper(root->right, {0,0});
+        
+        //compare
+        int actual = root->val + left[0] + right[0];
+        int prev = left[1] + right[1];
+        
+        if(actual > prev){
+            return {prev, actual};
+        }
+        
+        return {prev, prev};
+    }
+};
+/*
+
+*/

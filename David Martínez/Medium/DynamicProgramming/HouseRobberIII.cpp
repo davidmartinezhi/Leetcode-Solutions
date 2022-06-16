@@ -81,5 +81,12 @@ class Solution{
     }
 };
 /*
+44 minutes
+El problema fue muy estimulante
+Me gusto que es la primera vez que aplico el optimize ans solve technique de "base case and build"
 
+Me siento orgulloso de que pude sacar la solución a tiempo. Aparte hoy fue mi entrevista con el ingeniero de facebook
+y mme comento que no hay duda de mis problem solving abilities. Trabajaré más en solucionar gastando un poco menos de tiempo
+en la planeación del inicio.
+    -Solo escribir lo escencial
 */

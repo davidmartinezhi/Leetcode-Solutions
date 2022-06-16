@@ -169,3 +169,13 @@ public:
     }
 };
 
+/*
+Notas:
+    La solución le implemente del data structure de pair,
+    que solo es un tuple que crea una unidad de valor con 2 datos que pueden ser de diferente valor. 
+    Como un tuple.
+
+    Mejoró muchisimo la memoria y el running time, ya en acción.
+    La compeljidad sigue siendo la misma 
+
+*/

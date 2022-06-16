@@ -17,7 +17,8 @@ struct TreeNode{
 };
 
 class SolutionArray{
-    int rob(TreeNode* root) {
+    public:
+    int robArray(TreeNode* root) {
     /*
     1. listen
     
@@ -94,7 +95,7 @@ en la planeación del inicio.
 
 class SolutionPair {
 public:
-    int rob(TreeNode* root) {
+    int robPair(TreeNode* root) {
     /*
     1. listen
     
@@ -179,3 +180,49 @@ Notas:
     La compeljidad sigue siendo la misma 
 
 */
+
+/*
+Pruebas
+-1 == nullptr
+[3,2,3,-1,3,-1,1]
+[3,3,5,100,200,-1,1]
+[3,4,5]
+[3,4,5,1,3,-1,1]
+[3,4,5,1,3,-1,1]
+[1]
+*/
+
+int main()
+{
+    SolutionArray solutionArray;
+    SolutionPair solutionPair;
+
+    vector<int> pruebas = {3,2,3,-1,3,-1,1};
+    vector<TreeNode*> pruebasTree;
+
+    for(int i = 0; i < pruebas.size();i++){
+        if(pruebas[i] == -1){
+            pruebasTree.push_back(nullptr);
+        }
+        else{
+            pruebasTree.push_back(new TreeNode(pruebas[i]));
+        }
+        
+    }
+    for(int i = 0; i < pruebasTree.size()-2; i++){
+        int j = i*2+1;
+        int k = i*2+2;
+
+        if(pruebasTree[i]){
+
+                pruebasTree[i]->left = pruebasTree[j];
+                pruebasTree[i]->right = pruebasTree[k];
+            
+        }
+    }
+
+    cout << "Solution Array: " << solutionArray.robArray(pruebasTree[0]) << endl;
+    cout << "Solution Pair: " << solutionPair.robPair(pruebasTree[0]) << endl;
+
+    return 0;
+}

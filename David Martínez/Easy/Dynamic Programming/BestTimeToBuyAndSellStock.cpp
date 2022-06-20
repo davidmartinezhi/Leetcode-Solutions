@@ -87,4 +87,21 @@ public:
     }
 };
 
+/*
+Nota:
+Terminado en 25 minutos
+
+    Buena implementación de kadane's algorithm
+    Lo saque muy rapido, si se nota la mejora y eficiencia para mi problem solving
+
+    Siento que hubo un momento en el que me detuve por no estar seguro que otro approach tomar
+        pero el comenzar a checar si los que había pensado pueden funcionar, me hizo darme cuenta de la 
+        solución más optima.
+
+    Complejidad:
+        O(n) time
+        O(1) extra space
+
+*/
+
 

@@ -170,3 +170,16 @@ public:
         return minWindow;    
     }
 };
+
+/*
+Notas:
+    -Desde los primeros 20 minutos tuve un approach que funcionaba para la solución
+        La idea de la solución fue correcta, la implementación me tarde
+
+    Siento que definir las condiciones a cumplir, me puede servir demasiado. porque ahora
+    solo debería de acomodarlo
+
+    Complejidad:
+        Time: O(n+m)
+        space: O(n+m)
+*/

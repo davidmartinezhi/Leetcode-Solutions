@@ -138,34 +138,34 @@ public:
                 
                 sHt[s[end]]++;    //add it
                 
-                if(sAux < tAux){
+                if(sAux < tAux){    //If it still doesn't has the frequency needed, add it
                     charsFound++;
                 }
             }
             
             
-            
             //if condition is met
             while(charsToFind == charsFound && start <= end){
-                found = true;
-                auto tAux = tHt[s[start]];
+                found = true;   //set found to true
+                auto tAux = tHt[s[start]];  //get values
                 auto sAux = sHt[s[start]];     
                 
-                if(tAux != 0 && tAux == sAux){
-                    sHt[s[start]]--;
-                    charsFound--;
-                    
-                }else if(tAux != 0){
-                    sHt[s[start]]--;
+                if(tAux != 0 && tAux == sAux){  //if the char exists in t and has the same frequency
+                    sHt[s[start]]--;    //decrease frequency
+                    charsFound--;   //update chars found
+                }else if(tAux != 0){    //if char exists in t and doesn't has same frequency
+                    sHt[s[start]]--;    //decrease it
                 }
+
+                //Check window
                 minWindow = (minWindow.size() > end+1-start) ? s.substr(start, end+1-start) : minWindow;
-                start++;
+                start++;    //Move index
             }
             
             end++;
         }
         
-        if(!found) return "";
+        if(!found) return "";   //if char not found return empty sting
     
         return minWindow;    
     }

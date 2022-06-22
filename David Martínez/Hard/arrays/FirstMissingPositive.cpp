@@ -53,7 +53,7 @@ public:
         
         //O(n) runtime
         //O(n) extra space
-        
+        /*
         //declare hashtable and int result
         unordered_map<int, int> numsFreq;
         int positiveInt = 1;
@@ -69,6 +69,19 @@ public:
         }
         
         return positiveInt;
+        */
         
+        //runtime: O(n log n)
+        //extra space: O(1)
+        int positiveInt = 1;
+        
+        //sorting
+        sort(nums.begin(), nums.end());
+        
+        for(int i = 0; i < nums.size(); i++){
+            if(positiveInt == nums[i]) positiveInt++;
+        }
+        
+        return positiveInt;
     }
 };

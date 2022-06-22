@@ -60,7 +60,7 @@ public:
         //optimize
         //Runtime: O(n)
         //extra space: O(n)
-        
+
         //create priority queue
         priority_queue<int> maxHeap(nums.begin(), nums.end());
 
@@ -74,3 +74,14 @@ public:
 
     }
 };
+
+/*
+Notas:
+    brute force terminado en 15 minutos
+    optimized version terminado en 9 minutos
+    total: 24 minutos
+
+    Me asombro lo rapido que saque la solución, se supone que el problema es medium
+    pero lo sentí como si fuese easy.
+
+*/

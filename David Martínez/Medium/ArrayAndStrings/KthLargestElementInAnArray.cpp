@@ -49,12 +49,26 @@ public:
         //brute force
         //runtime: O(n log n)
         //extra space: O(1)
-        
+         /*
         //sort
         sort(nums.begin(), nums.end());
         
         //return kth largest element
         return nums[nums.size() - k];
+        */
         
+        //optimize
+        
+        //create priority queue
+        priority_queue<int> maxHeap(nums.begin(), nums.end());
+
+        //get kth largest element
+        while(k > 1){
+            maxHeap.pop();
+            k--;
+        }
+        
+        return maxHeap.top();
+
     }
 };

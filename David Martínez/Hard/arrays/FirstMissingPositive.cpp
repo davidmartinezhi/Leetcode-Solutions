@@ -85,3 +85,12 @@ public:
         return positiveInt;
     }
 };
+
+/*
+Notas:
+    Terminado en 13 minutos con optimo runtime
+    Terminado en otros 13 minutos con optimo uso de memoria
+
+    Existe una manera de obtener optimo runtime y memoria, lo debo checar
+
+*/

@@ -47,6 +47,8 @@ public:
         */
         
         //brute force
+        //runtime: O(n log n)
+        //extra space: O(1)
         
         //sort
         sort(nums.begin(), nums.end());

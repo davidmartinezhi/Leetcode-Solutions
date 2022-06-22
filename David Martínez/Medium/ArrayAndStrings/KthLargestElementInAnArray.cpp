@@ -58,6 +58,8 @@ public:
         */
         
         //optimize
+        //Runtime: O(n)
+        //extra space: O(n)
         
         //create priority queue
         priority_queue<int> maxHeap(nums.begin(), nums.end());

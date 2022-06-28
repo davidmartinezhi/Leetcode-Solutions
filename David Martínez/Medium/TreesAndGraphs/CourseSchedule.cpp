@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <queue>
+#include <unordered_map>
 
 using namespace std;
 
@@ -77,6 +78,9 @@ public:
             
         */
         
+        /*
+//1.
+        //tiene limitantes en time complexity
         //no prerequisites check
         if(prerequisites.size() == 0) return true;
         
@@ -108,5 +112,58 @@ public:
         visited[v] = 2;
         return true;
     }
+    */
+
+//2.    
+    /*
+        //no prerequisites check
+        if(prerequisites.size() == 0) return true;
+        
+        //declare varibles
+        unordered_map<int, vector<int>> adj;
+        unordered_map<int, int> visited;
+        vector<int> exists;
+
+        //fill adjacencies info
+        for(int i = 0; i < prerequisites.size(); i++){
+            if(prerequisites[i][0] == prerequisites[i][1]) return false;
+            adj[prerequisites[i][0]].push_back(prerequisites[i][1]);
+            exists.push_back(prerequisites[i][0]);
+            
+        }
+        
+        //fill visited info
+        for(auto ad : adj){
+
+            visited[ad.first] = 0;
+             
+        }
+        
+        //traverse edges of existing courses
+        for(int i = 0; i < exists.size(); i++){
+            if(visited[exists[i]] == 0 && !dfs(adj, visited, exists[i])) return false;
+        }
+        
+        return true; 
+    }
     
+    bool dfs(unordered_map<int, vector<int>> & adj, unordered_map<int, int> & visited, int & v){
+        
+        //if it has been visited, and we come from it
+        if(visited[v] == 1) return false;   //return false
+        
+        //mark as visited
+        visited[v] = 1;
+        
+        //check adj
+        for(auto ad : adj[v]){
+            if(!dfs(adj, visited, ad)) return false;    //dfs
+        }
+        
+        visited[v] = 2; //mark as completed the visit
+        return true;    //return true
+    }
+    */
+
+
 };

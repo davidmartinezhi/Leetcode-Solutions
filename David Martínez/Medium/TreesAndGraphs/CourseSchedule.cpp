@@ -165,5 +165,44 @@ public:
     }
     */
 
-
+//3.
+        //no prerequisites check
+        if(prerequisites.size() == 0) return true;
+        
+        //declare varibles
+        vector<vector<int>> adj(numCourses, vector<int>()); //adjacencies
+        vector<int> indegreeCounts(numCourses, 0);  //how many nodes point to that single node
+        queue<int> starts;  //queue for nodes who are not being pointed by other nodes
+        int counter = 0;    //nodes found in the traversal
+        
+        //1. fill adjacencies and indigree
+        for(int i = 0; i < prerequisites.size(); i++){
+            adj[prerequisites[i][0]].push_back(prerequisites[i][1]);   //for each course, add prerequisite
+            indegreeCounts[prerequisites[i][1]]++;  //add how many courses point to that prerequisite
+        }
+        
+        //2. get nodes with indegree of 0 to the queue
+        for(int i = 0; i < indegreeCounts.size();i++){
+            if(indegreeCounts[i] == 0) starts.push(i);  //Add courses with no prerequisites to queue
+        }
+        
+        //3. process the queue
+        while(!starts.empty()){
+            int node = starts.front();  //get the node
+            starts.pop();
+            counter++;  //update counter
+            
+            for(int i = 0; i < adj[node].size(); i++){
+                
+                indegreeCounts[adj[node][i]]--; //update how many times the corresponding pre appears
+                
+                if(indegreeCounts[adj[node][i]] == 0){
+                    starts.push(adj[node][i]);  //if the course gets to 0, we add it
+                }
+            }
+            
+        }
+        
+        return counter == numCourses;   //return if nodes found is the same as numCourses
+    }
 };

@@ -206,3 +206,17 @@ public:
         return counter == numCourses;   //return if nodes found is the same as numCourses
     }
 };
+
+/*
+tiempo: 45+
+Complexity:
+    time: Overall O(v+e) vertices + edges = courses + prerequisites
+
+            O(v+e) fill adj and indegree
+            O(v) get courses with indegree 0
+            O(v+e) traverse prerequisites for each course
+
+    extra space: O(v+e)
+
+
+*/

@@ -218,5 +218,17 @@ Complexity:
 
     extra space: O(v+e)
 
+Notes:
+    Me siento orgulloso de que entendí el problema y que era con grafos por la manera en la que estaba
+    planteado el problema. Super que era grafos dirigidos y tenía que ver que no hubiera un ciclo
+
+    Pense en DFS y si algo se repite, es un ciclo. Pero resulto no ser muy optimo.
+
+    Topological sort sirve para ordenar prerequisitos y en este caso, saber si no existe un ciclo.
+    El algoritmo implementado es Kahn Algorithm
+        1.Fill indegree and adj
+        2.Add to queue nodes with indegree 0
+        3.Start from those nodes to traverse and update indegree
+            if indegree gets to 0, add it to the queue
 
 */

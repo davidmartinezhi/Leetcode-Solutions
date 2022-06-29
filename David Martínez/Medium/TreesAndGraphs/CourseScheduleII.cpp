@@ -105,6 +105,8 @@ public:
     time: 25 minutes
     complexity: time O(e+v) and extra space O(e+v)
 
-    
+    Note:
+        Una vez que ya estas familiarizado con el tipo de problema y sabes que utilizar, es muy facil sacar una solución
+        
 
 */

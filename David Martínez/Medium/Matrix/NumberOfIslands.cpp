@@ -87,4 +87,7 @@ Complexity:
     Time: O(n+m)
     extra space: stack memory (n*m* memory in each recursive call)
 
+    Muy buena idea la de ir marcando celdas, dejando breadcrumbs que luego nos ayudan
+    en el futuro, a saber donde hemos estado y que más podemos hacer.
+
 */

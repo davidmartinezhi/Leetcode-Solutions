@@ -49,6 +49,8 @@ To-Do:
 -investigar matrix exponentiation
 -Investigar sobre Divide and conquer
 -checar backtracking y familiarizarme con resolver permutations
+- hard/arrays/firstmissing positive, checar approach con optima memoria y runtime
+-Checar como hacer bfs and dfs traversal con una matriz, como para evitar obstaculos
 
 Terminado
 -Anotar problemas de mi entrevista para que los demas los tengan y lo puedan intentar. Terminado

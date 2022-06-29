@@ -80,3 +80,11 @@ public:
         
     }
 };
+
+/*
+Time Brute force: no lo tome, solo aprendí como aplicar DFS en matrices
+Complexity: 
+    Time: O(n+m)
+    extra space: stack memory (n*m* memory in each recursive call)
+
+*/

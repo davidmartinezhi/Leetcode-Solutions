@@ -1,7 +1,5 @@
 Checar en C++:
     -Sets (En c++, usan el binary tree implementation, han de ser buenos para busqueda y ordenamiento)
-    -Meter mi archivo sobre practicas de apuntadores, a este repositorio
-    -"auto" en el uso de variables
         
 *Puede ser utíl checar videos de gente resolviendo los problemas en el momento,
     De tal manera que pueda emular su approach a los problemas y saber identificarlos.
@@ -37,7 +35,6 @@ https://medium.com/karuna-sehgal/a-simplified-explanation-of-the-big-o-notation-
 
 To-Do:
 
--Hacer, usando la metodologia del libro. Problemas Array easy: Single Number y Rotate Array.
 -Luego investigar bits manipulation, ejemplo el ^= en c++ que es un XOR. Pendiente
     -Checar memset y bitset en manipulación de bits.
 -Poner ayuda rapida de como convertir letras de minusculas a mayusculas o como checar que algo es un numero o alphanumerico. (como en el problema easy/string/validPalindrome.cpp)
@@ -45,14 +42,15 @@ To-Do:
     -Investigar porque funciono con un map y no con un unordered_map
     -Checar logica
 -Investigar sobre dynammic programming, que hace que algo sea dynamic y como identificarlo
--Esto es más intenso y no afuerzas, pero checar como crear una función o struct para hacer hasing rapido, como en problema group anagrams.
+-Esto es más intenso y no afuerzas, pero checar como crear una función o struct para hacer hashing rapido, como en problema group anagrams.
 -investigar matrix exponentiation
 -Investigar sobre Divide and conquer
 -checar backtracking y familiarizarme con resolver permutations
-- hard/arrays/firstmissing positive, checar approach con optima memoria y runtime
+-hard/arrays/firstmissing positive, checar approach con optima memoria y runtime
 -Checar como hacer bfs and dfs traversal con una matriz, como para evitar obstaculos
 
 Terminado
+-Hacer, usando la metodologia del libro. Problemas Array easy: Single Number y Rotate Array. Terminado
 -Anotar problemas de mi entrevista para que los demas los tengan y lo puedan intentar. Terminado
 -También checar el solution flow que viene en cracking the coding interview. Terminado.
 -Anotar las "Optimize and Solve Techniques". Terminado

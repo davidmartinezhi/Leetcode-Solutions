@@ -130,6 +130,8 @@ Integers:
 
 Chars:
         Hacer operaciones matematicas con los chars.
+        Si es minuscula char-'a', te da el numero del 0, 25 al que pertenece
+        char-'0' para operaciones matematicas de numeros que son char
 
 Investigar backtracking y bit manipulation
 
@@ -142,14 +144,21 @@ La solución de los sub-problemas se combinan para dar solución al problema ori
 Por ejemplo el merge sort.
 
 GREEDY ALGORITHMS
-top-down approach. Selecting the best option available at the moment.
+top-down approach. 
+never reverses the previous decision 
+Selecting the best option available at the moment.
 Se selecciona la opción óptima en cada paso local con la esperanza de llegar 
 a una solución general óptima.
 
-Si la solución general óptima del problema corresponde a la solución óptima de sus subproblemas,
-entonces el problema se puede resolver utilizando un enfoque codicioso. 
-Esta propiedad se llama subestructura óptima.
-En la vida real podría seer como meta: ser titular en americano,
+    -Se usa si tiene estas propiedades:
+    Si se puede encontrar una solución óptima al problema eligiendo la mejor opción en cada paso sin 
+    reconsiderar los pasos anteriores una vez elegidos, el problema se puede resolver utilizando un enfoque codicioso. 
+    Esta propiedad se llama propiedad de elección codiciosa.
+
+    Si la solución general óptima del problema corresponde a la solución óptima de sus subproblemas,
+    entonces el problema se puede resolver utilizando un enfoque codicioso. 
+    Esta propiedad se llama subestructura óptima.
+    En la vida real podría seer como meta: ser titular en americano,
     como? jugando mejor mi posición
     problema: Mi jugar no es bueno
     sub problemas: corro lento, no atrapo pases, etc
@@ -163,7 +172,7 @@ En la vida real podría seer como meta: ser titular en americano,
     Como se mencionó anteriormente, el algoritmo codicioso no siempre produce la solución óptima. 
     Esta es la principal desventaja del algoritmo.
 
-    diferentes tipos de greedy algorithms:
+    -diferentes tipos de greedy algorithms:
         Selection sort
         Knapsack problem
         Minimum spanning tree

@@ -133,4 +133,7 @@ complexity:
     time: O(2n) = O(n)
     extra space: O(n)
 
+Make sure to understand the problem correctly, it's okay to try to go faster
+But a key element is understanding the problem well, I noticed that in info and examples
+I saw them supperficially without thinking much about them.
 */

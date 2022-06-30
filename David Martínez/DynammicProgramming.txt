@@ -50,3 +50,41 @@ Memoization:
 
 4 principles of optimality in dynammic programming
 https://www.youtube.com/watch?v=5dRGRueKU3M
+
+
+
+
+
+Dynamic Programming
+https://www.programiz.com/dsa/dynamic-programming
+
+La programación dinámica es una técnica en la programación de computadoras que ayuda a 
+resolver de manera eficiente una clase de problemas que tienen subproblemas superpuestos 
+y una propiedad de subestructura óptima.
+Por ejemplo: De Todas las posibles maneras de hacer x, saca la max/min
+             Cuenta las diferentes maneras de resolver x
+
+Si cualquier problema se puede dividir en subproblemas, que a su vez se dividen en 
+subproblemas más pequeños, y si hay superposición entre estos subproblemas, entonces 
+las soluciones a estos subproblemas se pueden guardar para referencia futura. De esta manera, 
+se puede mejorar la eficiencia de la CPU. Este método de resolver una solución se conoce como
+programación dinámica.
+
+Dichos problemas implican calcular repetidamente el valor de los mismos subproblemas para encontrar
+la solución óptima.
+
+Progra dinamica es guardar información para futuras comparaciones o procesos.
+
+Dynamic programming works by storing the result of subproblems so that when their solutions are required, they are at hand and we do not need to recalculate them.
+
+This technique of storing the value of subproblems is called memoization. 
+By saving the values in the array, we save time for computations of 
+sub-problems we have already come across
+Dynamic programming by memoization is a top-down approach to dynamic programming. And it can also be down-top
+
+However, greedy algorithms look for locally optimum solutions or in other words, a greedy choice, 
+in the hopes of finding a global optimum. Hence greedy algorithms can make a guess that looks optimum 
+at the time but becomes costly down the line and do not guarantee a globally optimum.
+
+Dynamic programming, on the other hand, finds the optimal solution to subproblems and then makes an 
+informed choice to combine the results of those subproblems to find the most optimum solution.

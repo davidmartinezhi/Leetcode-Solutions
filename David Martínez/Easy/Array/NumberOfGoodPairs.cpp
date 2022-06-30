@@ -99,4 +99,8 @@ complexity:
     time: O(n)
     extra space: O(n)
 
+Solución bastante veloz, en la entrevista me fue bien con este problema, aunque lo unico que me falto fue
+la formula matematica.
+
+Buena performance
 */

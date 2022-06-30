@@ -136,4 +136,13 @@ complexity:
 Make sure to understand the problem correctly, it's okay to try to go faster
 But a key element is understanding the problem well, I noticed that in info and examples
 I saw them supperficially without thinking much about them.
+
+Leer instrucciones bien y pensarle a los ejemplos, talvez siempre idear un ejemplo por mi cuenta
+aparte de los que ya me dan.
+
+En priority queue, con pairs. Se toma en cuenta el primer valor en el pair
+make_pair, funciona para crear pares. Gran herramienta aprendida hoy.
+priority queue es maxheap por default, para min es priority_queue<tipo de dato, vector<tipo de dato>, greater<tipo de dato>>
+Esto es util para sacar max y min de frequencias.
+
 */

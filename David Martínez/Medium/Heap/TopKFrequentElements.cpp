@@ -61,6 +61,7 @@ public:
             
         */
         
+        /*
         //declare variables
         unordered_map<int,int> numFreq;
         unordered_map<int,vector<int>> freqNum;
@@ -95,6 +96,32 @@ public:
         }
         
         return ans;
+        */
         
+        //simplifying answer
+        
+        //declare variables
+        unordered_map<int, int> numFreq;
+        priority_queue<pair<int,int>> topFreq;
+        vector<int> ans;
+        
+        //traverse original vector to fill info in numFreq
+        for(int i = 0; i < nums.size(); i++){
+            numFreq[nums[i]]++;
+        }
+        
+        //traverse numFreq to fill priority queue
+        for(auto n : numFreq){
+            topFreq.push(make_pair(n.second,n.first));
+        }
+        
+        //get k elements from priority queue
+        while(k > 0){
+            ans.push_back(topFreq.top().second);
+            topFreq.pop();
+            k--;
+        }
+        
+        return ans;
     }
 };

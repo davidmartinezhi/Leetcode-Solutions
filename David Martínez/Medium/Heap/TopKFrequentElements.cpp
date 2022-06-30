@@ -123,3 +123,14 @@ public:
         return ans;
     }
 };
+
+/*
+
+time: 45 minutes because at first I didn't understood the problem well
+      resolving the problem, aprox 25-30 minutes
+
+complexity:
+    time: O(2n) = O(n)
+    extra space: O(n)
+
+*/

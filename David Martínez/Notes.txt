@@ -34,7 +34,12 @@ https://medium.com/karuna-sehgal/a-simplified-explanation-of-the-big-o-notation-
     -checar bitset y memset.
 
 To-Do:
-
+-Estudiar y practicar recursividad.
+-Investigar sobre bit manipulation
+-Checar ejercicios para practicar recorridos de matrices (Vamos mejorando, pero aún falta fluides en este tipo de problemas)
+-Agregar secciones sobre traversals y estructuras de datos.
+-Investigar sobre Greedy Algorithms
+-Investigar, cuando utilizar Kadane's algorithm o dynamic window technique: listo
 -Luego investigar bits manipulation, ejemplo el ^= en c++ que es un XOR. Pendiente
     -Checar memset y bitset en manipulación de bits.
 -Poner ayuda rapida de como convertir letras de minusculas a mayusculas o como checar que algo es un numero o alphanumerico. (como en el problema easy/string/validPalindrome.cpp)
@@ -44,9 +49,8 @@ To-Do:
 -Investigar sobre dynammic programming, que hace que algo sea dynamic y como identificarlo
 -Esto es más intenso y no afuerzas, pero checar como crear una función o struct para hacer hashing rapido, como en problema group anagrams.
 -investigar matrix exponentiation
--Investigar sobre Divide and conquer
 -checar backtracking y familiarizarme con resolver permutations
--hard/arrays/firstmissing positive, checar approach con optima memoria y runtime
+-hard/arrays/first missing positive, checar approach con optima memoria y runtime
 -Checar como hacer bfs and dfs traversal con una matriz, como para evitar obstaculos
 
 Terminado
@@ -64,6 +68,7 @@ Terminado
 -Reverse integer y string to integer(atoi), checar como trabajar con limites. terminado
 -Checar el Morris traversal
 -Investigar cuando me puede ser utíl un algoritmo recursivo y como identificarlos. (Lo vere cuando llegue problemas de BST)
+-Investigar sobre Divide and conquer. terminado
 
 Reminder
 -Debo familiarizarme en trabajar con matrices.
@@ -127,3 +132,46 @@ Chars:
         Hacer operaciones matematicas con los chars.
 
 Investigar backtracking y bit manipulation
+
+Aproaches for solving problems:
+https://www.programiz.com/dsa/greedy-algorithm#:~:text=A%20greedy%20algorithm%20is%20an,in%20a%20top%2Ddown%20approach.
+
+DIVIDE AND CONQUER
+de manera recursiva se deconstruye un problema, para simplificarlo hasta poder resolverlos de manera directa.
+La solución de los sub-problemas se combinan para dar solución al problema original.
+Por ejemplo el merge sort.
+
+GREEDY ALGORITHMS
+top-down approach. Selecting the best option available at the moment.
+Se selecciona la opción óptima en cada paso local con la esperanza de llegar 
+a una solución general óptima.
+
+Si la solución general óptima del problema corresponde a la solución óptima de sus subproblemas,
+entonces el problema se puede resolver utilizando un enfoque codicioso. 
+Esta propiedad se llama subestructura óptima.
+En la vida real podría seer como meta: ser titular en americano,
+    como? jugando mejor mi posición
+    problema: Mi jugar no es bueno
+    sub problemas: corro lento, no atrapo pases, etc
+    Solución optima de sub problemas llevan a solución optima del problema
+
+    -ventajas
+    El algoritmo es más fácil de describir
+    Este algoritmo puede funcionar mejor que otros algoritmos (pero no en todos los casos)
+
+    -desventajas
+    Como se mencionó anteriormente, el algoritmo codicioso no siempre produce la solución óptima. 
+    Esta es la principal desventaja del algoritmo.
+
+    diferentes tipos de greedy algorithms:
+        Selection sort
+        Knapsack problem
+        Minimum spanning tree
+        Single-Source Shortest Path Problem
+        Job Scheduling Problem
+        Prim's Minimal Spanning Tree Algorithm
+        Kruskal's Minimal Spanning Tree Algorithm
+        Dijkstra's Minimal Spanning Tree Algorithm
+        Huffman Coding
+        Ford-Fulkerson Algorithm
+

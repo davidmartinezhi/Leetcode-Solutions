@@ -113,13 +113,11 @@ public:
         //traverse numFreq to fill priority queue
         for(auto n : numFreq){
             topFreq.push(make_pair(n.second,n.first));
-        }
-        
-        //get k elements from priority queue
-        while(k > 0){
-            ans.push_back(topFreq.top().second);
-            topFreq.pop();
-            k--;
+            
+            if(topFreq.size() > numFreq.size() - k){
+                ans.push_back(topFreq.top().second);
+                topFreq.pop();                
+            }
         }
         
         return ans;

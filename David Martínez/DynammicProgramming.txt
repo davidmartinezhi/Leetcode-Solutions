@@ -88,3 +88,5 @@ at the time but becomes costly down the line and do not guarantee a globally opt
 
 Dynamic programming, on the other hand, finds the optimal solution to subproblems and then makes an 
 informed choice to combine the results of those subproblems to find the most optimum solution.
+
+memoization: guardar información de subproblemas, para hacer calculos informados en el futuro

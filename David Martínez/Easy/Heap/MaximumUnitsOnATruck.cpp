@@ -127,3 +127,21 @@ public:
         
     }
 };
+
+/*
+time: 35 minutes to finish coding, + 20 minutes on discovering I need totalBoxes variable
+Complecity:
+    time: O(n)
+    extra space: O(n)
+
+Batalle en descubrir que necesitaba totalBoxes porque lo compare con el problema
+de applegame y lo quise hacer directamente igual.
+
+No considere el tener la capacidad de cajas y el total de cajas
+    Aparte literal lo escribí arriba del loop pero no le hice caso después
+    Si nos quedamos sin cajas o se llena el camion, dejamos de meter cajas.
+
+Aún así desde el principio supe como se resolvería e hice una buena implementación
+
+
+*/

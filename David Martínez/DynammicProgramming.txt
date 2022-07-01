@@ -51,8 +51,24 @@ Memoization:
 4 principles of optimality in dynammic programming
 https://www.youtube.com/watch?v=5dRGRueKU3M
 
+Greedy method and DP both are used for solving optimization problems
+both have different strategies but purpose is same
 
+Opt problems need optimal min or max result.
 
+Greedy method tryies to follo predefined steps to get the result
+    ex. always select this and then do this
+
+DP tryis to find out all possible solutions, and find the best one
+    Almost always follow recursive formulas
+
+It follows pronciple of optimality
+    by taking sequence of desicions, to get optimal solution. 
+
+    Greedy follows rigid desicion, always does something the same way. sequence of instructions
+    DP sequence of decisions
+
+    
 
 
 

@@ -96,3 +96,15 @@ public:
         
     }
 };
+
+/*
+time: 43 minutes
+complexity:
+    time: O((n+m) + (appearance of starting char * word))
+    extra space: O(word size * variables used on each stack call)
+
+Me siento orgulloso de lo eficiente que resolcí este problema
+No me imaginaba aplicando dfs en una matriz para encontrar patrones, pero 
+se nota mucho el improvement desde principios del año hasta ahora.
+
+*/

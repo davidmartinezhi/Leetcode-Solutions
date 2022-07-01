@@ -49,7 +49,7 @@ To-Do:
 -Investigar sobre dynammic programming, que hace que algo sea dynamic y como identificarlo
 -Esto es más intenso y no afuerzas, pero checar como crear una función o struct para hacer hashing rapido, como en problema group anagrams.
 -investigar matrix exponentiation
--checar backtracking y familiarizarme con resolver permutations
+-familiarizarme con resolver permutations
 -hard/arrays/first missing positive, checar approach con optima memoria y runtime
 -Checar como hacer bfs and dfs traversal con una matriz, como para evitar obstaculos
 
@@ -69,6 +69,7 @@ Terminado
 -Checar el Morris traversal
 -Investigar cuando me puede ser utíl un algoritmo recursivo y como identificarlos. (Lo vere cuando llegue problemas de BST)
 -Investigar sobre Divide and conquer. terminado
+-Checar backtracking
 
 Reminder
 -Debo familiarizarme en trabajar con matrices.
@@ -144,7 +145,7 @@ La solución de los sub-problemas se combinan para dar solución al problema ori
 Por ejemplo el merge sort.
 
 GREEDY ALGORITHMS
-top-down approach. 
+top-down approach. 5 -> 0 down-top sería 0 -> 5
 never reverses the previous decision 
 Selecting the best option available at the moment.
 Se selecciona la opción óptima en cada paso local con la esperanza de llegar 
@@ -199,3 +200,8 @@ To find all Hamiltonian Paths present in a graph.
 To solve the N Queen problem.
 Maze solving problem.
 The Knight's tour problem.
+
+
+Disjoint sets
+https://www.youtube.com/watch?v=wU6udHRIkcc&list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O&index=18
+https://www.youtube.com/watch?v=1SFrVShoRYU

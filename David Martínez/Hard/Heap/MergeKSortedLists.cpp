@@ -147,3 +147,33 @@ public:
         return ansHead;
     }
 };
+
+/*
+Time: 40-45 minutes
+Complexity:
+    Time: O(total nodes)
+    Extra space: O(total nodes)
+
+    Debe haber una manera de lograrlo con extra space K, lo puedo optimizar
+    Entendí muy bien el problema y lo solucione de manera muy eficiente
+
+    A los 20 minutos ya había escrito como lo iba a solucionar con todo y test cases
+
+    En lo que más me tarde fue en implementación.
+
+    Debo deterneme un momento en el walkthrough para calmarme y pensar bien el diseño antes de continuar
+
+    Overall: Muy buena solución en tiempo y forma
+
+    Opimiazaciones:
+        Poner vector con curr de cada lista de acuerdo al index y así manipularlo más facíl
+        También esto es util para ver posible solución en extra space O(k) ya tengo referencias
+        y solo las conecto y avanzo
+
+        Example con dibujos tal vez me hubieses ayudado a visualizarlo así
+
+    Tips:
+        Detenerme a pensar claro en walkthrough
+        Visualizar bien el problema en el Example
+
+*/

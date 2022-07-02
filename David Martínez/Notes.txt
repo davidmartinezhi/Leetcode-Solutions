@@ -52,6 +52,7 @@ To-Do:
 -familiarizarme con resolver permutations
 -hard/arrays/first missing positive, checar approach con optima memoria y runtime
 -Checar como hacer bfs and dfs traversal con una matriz, como para evitar obstaculos
+-Optimizar merge k sorted lists
 
 Terminado
 -Hacer, usando la metodologia del libro. Problemas Array easy: Single Number y Rotate Array. Terminado

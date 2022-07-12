@@ -57,10 +57,11 @@ public:
         //traverse to fill the gaps
         for(int i = 1; i < m; i++){
             for(int j = 1; j < n; j++){
+                //takes values from left and right and that is the value on each cell
                 grid[i][j] = grid[i-1][j] + grid[i][j-1];
             }
         }
         
-        return grid[m-1][n-1];
+        return grid[m-1][n-1];  //value ends up on the bottom right corner
     }
 };

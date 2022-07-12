@@ -67,3 +67,14 @@ public:
         return grid[m-1][n-1];  //value ends up on the bottom right corner
     }
 };
+
+/*
+Notes:
+    time: rapido con backtracking pero no optimo.
+
+    complexity
+        time O(n*m)
+        extra space O(n*m)
+
+
+*/

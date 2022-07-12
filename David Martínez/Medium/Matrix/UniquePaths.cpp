@@ -76,5 +76,11 @@ Notes:
         time O(n*m)
         extra space O(n*m)
 
+    
+    Backtracking si podía funcionar, pero la complejidad era pesima
+    Memoization salio muy bien. no se me había ocurrida pero si es el mejor approach.
+
+    Debo investigar sobre dp on grids.
+
 
 */

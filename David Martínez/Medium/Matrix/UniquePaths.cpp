@@ -3,3 +3,64 @@
 
 using namespace std;
 
+class Solution {
+public:
+    int uniquePaths(int m, int n) {
+        /*
+        
+        info
+            input: m = rows, n = columns grid
+            
+            robot starts and grid[0][0]
+            robot can only move right and down
+            
+            output: all possible ways to get to bottom right corner
+            
+            constraints: m and n are both between 1 and 100
+            
+        example
+           Input: m = 3, n = 7
+           Output: 28
+           
+           Input: m = 3, n = 2
+           Output: 3 
+           
+        brute force
+            backtracking
+                complexity
+                    time: O(n!)
+                    space: O(m+n)
+                    
+        optimize
+            I think this is the optimal approach
+            
+        walkthrough
+            declare variables
+            do backtrack
+            
+            
+            if passed limits return
+            if reached goal, count++ and return
+            
+            for both possible moves
+                mark visited cell
+                do backtrack
+                unmark cell
+            
+        test
+                
+        */
+        
+        //create grid
+        vector<vector<int>> grid(m, vector<int>(n, 1));       
+        
+        //traverse to fill the gaps
+        for(int i = 1; i < m; i++){
+            for(int j = 1; j < n; j++){
+                grid[i][j] = grid[i-1][j] + grid[i][j-1];
+            }
+        }
+        
+        return grid[m-1][n-1];
+    }
+};

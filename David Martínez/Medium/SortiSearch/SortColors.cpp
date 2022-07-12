@@ -65,3 +65,15 @@ public:
         }
     }
 };
+
+/*
+14 minutes
+
+complexity
+    time: O(n)
+    extra space: O(1)
+
+Problema resulto con bastante velocidad, me sentí muy bien con la solución
+propuesta y con las alternativas que sugerí
+
+*/

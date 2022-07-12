@@ -52,9 +52,11 @@ public:
         */
         
         //create grid
+        //extra space: O(n*m)
         vector<vector<int>> grid(m, vector<int>(n, 1));       
         
         //traverse to fill the gaps
+        //time O(n*m)
         for(int i = 1; i < m; i++){
             for(int j = 1; j < n; j++){
                 //takes values from left and right and that is the value on each cell

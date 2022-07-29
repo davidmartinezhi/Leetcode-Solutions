@@ -218,6 +218,12 @@ Notas:
         time: O(n)
         extra space: O(1)
 
-    
+    Es mi primer problema sobre intervalos.
+    Estuve en lo correcto en que debía de implementar memoization para comparar variables
+
+    Pero por falta de experiencia con este tipo de problemas no pude decifrarlo antes de los 45 minutos
+    La respuesto no se ve muy compleja pero esta muy simple y elegante.
+
+    Debo practicar más problemas de intervalos
 
 */

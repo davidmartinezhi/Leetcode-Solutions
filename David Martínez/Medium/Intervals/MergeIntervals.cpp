@@ -94,8 +94,18 @@ class Solution{
 
 finished in: 34 minutes
 
-comlexity
+complexity
     time: O(n log n)
     extra space: O(1)
+
+Notes
+    Terminado rapido, una vez que ya vi como trabajar con intervalos en INSERT INTERVAL
+    se me hizo muy sencillo implementar una solución. Me tarde un poco en hotspots de lógica
+    debería de anotar esos hot spots en test.
+
+    Aún así muy buena solución.
+
+    Debo checar si hay una manera de solucionarlo sin el sort, aunque no creo que sea posible
+    si se quiere saber los overlapse
 
 */

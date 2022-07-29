@@ -54,7 +54,7 @@ class Solution{
         //[[1,4], [4,5]]
         //[[1,3],[2,6],[8,10],[15,18]]
         
-        //sort in ascending order all starts
+        //sort in ascending order all starts, time O(n log n)
         sort(intervals.begin(), intervals.end());
         
         //declare variables
@@ -62,7 +62,7 @@ class Solution{
         vector<int> mergeI; //[1,3]
         int i = 0, n = intervals.size();
         
-        //traverse the array
+        //traverse the array    time O(n)
         while(i < n-1){
             
             mergeI = intervals[i];
@@ -79,15 +79,23 @@ class Solution{
             i++;
         }
         
+        //add remaining intervals
         while(i < n){
             result.push_back(intervals[i]);  
             i++;            
         }
-        
-
-        
         //return result
         return result;
                     
         }
 };
+
+/*
+
+finished in: 34 minutes
+
+comlexity
+    time: O(n log n)
+    extra space: O(1)
+
+*/

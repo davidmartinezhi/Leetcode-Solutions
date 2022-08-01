@@ -58,12 +58,12 @@ public:
         //check for size 1
         if(intervals.size() == 1) return 0;
         
-        sort(intervals.begin(), intervals.end());
-        vector<int> merge;
+        sort(intervals.begin(), intervals.end());   //O(n log n) time
+        vector<int> merge; //O(1) extra space
         int i = 0;
         int count = 0;
         
-        while(i < intervals.size()-1){
+        while(i < intervals.size()-1){ //O(n) time
             merge = intervals[i];
             
             while(i < intervals.size() - 1 && merge[1] > intervals[i+1][0]){
@@ -83,3 +83,14 @@ public:
         return intervals.size() - count;
     }
 };
+
+/*
+minutes: 45+
+
+complexity:
+    time: O(n log n)
+    extra space: O(1)
+
+
+
+*/

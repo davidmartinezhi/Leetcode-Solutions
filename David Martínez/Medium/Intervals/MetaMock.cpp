@@ -70,3 +70,13 @@ int main()
     return 0;
 }
 
+/*
+Notes:
+    Terminado en 10 minutos
+    Una vez que ya estaba familiarizado con este tipo de problemas
+    Salio demasiado rapida la respuesta.
+
+    Solución muy optima, en uns entrevista, una pregunta sobre intervalos si
+    la puedo contestar de manera eficiente.
+
+*/

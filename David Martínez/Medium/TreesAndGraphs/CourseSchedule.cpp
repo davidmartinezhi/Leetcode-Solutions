@@ -200,7 +200,6 @@ public:
                     starts.push(adj[node][i]);  //if the course gets to 0, we add it
                 }
             }
-            
         }
         
         return counter == numCourses;   //return if nodes found is the same as numCourses

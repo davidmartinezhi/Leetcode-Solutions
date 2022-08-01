@@ -48,14 +48,25 @@ class Solution{
                 while(i < trips.size() - 1 && mergeInterval[2] > trips[i+1][1]){
 
                     currPassengers += trips[i+1][0];
-                    if(currPassengers > capacity) return false;
-
                     i++;
                 }
+
+                if(currPassengers > capacity) return false;
                 i++;
             }
 
             return true;
         }
 };
+
+int main()
+{
+    Solution solution;
+    vector<vector<int>> aux = {{2,1,5}, {3,3,7}};
+    int capacity = 4;
+
+    cout << solution.tripBool(capacity, aux) << endl;
+
+    return 0;
+}
 

@@ -91,6 +91,11 @@ complexity:
     time: O(n log n)
     extra space: O(1)
 
+Notes:
+    La respuesta fue hacer lo que hice ayer y anitier.
+    Era recorrer de misma manera e identificar donde había overlapping.
+    Pero ahora poniendome creativo y sacar las idferencias entre el original y sin overlaps
 
+    La clave es saber identificar overlaps en intervalos
 
 */

@@ -71,4 +71,9 @@ public:
         return start;
         
     }
+
+    //Esta función es solo para que no marque error en vscode, en leetcode no ponerlo
+    bool isBadVersion(int n){
+        return true;
+    }
 };

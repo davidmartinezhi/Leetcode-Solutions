@@ -123,3 +123,47 @@ complexity:
         y cuando regresas, exploras los posibles nuevos caminos.
 
         Siento que esto es dfs
+
+
+=====================================================================================
+
+https://www.youtube.com/watch?v=f19e_ofbydc&list=PLEJXowNB4kPxBwaXtRO1qFLpCzF75DYrS
+DP
+
+Optimization over plain recursion
+    Instead of repeating work, we store the result so we use it again later
+
+    Conditions for dp:
+        Problem with subproblems, if subproblems can be solved we resolve the entire problem
+        Many of subproblems should be repeating (like fibonacci where there is a ton of repetitive calculations) This is optimal substructure
+
+DP Classifications
+    Most difficult part is to identify the problem
+
+    Easy to medium level Classifications (most common for interviews)
+        1. Knapsack    1) 0-1  2) bounded  3) unbounded
+        2. Longest Common subsequence
+        3. Longest increasing subsequence
+        4. Matrix chain multiplication
+        5. DP on grid. One variation is from first cell at top left, to bottom right
+        6. Kadane's algorithm
+        7. Others
+
+    Advanced DP (not  ommon in interview, yes in competitive programming)
+        1. DP Kth-lexicographical string
+        2. DP on tree
+        3. DP + bitmasking
+        4. DP + BIT/segment tree
+        5. DP + convex hull
+        6. DP + preprocessing
+        7. DP + trie
+        8. DP + Geometry
+        9. DP + Binary search
+        10. DP + knuth optimization
+        Others...
+
+
+
+
+
+

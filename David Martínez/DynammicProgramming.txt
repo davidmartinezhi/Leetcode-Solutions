@@ -163,7 +163,47 @@ DP Classifications
         Others...
 
 
+Knapsack Classification
+https://www.youtube.com/watch?v=ReYPIilhrIo&list=PLEJXowNB4kPxBwaXtRO1qFLpCzF75DYrS&index=4
 
+#What is a Knapsack problem
+-knapsack means a bag where you can store anything (put in or out of a bag)
+    Given: items with price or weight 
+    Goal: fill the bag to get max profit
+    Input: Given Items with weight and profit
 
+How you fill the bag is defined by knapsack type
+
+#Types
+
+    1. 0/1
+        If we have an item, it is either included or excluded, we cannot use multple instances of the same item. 
+        Either 0 or 1 instance is present in the bag
+
+    2. bounded
+        We can either include an item or exclude. But we can include multiple instances of one item, but bounded to
+        a limiting value. No infinite.
+
+    3. unbounded
+        Infinite instances can be included
+
+    Fractional (greedy)
+        Can pick part of an item
+
+    Integer
+        Can't pick part of an item
+
+Note: Typically kanpsacks are of mixed Types
+    example:
+        Integer + Bounded: Fractional items not allowed + limit of no. of instances per item
+        Integer + unbounded: Fractional items not allowed + no limit of no. of intances per item
+
+#Knapsack variations
+    1) subset sum problem
+    2) partition equal subset sum
+    3) count of subsets with sum = x
+    4) partition a set into 2 subsets such that difference of subset sum is minimum
+    5) target sum
+    6) other variations with same patterns
 
 

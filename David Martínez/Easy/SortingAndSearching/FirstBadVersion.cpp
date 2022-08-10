@@ -29,7 +29,7 @@ public:
         Optimize
             Use binary search to look for range in bad version
             complexity O(log n)
-            space O(1)
+            space O(1) iterativo, log n recursivo
             
         walkthrough
             create bst function with 1 as default start n as end
@@ -47,6 +47,30 @@ public:
             
         
         */
+
+       //versión iterativa
+
+       /*
+        int start = 1;
+        int end = n;
+        
+        while(start < end){
+            int middle = ((end-start)/2) + start;
+            bool m; 
+            
+            m = isBadVersion(middle);
+            
+            //if middle if good version
+            if(!m){
+                start = middle+1;
+            }else{
+                end = middle;
+            }
+        }
+
+        
+        return start;
+       */
         
         return bst(1, n);
         
@@ -69,6 +93,7 @@ public:
         }
         
         return start;
+
         
     }
 

@@ -102,3 +102,17 @@ public:
         return true;
     }
 };
+
+/*
+
+Notas: terminado en 34 min. con la mejor complejidad posible
+
+Ahora que regreso al problema noto aún más el progreso que he tenido para identificar problemas
+y approaches apra solucionarlo de manera eficiente.
+
+La practica si ayuda mucho a mejorar.
+
+Tener un cuaderno para hacer prueba de escritorio es esencial. En entrevistas de preferencia
+utilizar un lugar con un pizarron.
+
+*/

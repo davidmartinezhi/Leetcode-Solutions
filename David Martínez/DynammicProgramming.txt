@@ -207,3 +207,56 @@ Note: Typically kanpsacks are of mixed Types
     6) other variations with same patterns
 
 
+=== Knapsack using Recursion
+https://www.youtube.com/watch?v=mGfK-j9gAQA&list=PLEJXowNB4kPxBwaXtRO1qFLpCzF75DYrS&index=5
+    DP where we take both paths, adding the item and not adding them
+    complexity = O(2^n) because every item has 2 alternatives
+    Typical Input
+        array weight, array profit, space in bag, element number
+
+    Typical base cases, return 0
+        1) bag is full
+        2) No more items to procesos
+
+    Desition tree
+        traversing from right to left
+        exclude: (wt, profit, w, n-1)
+        inlcude: (wt,profit, w - weight[n], n-1)
+
+    //base case
+    //skip case if the weight in that cell is greater than the space in bag
+    //return max case
+
+=== Knapsack using memoization
+https://www.youtube.com/watch?v=dT6dvdbpChA&list=PLEJXowNB4kPxBwaXtRO1qFLpCzF75DYrS&index=7
+    Memoization is storing past results and reusing it, to save calculations consts
+
+    How to store values?
+        Generally on array or maps
+
+    Identify on what variables does your answer depend, does variables are your states. Save their values
+
+    Max profit depends on bag capacity and profit left on items
+
+Idea of memoization (Top-down)  Tabulation is Bottom-Up
+    1)
+        Apply recursion concept (recursion + dp => dynamic programming)
+
+    2) 
+        If subproblem is already calculated, return
+        Else continue recursion and save result in memory table
+
+Subproblem concept
+    Smaller parts that are required to solve to get the bigger problem
+
+    Solution with memoization
+    Paramters 
+        waightProfit matrix, profit parameter, weight index, item index
+        complexity = O(n*m)
+
+    Memoization uses extra space and there could be stack overflow
+    Try to apply it in iterative approach
+
+
+    
+

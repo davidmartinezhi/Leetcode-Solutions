@@ -104,3 +104,22 @@ public:
         return dp[n][amount];
     }
 };
+
+/*
+Time: 37 minutes with notes
+Complexity: 
+    time: O(array size * amount)
+    extra space: O(array size * amount)
+
+Notes:
+    Este problema me encantó porque me hizo crecer mucho.
+    Tuve que adentrarme a estudiar y comprender temas que ni siqueira sabía que existían.
+    Por ejemplo tuve un mejor entendimiento de programación dinamica y lo que la conforma
+        Como backtracking, memoization, tabulation. Top-down and bottom-up approach.
+
+    Seguiré practicando y mejorando mis habilidades aún más. Pero por el momento solo puedo decir
+    que hice un buen trabajo agarrandole la onda a este problema, trataré de hacer más dp problems.
+
+    Dp me hizo hacer pensar muy diferente sobre como solucionar problemas
+
+*/

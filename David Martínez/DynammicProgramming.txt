@@ -227,7 +227,7 @@ https://www.youtube.com/watch?v=mGfK-j9gAQA&list=PLEJXowNB4kPxBwaXtRO1qFLpCzF75D
     //skip case if the weight in that cell is greater than the space in bag
     //return max case
 
-=== Knapsack using memoization
+=== Knapsack using memoization (tom-down)
 https://www.youtube.com/watch?v=dT6dvdbpChA&list=PLEJXowNB4kPxBwaXtRO1qFLpCzF75DYrS&index=7
     Memoization is storing past results and reusing it, to save calculations consts
 
@@ -238,7 +238,7 @@ https://www.youtube.com/watch?v=dT6dvdbpChA&list=PLEJXowNB4kPxBwaXtRO1qFLpCzF75D
 
     Max profit depends on bag capacity and profit left on items
 
-Idea of memoization (Top-down)  Tabulation is Bottom-Up
+Idea of memoization 
     1)
         Apply recursion concept (recursion + dp => dynamic programming)
 
@@ -257,6 +257,43 @@ Subproblem concept
     Memoization uses extra space and there could be stack overflow
     Try to apply it in iterative approach
 
+=== Knapsack using tabulation (bottom-up)
+
+
+    Why tabulation?
+    Recursion uses stack memory and takes more time
+    It's better to use heap memory rather than stack memory, there is more heap memory available generally
+
+    How To Build Table?
+        Identify on what states does your solution really depends
+
+
+==Okay ya lo entendí
+
+Memoization es top-down o bottom-up con recursividad y referencia a data structure que guarda datos
+Tabulation es con iteratividad
+    top-down es iterativo
+    bottom-up también es iterativo
+
+
+==Identifying knapsack problems
+https://www.youtube.com/watch?v=oaloiuvGcQg&list=PLEJXowNB4kPxBwaXtRO1qFLpCzF75DYrS&index=7
+
+    Knapsack problems patterns
+        1) An array (with k number of properties)
+        2) Max value W (knapsack capacity)
+        We have choice to include or exclude items
+        Number of times we can choose item defines the type of knapsack
+        (conatrints definte knapsack type)
+
+    Bounded:
+        we can take items 0 to n times
+
+    0-1:
+        special case bounded knapsack, only take 0 or 1
+
+    Unbounded:
+        Can take infinite number of each item
 
     
 

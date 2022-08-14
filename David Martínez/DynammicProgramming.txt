@@ -296,4 +296,35 @@ https://www.youtube.com/watch?v=oaloiuvGcQg&list=PLEJXowNB4kPxBwaXtRO1qFLpCzF75D
         Can take infinite number of each item
 
     
+==DP on grid and its variations
+https://www.youtube.com/watch?v=tEdsR9_VUQI&list=PLEJXowNB4kPxBwaXtRO1qFLpCzF75DYrS&index=33
 
+What is dp on grid?
+    given: grid/matrix/chessboard
+    goal: find something
+    algo used: DP
+
+example:
+    Find minimum cost to reach from (0,0) to (n,m)
+
+Common variations
+    1) Find number of unique ways to reach from (0,0) to (n,m)
+        a) with obstacles
+        b) without obstacles
+
+        Leetcode unique paths 1 and 2 (practice) #62 and #63
+
+    2) minimum cost path from (0,0) tom (n,m)
+
+        leetcode minimum path sum #64
+
+    3) chessboard type problem
+        ex. queens attack problem
+        Many questions can be framed using chessboards
+
+    4) Matrix type
+        ex. max size square/rectangle etc. in a given matrix
+
+    5) Others
+        a) cherry pickup (max profit + obstacles + traverse back to source) leetcode#741
+        b) dungeon game leetcode#174

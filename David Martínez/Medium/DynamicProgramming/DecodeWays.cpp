@@ -56,7 +56,8 @@ public:
     }
     
     int helper_dp(string s, int k, vector<int> & aux){
-        
+        //O(n)
+
         //base cases
         //empty string
         if(k == 0) return 1;
@@ -82,14 +83,24 @@ public:
     }
     
     int toInt(string s){
+        //O(1)
         int result = 0;
         
         for(int i = 0; i < 2; i++){
             result = (result*10) + (s[i] - '0');
         }
-        
         return result;
     }
 };
 
-//45+ minutes
+/*
+Time: 45+ minutes
+
+complexity: 
+    time: O(n)
+    extra space: O(n)
+
+Es un problem muy relacionado a permutaciones también.
+Debería de familiarizarme un poco más con permutaciones
+
+*/

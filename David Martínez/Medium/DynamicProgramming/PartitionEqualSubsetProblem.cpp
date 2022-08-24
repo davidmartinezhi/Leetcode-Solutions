@@ -121,3 +121,12 @@ public:
     }
 };
 
+/*
+Finished in 32 minutes
+
+    El problema fue igual que equal sum subset.
+    Solo que ahora era checar primero si es posibles hacer la suma
+        Ya que vimos que era posible, es ver si hay alguna suma que logre llegar a la mitad
+        Eso significa que si se pueden crear 2 subsets con la misma suma.
+
+*/

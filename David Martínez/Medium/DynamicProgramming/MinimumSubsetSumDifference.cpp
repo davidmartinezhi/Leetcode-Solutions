@@ -74,3 +74,20 @@ int main()
     cout << sol.minSubsetSumDifference(nums) << endl;     
     return 0;
 }
+
+/*
+Nota: Termindao en 45+ minutos
+
+Complexity
+    Time: O(items * sum)
+    Extra space: O(items * sum)
+
+La teoria estuvo bien, saque la logica y un buen approach para hacerlo
+con numeros. 
+Se me hizo muy ingenioso como fue la solución.
+Me puede servir el hacer zoom out y checar que info me da la solución que ya tengo
+    Y de ahí ver si puedo sacar la vuelta, antes de tener que reestructurar todo.
+
+    
+
+*/

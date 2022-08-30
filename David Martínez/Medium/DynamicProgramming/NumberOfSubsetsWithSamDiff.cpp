@@ -62,3 +62,16 @@ int main()
     cout << sol.countSubsetsWithSameDiff(nums, diff) << endl; 
     return 0;
 }
+
+/*
+Notas:
+    complexity
+        tiempo O(tamaño de array * (sum de elementos en el array - diff))
+        Tamaño igual
+
+    He notado que estos tipos de problemas me generan la tabla con la info que necesito
+    En los distintos problemas de knapsack que existen.
+
+    Talvez deba checar un problema de knapsack que sea unbounded.
+
+*/

@@ -87,3 +87,8 @@ public:
 //brute force terminado en 25-30 minutos
 //checar la manera optima de resolver este problema
 //Me va a fallar si le doy correr, pero aún así lo intentare
+
+/*
+Tengo una noción sobre como resolverlo de manera dinamica, pero debo de checar bien como
+
+*/

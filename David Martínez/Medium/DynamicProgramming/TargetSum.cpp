@@ -90,5 +90,17 @@ public:
 
 /*
 Tengo una noción sobre como resolverlo de manera dinamica, pero debo de checar bien como
+https://www.youtube.com/watch?v=hqGa65Rp5LQ&list=PLEJXowNB4kPxBwaXtRO1qFLpCzF75DYrS&index=13
+
+Checar subset de valores positivos y negativos suena a una buena idea
+S1-S2 me da el valor que busco
+Debo de sacar S1, ese es el frame que debo de sacar.
+Encontrar un valor que me de la respuesta y ya basar la respuesta en eso.
+
+En el video lo hace sonar super simple
+    Sacar los subsets donde ese numero - los restante. me dan el resultado
+    Es lo que ya he estado haciendo. El framing es muy importante,
+    Debería de analizar diferentes maneras de hacer el frame rapido
+
 
 */

@@ -1,0 +1,17 @@
+Backtracking es checar de escencia recursiva todas las posibles soluciones
+Se usa tipicamente para permutation problems
+
+Backtracking es DFS
+Branch and Bound es  BFS
+    Se usa para Optimización y minimización.
+    Ayuda para evaluar si ya hemos pasado por un camino más eficiente y se va a ese
+
+    Branching bound tiene 3 variantes.
+        FIFO (usamos queue) y checamos desde la primer opción
+        LIFO (usamos stack) y checamos desde la ultima opción
+        LC (Least Cost) checamos en base al Costo de cada nodo
+
+Branch and Bound ejercicio
+https://www.youtube.com/watch?v=M7Fl_z7_J2k
+https://www.youtube.com/watch?v=1FEP_sNb62k
+

@@ -302,6 +302,13 @@ Classifications base on goals:
     Minimum Subset sum problem  S1-S2 = MIN
     count subsets problem S1 = value
     
+S1 - S2 = target/diff
+significa que S2 = sum - S1
+S1 - (sum - S1 ) = target/diff
+
+target/diff = 2S1 - sum = target/diff
+
+    ->S1 = (sum + target) / 2;
 
 
     

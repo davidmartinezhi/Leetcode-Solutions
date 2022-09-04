@@ -20,7 +20,7 @@ Creado: Septiembre 1 del 2022. Ultima Actualización: Septiembre 3 del 2022
 #include <vector>
 using namespace std;
 
-void printSolucion(vector<vector<bool>> laberintoSolucion)
+void printSolucion(vector<vector<bool> > laberintoSolucion)
 {
     for (int i = 0; i < laberintoSolucion.size(); i++)
     {
@@ -31,7 +31,7 @@ void printSolucion(vector<vector<bool>> laberintoSolucion)
         cout << endl;
     }
 }
-void printSolucion(vector<vector<int>> laberintoSolucion)
+void printSolucion(vector<vector<int> > laberintoSolucion)
 {
     for (int i = 0; i < laberintoSolucion.size(); i++)
     {
@@ -46,7 +46,7 @@ void printSolucion(vector<vector<int>> laberintoSolucion)
 //===============================
 // Solución Recursiva
 // convertimos el laberinto a numeros enteros
-vector<vector<int>> laberintoToNums(vector<vector<bool>> &laberinto)
+vector<vector<int> > laberintoToNums(vector<vector<bool> > &laberinto)
 {
     /*
     Creamos un laberinto equivalente, con numeros enteros
@@ -60,7 +60,7 @@ vector<vector<int>> laberintoToNums(vector<vector<bool>> &laberinto)
     int cols = laberinto[0].size();
 
     // creamos laberinto para numeros enteros
-    vector<vector<int>> laberintoNums(rows, vector<int>(cols));
+    vector<vector<int> > laberintoNums(rows, vector<int>(cols));
 
     // recorremos laberinto original
     for (int i = 0; i < laberinto.size(); i++)
@@ -81,7 +81,7 @@ vector<vector<int>> laberintoToNums(vector<vector<bool>> &laberinto)
 }
 
 // convertimos el laberinto a booleano
-vector<vector<bool>> laberintoToBool(vector<vector<int>> &laberinto)
+vector<vector<bool> > laberintoToBool(vector<vector<int> > &laberinto)
 {
     /*
     Creamos un laberinto equivalente, con valores booleanos
@@ -95,7 +95,7 @@ vector<vector<bool>> laberintoToBool(vector<vector<int>> &laberinto)
     int cols = laberinto[0].size();
 
     // creamos laberinto para valores booleanos
-    vector<vector<bool>> laberintoBools(rows, vector<bool>(cols));
+    vector<vector<bool> > laberintoBools(rows, vector<bool>(cols));
 
     // recorremos laberinto original
     for (int i = 0; i < laberinto.size(); i++)
@@ -116,8 +116,8 @@ vector<vector<bool>> laberintoToBool(vector<vector<int>> &laberinto)
 }
 
 // encontramos el path con backtracking
-void encontrarCamino(vector<vector<int>> &laberinto,
-                     vector<vector<bool>> &resultado, int &rows, int &cols,
+void encontrarCamino(vector<vector<int> > &laberinto,
+                     vector<vector<bool> > &resultado, int &rows, int &cols,
                      int row, int col)
 {
 
@@ -166,8 +166,8 @@ void encontrarCamino(vector<vector<int>> &laberinto,
 // Elegimos hacia donde nos movemos en base a que nodo nos acerca más a la respuesta
 
 // encontramos el path
-void encontrarCaminoBranchAndBound(vector<vector<int>> &laberinto,
-                                   vector<vector<bool>> &resultado, bool &found, int &rows,
+void encontrarCaminoBranchAndBound(vector<vector<int> > &laberinto,
+                                   vector<vector<bool> > &resultado, bool &found, int &rows,
                                    int &cols, int row, int col)
 {
 
@@ -203,7 +203,7 @@ void encontrarCaminoBranchAndBound(vector<vector<int>> &laberinto,
     }
 
     // O(1) extra espacio, siempre serán de tamaño 4 los vectores
-    vector<pair<double, string>> minDistanceToDestiny(4);
+    vector<pair<double, string> > minDistanceToDestiny(4);
 
     // arriba
     minDistanceToDestiny[0].first =
@@ -267,7 +267,7 @@ int main()
     int numeroFilas = 0, numeroColumnas = 0, fin = 0, contador = 0;
     bool coordenada = false;
     vector<bool> filaLaberinto;
-    vector<vector<bool>> laberinto;
+    vector<vector<bool> > laberinto;
 
     // Lectura de archivo
     ifstream archivoEntrada;
@@ -299,7 +299,7 @@ int main()
     archivoEntrada.close();
 
     // Hacer laberinto con numeros enteros
-    vector<vector<int>> laberintoNums = laberintoToNums(laberinto);
+    vector<vector<int> > laberintoNums = laberintoToNums(laberinto);
     bool found = false;
     // sacamos el camino unico
     encontrarCaminoBranchAndBound(laberintoNums, laberinto, found, numeroFilas, numeroColumnas, 0, 0);

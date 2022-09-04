@@ -107,3 +107,14 @@ public:
         //return dp[nums.size()][s1];
     }
 };
+/*
+Terminado en 45+
+
+Brute force salio en 25 minutos.
+Pero esta solución si fue pensar un poco más.
+
+Literal era la solución que ya había hecho para subsets with given difference.
+Es encontrar la cantidad de subsets que hacen un valor.
+Ese valor lo encuentro con: (sum+targer/diff)/2
+
+*/

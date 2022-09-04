@@ -1,5 +1,17 @@
 /*
+Utilizando la técnica de programación de "backtracking" y la de "ramificación y poda", escribe en equipos de máximo dos peronas, en C++ un programa que resuelva un laberinto.
 
+El programa recibe dos numeros enteros M y N, seguido de M líneas de N valores booleanos(0|1) separados por un espacio, por la entrada estándar que representan el laberinto.  Un 1 representa una casilla en la que es posible moverse, un 0 es una casilla por la que NO se puede pasar.
+El origen o casilla de inicio es siempre la casilla (0,0) y la salida o meta es siempre la casilla (M-1, N-1)
+La salida del programa es una matriz de valores booleanos (0|1) que representan el camino para salir del laberinto. Primero debe mostrarse la solución utilizando la técnica de backtracking, y luego utilizando la técnica de ramificación y poda.
+Tu programa debe compilar sin errores ni warnings y debe ejecutarse correctamente en en ambiente linux. Piensa en posibles casos de prueba extremos que pueden ser utilizados para probar tu programa.
+Tu solución propuesta debe ser correcta y eficiente.
+
+Autores: 
+    David Gerardo Martínez Hidrogo - A01235692
+    Arturo Garza Campuzano - A00828096 
+
+Creado: Septiembre 1 del 2022. Ultima Actualización: Septiembre 3 del 2022
 */
 
 #include <algorithm>

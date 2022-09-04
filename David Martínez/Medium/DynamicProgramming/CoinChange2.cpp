@@ -71,7 +71,6 @@ public:
                 
         */
         
-        //get sum of all denominations
         int n = coins.size();
         
         //create dp table
@@ -100,4 +99,15 @@ public:
         return dp[n][amount];
     }
 };
-//43 minutes
+/*
+terminado en 43 minutos
+
+complexity:
+    time: O(# of coins * amount)
+    extra space: O(# of coins * amount)
+
+Entendí muy bien el problema, me quede ciclado en conseguir el numero de subsets en bounded knapsack
+Porque en ese se toma como base la suma maxima de todos los numeros, pero en unbounded puedes
+tener cualquier numero infinita cantidad de veces. Entonces es mejor tomar como referencia el amount
+que te piden.
+*/

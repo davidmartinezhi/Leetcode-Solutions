@@ -103,12 +103,17 @@ public:
         
         //return value at position s1 multiplied by 0s frequency to the power of 2
         //if there are no 0s, answer will hace 1 * dp[nums.size()][s1];
-        return pow(2, ceroesCount) * dp[nums.size()][s1] ;
+        //To get all combinations even with 0s
+        return pow(2, ceroesCount) * dp[nums.size()][s1];
         //return dp[nums.size()][s1];
     }
 };
 /*
 Terminado en 45+
+
+Complexity:
+    Time: O(items*sum of items)
+    Extra Space: O(items * sum of items)
 
 Brute force salio en 25 minutos.
 Pero esta solución si fue pensar un poco más.

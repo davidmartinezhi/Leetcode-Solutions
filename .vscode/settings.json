@@ -4,6 +4,7 @@
         "*.py": "python",
         "new": "cpp",
         "vector": "cpp",
-        "__config": "cpp"
+        "__config": "cpp",
+        "iosfwd": "cpp"
     }
 }

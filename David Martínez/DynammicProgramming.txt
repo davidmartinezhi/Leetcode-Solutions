@@ -295,6 +295,15 @@ https://www.youtube.com/watch?v=oaloiuvGcQg&list=PLEJXowNB4kPxBwaXtRO1qFLpCzF75D
     Unbounded:
         Can take infinite number of each item
 
+================================================
+Classifications base on goals:
+    Subset sum problem T/F find if subset that adds up to given sum exists
+    Equal subset problem    S1-S2 = 0
+    Minimum Subset sum problem  S1-S2 = MIN
+    count subsets problem S1 = value
+    
+
+
     
 ==DP on grid and its variations
 https://www.youtube.com/watch?v=tEdsR9_VUQI&list=PLEJXowNB4kPxBwaXtRO1qFLpCzF75DYrS&index=33

@@ -10,18 +10,20 @@ and selling
 
 int rodCutMem(vector<int> &price, vector<int> &length, vector<int> &mem, int size)
 {
-    //check if value has already been calculated
-    if(mem[size] == -1e6){
+    // check if value has already been calculated
+    if (mem[size] == -1e6)
+    {
 
-        //traverse lengths
-        for(int i = 1; i <= size; i++){
+        // traverse lengths
+        for (int i = 1; i <= size; i++)
+        {
+            // get value of profit of that length, and check amount with rest of money
+            int temp = price[i - 1] + rodCutMem(price, length, mem, size - i);
 
-            //get value of profit of that length, and check amount with rest of money
-            int temp = price[i-1] + rodCutMem(price, length, mem, size - i);
-
-            //if we get more profit, we update the max possible profit for that length
-            if(temp > mem[size]){
-                mem[size] = temp; //update
+            // if we get more profit, we update the max possible profit for that length
+            if (temp > mem[size])
+            {
+                mem[size] = temp; // update
             }
         }
     }
@@ -29,40 +31,48 @@ int rodCutMem(vector<int> &price, vector<int> &length, vector<int> &mem, int siz
     return mem[size];
 }
 
-int rodCutIt(vector<int> &price, vector<int> &length, int maxLen){
+int rodCutIt(vector<int> &price, vector<int> &length, int maxLen)
+{
 
-    //create dp table
+    // create dp table
     int n = price.size();
 
-    int dp[n+1][maxLen+1];
+    int dp[n + 1][maxLen + 1];
 
-    //traverse and fill
-    for(int i = 0; i <= n; i++){
-        for(int j = 0; j <= maxLen; j++){
+    // traverse and fill
+    for (int i = 0; i <= n; i++)
+    {
+        for (int j = 0; j <= maxLen; j++)
+        {
 
-            //first column
-            if(j == 0){
+            // first column
+            if (j == 0)
+            {
                 dp[i][j] = 0;
             }
-            //first row
-            else if(i == 0){
+            // first row
+            else if (i == 0)
+            {
                 dp[i][j] = -1e6;
             }
 
-            //exclude
-            else if(length[i - 1] > j){
-                dp[i][j] = dp[i-1][j];
+            // exclude
+            else if (length[i - 1] > j)
+            {
+                dp[i][j] = dp[i - 1][j];
             }
 
-            //compare include and exclude
-            else{
-                dp[i][j] = max(price[i-1] + dp[i][j - length[i-1]] , dp[i-1][j]);
+            // compare include and exclude
+            else
+            {
+                dp[i][j] = max(price[i - 1] + dp[i][j - length[i - 1]], dp[i - 1][j]);
             }
         }
     }
 
     return dp[n][maxLen];
 }
+
 
 int main()
 {
@@ -92,7 +102,7 @@ int main()
     mem[0] = 0;
 
     // call funtion
-    //profit = rodCutMem(price, length, mem, size);
+    // profit = rodCutMem(price, length, mem, size);
     profit = rodCutIt(price, length, size);
 
     // return answer
@@ -100,3 +110,20 @@ int main()
 
     return 0;
 }
+
+/*
+Se puede hacer de manera iterativa, con el metodo que use en memoization
+solo anidado 
+    for i = 1; i <= size; i++
+        for j = 1; j <= i; j++
+            temp = price[j-1] + mem[i-j];
+
+            if(temp > mem[i])
+                mem[i] = temp
+
+    return mem[size];
+
+    complexity:
+        time: O(n^2)
+        extra space: O(n)
+*/

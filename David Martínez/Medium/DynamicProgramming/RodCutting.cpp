@@ -8,28 +8,25 @@ Find max profit of cutting the rod into different pieces
 and selling
 */
 
-int rodCutMem(vector<int> &price, vector<int> &length, vector<vector<int> > &mem, int maxLen, int size)
+int rodCutMem(vector<int> &price, vector<int> &length, vector<int> &mem, int size)
 {
+    //check if value has already been calculated
+    if(mem[size] == -1e6){
 
-    // base case
-    if (size == 0 || maxLen == 0)
-        return 0;
+        //traverse lengths
+        for(int i = 1; i <= size; i++){
 
-    // recursive call
+            //get value of profit of that length, and check amount with rest of money
+            int temp = price[i-1] + rodCutMem(price, length, mem, size - i);
 
-    // exclude length cut
-    if (length[size - 1] > maxLen)
-    {
-        mem[size][maxLen] = rodCutMem(price, length, mem, maxLen, size - 1);
-    }
-    // Include or exclude
-    else
-    {
-        mem[size][maxLen] = max(price[size - 1] + rodCutMem(price, length, mem, maxLen - length[size - 1], size),
-                                rodCutMem(price, length, mem, maxLen, size - 1));
+            //if we get more profit, we update the max possible profit for that length
+            if(temp > mem[size]){
+                mem[size] = temp; //update
+            }
+        }
     }
 
-    return mem[size][maxLen];
+    return mem[size];
 }
 
 int rodCutIt(vector<int> &price, vector<int> &length, int maxLen){
@@ -85,16 +82,17 @@ int main()
     length.push_back(4);
 
     vector<int> price;
-    price.push_back(1);
-    price.push_back(5);
-    price.push_back(8);
-    price.push_back(9);
+    price.push_back(2);
+    price.push_back(7);
+    price.push_back(14);
+    price.push_back(15);
 
     // memoization
-    vector<vector<int> > mem(size + 1, vector<int>(size + 1));
+    vector<int> mem(size + 1, -1e6);
+    mem[0] = 0;
 
     // call funtion
-    //profit = rodCutMem(price, length, mem, size, size);
+    //profit = rodCutMem(price, length, mem, size);
     profit = rodCutIt(price, length, size);
 
     // return answer

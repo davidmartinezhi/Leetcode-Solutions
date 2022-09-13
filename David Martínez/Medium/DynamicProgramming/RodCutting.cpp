@@ -126,4 +126,22 @@ solo anidado
     complexity:
         time: O(n^2)
         extra space: O(n)
+
+Para saber el corte optimo, creo array de corte y una hashtable
+
+    for i = 1; i <= size; i++
+        for j = 1; j <= i; j++
+            temp = price[j-1] + mem[i-j];
+
+            if(temp > mem[i])
+                mem[i] = temp;
+                cut[i] = j;
+
+    lleno hashtable
+        mientras size sea mayor a 0
+        agrego ht[size] = cut[size]
+        size--;
+
+    return mem[size];
+
 */

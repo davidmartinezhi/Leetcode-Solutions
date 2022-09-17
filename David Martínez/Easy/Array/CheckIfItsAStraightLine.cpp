@@ -125,23 +125,23 @@ public:
         */
         //solution Ian
         
-        //just 2 coordinates
+        //just 2 coordinates exist
         if(coordinates.size() == 2) return true;
         
         //get coordinates of first point
-        double y0 = coordinates[0][1];
-        double x0 = coordinates[0][0];
+        int y0 = coordinates[0][1];
+        int x0 = coordinates[0][0];
         
         //get difference between first and second point (slope)
-        double dy_0 = coordinates[1][1] - y0;
-        double dx_0 = coordinates[1][0] - x0;
+        int dy_0 = coordinates[1][1] - y0;
+        int dx_0 = coordinates[1][0] - x0;
         
         //traverse the rest of coordinates
         for(int i = 2; i < coordinates.size(); i++){
             
             //get slope of next and previous slope
-            double dx_i = coordinates[i][0] - coordinates[i-1][0];
-            double dy_i = coordinates[i][1] - coordinates[i-1][1];
+            int dx_i = coordinates[i][0] - coordinates[i-1][0];
+            int dy_i = coordinates[i][1] - coordinates[i-1][1];
             
             //check if they are the same slope
             //they should give the same result
@@ -149,6 +149,6 @@ public:
         }
         
         return true;
-        
+                
     }
 };

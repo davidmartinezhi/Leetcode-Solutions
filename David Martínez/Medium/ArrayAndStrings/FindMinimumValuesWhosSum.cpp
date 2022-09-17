@@ -56,7 +56,9 @@ private:
     
     void createFibSeqList(int k){
         
+
         
+        //iterative
         //add first number of fib sequence
         fibSeq.push_back(0);
         
@@ -77,12 +79,27 @@ private:
         }
         
         return;
+        
     }
   
     
 public:
     int findMinFibonacciNumbers(int k) {
+
+        //recursive
+        int f1 = 0, f2 = 1; //first and second element in fibonacci
+
+        //get a value that is greater,
+        //ther pevious value, fits the number we are looking for (f1)
+        //then we substract that value from k, and look for the next value that fits
         
+        while (f2 <= k) {   //while f2 is less or equal to K
+            swap(f1, f2);   //f2 now has the value of f1, and f1 of f2
+            f2 += f1;   //now we add f2 to f1
+        }
+        
+        return 1 + (k == f1 ? 0 : findMinFibonacciNumbers(k - f1));
+        /*
         //create fibonacci sequence array
         createFibSeqList(k);
         
@@ -100,7 +117,7 @@ public:
         }
         
         return count;
-        
+        */
         /*
         //get count of min numbers sum that gets me k
         int dp[fibSeq.size()+1][k+1];
@@ -123,3 +140,27 @@ public:
         */
     }
 };
+
+/*
+tiempo: ???
+complexity:
+    time: O(n)
+    extra space: O(1)
+    There is a limit to how much elements the fibonacci array will contain
+
+Me gustó el approach al problema, lo dividí de manera correcta y lo comprendí bien
+La creación del array inicial fue sencillo de hacer y comprender
+La parte que me causo ruido fue la de conseguir la minima cantidad de numeros, que me dieran la suma
+    al parecer si aseguran que existe la manera de hacer el numero siempre y tienes el mismo patron siempre
+    Puedes usar metodo greedy bien.
+
+Implemente dp, pero consumia mucha memoria. Talvez un approach diferente puede llegar a ser más eficiente
+
+Overall. Buen entendimiento del problema y buena performance.
+
+La pense de más, al estar preocupado por una manera de chacer si existe la suma siempre.
+Sabiendo que podría tener un numero que no esta dentro de la secuencies, pero aún aí debiendo
+de seguir avanzando
+
+
+*/

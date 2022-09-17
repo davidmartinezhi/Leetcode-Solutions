@@ -33,3 +33,19 @@ public:
         return longest;
     }
 };
+
+/*
+Notas:
+    Time: 45+
+
+    complexity
+        time: O(n^2)
+        extra space: O(n)
+
+    Tuve la idea de un approach que también servía en tiempo O(n^2) y extra space O(n)
+    Entonces estuvo bien la intuición. Solo me falto la ejecución en ese algoritmo
+
+    La solución es muy simmilar a la solución de coinchange cuando usas memoria O(n)
+    Debería de observar ambos patrones para identificarlos mejor. Hacer matríz o no
+
+*/

@@ -234,3 +234,41 @@ Aparte de esta manera es más sencillo explicarselo a otro humano jajaja
 Memoization
 Memoization suele ser recursividad pero con un data structure que guarda valores intermedios
 Para no volver a procesarlos.
+
+
+
+=====
+KMP
+https://www.youtube.com/watch?v=GTJr8OvyEVQ
+
+1)First create list of patters in suffix-preffix
+
+    set variable for counting matches
+    traverse
+        if match
+            list[i] = matchescount +1
+            matchescount+1
+        else
+            if no matches (matchesCount == 0)
+                list[i] = 0
+            else
+                matchesCount = list[matchesCount-1]
+                i--;
+
+2) check for pattern matching of substring in original string
+
+    set variable for matchesCount
+    
+    traverse
+
+        if match
+            matchesCount++
+
+        else
+            if matchesCount != 0
+                matchesCount = list[matchesCount - 1]
+                i--
+
+        
+        check if there is a match
+        if matchaesCount == substring size return i - j + 1

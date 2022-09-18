@@ -52,4 +52,6 @@ Notas:
 
     En coin change, quería checar todas las monedas siempre, por eso el segundo loop es hasta el final
     En increasing subsequence, solo es, hasta el index actual. por eso esa es la diferencia.
+
+    Debería de repasar dp y hacer una lista pequeña de patrones importantes y el setup
 */

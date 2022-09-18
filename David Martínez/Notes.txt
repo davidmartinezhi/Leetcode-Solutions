@@ -34,7 +34,6 @@ https://medium.com/karuna-sehgal/a-simplified-explanation-of-the-big-o-notation-
     -checar bitset y memset.
 
 To-Do:
--Estudiar y practicar recursividad.
 -Investigar sobre bit manipulation
 -Checar ejercicios para practicar recorridos de matrices (Vamos mejorando, pero aún falta fluides en este tipo de problemas)
 -Agregar secciones sobre traversals y estructuras de datos.
@@ -211,3 +210,23 @@ https://www.youtube.com/watch?v=1SFrVShoRYU
 
 Intevals
 https://www.youtube.com/watch?v=FuLfL_WhUHI
+
+
+DP traversals
+
+Tabulation
+Eh descubierto que dp lo puedes hacer muchas veces con un doble for loop
+El guardar los datos puede ser con matriz o con un array normal, de igual manera nos puede dar la solución
+
+Para guardar los datos y checarlos con un array es 
+    primer for loop, de 1 hasta el knapsack que quieres llenar o al final de una sequencia
+        segundo loop desde 0 hasta el final de la lista que comparas o los numeros que comparas
+            la condición de que numero quieres dejar
+
+    regresar resultado
+
+Aparte de esta manera es más sencillo explicarselo a otro humano jajaja
+
+Memoization
+Memoization suele ser recursividad pero con un data structure que guarda valores intermedios
+Para no volver a procesarlos.

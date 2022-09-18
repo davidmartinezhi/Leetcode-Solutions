@@ -21,6 +21,8 @@ public:
             for(int j = 0; j < i; j++){
                 
                 //if the front index is bigger, and it has a shortest or equal subsequence count
+                //counts how many numbers in front are smaller. if they have a greater increasing subsew
+                    //add their increasing subseq + 1
                 if(nums[i] > nums[j] && aux[i] <= aux[j]){
                     aux[i] = aux[j] + 1;    //add the subsequence of the smaller number and add 1
                     

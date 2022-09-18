@@ -67,7 +67,8 @@ public:
                  coins size + 1 or coins size in traversal
                 
         */
-        
+       
+        /*
         //set variables
         int n = coins.size();
         
@@ -102,6 +103,39 @@ public:
         
         
         return dp[n][amount];
+        */
+
+        //declare aux vector for dp
+        vector<int> dp(amount+1, 1e5);
+        dp[0] = 0;
+        
+        
+        //traverse the array
+        for(int i = 1; i < dp.size(); i++){
+            
+            //traverse from first index to i
+            for(int j = 0; j < coins.size(); j++){
+                
+                if(i>=coins[j]){
+                    //si la moneda puede completar la cantidad de dinero actual
+                    //checa si usa menos monedas con la cantidad actual o con la que llega al valor anterior
+                    //más agregar la nueva. ej: min(1+2+2, 0 + 5) 2 (0+5)
+                    
+                    //en la celda actual de i, el numero que tratamos de alcanzar
+                    //checamos todas las monedas para ver si alguna lo lleva a esa cifra
+                    //si una cifra previa, más una nueva moneda lo lleva a la cifra
+                    //pone el que ocupe menos monedas
+                    dp[i] = min(dp[i],1+dp[i-coins[j]]);    
+                    
+                }
+                            
+            }
+        }
+        
+        
+        if(dp[amount] == 1e5) return -1;
+        
+        return dp[amount];
     }
 };
 

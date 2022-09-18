@@ -38,19 +38,15 @@ To-Do:
 -Checar ejercicios para practicar recorridos de matrices (Vamos mejorando, pero aún falta fluides en este tipo de problemas)
 -Agregar secciones sobre traversals y estructuras de datos.
 -Investigar sobre Greedy Algorithms
--Investigar, cuando utilizar Kadane's algorithm o dynamic window technique: listo
 -Luego investigar bits manipulation, ejemplo el ^= en c++ que es un XOR. Pendiente
     -Checar memset y bitset en manipulación de bits.
 -Poner ayuda rapida de como convertir letras de minusculas a mayusculas o como checar que algo es un numero o alphanumerico. (como en el problema easy/string/validPalindrome.cpp)
 -Construct binary tree from inorder and preorder traversal array
     -Investigar porque funciono con un map y no con un unordered_map
     -Checar logica
--Investigar sobre dynammic programming, que hace que algo sea dynamic y como identificarlo
 -Esto es más intenso y no afuerzas, pero checar como crear una función o struct para hacer hashing rapido, como en problema group anagrams.
 -investigar matrix exponentiation
--familiarizarme con resolver permutations
 -hard/arrays/first missing positive, checar approach con optima memoria y runtime
--Checar como hacer bfs and dfs traversal con una matriz, como para evitar obstaculos
 -Optimizar merge k sorted lists
 
 Terminado
@@ -70,6 +66,11 @@ Terminado
 -Investigar cuando me puede ser utíl un algoritmo recursivo y como identificarlos. (Lo vere cuando llegue problemas de BST)
 -Investigar sobre Divide and conquer. terminado
 -Checar backtracking
+-Investigar, cuando utilizar Kadane's algorithm o dynamic window technique: listo
+-Investigar sobre dynammic programming, que hace que algo sea dynamic y como identificarlo
+-familiarizarme con resolver permutations
+-Checar como hacer bfs and dfs traversal con una matriz, como para evitar obstaculos
+
 
 Reminder
 -Debo familiarizarme en trabajar con matrices.
@@ -211,6 +212,9 @@ https://www.youtube.com/watch?v=1SFrVShoRYU
 Intevals
 https://www.youtube.com/watch?v=FuLfL_WhUHI
 
+-Checar como hacer bfs and dfs traversal con una matriz, como para evitar obstaculos
+    DFS es con backtracking, no es muy eficientes
+    BFS es con branch and bound, es bastante eficiente
 
 DP traversals
 

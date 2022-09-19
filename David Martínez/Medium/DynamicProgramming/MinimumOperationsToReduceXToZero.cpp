@@ -156,3 +156,15 @@ public:
 
     }
 };
+
+/*
+comlexity
+    time: O(n)
+    extra space: O(1)
+
+Me gustó que es un refraiming del problema, en lugar de encontrar los numeros que restando nos dan 0
+Buscamos los numeros que nos sumen a la suma de los numeros en total - lo que buscamos.
+Así ya tenemos el dato de cuantos numeros no queremos.  
+    -Entonces solo sacamos la operación de los que existen - los que no queremos = los que queremos
+    -Como es sliding window technique no importa si esa ventana esta en un extremo o en medio
+*/

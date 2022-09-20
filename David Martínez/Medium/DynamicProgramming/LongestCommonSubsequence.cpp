@@ -36,3 +36,18 @@ public:
         return dp[len1][len2];
     }
 };
+
+/*
+Debo comenzar a tomar tiempo otra vez
+
+Complexity:
+    time: O(text1 * text2)
+    extra space: o(text1 * text2)
+
+Es igual que cuando queria checar longest common substring
+Pero substring buscaba a los que estuviesen pegados.
+
+En este caso, arrastramos el valor maximo hasta que hayan más updates 
+y seguimos comparando
+
+*/

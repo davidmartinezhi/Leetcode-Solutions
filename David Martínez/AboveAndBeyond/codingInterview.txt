@@ -1,0 +1,60 @@
+The mock interview 
+
+It's to know how you think and tackle hard problems
+
+Evaluate problem-solving skills
+
+======
+Before we start coding
+-Proactive communication is any communication before I start to code.
+    It helps start the solution and understand the information well
+
+-Don't assume a question is Easy
+    repeat the question and rephrase it in your own words.
+    Don't assume
+
+-Assume all information given by the interviewer is important for solution
+
+-Ask alot of questions
+    clarify problem scope and intention
+    understand inputs and outputs
+    identify constraints
+    ask about edge cases and how they should be handled
+
+Communicate proactively and use visuals if needed.
+
+While coding
+See interviewer as a collaborator
+    -they want to know what it feels like to work through a problem with you
+    
+    Show them how you are tackling the problem so they know you are not stucked
+    Verbalize each step of your solution (think at loud)
+    As you walk through your code youll catch mistakes that you might have
+
+
+    -tell the interviewer when you are not sure
+    -let them know what you thought may work and why it doesn't
+
+Ask questions:
+        Don't pretende when you don't
+        ask questions to help identify path foward
+        not a good idea to ask for hints
+
+It's okay to say you are stuck
+        -draw the problem to clarify and explain where you are stuck
+        -break down problem into smaller problems
+        -practice more problems of that type.
+
+Don't rush
+    Go ahead at a methodical pace so you dont commit careless mistakes
+    And so you can thoroughly think through the problem at loud
+
+Dont forget to communicate complexity
+        -and explain tradeoffs
+        -know if your solution is optimal
+
+summary:
+    - walk your interviewer through your code and your solution
+    - treate interviewer as collaborators
+    - Ask questions, don't ask for hints
+    - reiterate time and space complexity of your approach and alternate solutions

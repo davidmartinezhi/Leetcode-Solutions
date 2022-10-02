@@ -77,5 +77,9 @@ Si de plano no puedo pensar en el bcr, que muchas veces no se puedde hacer. Debe
 que se me pueda ocurrir. en este caso si pude iniciar con brute force y checar mempization para optimizar
 Y no iba a estar lejos de la solución más optima
 
+Pero esta solución es muy optima también y resuelve mis dudas sobre trabajar con substrings ya encontrados.
+Lo cual es algo que ya había curioseado, pero no lo había aplicado. Enotnces me alegra que haya salido.
 
+Podría hacer algo de permutaciónes de una palabra con esto? Creo que si
+    Creo que es lo mismo que dijo Kevin sobre el problema de las ranas, sería fibonacci en log n
 */

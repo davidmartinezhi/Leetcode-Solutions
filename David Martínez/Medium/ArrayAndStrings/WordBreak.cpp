@@ -60,3 +60,14 @@ public:
         return dp[1][n];
     }
 };
+
+/*
+Time: 45+ minutes
+
+Complexity:
+    time: O(n^3)
+    extra space: O(n)
+
+
+
+*/

@@ -30,11 +30,13 @@ public:
                 string temp = s.substr(start-1,length); //declare substring of indexes in window
                 
                 //if word exists in dictionary
-                if(myset.find(temp)!=myset.end()) 
+                if(myset.find(temp)!=myset.end()){
                     dp[start][end] = true;  //set cell as true
+                }   
+
+                //if word doesn't exists, check if it has been found before
                 else
                 {
-                    
                     bool flag = false;
                     
                     //decrease window all the way to the end
@@ -68,6 +70,12 @@ Complexity:
     time: O(n^3)
     extra space: O(n)
 
+No estuve muy alejado de una solución optima. El tratar de conseguir algo O(n^2) me hizo perder mucho
+tiempo y pensamiento.
+
+Si de plano no puedo pensar en el bcr, que muchas veces no se puedde hacer. Debería de intentar irme con lo siguiente mejor
+que se me pueda ocurrir. en este caso si pude iniciar con brute force y checar mempization para optimizar
+Y no iba a estar lejos de la solución más optima
 
 
 */

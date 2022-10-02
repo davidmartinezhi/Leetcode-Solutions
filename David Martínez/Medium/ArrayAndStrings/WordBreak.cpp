@@ -43,6 +43,8 @@ public:
                     for(int i=start;i<end;++i)
                         
                         //if we have found a word in current index and on previous index
+                        //checa todo posible combinación de partición que nos valide hasta
+                            //el dato en el que estamos
                         if(dp[start][i] and dp[i+1][end])
                         {   
                             //set as true that cell

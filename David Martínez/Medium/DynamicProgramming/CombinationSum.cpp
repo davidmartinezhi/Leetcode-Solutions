@@ -77,3 +77,12 @@ public:
        return dp[target];
     }
 };
+
+/*
+
+A los 8 minutos ya tenia la respuesta, pero me tarde en programarlo
+complexity:
+    time: O(array size * target)
+    extra space: O(target)
+
+*/

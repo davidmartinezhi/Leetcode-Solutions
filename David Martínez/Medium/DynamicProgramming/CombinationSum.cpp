@@ -70,7 +70,6 @@ public:
                     dp[i] += dp[i-nums[j]];
                 }
             }
-            cout << dp[i] << " ";
         }
         
         
@@ -85,4 +84,6 @@ complexity:
     time: O(array size * target)
     extra space: O(target)
 
+Problema no fue dificil, deberíad e hacer un cheatsheet para tabulación con dp.
+Pero en general, se puede decir que estoy listo para entrevistas de dp
 */

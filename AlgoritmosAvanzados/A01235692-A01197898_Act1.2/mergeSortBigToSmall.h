@@ -40,7 +40,7 @@ void merge(vector<int> & list, vector<int> & aux, int  left, int right){
 void mergeSort(vector<int> & list, vector<int> & aux, int left, int right){
 
     //base case
-    if(left 
+    if(left < right){
 
         int middle = (left+right)/2;
 

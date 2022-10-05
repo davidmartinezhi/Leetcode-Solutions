@@ -87,7 +87,6 @@ Classifications base on goals:
 # Algoritmo de prim
 ## Encontrar árbol de mínima extensión
 
-
 # Algoritmo de kruskal
 ## Encontrar árbol de mínima extensión
 
@@ -99,4 +98,24 @@ Classifications base on goals:
 
 
 
+# Problema del flujo máximo
 
+## methods
+    - ford-fulkerson
+
+
+### ford-fulkerson
+
+
+
+
+checkar
+    -ramificación y poda
+    -manacher
+    -busquedas con el suffix array
+    -implementación de trie
+    -Dijkstra & Floyd
+    -Prim & Kruskal
+    -ABB optimo de Gilbert and Moore
+    -Algoritmo de coloreo de grafos
+    -Algoritmo de flujo máximo en un grafo

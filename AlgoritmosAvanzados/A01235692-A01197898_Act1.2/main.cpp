@@ -1,53 +1,58 @@
 /*
+Instrucciones:
+Utilizando las técnicas de programación de "programación dinámica", y la de "algoritmos avaros",
+escribe en equipos de máximo dos personas, en C++ un programa que resuelva el problema del cambio de monedas.
+
+El programa recibe un numero entero N, seguido de N valores enteros (uno en cada línea)
+que representan las diferentes denominaciones disponibles de las monedas.
+
+Seguido de esto, el programa recibe dos números enteros: P y Q, (uno en cada línea) por la entrada estándar,
+que representan P: el precio de un producto dado y Q: es el billete o moneda con el que se paga dicho producto.
+
+La salida del programa es una lista de N valores correspondientes al número de monedas de cada denominación,
+de mayor a menor, una en cada línea, que se tienen que dar para dar el cambio por el producto pagado,
+primero utilizando programación dinámica, y luego utilizando un algoritmo avaro.
+
 David Gerardo Martínez Hidrogo - A01235692
 Humberto Ricardo Rodriguez Ruán - A01197898
 
-Instrucciones:
-Utilizando las técnicas de programación de "programación dinámica", y la de "algoritmos avaros", 
-escribe en equipos de máximo dos personas, en C++ un programa que resuelva el problema del cambio de monedas.
-
-El programa recibe un numero entero N, seguido de N valores enteros (uno en cada línea) 
-que representan las diferentes denominaciones disponibles de las monedas. 
-
-Seguido de esto, el programa recibe dos números enteros: P y Q, (uno en cada línea) por la entrada estándar, 
-que representan P: el precio de un producto dado y Q: es el billete o moneda con el que se paga dicho producto.
-
-La salida del programa es una lista de N valores correspondientes al número de monedas de cada denominación, 
-de mayor a menor, una en cada línea, que se tienen que dar para dar el cambio por el producto pagado, 
-primero utilizando programación dinámica, y luego utilizando un algoritmo avaro.
+Last modified: Oct 4, 2022
 */
 
 #include <iostream>
 #include <vector>
+#include <algorithm>
 using namespace std;
 
 #include "./mergeSortBigToSmall.h"
 
 
-//dynamic solution
+/*
+With a Dynammic Programming approach
+Receives array of coin denominations and a target
+Returns array of min coins that add up to target
+complexity:
+    time: O(array size * amount)
+    space: O((array size * amount2))
+*/
 vector<int> coinChange(vector<int> &coins, int amount)
 {
-    /*
-        Returns array with coin denominations needed
-        complexity:
-            time: O(array size * amount)
-            space: O(2(array size * amount)) = O(array size * amount)
-    */
 
     // set variables
     int n = coins.size();
 
-    // matrix minimum coins
-    vector<int> aux(amount+1);
-    vector<vector<int> > dp(n+1, aux);
-    
-    // matrix coin denominations array
-    vector<vector<vector<int> > > dpDenomination(n + 1, vector<vector<int> >(amount+1));
+    //matrix minimum coins
+    vector<vector<int> > dp(n + 1, vector<int>(amount + 1));
 
-    // traverse the matrix
-    for (int i = 0; i <= n; i++)
+    // matrix coin denominations array
+    vector<vector<vector<int> > > dpDenomination(n + 1, vector<vector<int> >(amount + 1));
+
+    // traverse matrix
+    //for every coin denomination
+    for (int i = 0; i <= n; i++)  
     {
-        for (int j = 0; j <= amount; j++)
+        //check how many are needed for min coins that sum to target
+        for (int j = 0; j <= amount; j++) 
         {
             // first col
             if (j == 0)
@@ -62,19 +67,24 @@ vector<int> coinChange(vector<int> &coins, int amount)
             // if current value is greater, we skip
             else if (coins[i - 1] > j)
             {
+                //just set cells as values previously found
                 dp[i][j] = dp[i - 1][j];
                 dpDenomination[i][j] = dpDenomination[i - 1][j];
             }
             // comparison
             else
             {
-                if(1 + dp[i][j - coins[i - 1]] < dp[i - 1][j]){
-                    dp[i][j] = 1 + dp[i][j - coins[i - 1]];
-                    dpDenomination[i][j] = dpDenomination[i][j - coins[i-1]];
-                    dpDenomination[i][j].push_back(coins[i-1]);
+                //if the current coins needed for target is smaller than the previously found
+                if (1 + dp[i][j - coins[i - 1]] < dp[i - 1][j])
+                {
+                    dp[i][j] = 1 + dp[i][j - coins[i - 1]]; //Set value of min coins needed for that value
+                    dpDenomination[i][j] = dpDenomination[i][j - coins[i - 1]]; //Set vector as the one in that position
+                    dpDenomination[i][j].push_back(coins[i - 1]); //add new coin adn denomination
                 }
-                else{
-                    dp[i][j] = dp[i - 1][j];
+                else
+                {
+                    //bring values previously found to that cell
+                    dp[i][j] = dp[i - 1][j]; 
                     dpDenomination[i][j] = dpDenomination[i - 1][j];
                 }
             }
@@ -85,75 +95,106 @@ vector<int> coinChange(vector<int> &coins, int amount)
     if (dp[n][amount] > 1e4)
         return dpDenomination[0][0];
 
+    //reverse list
+    for(int i = 0; i < dpDenomination[n][amount].size()/2; i++){
+        int size = dpDenomination[n][amount].size();
+
+        int aux = dpDenomination[n][amount][size-i-1];
+        dpDenomination[n][amount][size-i-1] = dpDenomination[n][amount][i];
+        dpDenomination[n][amount][i] = aux;
+
+    }
+
+    //Return list
     return dpDenomination[n][amount];
 }
 
-//dynamic solution
-vector<int> coinChangeGreedy(vector<int> &coins, int amount)
+/*
+With a greedy approach
+Receives array of coin denominations and a target
+Returns array of min coins that add up to target
+complexity:
+    time: O(n log n), due to the sorting algorithm
+    space: O(1)
+*/
+vector<int> coinChangeGreedy(vector<int> coins, int amount)
 {
-    /*
-        Returns array with coin denominations needed
-        complexity:
-            time: O(n log n)
-            space: O(1)
-    */
 
     // set variables
     int n = coins.size();
     vector<int> result;
 
-    //sort array
-    sort(coins.begin(), coins.end());
+    // sort array
+    vector<int> aux(coins.size());
+    mergeSort(coins, aux, 0, coins.size() - 1); // complexity: time O(n log n)
 
-    //grab coins
-    for(int i = coins.size() - 1; i >= 0; i--){
-        int auxN = coins[i];
+    // grab coins
+    for (int i = 0; i < coins.size(); i++)
+    {
+        int auxN = coins[i]; //current coin
 
-        while(auxN <= amount){
-            result.push_back(auxN);
-            amount -= auxN;
+        while (auxN <= amount)  //while coin is smaller or equal to amount
+        {
+            result.push_back(auxN); //Add coin
+            amount -= auxN; //substract from amount to find
         }
-
     }
+
+    //check if amount can be made
+    if(amount != 0) return vector<int>(0);
 
     return result;
 }
 
+/*
+Print list
+receives a list and prints the values it contains
+complexity
+    time: O(n), n being the number of elements in the list
+    extra space: O(1)
+*/
+void printList(const vector<int> &list)
+{
+    // traverse list
+    for (int i = 0; i < list.size(); i++)
+    {
+        cout << list[i] << " "; // print values
+    }
+    cout << endl;
+    return;
+}
+
 int main()
 {
-    //set variables for problem
-    int p, q; //price and bill used to pay
-    int n;  //number of denominations
-    vector<int> list; //denominations
-    vector<int> result;
+    // Declare variables
+    int price, bill;
+    int n;                     // number of denominations
+    vector<int> denominations; // denominations
+    vector<int> resultDp;      // result for Dynammic Programming method
+    vector<int> resultGreedy;  // result for Greedy method
 
-    //create list for problem
-    cin >> n;
-    
-    while(n > 0){
-        //adds numbers to the list
+    // Get Coin denominations
+    cin >> n; // get amount of coins
+
+    while (n > 0) // get coin denominations
+    {
         int auxN;
         cin >> auxN;
-        list.push_back(auxN);
+        denominations.push_back(auxN);
         n--;
     }
 
-    //get price of product and bill it is payed with
-    cin >> p;
-    cin >> q;
+    // Get Price of product and bill it is payed with
+    cin >> price; // price
+    cin >> bill;  // bill
 
-    //get vector with corresponding denominations for minimum coins
-    result = coinChange(list, q-p);
-    //result = coinChangeGreedy(list, q-p);
+    // Get denominations for change with both methods
+    resultDp = coinChange(denominations, bill - price);
+    resultGreedy = coinChangeGreedy(denominations, bill - price);
 
-    //sort the array from greater to smaller
-    vector<int> aux(result.size());
-    mergeSort(result, aux, 0, result.size()-1); //complexity: time O(n log n)
-    
-    //print resulting list
-    for(int i = 0; i < result.size(); i++){
-        cout << result[i] << " ";
-    }
-    cout << endl;
+    // print resulting denominations
+    printList(resultDp);
+    printList(resultGreedy);
+
     return 0;
 }

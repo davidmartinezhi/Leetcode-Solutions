@@ -8,6 +8,7 @@ Last Modified: Oct 3. 20:07:00
 */
 
 #include <iostream>
+#include <algorithm>
 #include <vector>
  using namespace std;
 
@@ -18,7 +19,7 @@ Receives String input and generates de Suffix Array of that string
 
 Complexity
     time: O(n^2 log n). O(n log n) for sorting and O(n) for comparison between strings while sorting
-    extra space: O(1). It just uses the space needed to create the suffix array
+    extra space: O(n). It just uses the space needed to create the suffix array
 */
  vector<pair<string, int> > createSuffixArray(string & str){
 
@@ -52,11 +53,14 @@ Complexity
         cout << suffixArray[i].first << " ";
     }
     cout << endl;
+
+    
     //Display suffix array indexes
     for(int i = 0; i < str.size(); i++){
         cout << suffixArray[i].second << " ";
     }
     cout << endl;
+    
     
     return 0;
  }

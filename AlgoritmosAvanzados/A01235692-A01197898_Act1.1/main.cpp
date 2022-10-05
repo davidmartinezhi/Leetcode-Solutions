@@ -1,6 +1,11 @@
 /*
+Divide and conquer
+Apply Merge sort algorithm
+
 David Gerardo Martínez Hidrogo - A01235692
 Humberto Ricardo Rodriguez Ruán - A01197898
+
+Last modified: Oct 4, 2022
 */
 #include <iostream>
 #include <vector>
@@ -8,7 +13,14 @@ Humberto Ricardo Rodriguez Ruán - A01197898
 using namespace std;
 
 
-//complexity: time: O(n)
+
+/*
+Merge the sorted sections resulting from the divisions of the array
+
+complexity
+    time: O(n), n being number of elements in array
+    extra space: O(1)
+*/
 void merge(vector<double> & list, vector<double> & aux, int  left, int right){
 
     //declare variables
@@ -41,7 +53,14 @@ void merge(vector<double> & list, vector<double> & aux, int  left, int right){
     }
 }
 
-//complexity: time: O(n log n)
+//
+
+/*
+Divides the array in half, until there is only one element left for each section
+complexity
+    time: O(n log n), log n for the division, n for the merge traversal
+    extra space: O(log n) recursive calls
+*/
 void mergeSort(vector<double> & list, vector<double> & aux, int left, int right){
 
     //base case
@@ -50,7 +69,7 @@ void mergeSort(vector<double> & list, vector<double> & aux, int left, int right)
         int middle = (left+right)/2;
 
         //recursive calls. left and right side of list.
-        //complexity: O( log n)
+        //complexity: O(log n)
         mergeSort(list, aux, left, middle);
         mergeSort(list, aux, middle+1, right);
         

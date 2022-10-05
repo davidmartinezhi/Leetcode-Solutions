@@ -14,11 +14,14 @@ Created: Oct 5, 2022 at 12:54pm    Last Moidification: Oct 5, 2022
 */
 
 #include <iostream>
+#include <unordered_map>
 #include <vector>
+#include <set>
+#include <iterator>
 using namespace std;
 
 
-//Dijkstra
+//Dijkstra Algorithm
 
 /*
 Selects the vertex that has not been processed and has the minimum distance value
@@ -116,6 +119,73 @@ void dijkstra(vector<vector<int> > & adjMatrix, int & n, int & val){
 
 }
 
+/*
+Generates shortest path distances from source vertex to the rest of vertex
+Receives an adjacency matrix,the matrix dimention and the source vertex
+
+complexity
+    time: O(E log V), E being Edges and V being Vertices
+    extra space: O(E+V) for the creation of adjacency list
+*/
+void dijkstraAdjList(vector<vector<int> > & adjMatrix, int & n, int & val){
+
+    //Declare variables
+    unordered_map<int, vector<pair<int, int> > > adjList;
+    vector<int> distances(n, INT_MAX);
+    set<pair<int, int> > extractSet;
+
+    //fill adj list
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < n; j++){
+            if(adjMatrix[i][j] != -1){
+                adjList[i].push_back(make_pair(j, adjMatrix[i][j]));
+            }      
+        }
+    }
+
+    //set source vertex values
+    distances[val] = 0;
+    extractSet.insert(make_pair(0, val));
+
+    //while extract set is not empty
+    while(!extractSet.empty()){
+
+        //get minimum of distance
+        pair<int, int> aux = *(extractSet.begin());
+        extractSet.erase(extractSet.begin());
+
+        //vertex
+        int U = aux.second;
+
+        //go over adjacency list
+        for(auto i = adjList[U].begin(); i != adjList[U].end(); i++){
+
+            //get vertex and weight
+            int V = (*i).first;
+            int weight = (*i).second;
+
+            //check if we have found a shortest path
+            if(distances[V] > distances[U] + weight){
+
+                //remove current distance if it's in set
+                if(distances[V] != INT_MAX){
+                    extractSet.erase(extractSet.find(make_pair(distances[V],V)));
+                }
+
+                //update the distance
+                distances[V] = distances[U] + weight;
+                extractSet.insert(make_pair(distances[V], V));
+            }
+        } 
+    }
+
+    //print shortest distance
+    printDistance(distances, val);
+}
+
+//Floyd-Warshall Algorithm
+
+
 int main()
 {
     
@@ -134,7 +204,7 @@ int main()
         }
     }
 
-    //call Dijkstra method
+    //call Dijkstra method on every vertex
     for(int i = 0; i < n; i++){
         dijkstra(adjMatrix, n, i);
     }

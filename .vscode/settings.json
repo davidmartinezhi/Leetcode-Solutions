@@ -5,6 +5,13 @@
         "new": "cpp",
         "vector": "cpp",
         "__config": "cpp",
-        "iosfwd": "cpp"
+        "iosfwd": "cpp",
+        "iostream": "cpp",
+        "string": "cpp",
+        "utility": "cpp",
+        "sstream": "cpp",
+        "istream": "cpp",
+        "ostream": "cpp",
+        "unordered_map": "cpp"
     }
 }

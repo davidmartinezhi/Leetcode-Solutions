@@ -76,6 +76,13 @@ Reminder
 -Debo familiarizarme en trabajar con matrices.
 -Sliding Window Technique: https://youtu.be/dQw4w9WgXcQ
 
+=====
+Map es un self balancing bst, values are in order
+    Usarlo cuando enserio necesitas sorted data
+    time: log N
+
+unordered_map es hash table
+
 
 Trees:
     -Los recorridos lo son todo.

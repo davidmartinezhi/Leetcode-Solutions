@@ -22,7 +22,7 @@ Before we start coding
     ask about edge cases and how they should be handled
 
 Communicate proactively and use visuals if needed.
-
+======
 While coding
 See interviewer as a collaborator
     -they want to know what it feels like to work through a problem with you
@@ -58,3 +58,29 @@ summary:
     - treate interviewer as collaborators
     - Ask questions, don't ask for hints
     - reiterate time and space complexity of your approach and alternate solutions
+======
+Handling Mistakes
+
+What meta looks for in interviews:
+    -Solution forming
+    -communication
+    -coding
+    -Engineering tradeoffs
+    -Your limites
+
+Your interviewer wants to see how you handle mistakes algoritmos
+    -did you catch the bugs?
+    -did you got back on track?
+
+Dos:
+    -Acknowledge mistakes and plan how to fix it
+    -Trace code on an example
+    -Listen carefully to interviewer
+    -Ask questions
+    -Don't pretend to know something you don't
+        * explain cause and effect of reasoning 
+    -Use defense code
+        *edge cases and null values
+    -Use descriptive names
+    -Avoid sloppy coding standards
+

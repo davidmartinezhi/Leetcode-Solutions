@@ -127,6 +127,7 @@ complexity
     time: O(E log V), E being Edges and V being Vertices
     extra space: O(E+V) for the creation of adjacency list
 */
+/*
 void dijkstraAdjList(vector<vector<int> > & adjMatrix, int & n, int & val){
 
     //Declare variables
@@ -182,9 +183,69 @@ void dijkstraAdjList(vector<vector<int> > & adjMatrix, int & n, int & val){
     //print shortest distance
     printDistance(distances, val);
 }
+*/
 
 //Floyd-Warshall Algorithm
+/*
+Print a matrix with nxn dimensions
 
+complexity:
+    time: O(n^2), traversing every row and column
+    extra space: O(1)
+*/
+void printMatrix(vector<vector<int> > & adjMatrix, int & n){
+
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < n; j++){
+            cout << adjMatrix[i][j] << " ";
+        }
+        cout << endl;
+    }
+}
+
+/*
+Receives and adjacency matrix and prints a matrix of shortest paths
+between every pair of vertex
+
+complexity
+    time: O(n^3), n for every vertex line
+    extra space: O(n^2) for the cloning of the adjMatrix
+*/
+void floydWarshall(vector<vector<int> > & adjMatrix, int & n){
+
+    vector<vector<int> > matrix = adjMatrix;
+
+    //get shortest paths between pairs
+    //For every vertex
+    //We traverse the matrix to update the shortest path from that vertex to every other vertex
+    for(int k = 0; k < n; k++){ 
+        for(int i = 0; i < n; i++){ 
+            for(int j = 0; j < n; j++){
+
+                //if there is no edge, set to inf
+                if(matrix[i][j] == -1) matrix[i][j] = 1e6;
+
+                //set value of cell
+                matrix[i][j] = min(matrix[i][j], matrix[i][k]+matrix[k][j]);
+            }
+        }
+    }
+
+    //print processed matrix
+    printMatrix(matrix, n);
+
+}
+
+/*
+Receives as input an adjacency matrix
+Displays the shortest distance between vertices using dijkstra algorithm
+Displays matrix with shortest distance between pair of vertices using Floyd-Warshall algorithm
+
+Complexity
+    time: O(n^3), n^3 from using dijkstra on every node and from floyd-warshall algorithm
+    extra space: O(n^2) to fill the adjacency matrix depdneing on the input n
+
+*/
 
 int main()
 {
@@ -208,6 +269,10 @@ int main()
     for(int i = 0; i < n; i++){
         dijkstra(adjMatrix, n, i);
     }
+    cout << endl;
+
+    //call Floyd-Warshall
+    floydWarshall(adjMatrix, n);
     
 
     return 0;

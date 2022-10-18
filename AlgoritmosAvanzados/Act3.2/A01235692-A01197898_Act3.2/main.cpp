@@ -36,7 +36,7 @@ comlexity
 int selectMinVertex(vector<int> & distance, vector<bool> & processed, int & n){
 
     //declare variables
-    int minimum = INT_MAX;  //minimu value
+    int minimum = 1e6;  //minimu value
     int vertex; //vartex
 
     for(int i = 0; i < n; i++){
@@ -61,9 +61,9 @@ complexity
 */
 void printDistance(vector<int> & distance, int & val){
 
-    for(int i = 0; i < distance.size(); i++){
+    for(auto i = 0; i < distance.size(); i++){
         if(distance[i] != 0){
-            cout << "node: " << val + 1 << " to node " << i + 1 << ": " << distance[i] << endl;
+            cout << "node " << val + 1 << " to node " << i + 1 << " : " << distance[i] << endl;
         }  
     }
 }
@@ -81,7 +81,7 @@ void dijkstra(vector<vector<int> > & adjMatrix, int & n, int & val){
     //declare variables
     vector<int> parent(n);
     vector<bool> processed(n, false);
-    vector<int> distance(n, INT_MAX);
+    vector<int> distance(n, 1e6);
 
     //mark first node as processed
     distance[val] = 0;  //value 0 to get picked first
@@ -93,7 +93,7 @@ void dijkstra(vector<vector<int> > & adjMatrix, int & n, int & val){
         int U = selectMinVertex(distance, processed, n);
 
         //check if all vertices have been visited
-        if(U == INT_MAX) break;
+        if(U == 1e6) break;
 
         //Mark as processed
         processed[U] = true;
@@ -107,7 +107,7 @@ void dijkstra(vector<vector<int> > & adjMatrix, int & n, int & val){
                 3. edge weight is smaller than current edge weight
             */
 
-           if(adjMatrix[U][j] != -1 && processed[j] == false && distance[U] != INT_MAX && (distance[U] + adjMatrix[U][j] < distance[j])){
+           if(adjMatrix[U][j] != -1 && processed[j] == false && distance[U] != 1e6 && (distance[U] + adjMatrix[U][j] < distance[j])){
             distance[j] = distance[U] + adjMatrix[U][j];
             parent[j] = U;
            }
@@ -133,7 +133,7 @@ void dijkstraAdjList(vector<vector<int> > & adjMatrix, int & n, int & val){
 
     //Declare variables
     unordered_map<int, vector<pair<int, int> > > adjList;
-    vector<int> distances(n, INT_MAX);
+    vector<int> distances(n, 1e6);
     set<pair<int, int> > extractSet;
 
     //fill adj list
@@ -170,7 +170,7 @@ void dijkstraAdjList(vector<vector<int> > & adjMatrix, int & n, int & val){
             if(distances[V] > distances[U] + weight){
 
                 //remove current distance if it's in set
-                if(distances[V] != INT_MAX){
+                if(distances[V] != 1e6){
                     extractSet.erase(extractSet.find(make_pair(distances[V],V)));
                 }
 
@@ -224,7 +224,7 @@ void floydWarshall(vector<vector<int> > & adjMatrix, int & n){
             for(int j = 0; j < n; j++){
 
                 //if there is no edge, set to inf
-                if(matrix[i][j] == -1) matrix[i][j] = 1e6;
+                if(matrix[i][j] == -1) matrix[i][j] = 1e8;
 
                 //set value of cell
                 matrix[i][j] = min(matrix[i][j], matrix[i][k]+matrix[k][j]);
@@ -267,14 +267,15 @@ int main()
     }
 
     //call Dijkstra method on every vertex
+    cout << "Dijkstra:" << endl;
     for(int i = 0; i < n; i++){
         dijkstra(adjMatrix, n, i);
     }
     cout << endl;
 
+    cout << "Floyd:" << endl;
     //call Floyd-Warshall
     floydWarshall(adjMatrix, n);
-    
 
     return 0;
 }

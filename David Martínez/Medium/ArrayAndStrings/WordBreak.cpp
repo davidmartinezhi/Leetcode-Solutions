@@ -7,6 +7,37 @@ using namespace std;
 class Solution {
 public:
     bool wordBreak(string s, vector<string>& wordDict) {
+        //bottom up approach
+        int n = s.size();
+        
+        //create dp array for valid word connections
+        vector<bool> dp(n+1, false);
+        dp[n] = true;   //set last value as true
+        
+        //traverse string backwards
+        for(int i = n-1; i >= 0; i--){
+            
+            //traverse words dictionary
+            for(string w: wordDict){
+                
+                //check if word size is valid and if word matches
+                if(i + w.size() <= n && s.substr(i,w.size()) == w){
+                    dp[i] = dp[i+w.size()]; //set if it matches and the order
+                }
+                
+                if(dp[i]) break; //if we found a true value, we jump to next index
+            }
+        }
+        
+        //Return if the string can be made
+        return dp[0];
+    }
+};
+
+/*
+class Solution {
+public:
+    bool wordBreak(string s, vector<string>& wordDict) {
         //bottom-up approach
         
         //declare variables
@@ -64,7 +95,7 @@ public:
         return dp[1][n];
     }
 };
-
+*/
 /*
 Time: 45+ minutes
 

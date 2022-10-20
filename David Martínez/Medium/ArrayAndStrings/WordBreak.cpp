@@ -35,6 +35,16 @@ public:
 };
 
 /*
+Esta sencillo solucionar este problema, la complique de más con el primer approach que estuve intentando
+En realidad es similar a coinchange, solo que en lugar de bottom-up, ahora es top-down
+Solo es checar si la palabra se puede hacer, si si, checar si la palabra es igual
+Esa es la condición, pero el approach es el mismo.
+
+Es un unbounded knapsack problem, igual que coin change
+
+*/
+
+/*
 class Solution {
 public:
     bool wordBreak(string s, vector<string>& wordDict) {

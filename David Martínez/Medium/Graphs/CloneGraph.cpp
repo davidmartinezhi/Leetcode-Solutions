@@ -140,3 +140,56 @@ pero salio de manera adecuada una solución optima.
 Pienso que al familiarizarme con grafos, mi velocidad de resolución de este tipo de problemas
 ira incrementando.
 */
+
+
+//dfs solution
+
+/*
+
+class Solution {
+public:
+    unordered_map<Node*,Node*> mp; //hashtable
+    
+    void dfs(Node* cloneNode, Node* node)
+    {
+        //for every neighbor of the node
+        for(auto n : node->neighbors)
+        {
+            //create pointer to noce to be added
+            Node* c = nullptr;
+            
+            //if node exists in ht, it has been visited and exists
+            if(mp.find(n)!=mp.end())
+                
+                c=mp[n]; //set as node to add
+            
+            else
+            {
+                c = new Node(n->val); //else create a new node with that valie
+                mp[n]=c;    //set node with value as its clone
+                dfs(c,n);   //call dfs
+            }
+            
+            cloneNode->neighbors.push_back(c); //add node to neighbors
+        }
+    }
+    
+    Node* cloneGraph(Node* node) {
+        
+        //check if node is a nullptr
+        if(!node) return node;
+        
+        //create answer node
+        auto ans = new Node(node->val); 
+        
+        //add to hashtable node and clone
+        mp[node]=ans;
+        
+        //send them to dfs
+        dfs(ans,node);
+        
+        return ans;
+    }
+};
+
+*/

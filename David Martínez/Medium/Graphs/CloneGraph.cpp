@@ -95,7 +95,6 @@ public:
             
             //get node of clone
             Node * cloneNode = nodesInClone[auxNode->val];
-            
 
             //traverse adjacencies of original
             for(int i = 0; i < auxNode->neighbors.size(); i++){

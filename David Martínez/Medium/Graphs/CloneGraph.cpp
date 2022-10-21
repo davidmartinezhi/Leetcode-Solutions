@@ -126,3 +126,18 @@ public:
         return nodesInClone[1];
     }
 };
+
+/*
+Time:
+    45minutes+
+
+Complexity:
+    time: O(vertex+edges)
+    extra space: O(vertex)
+
+Me gusto que salio el problema a la primera, llevaba tiempo sin trabajar con grafos
+pero salio de manera adecuada una solución optima.
+
+Pienso que al familiarizarme con grafos, mi velocidad de resolución de este tipo de problemas
+ira incrementando.
+*/

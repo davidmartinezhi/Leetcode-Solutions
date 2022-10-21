@@ -132,7 +132,7 @@ Time:
 
 Complexity:
     time: O(vertex+edges)
-    extra space: O(vertex)
+    extra space: O(vertex+edges)
 
 Me gusto que salio el problema a la primera, llevaba tiempo sin trabajar con grafos
 pero salio de manera adecuada una solución optima.

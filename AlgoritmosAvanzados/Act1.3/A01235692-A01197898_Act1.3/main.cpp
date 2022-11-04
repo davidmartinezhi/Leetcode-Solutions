@@ -7,7 +7,7 @@ La salida es una matriz de valores booleanos (0|1) que representa el camino para
 David Gerardo Martínez Hidrogo - A01235692
 Humberto Ricardo Rodriguez Ruán - A01197898
 
-Last modified: Oct 4, 2022
+Last modified: Nov 1, 2022
 */
 
 #include <iostream>
@@ -34,59 +34,101 @@ void printMatrix(const vector< vector<int> > & matrix){
     }
 }
 
+
+// Backtracking 
 /*
-Return matrix with all possible paths to bottom-right corner using backtracking
-complexity
-    time: O(n*m)
-    extra space: O(n*m)
+Checks if current cell in the path is a valid
+input: original matrix, rows in matrix, cols in matrix, current row being checked and current col being checked
+output: boolean value if cell is valid
+complexity:
+    time: O(1)
+    extra space: O(1)
 */
-void backtracking(vector<vector<int> > & matrix, vector<vector<int> > & laberinth, int & rows, int & cols, int row, int col){
-
-    //base cases 
-    if(row >= rows || row < 0 || col >= cols || col < 0 || matrix[row][col] != 1) return; //no path
-
+bool isValid(vector<vector<int> > & matrix, int & rows, int & cols, int row, int col) {
     
-    matrix[row][col]++; //mark cell as visited
-
-    if(row == rows-1 && col == cols-1){ //path found
-        matrix[row][col] = 0;
-        laberinth[row][col] = 1;
-        return;
+    // Check if path is valid and in bounds
+    if (row >= 0 && row < rows && col >= 0 && col < cols && matrix[row][col] == 1) {
+        return true;
     }
 
-    //check other possible paths
-    backtracking(matrix, laberinth, rows, cols, row, col+1); //right
-    backtracking(matrix, laberinth, rows, cols, row+1, col); //bottom
-    backtracking(matrix, laberinth, rows, cols, row, col-1); //left
-    backtracking(matrix, laberinth, rows, cols, row-1, col); //up
-
-    matrix[row][col] = 0;
-    laberinth[row][col] = 1;
+    //else return false
+    return false;
 }
 
 /*
-Return matrix with all possible paths to bottom-right corner using backtracking
+Build unique path in matrix to bottom-right corner
+input: original matrix, new matrix, rows in matrix, cols in matrix, current row being checked and current col being checked
+output: boolean value if path is valid
 complexity
-    time: O(n*m)
-    extra space: O(n*m)
+    time: O(n*m) traverse all matrix with backtracking
+    extra space: O(n+m) recursive calls to bottom-right corner
 */
-vector<vector<int> > findPathBacktracking(vector<vector<int> > matrix, int & rows, int & cols){
-
-    //clone matrix
-    vector<vector<int> > laberinth(rows, vector<int>(cols));
+bool backtracking(vector<vector<int> > & matrix, vector<vector<int> > & laberinth, int & rows, int & cols, int row, int col) {
     
-    //get laberinth from backtracking
-    backtracking(matrix, laberinth, rows, cols, 0, 0);
-    //printMatrix(matrix);
+    //base cases
+    //check if we are at the last position of the laberinth
+    if (row == rows-1 && col == cols-1 && matrix[row][col] == 1) {
+        laberinth[row][col] = 1; // set solution cell as true
+        return true;    //return true
+    }
+    
+    // Check if the path is valid
+    if (isValid(matrix, rows, cols, row, col)) {
 
-    return laberinth;
+        // If path already part of solution
+        if (laberinth[row][col] == 1) {
+            return false; //return
+        }
+
+        // Add path to our solution
+        laberinth[row][col] = 1;
+        
+        // Move to path one cell down
+        if (backtracking(matrix, laberinth, rows, cols, row+1, col)) {
+            return true;
+        }
+        
+        // Move to path one cell right
+        if (backtracking(matrix, laberinth, rows, cols, row, col+1)) {
+            return true;
+        }
+        
+        //if there is no valid path, set cell as 0 and return false
+        laberinth[row][col] = 0;
+        return false;
+    }
+
+    return false;
+}
+
+
+/*
+Return matrix with path to bottom-right corner using backtracking
+input: original matrix, number of rows and cols in original matrix
+output: matrix with valid path represented with 1s
+complexity
+    time: O(n*m) traverse all matric with backtracking
+    extra space: O(n*m) clones the matrix to return a new one with the path
+*/
+vector<vector<int> > findPathBacktracking(vector<vector<int> > matrix, int rows, int cols) {
+    
+    //clone smatrix
+    vector<vector<int> > laberinth(rows, vector<int>(cols));
+
+    //call backtracking function to get unique path
+    backtracking(matrix, laberinth, rows, cols, 0, 0); 
+
+    return laberinth; //return matrix with unique path
 }
 
 /*
 Return matrix with all possible path to bottom-right corner using branch and bound
+input: original matrix, new matrix, flag to know when we found the valid path ,
+       rows in matrix, cols in matrix, current row being checked and current col being checked
+output: none
 complexity
     time: O(n+m)
-    extra space: O(n+m)
+    extra space: O(n+m) recursive calls
 */
 void branchAndBound(vector<vector<int> > & matrix, vector<vector<int> > & laberinth, bool & found, int & rows, int & cols, int row, int col){
 
@@ -99,10 +141,9 @@ void branchAndBound(vector<vector<int> > & matrix, vector<vector<int> > & laberi
     //mark cell as visited, if it's 1
     matrix[row][col] = 2;
 
-    //if it has arrived the bottom-left cell. we found it
+    //if it has arrived the bottom-right cell. we found it
     if (row == rows - 1 && col == cols - 1) {
         found = true;
-        
         for(int i = 0; i < rows; i++){
             for(int j = 0; j < cols; j++){
                 if(matrix[i][j] == 2) laberinth[i][j] = 1;
@@ -167,9 +208,11 @@ void branchAndBound(vector<vector<int> > & matrix, vector<vector<int> > & laberi
 
 /*
 Return matrix with all possible path to bottom-right corner using branch and bound
+input: original matrix, number of rows and cols in original matrix
+output: matrix with valid path represented with 1s
 complexity
     time: O(n+m)
-    extra space: O(n+m)
+    extra space: O(n*m) for the cloneation of the amtrix
 */
 vector<vector<int> > findPathBranchAndBound(vector<vector<int> > matrix, int rows, int cols){
     
@@ -179,7 +222,6 @@ vector<vector<int> > findPathBranchAndBound(vector<vector<int> > matrix, int row
 
     //get laberinth from backtracking
     branchAndBound(matrix, laberinth, found, rows, cols, 0, 0);
-    //printMatrix(matrix);
 
     return laberinth;
 
@@ -205,8 +247,6 @@ int main() {
             laberinth[i][j] = aux;
         }
     }
-
-    //printMatrix(laberinth);
 
     //Find paths
     vector< vector<int> > laberinthBacktracking = findPathBacktracking(laberinth, rows, cols);

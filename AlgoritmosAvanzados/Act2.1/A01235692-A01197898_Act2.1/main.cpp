@@ -32,7 +32,6 @@ Last modified: October 4 2022
 #include <iostream>
 #include <vector>
 #include <unordered_set>
-#include <fstream>
 #include <sstream>
 using namespace std;
 
@@ -205,29 +204,31 @@ int main()
     vector<string> textWords; // text words
 
     string aux;    // auxiliary string
-    ifstream file; // file
 
     // Get Text lines
-    file.open("in.txt");
+    cin >> pattern; // pattern to find
 
-    file >> pattern; // pattern to find
-
-    while (getline(file, aux))
+    while (getline(cin, aux))
     {
-
         istringstream iss(aux);
         text.push_back(aux);
     }
-    file.close();
+
 
     // Get Text words
-    file.open("in.txt");
+    textWords.push_back(pattern);
 
-    while (file >> aux)
-    {
-        textWords.push_back(aux);
+    for(int i = 0; i < text.size(); i++){
+        aux = "";
+        for(int j = 0; j < text[i].size(); j++){
+            if(text[i][j] == ' '){
+                textWords.push_back(aux);
+                aux = "";
+            }else{
+                aux += text[i][j];
+            }
+        }
     }
-    file.close();
 
     // If pattern exists
     if (patternExists(textWords))

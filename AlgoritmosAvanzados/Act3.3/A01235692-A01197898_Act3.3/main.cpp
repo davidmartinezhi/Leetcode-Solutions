@@ -9,15 +9,17 @@ finally, an integer W, which represents the maximum weight or capacity of the ba
 
 The output of the program must be the optimal gain (or benefit) and the elements associated with said gain.
 
-David Gerardo Martínez Hidrogo - A01235692 
-Humberto Ricardo Rodriguez Ruán - A01197898
+David Gerardo Martinez Hidrogo - A01235692 
+Humberto Ricardo Rodriguez Ruan - A01197898
 
-Created: Oct 6, 2022 12:54pm    Last Modification: Oct 6, 2022 01:47pm
+Created: Oct 6, 2022 12:54pm    Last Modification: Oct 18, 2022 02:12pm
 
 */
 
 #include <iostream>
+#include <set>
 #include <vector>
+#include <iterator>
 using namespace std;
 
 /*
@@ -26,40 +28,114 @@ Return optimal benefit and weights associated to that benefit
 
 Complexity
     time: O(capacity(w) * number of elements)
-    extra space: O(capacity(w)^2)
+    extra space: O(capacity(w) * number of elements)
 
 */
+
+/*
 void optimalBenefit(vector<int> & values, vector<int> & weights, int & n, int & w){
 
-    //Declare dp vectors
-    vector<int> dp(w+1, 0); // optimal benefit
-    vector<vector<int> > dpWeights(w+1, vector<int>(0)); //weights associated to optimal benefit
+    //dp tables
+    vector<vector<int> > dp(n+1, vector<int>(w+1));
+    vector<vector<vector<int> > > dpWeights(n+1, vector<vector<int> >(w+1, vector<int>()));
 
-    for(int i = 1; i <= w; i++){ // traverse weight
-        for(int j = 0; j < n; j++){ //traverse elements
+    //traverse the tables
+    for(int i = 0; i <= n; i++){
+        for(int j = 0; j <= w; j++){
 
-            //If weight can be checked
-            if( i - weights[j] >= 0 ){
-
-                //check if previous weight value + new weight value is bigger than curr index
-                if(dp[i] <= dp[i - weights[j]] + values[j]){
-                    dp[i] = dp[i - weights[j]] + values[j]; //update index
-                    dpWeights[i] = dpWeights[i - weights[j]]; //update vector of values
-                    dpWeights[i].push_back(weights[j]); //add value
+            //first row and col
+            if(i == 0 || j == 0){
+                dp[i][j] = 0;
+            }
+            //check if weight is valid
+            else if(j < weights[i-1]){
+                dp[i][j] = dp[i-1][j];
+                dpWeights[i][j] = dpWeights[i-1][j];
+            }
+            //check for max value
+            else{
+                //add 
+                if(dp[i-1][j] < dp[i-1][j-weights[i-1]] + values[i-1]){
+                    dp[i][j] = dp[i-1][j-weights[i-1]] + values[i-1];
+                    dpWeights[i][j] = dpWeights[i-1][j-weights[i-1]];
+                    dpWeights[i][j].push_back(i);
+                }else{
+                    dp[i][j] = dp[i-1][j];
+                    dpWeights[i][j] = dpWeights[i-1][j];
                 }
+                //dp[i][j] = max(dp[i-1][j], dp[i-1][j-weights[i-1]] + values[i-1]);
             }
         }
     }
 
-    cout << dp[w] << " ";//optimal value
-
-    for(int i = 0; i < dpWeights[w].size(); i++){   //weights associated to that optimal value
-        cout << dpWeights[w][i] << " ";
+    cout << dp[n][w] << " ";
+    for(int i = dpWeights[n][w].size() - 1; i >= 0 ; i--){
+        cout << dpWeights[n][w][i] << " ";
     }
-    cout << endl;
 
 }
+*/
 
+/*
+Receive elements with weight and value represented as arrays, and a w capacity
+Return optimal benefit and weights associated to that benefit
+
+Complexity
+    time: O(capacity(w) * number of elements)
+    extra space: O(capacity(w) * number of elements)
+
+*/
+void optimalBenefit(vector<int> & values, vector<int> & weights, int & n, int & w){
+
+    //dp tables
+    vector<vector<int> > dp(n+1, vector<int>(w+1));
+
+    //get optimal value
+    for(int i = 0; i <= n; i++){
+        for(int j = 0; j <= w; j++){
+
+            //first row and col
+            if(i == 0 || j == 0){
+                dp[i][j] = 0;
+            }
+            //check if weight is valid
+            else if(j < weights[i-1]){
+                dp[i][j] = dp[i-1][j];
+            }
+            //check for max value
+            else{
+                //add 
+                dp[i][j] = max(dp[i-1][j], dp[i-1][j-weights[i-1]] + values[i-1]);
+            }
+        }
+    }
+
+    //get weights associated to optimal value
+    //optimal value
+    int optimalVal = dp[n][w];
+    cout << optimalVal << " ";
+
+    //traverse matrix backwards
+    for(int i = n; i > 0; i--){
+
+        bool found = false; //search for optimal value first instance
+
+        for(int j = w; j >= 0; j--){
+
+            //check if optimal value has appeared previously
+            if(dp[i-1][j] == optimalVal){
+                found = true;
+            }
+
+        }
+
+        //if we found the first instance
+        if(!found){
+            cout << i << " ";   //print position
+            optimalVal -= values[i-1]; //update optimal value
+        }
+    }
+}
 
 /*
 Get Optimal benefit of fitting elements of weights and values

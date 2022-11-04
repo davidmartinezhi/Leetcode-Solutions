@@ -107,15 +107,20 @@ Classifications base on goals:
 ### ford-fulkerson
 
 
+## Graph coloring/chromatic number color
+
 
 
 checkar
-    -ramificación y poda
-    -manacher
-    -busquedas con el suffix array
-    -implementación de trie
-    -Dijkstra & Floyd
-    -Prim & Kruskal
-    -ABB optimo de Gilbert and Moore
-    -Algoritmo de coloreo de grafos
-    -Algoritmo de flujo máximo en un grafo
+  - ramificación y poda
+  - manacher
+  - busquedas con el suffix array
+  - implementación de trie 
+  - **DONE:** Dijkstra & Floyd
+  - Prim & Kruskal
+  - ABB optimo de Gilbert and Moore
+  - Algoritmo de coloreo de grafos
+  - Algoritmo de flujo máximo en un grafo
+
+
+

@@ -48,18 +48,10 @@ Complexity
     //create suffix array
     vector<pair<string,int> > suffixArray = createSuffixArray(str);
 
-    //Display suffix array values
+    //Display suffix array values and their index
     for(int i = 0; i < str.size(); i++){
-        cout << suffixArray[i].first << " ";
+        cout << suffixArray[i].second << " " << suffixArray[i].first << endl;
     }
-    cout << endl;
-
-    
-    //Display suffix array indexes
-    for(int i = 0; i < str.size(); i++){
-        cout << suffixArray[i].second << " ";
-    }
-    cout << endl;
     
     
     return 0;

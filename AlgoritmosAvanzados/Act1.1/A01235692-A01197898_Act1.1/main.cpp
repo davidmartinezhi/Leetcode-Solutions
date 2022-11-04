@@ -16,7 +16,8 @@ using namespace std;
 
 /*
 Merge the sorted sections resulting from the divisions of the array
-
+input: receive a list, and an auxiliary list, with left and right pointers
+output: none
 complexity
     time: O(n), n being number of elements in array
     extra space: O(1)
@@ -57,6 +58,8 @@ void merge(vector<double> & list, vector<double> & aux, int  left, int right){
 
 /*
 Divides the array in half, until there is only one element left for each section
+input: receive a list, and an auxiliary list, with left and right pointers
+output: none
 complexity
     time: O(n log n), log n for the division, n for the merge traversal
     extra space: O(log n) recursive calls
@@ -102,10 +105,7 @@ int main()
     
     //print results
     for(int i = 0; i < list.size(); i++){
-        cout << list[i] << " ";
+        cout << list[i] << endl;
     }
-    cout << endl;
-
-
     return 0;
 }

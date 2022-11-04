@@ -13,8 +13,8 @@ La salida del programa es una lista de N valores correspondientes al número de 
 de mayor a menor, una en cada línea, que se tienen que dar para dar el cambio por el producto pagado,
 primero utilizando programación dinámica, y luego utilizando un algoritmo avaro.
 
-David Gerardo Martínez Hidrogo - A01235692
-Humberto Ricardo Rodriguez Ruán - A01197898
+David Gerardo Martinez Hidrogo - A01235692
+Humberto Ricardo Rodriguez Ruan - A01197898
 
 Last modified: Oct 4, 2022
 */
@@ -24,7 +24,73 @@ Last modified: Oct 4, 2022
 #include <algorithm>
 using namespace std;
 
-#include "./mergeSortBigToSmall.h"
+/*
+Merge list of values from greater to smaller
+input: receive a list, and an auxiliary list, with left and right pointers
+output: none
+complexity
+    time: O(n+m)
+    extra space: O(1)
+*/
+void merge(vector<int> & list, vector<int> & aux, int  left, int right){
+
+    //declare variables
+    int middle = (left+right)/2;
+    int i = left, k = left, j = middle+1;
+
+    //merge
+    while(i <= middle && j <= right){
+
+        //left value is smaller
+        if(list[i] > list[j]){
+            aux[k] = list[i];
+            k++;
+            i++;
+        }else{
+        //right value is smaller
+            aux[k] = list[j];
+            k++;
+            j++;
+        } 
+    }
+
+    //add remaining values
+    while(i <= middle) aux[k++] = list[i++];
+    while(j <= right) aux[k++] = list[j++];
+
+    //update the original list on the given indexes
+    for(int z = left; z <= right; z++){
+        list[z] = aux[z];
+    }
+}
+
+/*
+Put array values in order from greater to smaller on a new vector.
+input: receive a list, and an auxiliary list, with left and right pointers
+output: none
+complexity
+    time: O(n log n)
+    extra space: O(log n) on recursive calls
+*/
+void mergeSort(vector<int> & list, vector<int> & aux, int left, int right){
+
+    //base case
+    if(left < right){
+
+        int middle = (left+right)/2;
+
+        //recursive calls. left and right side of list.
+        //complexity: O( log n)
+        mergeSort(list, aux, left, middle);
+        mergeSort(list, aux, middle+1, right);
+        
+        //return merge of both sides. O(n)
+        merge(list, aux, left, right);        
+    }
+
+    return;
+}
+
 
 
 /*
@@ -95,15 +161,9 @@ vector<int> coinChange(vector<int> &coins, int amount)
     if (dp[n][amount] > 1e4)
         return dpDenomination[0][0];
 
-    //reverse list
-    for(int i = 0; i < dpDenomination[n][amount].size()/2; i++){
-        int size = dpDenomination[n][amount].size();
-
-        int aux = dpDenomination[n][amount][size-i-1];
-        dpDenomination[n][amount][size-i-1] = dpDenomination[n][amount][i];
-        dpDenomination[n][amount][i] = aux;
-
-    }
+    //big to small. O(n log n)
+    vector<int> aux(dpDenomination[n][amount].size());
+    mergeSort(dpDenomination[n][amount], aux, 0, dpDenomination[n][amount].size() - 1);
 
     //Return list
     return dpDenomination[n][amount];
@@ -155,12 +215,20 @@ complexity
 */
 void printList(const vector<int> &list)
 {
+    int count = 0;
+    double aux = list[0];
     // traverse list
     for (int i = 0; i < list.size(); i++)
     {
-        cout << list[i] << " "; // print values
+        if(aux == list[i]){
+            count++;
+        }else{
+            cout << count << " " << aux << endl; // print values
+            count = 1;
+            aux = list[i];
+        }
     }
-    cout << endl;
+    cout << count << " " << aux << endl; // print values
     return;
 }
 
@@ -194,6 +262,7 @@ int main()
 
     // print resulting denominations
     printList(resultDp);
+    cout << endl;
     printList(resultGreedy);
 
     return 0;

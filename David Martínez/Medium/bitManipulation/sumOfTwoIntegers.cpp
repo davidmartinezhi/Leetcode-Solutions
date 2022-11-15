@@ -30,6 +30,7 @@ Notes:
 Complexity:
     time: O(1) **Verificar que la complejidad sea correcta** pudiese ser O(log b)
     extra space: O(1)
+    Pregutnar complejidad a Osuna
 
 De lo que tengo entendido este tipo de operaciones no se usan en la vida real
 ni en entrevistas, pero pueden tocar.

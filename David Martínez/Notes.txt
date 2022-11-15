@@ -286,3 +286,39 @@ En grafos debo tener en cuenta traversals
     BFS
     Union find
     disjoint set
+
+
+
+Bitshifting Basics
+https://www.youtube.com/watch?v=qq64FrA2UXQ
+
+Add two numbers without the plus sign
+
+Any arithmetic operation without sign, means bit shifting
+manipulation on bit quantities
+
+Si hay numero inpar de 1s, se pone 1
+
+2 = 10
+3 = 11
+
+Ponemos el valor de la derecha con resulting y carry es el valor de la izquierda
+
+& AND operator checa si ambos son true or false, necesitamos 2 true para poner 1
+Este operador me muestra las posiciones donde hago el carry. se pone a la izquierda
+de donde fue descubierto el carry <<
+
+xor(^) if neither is true is false, when both are true it's false
+It simulates addition. so when it is 0, we carry a one to the left
+
+& to know when to carry
+^ for addition
+<< left shift operator
+
+left shift, shifts each binary number by one position
+
+a, b: a holds addition, b holds carry
+
+1) find carry
+2) do the addition
+3) b hold left-shifted carry

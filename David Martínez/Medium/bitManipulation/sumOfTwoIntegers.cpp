@@ -8,13 +8,14 @@ public:
         //while b is not 0
         while(b != 0){
 
-            //get the positions where we need to carry
+            //get the positions where we need to carry, where values are the same (1&1)
+            //unsigned para tomarlo como positivo y no darle importancia al simbolo
             unsigned carry = a&b;
 
-            //perform sum
+            //perform sum, where values are different, we set 1s
             a = a^b;
 
-            //shift carry
+            //shift carry, by one
             b = carry << 1;
         }
 
@@ -22,3 +23,21 @@ public:
 
     }
 };
+
+/*
+Notes:
+
+Complexity:
+    time: O(1) **Verificar que la complejidad sea correcta** pudiese ser O(log b)
+    extra space: O(1)
+
+De lo que tengo entendido este tipo de operaciones no se usan en la vida real
+ni en entrevistas, pero pueden tocar.
+
+Creo que tuve un entendemiento de como es que funciona la solución
+
+& to know where to carry
+^ for addition
+<< left shift operator
+
+*/

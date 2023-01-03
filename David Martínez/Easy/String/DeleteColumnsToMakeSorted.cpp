@@ -123,7 +123,11 @@ public:
 };
 
 /*
+Time: 30 min
 
+Complexity
+    Runtime: O(n*m)
+    extra space: O(1)
 
 Estuvo bueno el problema, llevo casi 2 meses sin hacer ejercicios de leetcode
 pero saco a la luz mucha agilides mental y entre en la zona bastante rápido

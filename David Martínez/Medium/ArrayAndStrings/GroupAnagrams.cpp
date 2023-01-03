@@ -1,12 +1,13 @@
 #include <iostream>
 #include <vector>
 #include <unordered_map>
+#include <string>
 using namespace std;
 
 
 class Solution {
 public:
-    vector<vector<string>> groupAnagrams(vector<string>& strs) {
+    vector<vector<string> > groupAnagrams(vector<string>& strs) {
         /*
         1. info
             input: array of strings
@@ -68,10 +69,10 @@ public:
         //runtime: O(n* k log k)
         //space: O(n)
         
-        vector<vector<string>> result;
+        vector<vector<string> > result;
         if(strs.size() == 0) return result;
         
-        unordered_map<string, vector<string>> ht;   //space: O(n)
+        unordered_map<string, vector<string> > ht;   //space: O(n)
         
         //runtime: O(n)
         for(int i = 0; i < strs.size(); i++){
@@ -116,3 +117,27 @@ Un hashtable me hubiera hecho la vida mucho más sencillo.
 Hashtable convinado con vectores hace la vida muy sencilla.
 En 3 sum, si pude haer mi approach con hashtables, poniendo el numero y los indices que tienen el valor
 */
+
+int main()
+{
+    Solution solution;
+    vector<string> anagrams;
+    anagrams.push_back("eat");
+    anagrams.push_back("tea");
+    anagrams.push_back("tan");
+    anagrams.push_back("ate");
+    anagrams.push_back("nat");
+    anagrams.push_back("bat");
+
+    vector<vector<string> > result = solution.groupAnagrams(anagrams);
+
+    for(int i = 0; i < result.size(); i++){
+        for(int j = 0; j < result[i].size(); j++){
+            cout << result[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+

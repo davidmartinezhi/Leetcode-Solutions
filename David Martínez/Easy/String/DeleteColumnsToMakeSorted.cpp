@@ -121,3 +121,46 @@ public:
         return colsToDelete;
     }
 };
+
+/*
+
+
+Estuvo bueno el problema, llevo casi 2 meses sin hacer ejercicios de leetcode
+pero saco a la luz mucha agilides mental y entre en la zona bastante rápido
+
+Tuve como punto ciego el no distingir que el length the cols y rows era diferente cuando
+aplique la solución. En la teoría lo saque bastante rapido.
+
+Por partes
+
+-Planeación buena
+    -entendí todo rapido
+
+-Ejemplos
+    -utilize ejemplos que me dio leetcode, si pense en ejemplos para tests pero 
+     no los apliqué
+    -Pero si los recorrí para entender como se comportaba la info que nos daban
+     y poder sacar una solución
+
+Brute Force
+    -Comence con la solución optima, pero me obligue a sacar esta respuesta
+    -Es bueno para demostrar conocimiento, solo que me consumio tiempo.
+        Si ya se un approach optimo, debería de solo mencionar brute froce rapido y
+        saltarme al bueno.
+
+Optimize
+    -Buen BCR y muy veloz como lo saque
+    -Saqué el walkthrough y de ahí la complejidad
+
+Test
+    -Le di muy rapido a los test y muy genericos
+
+Podría solo mencionas brute force y optimize, con complejidad
+Luego dejar la solución hasta el walkthrough. Para poder dedicarle más tiempo
+a una ruta más optima y su viabilidad.
+
+Darle más rapido al brute force,
+hacer notas en optimize, pero walkthrough debe ser su propia cosa y de ahí voy sacando lo de test
+tambíen anotar tests desde que estoy en el inicio con la info de input, output, requisitos y constraints.
+
+*/

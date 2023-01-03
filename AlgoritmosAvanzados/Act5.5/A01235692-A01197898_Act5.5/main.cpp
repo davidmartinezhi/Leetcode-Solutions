@@ -53,6 +53,7 @@ struct Cell {
     int parent_i, parent_j;
     // f = g + h
     double f, g, h;
+    string parentMove;
 };
 
 
@@ -90,27 +91,29 @@ double calculateHCost(int i, int j, Pair & dest){
 void tracePath(vector<vector<Cell> > cellInfo, Pair dest){
 
     //get destination coordinates
+    string answer = "";
     int row = dest.first;
     int col = dest.second;
 
-    stack<Pair> path;
+    stack<string> path;
 
     while(!(cellInfo[row][col].parent_i == row && cellInfo[row][col].parent_j == col)){
-        path.push(make_pair(row, col));
+        path.push(cellInfo[row][col].parentMove);
         int temp_row = cellInfo[row][col].parent_i;
         int temp_col = cellInfo[row][col].parent_j;
         row = temp_row;
         col = temp_col;
     }
 
-    path.push(make_pair(row, col));
 
     while(!path.empty()){
-        pair<int, int> p = path.top();
+        string p = path.top();
         path.pop();
 
-        cout << "(" << p.first << "," << p.second << ") " << endl;
+        answer += p;
     }
+
+    cout << answer << endl;
 
     return;
 }
@@ -134,6 +137,7 @@ void aStarSearch(vector<vector<int> > maze, Pair src, Pair dest){
             cellInfo[i][j].h = DBL_MAX;
             cellInfo[i][j].parent_i = -1;
             cellInfo[i][j].parent_j = -1;
+            cellInfo[i][j].parentMove = "N";
         }
     }
 
@@ -144,16 +148,14 @@ void aStarSearch(vector<vector<int> > maze, Pair src, Pair dest){
     cellInfo[i][j].g = 0.0;
     cellInfo[i][j].h = 0.0;
     cellInfo[i][j].parent_i = i;
-    cellInfo[i][j].parent_j = j; 
+    cellInfo[i][j].parent_j = j;
+    cellInfo[i][j].parentMove = "S"; 
 
     //create open list with info as <f, <i,j>> f = g+h
     set<pPair> open;
 
     //put first cell on starting list
     open.insert(make_pair(0.0, make_pair(i, j)));
-
-    //destiny reached flag
-    bool foundDest = false;
 
     while(!open.empty()){
 
@@ -171,83 +173,7 @@ void aStarSearch(vector<vector<int> > maze, Pair src, Pair dest){
         //declare values for succesors
         double g_new, h_new, f_new;
 
-        //up
-        if(validMove(maze, i-1, j) == true){
-
-            //if destination is the same as successor
-            if(isDest(i-1, j, dest) == true){
-
-                //set parent of setination cell
-                cellInfo[i-1][j].parent_i = i;
-                cellInfo[i-1][j].parent_j = j;
-                tracePath(cellInfo, dest);
-                foundDest = true;
-                //return;
-
-            }
-
-            //if successor is not on closed list && is not blockage
-            else if(closed[i-1][j] == false && maze[i-1][j] == 1){
-                g_new = cellInfo[i][j].g + 1.0;
-                h_new = calculateHCost(i - 1, j, dest);
-                f_new = g_new + h_new;
-
-                //if it not on open or the new f cost is lesser
-                if(cellInfo[i-1][j].f == DBL_MAX || cellInfo[i-1][j].f > f_new){
-
-                    //add pair to open
-                    open.insert(make_pair(f_new, make_pair(i-1, j)));
-
-                    //update details of this cell
-                    cellInfo[i-1][j].f = f_new;
-                    cellInfo[i-1][j].g = g_new;
-                    cellInfo[i-1][j].h = h_new;
-                    cellInfo[i-1][j].parent_i = i;
-                    cellInfo[i-1][j].parent_j = j;
-                }
-            }
-
-        }
-
-        //down
-        if(validMove(maze, i+1, j) == true){
-
-            //if destination is the same as successor
-            if(isDest(i+1, j, dest) == true){
-
-                //set parent of setination cell
-                cellInfo[i+1][j].parent_i = i;
-                cellInfo[i+1][j].parent_j = j;
-                tracePath(cellInfo, dest);
-                foundDest = true;
-                //return;
-
-            }
-
-            //if successor is not on closed list && is not blockage
-            else if(closed[i+1][j] == false && maze[i+1][j] == 1){
-                g_new = cellInfo[i][j].g + 1.0;
-                h_new = calculateHCost(i + 1, j, dest);
-                f_new = g_new + h_new;
-
-                //if it not on open or the new f cost is lesser
-                if(cellInfo[i+1][j].f == DBL_MAX || cellInfo[i+1][j].f > f_new){
-
-                    //add pair to open
-                    open.insert(make_pair(f_new, make_pair(i+1, j)));
-
-                    //update details of this cell
-                    cellInfo[i+1][j].f = f_new;
-                    cellInfo[i+1][j].g = g_new;
-                    cellInfo[i+1][j].h = h_new;
-                    cellInfo[i+1][j].parent_i = i;
-                    cellInfo[i+1][j].parent_j = j;
-                }
-            }
-
-        }
-
-        //right
+       //right
         if(validMove(maze, i, j+1) == true){
 
             //if destination is the same as successor
@@ -256,8 +182,8 @@ void aStarSearch(vector<vector<int> > maze, Pair src, Pair dest){
                 //set parent of setination cell
                 cellInfo[i][j+1].parent_i = i;
                 cellInfo[i][j+1].parent_j = j;
+                cellInfo[i][j+1].parentMove = "R";
                 tracePath(cellInfo, dest);
-                foundDest = true;
                 //return;
 
             }
@@ -280,6 +206,7 @@ void aStarSearch(vector<vector<int> > maze, Pair src, Pair dest){
                     cellInfo[i][j+1].h = h_new;
                     cellInfo[i][j+1].parent_i = i;
                     cellInfo[i][j+1].parent_j = j;
+                    cellInfo[i][j+1].parentMove = "R";
                 }
             }
 
@@ -294,8 +221,8 @@ void aStarSearch(vector<vector<int> > maze, Pair src, Pair dest){
                 //set parent of setination cell
                 cellInfo[i][j-1].parent_i = i;
                 cellInfo[i][j-1].parent_j = j;
+                cellInfo[i][j-1].parentMove = "L";
                 tracePath(cellInfo, dest);
-                foundDest = true;
                 //return;
 
             }
@@ -318,9 +245,90 @@ void aStarSearch(vector<vector<int> > maze, Pair src, Pair dest){
                     cellInfo[i][j-1].h = h_new;
                     cellInfo[i][j-1].parent_i = i;
                     cellInfo[i][j-1].parent_j = j;
+                    cellInfo[i][j-1].parentMove = "L";
                 }
             }
         }
+
+        //up
+        if(validMove(maze, i-1, j) == true){
+
+            //if destination is the same as successor
+            if(isDest(i-1, j, dest) == true){
+
+                //set parent of setination cell
+                cellInfo[i-1][j].parent_i = i;
+                cellInfo[i-1][j].parent_j = j;
+                cellInfo[i-1][j].parentMove = "U";
+                tracePath(cellInfo, dest);
+                //return;
+
+            }
+
+            //if successor is not on closed list && is not blockage
+            else if(closed[i-1][j] == false && maze[i-1][j] == 1){
+                g_new = cellInfo[i][j].g + 1.0;
+                h_new = calculateHCost(i - 1, j, dest);
+                f_new = g_new + h_new;
+
+                //if it not on open or the new f cost is lesser
+                if(cellInfo[i-1][j].f == DBL_MAX || cellInfo[i-1][j].f > f_new){
+
+                    //add pair to open
+                    open.insert(make_pair(f_new, make_pair(i-1, j)));
+
+                    //update details of this cell
+                    cellInfo[i-1][j].f = f_new;
+                    cellInfo[i-1][j].g = g_new;
+                    cellInfo[i-1][j].h = h_new;
+                    cellInfo[i-1][j].parent_i = i;
+                    cellInfo[i-1][j].parent_j = j;
+                    cellInfo[i-1][j].parentMove = "U";
+                }
+            }
+
+        }
+
+        //down
+        if(validMove(maze, i+1, j) == true){
+
+            //if destination is the same as successor
+            if(isDest(i+1, j, dest) == true){
+
+                //set parent of setination cell
+                cellInfo[i+1][j].parent_i = i;
+                cellInfo[i+1][j].parent_j = j;
+                cellInfo[i+1][j].parentMove = "D";
+                tracePath(cellInfo, dest);
+                //return;
+
+            }
+
+            //if successor is not on closed list && is not blockage
+            else if(closed[i+1][j] == false && maze[i+1][j] == 1){
+                g_new = cellInfo[i][j].g + 1.0;
+                h_new = calculateHCost(i + 1, j, dest);
+                f_new = g_new + h_new;
+
+                //if it not on open or the new f cost is lesser
+                if(cellInfo[i+1][j].f == DBL_MAX || cellInfo[i+1][j].f > f_new){
+
+                    //add pair to open
+                    open.insert(make_pair(f_new, make_pair(i+1, j)));
+
+                    //update details of this cell
+                    cellInfo[i+1][j].f = f_new;
+                    cellInfo[i+1][j].g = g_new;
+                    cellInfo[i+1][j].h = h_new;
+                    cellInfo[i+1][j].parent_i = i;
+                    cellInfo[i+1][j].parent_j = j;
+                    cellInfo[i+1][j].parentMove = "D";
+                }
+            }
+
+        }
+
+ 
     }
 
     return;

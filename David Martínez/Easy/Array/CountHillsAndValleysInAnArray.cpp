@@ -93,11 +93,11 @@ public:
             bool repeats = false;
 
             //traverse left pointer (maybe could remove this block of code)
-            while(left >= 0 && nums[left] == nums[i]){
-                left--;
-            }
+            //while(left >= 0 && nums[left] == nums[i]){
+                //left--;
+            //}
 
-            if(left < 0) continue;
+            //if(left < 0) continue;
 
             //traverse right pointer
             while(right < nums.size() && nums[right] == nums[i]){
@@ -129,3 +129,26 @@ public:
         
     }
 };
+
+/*
+Time: 42 minutes
+
+Got the answer right in the first 25 minutes, but wasted the rest of the time in a bug
+due to me not realizing I was moving i, when the characters repeat before comparing id nums[i]
+was a hill or a valley.
+
+Still, good effort on my first leetcode problem since november.
+
+Complexity:
+    runtime: O(n)
+    space: O(1)
+
+Best conceivable comlexity.
+I could have used dynammic window technique, and I did, but unconsciously.
+
+The pattern is, I always start from a number which has no repiting numbers on left side, according to my algorithm
+because if I found repeating numbers on the right, after comparing. I'll just jump from the current number into the
+number that is not being repeated
+
+
+*/

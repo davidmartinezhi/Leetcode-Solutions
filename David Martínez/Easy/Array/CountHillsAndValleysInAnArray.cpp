@@ -81,6 +81,35 @@ public:
         test:
 
         */
+        //declare result variable
+        int result = 0;
+
+        //traverse
+        for(int i = 1; i < nums.size(); i++){
+            //declare pointers
+            int left = i - 1;
+            int right = i + 1;
+
+            //traverse right pointer if numbers are equal
+            while(right < nums.size() && nums[right] == nums[i]) right++;
+            if(right >= nums.size()) break; // if out of bounds, break
+            
+            //compare
+            //hill
+            if(nums[left] < nums[i] && nums[right] < nums[i]) result++;
+            //valley
+            if(nums[left] > nums[i] && nums[right] > nums[i]) result++;
+            
+            //move to next non equal number
+            i = right - 1;
+        }
+
+        return result;
+        
+    }
+};
+
+       /*
 
         //declare result variable
         int result = 0;
@@ -129,7 +158,7 @@ public:
         
     }
 };
-
+*/
 /*
 Time: 42 minutes
 

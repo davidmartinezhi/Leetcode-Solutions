@@ -126,3 +126,18 @@ public:
         return numOfIslands;
     }
 };
+
+
+/*
+Complexity
+    runtime: O(n*m), we traverse all positions in the grid
+    extra space: O(n*m * memory on each recursive call) recursive calls m*n
+
+Trate de hacerlo iterativo pero no salio como solución. Lo que hace más sentido es hacer dfs en
+cada nueva isla descubierta, de esta manera se puede hacer una busqueda profunda
+de hasta donde se extiende cada isla.
+
+Buen pensamiento sobre el problema y buen manejo del tiempo, pero los test cases me fallaron para hacer
+una solución optima desde el principio. Esa key de hacer dfs por cada isla debío de
+ser mi indicador sobre el tipo de solución que es.
+*/

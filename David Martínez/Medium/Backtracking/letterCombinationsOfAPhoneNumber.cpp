@@ -54,7 +54,7 @@ public:
         
         */
         
-        //check if string has digits
+        //check if string has no digits
         if(digits.size() == 0) return {};
         
         //declare variables
@@ -105,7 +105,24 @@ public:
             currIdx--;
         }
             
-            
         return;
     }
 };
+
+
+/*
+Notes:
+Completion time: 39 minutes (first attempt)
+
+Complexity (I need to double check complexity on backtracking to refresh memory): 
+    runtime: O(!n) exponential
+    extra space: O(n) wich will be stack calls
+
+
+I felt comfortable implementing the solution, I notices that I have a good intuition on 
+what approach to use and how the information is going to be handled in the code, but
+some varibale declarations I only notices I needed them while coding, maybe stopping to
+double check the walkthrough could be beneficial.
+
+Overall, I feel proud of myself that I could come up with a good solution as fast as I did.
+*/

@@ -54,24 +54,24 @@ public:
         
         */
         
-        //check if string has no digits
+        //check if string has digits
         if(digits.size() == 0) return {};
         
         //declare variables
         string str = "";
         vector<string> digitCombinations;
-        unordered_map<char, vector<string>> digitChars;
+        unordered_map<char, vector<char>> digitChars;
         int currIdx = 0;
         
         //fill unordered map
-        digitChars['2'] = {"a", "b", "c"};
-        digitChars['3'] = {"d", "e", "f"};
-        digitChars['4'] = {"g", "h", "i"};
-        digitChars['5'] = {"j", "k", "l"};
-        digitChars['6'] = {"m", "n", "o"};
-        digitChars['7'] = {"p", "q", "r", "s"};
-        digitChars['8'] = {"t", "u", "v"};
-        digitChars['9'] = {"w", "x", "y", "z"};
+        digitChars['2'] = {'a', 'b', 'c'};
+        digitChars['3'] = {'d', 'e', 'f'};
+        digitChars['4'] = {'g', 'h', 'i'};
+        digitChars['5'] = {'j', 'k', 'l'};
+        digitChars['6'] = {'m', 'n', 'o'};
+        digitChars['7'] = {'p', 'q', 'r', 's'};
+        digitChars['8'] = {'t', 'u', 'v'};
+        digitChars['9'] = {'w', 'x', 'y', 'z'};
 
         helperLetterCombinations(digits, digitChars, digitCombinations, str, currIdx);
         
@@ -80,7 +80,7 @@ public:
         
     }
     
-    void helperLetterCombinations(string & digits, unordered_map<char, vector<string>> & digitChars, vector<string> & digitCombinations, string & str, int & currIdx){
+    void helperLetterCombinations(string & digits, unordered_map<char, vector<char>> & digitChars, vector<string> & digitCombinations, string & str, int & currIdx){
         
         //base case
         //same size as sigits
@@ -93,17 +93,17 @@ public:
         for(int i = 0; i < digitChars[digits[currIdx]].size(); i++){
             
             //add letter
-            string aux = str;
-            str += digitChars[digits[currIdx]][i];
+            str.push_back(digitChars[digits[currIdx]][i]);
             currIdx++;
             
             //call backtracking function
             helperLetterCombinations(digits, digitChars, digitCombinations, str, currIdx);
             
             //remove letter
-            str = aux;  
+            str.pop_back();  
             currIdx--;
         }
+            
             
         return;
     }
@@ -125,4 +125,6 @@ some varibale declarations I only notices I needed them while coding, maybe stop
 double check the walkthrough could be beneficial.
 
 Overall, I feel proud of myself that I could come up with a good solution as fast as I did.
+
+I discovered I can use pushback and popback on strings, this could be very useful for future solutions
 */

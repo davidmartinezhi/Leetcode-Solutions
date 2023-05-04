@@ -171,3 +171,36 @@ public:
     }
 };
 
+/*
+Time: 44 minutes
+
+Complexity:
+    runtime: O(n)
+    extra space: O(1)
+
+Aprendizajes:
+    Tuve esta pregunta en mock interview con bloomberg.
+    A solas lo saque bastante bien y en tiempo, pero en la entrevista no
+
+    Debería de tomar mi tiempo para resolver los problemas también en la entrevista,
+    ya que quise rushear para saltar a programar. Debo ser paciente.
+
+    No perder el tiempo y el el ejemplo ponerme a analizar bien el comportamiento que
+    debo tener en el algoritmo mientras lo trabajo con el brute force o optimal solution.
+
+    Debo de aprovechar mi tiempo, agarrar rapido la info e irme al example.
+    Ya en el example ir sacando un brute force con complejidad también y pensar
+    en como poder optimizarlo.
+
+    Ir al punto, pero tomandome mi tiempo y decir que quiero tomar mi tiempo para tener claro que debo programar
+    antes de hacerlo.
+
+Overall, el problema estuvo sencillo en apariencia pero un poco retador en lógica porque
+me obligo a tener que frenarme a ver que iba pasando en cada paso de la iteración.
+
+Pero si debo de ser paciente al estar sacando respuestas y siento que es normal
+no querer parecer como que no sabes en la entrevista pero siento que es mejor 
+dar a entender explicitamente que quiero entenderlo bien y una vez que vea el patron 
+el codigo saldrá bastante rapido.
+
+*/

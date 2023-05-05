@@ -138,3 +138,17 @@ public:
 
     }
 };
+
+/*
+Time: 25 minutes
+Complexity.
+    runtime: O(n)
+    extra space: O(1)
+
+Me sentí muy comodo y veloz al hacer la solución.
+Tener un whiteboard si es de demasiada ayuda al momento de tener una soluci´n
+Debería practicar hacer las cosas sin whiteboard para acostumbrarme o poder hacerlo
+y seguir dandome a entender. En el caso de no tener un whiteboard en la entrevista.
+Porque poder garabatear me ayuda mucho a sacar una solución rapido.
+
+*/

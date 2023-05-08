@@ -96,3 +96,16 @@ public:
         return sumOfDiagonals;
     }
 };
+
+/*
+Time to complete: 12 minutes
+
+Complexity:
+    runtime: O(n)
+    extra space: O(1)
+
+Me sentí bastante comodo con esta respuesta,
+La clave es entender como se deben mover los apuntadores.
+
+
+*/

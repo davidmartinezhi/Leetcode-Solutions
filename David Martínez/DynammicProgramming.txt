@@ -344,3 +344,14 @@ Common variations
     5) Others
         a) cherry pickup (max profit + obstacles + traverse back to source) leetcode#741
         b) dungeon game leetcode#174
+
+
+Recursion steps on knapsack 0/1
+    1) base case
+    2) check if there is space for that item in the bag
+    3) return max of inclduded and not included item
+
+memoization steps   
+    1) use recursion
+    2) If subproblem has been solved, return. else continue recursion and save result y mem table
+

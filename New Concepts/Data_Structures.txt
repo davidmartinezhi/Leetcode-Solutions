@@ -3,23 +3,76 @@ Para descubrir diferentes maneras de implementar estructuras de datos.
 https://www.geeksforgeeks.org/c-plus-plus/?ref=leftbar
 
 
-Para implementar hashtable, unordered_map (search, insert, delete. son O(1))
-*Usado en intersection of two arrays 2
-    Use std::unordered_map when:
-        - You need to keep count of some data (Example – strings) and no ordering is required.
-        - You need single element access i.e. no traversal.
 
-Para implementar con BST, map
+unordered_map
+    associative container with pairs of elements, each pair consists of a key element and a value. it has no order
+    implement when search, insertion and deletion efficient of elements based on keys
 
-    Use std::map when:
-        - You need ordered data.
-        - You would have to print/access the data (in sorted order).
-        - You need predecessor/successor of elements.
-        - See advantages of BST over Hash Table for more cases.
+    operations complexity:
+        - insert: O(1)
+        - erase: O(1)
+        - find: O(1)
+
+unordered_set
+    container of unique elements, where value of element is also the key to its position on the container
+    implement when search, insertion and deletion efficient of unique elements
+
+    operations complexity:
+        - insert: O(1)
+        - erase: O(1)
+        - find: O(1)
+
+map
+    associative container containing pairs of elements ordered by keys
+    implement when elements ordered by keys is important
+
+    sorted in ascending order by default: use map<key_datatype, value_datatype, greater<int> > mapName; declaration to make it descending
+    
+
+    operations complexity:
+        - insert: O(log n)
+        - erase: O(log n)
+        - find: O(log n)
+
+set
+    container with unique elements in an especific order
+
+    sorted in ascending order by default: use set<int, greater<int> > s1; declaration to make it descending
+
+    operations complexity:
+    insert(g): O(log n)
+    erase(g): O(log n)
+    count(g): Returns 1 if element id present, else 0 - O(log n) 
+    find(g): returns iterator to element if present, else returns end() - O(log n)
+    empty(): returns bool, checks if set is empty - O(1)
+    size(): returns int of set size - O(1)
 
 
-/*
+Priority queue (heap)
+    adaptor container with restriction of constant elimination (delete max or min)
+    implement when efficient access, insertion and deletion of max or min elements is needed
 
-Luego agregar codigo con ejemplos e implementación
+    priority queue is max heap as default, use priority_queue <int, vector<int>, greater<int>> gq;
+    for min heap
 
-*/
+    operations complexity:
+        - push: O(log n)
+        - pop: O(log n)
+        - top: O(1)
+stack
+    adaptor container with restriction of LIFO (Last in First Out)
+    implement when LIFO restriction is needed
+
+    operations complexity:
+        - push: O(1)
+        - pop: O(1)
+        - top: O(1)  
+
+queue
+    adaptor container with restriction of FIFO (First in First Out)  
+    implement when FIFO restriction is needed
+
+    operations complexity:
+        - push: O(1)
+        - pop: O(1)
+        - front: O(1)  

@@ -1,0 +1,11 @@
+Binary search: Recursively and Iteratively
+
+
+
+DFS
+
+
+BFS
+
+
+Merge Sort

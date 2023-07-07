@@ -59,6 +59,7 @@ Priority queue (heap)
         - push: O(log n)
         - pop: O(log n)
         - top: O(1)
+        
 stack
     adaptor container with restriction of LIFO (Last in First Out)
     implement when LIFO restriction is needed

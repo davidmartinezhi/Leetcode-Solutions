@@ -3,10 +3,13 @@ BST tree traversals
 - pre order: used to copy BST
 - in order: used to get BST values in order
 - post order: used to delete BST
+- level by level
 
 
 preorder: Iterative and Recursively
 
 inorder: Iterative nad Recursively
 
-postorder: Itertive and Recursively
+postorder: Iterative and Recursively
+
+level by level: Iterative

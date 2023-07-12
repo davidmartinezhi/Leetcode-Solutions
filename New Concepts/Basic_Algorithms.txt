@@ -6,31 +6,69 @@ Iterative BS has complexity:
     time: O(log n)
     space: O(1)
 
-int binarySearch(vector<int> & arr, int left, int right, int target){
+    int search(vector<int>& nums, int target) {
 
-    //search
-    while(left <= right){
+        int left = 0;
+        int right = nums.size();
 
-        //get middle value index
-        int m = left + (right + 1) / 2;
+        while(left < right){
 
-        //check if present at middle
-        if(arr[m] == target) return m; 
-        else if(arr[m] < target) left  = m+1;
-        else right = m - 1;
+            int m = ((right-left)/2) + left;
 
+            //check if found
+            if(nums[m] == target) return m;
+            else if(nums[m] < target) left = m+1;
+            else right = m;
+
+        }
+
+
+        return -1;
     }
-
-    //not found
-    return -1;
-
-}
-
 
 DFS
 
+  Recursive DFS
+    Complexity:
+        time: O(v+e)
+        extra space: O(v+e) = O(# of nodes + recursive calls) for visited data structure
+
+    Have 2 hashtables or maps:
+        - visited <value, bool>
+        -adjacency list <value, list>
+
+    recursively
+        current value set as visited
+        iterate it's adjacecy list,
+            if value in adjacency list is not visited, send that value to the recursive call
+
+    
+  Iterative DFS
+    Complexity:
+        time: O(v+e)
+        extra space: O(v) = O(# of nodes) for visited data structure
+
+    Create a stack for nodes to visit and vector for visited nodes
+    push current source node
+
+    while the stack is not empty
+
+        get top element with a pop
+
+        if value is not visited, set as true
+
+        traverse adjacency list and if nodes have not been visited, push to stack
+
+
+    Do this to each node
+
+
+
+
+
 
 BFS
+
 
 
 Merge Sort

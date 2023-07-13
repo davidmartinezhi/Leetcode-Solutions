@@ -46,14 +46,14 @@ public:
 
         // visited and safe nodes
         int n = graph.size();
-        unordered_map<int, bool> safe;
-        vector<int> safeNodes;
+        unordered_map<int, bool> safe; // hashmap for safe values
+        vector<int> safeNodes;         // answer array
 
-        for (int i = 0; i < n; i++)
+        for (int i = 0; i < n; i++) // for each node
         {
-            if (DFS(graph, safe, i))
+            if (DFS(graph, safe, i)) // Do a DFS to see if it's valid
             {
-                safeNodes.push_back(i);
+                safeNodes.push_back(i); // If valid add no answer
             }
         }
 
@@ -63,9 +63,9 @@ public:
     bool DFS(vector<vector<int>> &graph, unordered_map<int, bool> &safe, int node)
     {
 
-        // check if value is already in safe
+        // check if value is already in safe nodes
         if (safe.find(node) != safe.end())
-            return safe[node];
+            return safe[node]; // return value of node
 
         // assume value is false
         safe[node] = false;
@@ -74,11 +74,11 @@ public:
         for (int adj : graph[node])
         {
 
-            if (!DFS(graph, safe, adj))
-                return false;
+            if (!DFS(graph, safe, adj)) // if adjacency is not safe
+                return false;           // Return false
         }
 
-        safe[node] = true;
-        return true;
+        safe[node] = true; // if it has not returned false, it means it's valid
+        return true;       // Return true
     }
 };

@@ -80,6 +80,25 @@ Algoritmos en grafos
 
 BFS
 
+Iterative solution
+    Complexity:
+        time: O(v+e)
+        extra space: O(v) = O(# of nodes) for visited data structure
+
+    Uses a queue for nodes to visit and array for visited nodes
+
+    mark first node as visited and add to queue
+
+    while queue is not empty
+
+        get front value and pop it from queue
+
+        traverse adjacent nodes
+            if node has not been visited
+                mark as visited
+                add to queue
+
+
 
 
 Merge Sort

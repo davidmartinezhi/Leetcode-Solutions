@@ -27,6 +27,17 @@ Iterative BS has complexity:
     }
 
 DFS
+La esencia es ir a lo más profundo y una vez que topamos, regresamos para checar otras condiciones,
+esta es la recursividad normal hasta el suelo en Binary search trees.
+
+Application of DFS Algorithm:
+    For finding the path
+    To test if the graph is bipartite
+    For finding the strongly connected components of a graph
+    For detecting cycles in a graph
+
+
+Algoritmos en grafos
 
   Recursive DFS
     Complexity:

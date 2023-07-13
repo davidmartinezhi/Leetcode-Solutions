@@ -82,3 +82,22 @@ public:
         return true;       // Return true
     }
 };
+
+/*
+Notes:
+    Complexity:
+        time: O(v+e) we traverse all edges for each vertex
+        extra space: O(v) vertices and safe state, depends on num of vertices
+
+    Tuve un buen entendimiento sobre como resolver el problema e iba en muy buen camino.
+    Solo que quise hacer el DFS como void sin que regresara nada y solo fuera pintando los valores en otras variables
+
+    La solución con DFS regresando un valor booleano es una gran idea, no se me había ocurrido el poder regresar un valor booleano
+    y mapear valores.
+
+    Dado que no llevo una gran cantidad de problemas de grafos, no siento que me haya ido tan mal. Pero definitivamente me abre la mente
+    para soluciones futuras que impliquen trabajar con grafos.
+
+    time: 45+
+
+*/

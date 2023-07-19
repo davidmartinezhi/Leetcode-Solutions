@@ -1,8 +1,8 @@
 BST tree traversals
 
 - pre order: used to copy BST
-- in order: used to get BST values in order
-- post order: used to delete BST
+- in order: used to get BST values in order (increasing)
+- post order: used to delete BST, can aldo get value in order (decreasing)
 - level by level
 
 
@@ -12,4 +12,4 @@ inorder: Iterative nad Recursively
 
 postorder: Iterative and Recursively
 
-level by level: Iterative
+level by level: Iteratively

@@ -170,6 +170,39 @@ void TreeTraversals::postorderIt(TreeNode *root)
 
 void TreeTraversals::levelByLevel(TreeNode *root)
 {
+
+    // declare queue
+    queue<TreeNode *> q;
+
+    // add root to queue
+    q.push(root);
+
+    // while que is not empty
+    while (!q.empty())
+    {
+
+        // get queue length, # of nodes in current level
+        int n = q.size();
+
+        // here it can go a aux vector for interaction with level nodes
+
+        for (int i = 0; i < n; i++)
+        {
+
+            // get node
+            TreeNode *aux = q.front();
+            q.pop();
+
+            // print node value
+            cout << aux->val << endl;
+
+            // if it has children add them to queue
+            if (aux->left)
+                q.push(aux->left);
+            if (aux->right)
+                q.push(aux->right);
+        }
+    }
 }
 
 int main()

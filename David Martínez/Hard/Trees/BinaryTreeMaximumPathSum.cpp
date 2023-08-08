@@ -105,3 +105,29 @@ public:
 
     }
 };
+
+
+/*
+Time: 45+
+
+Complexity
+    runtime: O(n)
+    extra space: recursive calls O(n * variables)
+
+Desde el inicio tuve una idea sobre cual iba a ser la solución
+Si es similar el concepto al kadanes algorithm pero le agrega otro paso
+
+En kadanes algorithm solo checamos la suma que viene y si es negativo, la cambiamos a 0
+representando un corte en el subarray actual y comenzando otro.
+
+En este ejercicio de igual manera se realiza ese corte.
+
+Si hubiera pensado en el split y que con 2 splits se rompe la adyacencia,
+lo hubiera terminado en los 25 minutos.
+Pero lo que me falto pensar en eso, de todos modos es el primer ejercicio de este estilo que hago
+entonces es un modelo mental que me podría funcionar despues.
+
+Porque solo checo si la suma de los 2 lados me da el split mas largo, checo si hacerle caso a la suma
+que viene desde cada lado o no. y regreso el numero del maximo sin split
+
+*/

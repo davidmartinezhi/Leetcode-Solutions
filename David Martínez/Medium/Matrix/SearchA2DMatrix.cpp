@@ -106,3 +106,16 @@ public:
 
     }
 };
+
+/*
+time: 30 minutes
+
+complexity
+    runtime: O(log(n*m))
+    extra space: O(1)
+
+La solución con binary search es muy buena, pero la solución con dos pointers resultó
+ser más sencilla y optima. talvez deba tratar de resolverlo lo más simple posible
+por un momento.
+
+*/

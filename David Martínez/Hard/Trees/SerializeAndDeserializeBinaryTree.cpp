@@ -55,19 +55,12 @@ public:
         */
 
         string serializedTree = "";
+        serializeHelper(root, serializedTree);
 
+        /*
         //iterative preorder traversal
         stack<TreeNode*> stack;
 
-        /*
-                    1
-                2       3
-                            4
-
-            stack = [
-            currentNode = 
-            root = 4
-        */
 
         while(!stack.empty() || root != nullptr){
             while(root != nullptr){
@@ -91,9 +84,24 @@ public:
 
             root = root->right;
         }
-        cout << serializedTree << endl;
+        */
         return serializedTree;
         
+    }
+
+    void serializeHelper(TreeNode* root, string & serializedTree){
+
+        if(root == nullptr){
+            serializedTree += "n.";
+            return;
+        }
+
+        serializedTree += to_string(root->val);
+        serializedTree += '.';
+
+        serializeHelper(root->left, serializedTree);
+        serializeHelper(root->right, serializedTree);
+        return;
     }
 
     // Decodes your encoded data to tree.

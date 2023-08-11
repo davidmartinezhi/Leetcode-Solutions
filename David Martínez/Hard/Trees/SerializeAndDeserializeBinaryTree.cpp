@@ -171,6 +171,13 @@ public:
 };
 
 /*
+En 20 minutos ya tenía la idea de como reolverlo, pero se me acabaron esos 20 minutos.
+
+Note que me tardo más en hacer los traversals si son iterativos, talvez checar una alternativa para
+hacerlo recursivo primero. Sino ahora si lo hago iterativo y digo que para no depender en stack memory
+
+En 45 minutos siento que si lo sacaba sin problema, aparte estando bien descansado.
+
 Con este programa aplique muchos conceptos vistos previemente en problemas easy y medium
 En parte me aparecio: Tree traversals (preorder), convert string to integer (incluyendo numeros negativos), character digit to number.
 

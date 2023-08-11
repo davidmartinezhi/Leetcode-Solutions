@@ -161,3 +161,11 @@ public:
 
     }
 };
+
+/*
+Con este programa aplique muchos conceptos vistos previemente en problemas easy y medium
+En parte me aparecio: Tree traversals (preorder), convert string to integer (incluyendo numeros negativos), character digit to number.
+
+Si resulto ser muy util utilizar recursividad para armar el árbol binario
+
+*/

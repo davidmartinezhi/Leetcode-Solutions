@@ -141,6 +141,7 @@ Chars:
         Hacer operaciones matematicas con los chars.
         Si es minuscula char-'a', te da el numero del 0, 25 al que pertenece
         char-'0' para operaciones matematicas de numeros que son char
+        integer a string usar to_string
 
 Investigar backtracking y bit manipulation
 

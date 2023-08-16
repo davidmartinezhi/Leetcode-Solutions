@@ -97,3 +97,17 @@ public:
         return found;
     }
 };
+
+/*
+time: 45+
+
+Complexity
+    runtime: O(((n*m)*(n*m))+array size)
+
+Solución inicial que hice estuvo dentro del tiempo, pero era backtracking sin la implementación de trie
+Trie ayuda a reducir la complejidad bastante porque sino es O(nm*nm*array size) y esa complejidad es muy alta para el time limit que tenía
+
+Pero si es miuy util utilizar trie también. Para mejorar la complejidad bastante.
+
+
+*/

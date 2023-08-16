@@ -170,3 +170,15 @@ public:
         return true;
     }
 };
+
+/*
+time: 30 minutes
+
+complexity:
+    runtime of each operation: O(n) n being the size of the string
+
+Llevo 2 ejercicios trabajando con trie y ya me he familiarizado bastante bien en la implementación
+lo más tardado en esta parte fue el aprovechar el tiempo para explicar como lo hacía todo
+mientras lo programaba
+
+*/

@@ -103,3 +103,14 @@ public:
         return trie_search(word, root, 0, word.size());
     }
 };
+
+/*
+Time: 45+
+Notes:
+Es la primera vez que implemento un trie, esta bastante interesante el concepto
+
+Complexity:
+    runtime: O(n(insert) + 26'N(search))
+    extra space: O(longest word)
+
+*/

@@ -135,6 +135,7 @@ public:
     }
 
 
+    //30 min
     int DFS(vector<vector<int>>& mat, vector<vector<int>>& result,int & rows, int & cols, int row, int col){
 
         //base case: in bounds
@@ -160,5 +161,25 @@ public:
 
     }
 
-    //30 min
+    
 };
+
+/*
+time: 45+ minutes
+      30 minutes for DFS approach
+
+Complexity:
+    runtime: O(n*m + n*m*4)
+    extra space: O(n*m*2)
+
+Desde el comienzzo supe como debería de ser el traversal pero no me había dado cuenta
+que con matrices solo había aplicado el DFS para buscar cosas y también para backtracking.
+
+Pero no se me había ocurrido que no he implementado BFS en matrices. La solución si es mucho
+más eficiente con BFS.
+
+Debería de detenerme un momento y pensar "Que tipo de recorrido debo implementar en este momento?"
+
+Aún así saque una respuesta a la pregunta, me gustó mucho este problema. Tratare de encontrar
+otro problema donde se implementé BFS en una matriz para ver si lo puedo implementar desde 0 yo solo
+*/

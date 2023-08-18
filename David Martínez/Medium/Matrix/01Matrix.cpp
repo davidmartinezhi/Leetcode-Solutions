@@ -182,4 +182,6 @@ Debería de detenerme un momento y pensar "Que tipo de recorrido debo implementa
 
 Aún así saque una respuesta a la pregunta, me gustó mucho este problema. Tratare de encontrar
 otro problema donde se implementé BFS en una matriz para ver si lo puedo implementar desde 0 yo solo
+
+Muy util el agregar los vecinos a proximos en ser visitados y actualizados. Es lo mejor verdaderamente.
 */

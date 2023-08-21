@@ -123,14 +123,109 @@ public:
 
         return result;
     }
+
+    vector<int> spiralOrderRecursive(vector<vector<int>>& matrix) {
+        /*
+        info
+            input:
+                - m*n matrix
+
+            output:
+                - vector with all elements of the matrix in spiral order
+
+            constraints:
+                - what values to expect from n and n. range[1, 10]
+                - what values would i expect on each cell? [-100, 100]
+
+        example
+            [
+                [$,$,$],
+                [$,$,$],
+                [$,$,$]
+            ]
+
+            -> [1,2,3,6,9,8,7,4,5]
+
+        brute force
+            recurively call, and do backtracking
+            starting with left side, go right until we reach end or find special number then go down
+            go down until end or find special number then go left
+            go left until end or find special char then go up
+            go up until end or special char, then go right
+
+            complexity:
+                runtime: O(n*m)
+                extra space: O(n*m)
+
+        optimize
+            best conceivable runtime: O(n*m)
+
+            can i improve memory?
+
+        test
+            - matrix 1*1
+            - matrix 2*2
+            - matrix 3*3
+            - matrix 2*4        
+        */
+
+        //declare variables
+        vector<int> spiralOrder;
+        int rows = matrix.size();
+        int cols = matrix[0].size();
+
+        traverseSpiral(matrix, spiralOrder, rows, cols, 0, 0, 'r');
+
+        return spiralOrder;
+        
+    }
+
+    void traverseSpiral(vector<vector<int>>& matrix, vector<int> & spiralOrder, 
+    int&rows, int&cols, int row, int col, char direction){
+
+        /*
+        [INT_MAX,2,3],
+        [4,5,6],
+        [7,8,9]
+
+        -> []
+        
+        */
+
+        //base case: in bounds
+        if(row < 0 || row == rows || col < 0 || col == cols) return;
+
+        //base case: special character
+        if(matrix[row][col] == INT_MAX) return;
+
+        spiralOrder.push_back(matrix[row][col]);
+        matrix[row][col] = INT_MAX;
+
+        if(direction == 'r'){
+            traverseSpiral(matrix, spiralOrder, rows, cols, row, col+1, 'r');
+            traverseSpiral(matrix, spiralOrder, rows, cols, row+1, col, 'd');
+        }else if(direction == 'd'){
+            traverseSpiral(matrix, spiralOrder, rows, cols, row+1, col, 'd');
+            traverseSpiral(matrix, spiralOrder, rows, cols, row, col-1, 'l');
+        }else if(direction == 'l'){
+            traverseSpiral(matrix, spiralOrder, rows, cols, row, col-1, 'l');
+            traverseSpiral(matrix, spiralOrder, rows, cols, row-1, col, 'u');
+        }else if(direction == 'u'){
+            traverseSpiral(matrix, spiralOrder, rows, cols, row-1, col, 'u');
+            traverseSpiral(matrix, spiralOrder, rows, cols, row, col+1, 'r');
+        }
+
+    }
 };
+
+
 
 /*
 Nota:
     Tiempo: +45
 
     Saque el diseño de la solución desde el principio, pero me tarde con la logica y los tests de los pointers
-    Talvez checar la lógica un poco más y asegurarme de como funcionará, sea mejor a hacer más esfuerzo metnal
+    Talvez checar la lógica un poco más y asegurarme de como funcionará, sea mejor a hacer más esfuerzo mental
 
     Si es mejor en papel asegurarme de que estoy haciendo y como lo haré. En lugar
     de estar a medio codigo y estar trabajando la lógica.
@@ -138,4 +233,7 @@ Nota:
     Solo improvisar y sacar la solución a medio sprint, cuando no exista alternativa. No apresurarme
     Si no hay razón para apurarme de la manera en la que me apuré, debo de no apurarme
 
+
+Nota:
+    Tiempo: 25 minutos con soluución recursica
 */

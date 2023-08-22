@@ -176,4 +176,7 @@ puede hacer más optima la solución, solo es cuestión de saber por donde comen
 
 Investigaré la solución con BFS. Aún así me hace feliz saber que un problema que necesite DFS lo puedo hacer relativamente rapido
 
+
+Solución optima del DFS y si es con memoization. Que gran idea.
+Tratare de ahora en adelante pensar sobre como aplicar memoization cuando deba de hacer DFS
 */

@@ -179,4 +179,8 @@ Investigaré la solución con BFS. Aún así me hace feliz saber que un problema
 
 Solución optima del DFS y si es con memoization. Que gran idea.
 Tratare de ahora en adelante pensar sobre como aplicar memoization cuando deba de hacer DFS
+
+Optimal solution complexity
+    runtime: O(n*m)
+    extra space: O(n*m)
 */

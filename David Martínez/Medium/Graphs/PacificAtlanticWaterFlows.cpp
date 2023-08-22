@@ -107,3 +107,18 @@ public:
 
     }
 };
+
+/*
+time: 50 minutes
+
+complexity
+    runtime: O((n*m)^2)
+    extra space: (n*m) recursive calls
+
+La solución la encontre rapidamente, en lo que más tarde fue en comprender bien el problema
+para saber las condiciones y poder decifrar una manera de resolver el problema con BFS que preciento
+puede hacer más optima la solución, solo es cuestión de saber por donde comenzar el recorrido.
+
+Investigaré la solución con BFS. Aún así me hace feliz saber que un problema que necesite DFS lo puedo hacer relativamente rapido
+
+*/

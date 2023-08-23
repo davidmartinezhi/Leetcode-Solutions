@@ -142,3 +142,17 @@ public:
         return longestCS;
     }
 };
+
+/*
+time: 30 min
+
+complexity
+    runtime: O(n)
+    extra space: O(n)
+
+De inicio saque un buen approach que no era optimo pero se acercaba a una respuesta lineal
+
+Pero el approach no comentado es el ideal ya que solo comienza a contar la secuencia si es que el
+elemento es el inicio de la secuencia.
+
+*/

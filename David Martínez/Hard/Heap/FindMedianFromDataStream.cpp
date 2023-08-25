@@ -42,3 +42,21 @@ public:
         return maxHeap.top();
     }
 };
+
+/*
+time: 45+ minutes
+
+complexity:
+    runtime: O(log n) insertion, O(1) find median
+    extra space: O(n) data stream numbers
+
+Saque solución pero no era la más eficiente. 
+tenía complejidad de O(n) find median
+
+Se me ocurrío el utilizar 2 heaps pero no me detuve a pensar sobre como iban a interactuar entre sí
+esos dos heaps. Talvez así se me hubiera ocurrido la solución rapidamente.
+
+Tengo buena intuición para la solución, pero me desespere y deje de analizar como se iba a mover la info
+solo pense en lo que tenía y como llegar ahí aunque hubiera errores. Debo de desacelerarme y 
+checar como se comporta el sistema. Buena solución aunque no fuese la más optima tho.
+*/

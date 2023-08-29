@@ -66,6 +66,38 @@ public:
         
     
     */
+            //declare variables
+        vector<ListNode*> nodes;
+        ListNode * node = head;
+
+        //fill array
+        while(node){
+            nodes.push_back(node);
+            node = node->next;
+        }
+
+        //traverse until middle of array
+        //get size of array
+        int n = nodes.size();
+
+        /*
+        head = [1,2,3,4]
+        4/2 = 2-1 = 1
+
+        head = [1,2,3,4,5]
+        
+        */
+
+        //even size
+        for(int i = 0; i < n/2; i++){
+            nodes[i]->next = nodes[n-i-1];
+            nodes[n-i-1]->next = nodes[i+1];
+        }
+
+        //set last value pointer
+        nodes[n/2]->next = nullptr;   
+
+    /*
         ListNode* aux = head;
         
         //Get size
@@ -101,6 +133,7 @@ public:
             prevHead2->next = head2;
             head2->next = nullptr;
         } 
+    */
    
     }
     
@@ -151,5 +184,8 @@ public:
         Esto quiere decir que así sabemos si la length es size even or non
 
         El reverse sería en el slow pointer, que es la mitad
+
+
+Nueva nota:
 
 */

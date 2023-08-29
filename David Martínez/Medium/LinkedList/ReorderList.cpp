@@ -187,5 +187,9 @@ public:
 
 
 Nueva nota:
+Se nota que he agarrado más experiencia en la solución de problemas, lo hice en 22 minutos y con muchas
+menos lineas de codigo. 
+
+Buena respuesta.
 
 */

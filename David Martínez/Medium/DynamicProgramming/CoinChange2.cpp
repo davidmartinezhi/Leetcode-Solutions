@@ -97,6 +97,26 @@ public:
         }
         
         return dp[n][amount];
+
+        /*
+        //declare variables
+        int n = coins.size();
+        vector<int> dp(amount+1, 0);
+        dp[0] = 1;
+
+        //traverse all coins
+        for(int i = 0; i < n; i++){
+            //traverse amount
+            for(int j = coins[i]; j <= amount; j++){
+                if(j - coins[i] >= 0){
+                    dp[j] = dp[j] + dp[j - coins[i]];
+                }
+            }
+        }
+
+        return dp[amount];
+        
+        */
     }
 };
 /*
@@ -110,4 +130,12 @@ Entendí muy bien el problema, me quede ciclado en conseguir el numero de subset
 Porque en ese se toma como base la suma maxima de todos los numeros, pero en unbounded puedes
 tener cualquier numero infinita cantidad de veces. Entonces es mejor tomar como referencia el amount
 que te piden.
+
+
+
+Agregada solución sin matriz, más sencilla de explicar razonamiento detras de la solución que con una matriz
+me ha servido bastante el hacer problemas. porque me permite encontrar maneras de solucionar
+problemas más rapido y elegante
+
+me tomo 25-28 minutos
 */

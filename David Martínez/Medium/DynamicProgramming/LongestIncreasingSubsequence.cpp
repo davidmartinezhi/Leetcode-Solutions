@@ -6,113 +6,79 @@ using namespace std;
 
 class Solution {
 public:
-
-//2022
-    /*
-    int lengthOfLIS(vector<int>& nums) {
-        
-        //declare aux vector for dp
-        vector<int> aux(nums.size(), 1);
-        
-        //declare varibale for longest subsequence
-        int longest = 1;
-        
-        //traverse the array
-        for(int i = 1; i < nums.size(); i++){
-            
-            //traverse from first index to i
-            for(int j = 0; j < i; j++){
-                
-                //if the front index is bigger, and it has a shortest or equal subsequence count
-                //counts how many numbers in front are smaller. if they have a greater increasing subsew
-                    //add their increasing subseq + 1
-                if(nums[i] > nums[j] && aux[i] <= aux[j]){
-                    aux[i] = aux[j] + 1;    //add the subsequence of the smaller number and add 1
-                    
-                    longest = max(longest, aux[i]); //save the number of longest subsequence
-                }
-            }
-        }
-        
-        //return longest subsequence
-        return longest;
-    }
-    */
-
-//2023
     int lengthOfLIS(vector<int>& nums) {
         /*
         info
-            input: integer array "nums"
-            output: length of longest strictly increasing subsequence
-            constraints: 
-                * array length in range 1 and 2500
-                * nums[i] values in range -10,000 and 10,000
-                
+            input:
+                - integer array "nums"
+            
+            output: 
+                - length of longest strictly increasing subsequence
+
+            constraints:
+                - what range of size can the array have? [1, 2500]
+                - what range of values to expect on each cell? [-10000, 10000]
+
         example
-           nums = [10,9,2,5,3,7,101,18] 
-           -> 4
-           
-           nums = [0,1,0,3,2,3]
-           -> 4
-           
-           nums = [7,7,7,7,7,7,7]
-           -> 1
-           
-        brute force
-            dynammic programming
-            
+            nums = [10,9,2,5,3,7,101,18]
+            -> 4
+
             nums = [0,1,0,3,2,3]
-            
-            dp = [1,2,2,3,3,4]
-            
-            complexity:
-                runtime: O(n^2)
-                extra space: O(n)
-                
-        walkthrough
-        
-            for each number
-                traverse previous numbers
-                    if(value in array is lesser than current value)
-                        value in dp array is max of currValue idx and value at position of value + 1
-                        if value bigger than max value, last index is maxValue
-                        save max value at last index
-                        
-        
-        test
-            *Carry max value
-            *Don't carry max calue
-        
+            -> 4
+
+            nums = [7,7,7,7,7,7,7]
+            -> 1
+
+            brute force
+                we need to get all prev numbers that are lower in value on each cell
+                its a dp problem 
+
+                nums = [0,1,0,3,2,3]
+                       [1,2,1,3,3,4]
+
+                on each cell i
+                    traverse all previous cells j
+                        if(nums[j] < nums[i])
+                            dp[i] = max(dp[i], dp[j]+1)
+
+                complexity:
+                    runtime: O(n^2)
+                    extra space: O(n)
+
+            optimize
+                best conceivable runtime: O(n)
+
+            test
+                one repeating int on all the array
+                different increasing sequences
         */
-        
-        
-        /*
-            nums = [0,1,0,3,2,3] 
-            dp =   [0,1,0,2,2,3]
-            maxValue = 2
-        
-        */
-        
-        
-        //declare variables for dp
-        int n = nums.size();
-        vector<int> dp(n, 1);
-        int maxValue = 1;
-        
-        //traverse original array
-        for(int i = 0; i < n; i++){
-            for(int j = 0; j < i; j++){ //traverse previous values before current idx
-                if(nums[j] < nums[i]){ 
-                    dp[i] = max(dp[j]+1, dp[i]);
-                    maxValue = max(dp[i], maxValue);
-                }   
-            }
-        }
-        return maxValue;
 
         /*
-                //Declare variables
+            nums = [0,1,0,3,2,3]
+                   [1,2,1,3,1,1]
+        */
+
+        //creamos vector para guardar valores
+        vector<int> dp;
+
+        //recorremos cada valor de nums
+        for (int num : nums) {
+
+            //regresamos la unicación del valor donde num puede ser insertado sin romper el orden ascendente
+            auto it = lower_bound(dp.begin(), dp.end(), num);
+
+            //si es mayor que todos los numeros, lo agregamos al final
+            if (it == dp.end()) {
+                dp.push_back(num);
+            } 
+            //si no es mayor al resto de numeros, lo agregamos a su posición sin romper orden ascendente
+            else {
+                *it = num;
+            }
+        }
+        return dp.size();
+    /*
+        //Declare variables
         int n = nums.size();
         vector<int> dp(n+1,1);
 

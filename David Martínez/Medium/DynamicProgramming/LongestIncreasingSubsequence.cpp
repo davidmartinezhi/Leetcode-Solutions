@@ -110,6 +110,27 @@ public:
             }
         }
         return maxValue;
+
+        /*
+                //Declare variables
+        int n = nums.size();
+        vector<int> dp(n+1,1);
+
+        //traverse all elements
+        for(int i = 0; i < n; i++){
+            //traverse all previous elements
+            for(int j = 0; j < i; j++){
+                //check if its a valid comparison
+                if(nums[j] < nums[i]){
+                    dp[i] = max(dp[i], dp[j]+1);
+                }
+
+                dp[n] = max(dp[i], dp[n]);
+            }
+        }
+
+        return dp[n];
+        */
     }
 };
 
@@ -137,4 +158,7 @@ Notas:
 8 meses despues volcí a ver este problema y lo resolví en 20 minutos.
 El concepto lo entendói bien y la solución quedo aún más limpia.
 A seguir trabajando.
+
+
+4 meses despues lo acabo de volver a hacer y salio igual en 20 minutos
 */

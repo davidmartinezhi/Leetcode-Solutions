@@ -127,4 +127,7 @@ A seguir trabajando.
 
 
 4 meses despues lo acabo de volver a hacer y salio igual en 20 minutos
+
+Agregada solución O(n log n) debería investigar que otros metodos existen para ver cuales puedo usar
+y simplificar trabajo
 */

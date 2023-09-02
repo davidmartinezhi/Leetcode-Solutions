@@ -41,6 +41,37 @@ public:
         }
 
         return dp[len1][len2];
+
+        /*
+                // Declarar variables
+        int len1 = text1.size();
+        int len2 = text2.size();
+        vector<int> dp(len2 + 1, 0); // Usamos un vector unidimensional para ahorrar espacio
+        int prev; // Variable para almacenar el valor anterior de dp[j]
+
+        // Recorrer el vector
+        for (int i = 1; i <= len1; ++i) {
+
+            prev = 0; // Inicializar prev para cada nueva fila
+
+            for (int j = 1; j <= len2; ++j) {
+
+                int temp = dp[j]; // Almacenar el valor actual de dp[j] antes de actualizarlo
+
+                if (text1[i - 1] == text2[j - 1]) {
+                    dp[j] = prev + 1;
+
+                } else {
+                    dp[j] = max(dp[j], dp[j - 1]);
+                }
+
+                prev = temp; // Actualizar prev para la siguiente iteración
+            }
+        }
+
+        return dp[len2];
+        
+        */
     }
 };
 

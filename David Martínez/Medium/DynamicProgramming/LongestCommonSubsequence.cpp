@@ -88,4 +88,6 @@ Pero substring buscaba a los que estuviesen pegados.
 En este caso, arrastramos el valor maximo hasta que hayan más updates
 y seguimos comparando
 
+Agregada solución con optimización de memoria.
+Lo mantiene un poco complejo de logica tho
 */

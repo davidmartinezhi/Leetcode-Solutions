@@ -91,3 +91,21 @@ public:
         return dp[0];
     }
 };
+
+/*
+Time: 32 minutes
+
+complexity:
+    runtime: O(s size * dict size * word size)
+    extra space: O(s size)
+
+He avanzado bastante en programación dinamica. Hace un año
+este problema era mi pesadilla pero ahora lo pude solucionar relativamente rapido y de la 
+manera más eficiente.
+
+Pero aún debo de checar y saber cuando utilizar el patron de recorrer desde atras.
+Podría servir más que nada para cuando quieres saber si algo contiene otra cosa.
+
+También se podría hacer recorriendo hacía adelatne y lo voy a tratar de hacer así
+
+*/

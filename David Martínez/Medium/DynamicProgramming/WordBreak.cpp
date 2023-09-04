@@ -108,4 +108,12 @@ Podría servir más que nada para cuando quieres saber si algo contiene otra cos
 
 También se podría hacer recorriendo hacía adelatne y lo voy a tratar de hacer así
 
+No se puede hacer comendzando desde el primer indice hacía el ultimo, debe ser del ultimo al primero
+
+En estos casos aplica más el recorrer del final hacía el inicio.
+
+* Dependencias hacia atrás: Cuando el estado actual depende de estados futuros, es más fácil calcular los estados futuros primero y luego usarlos para calcular los estados actuales.
+* Optimización de Memoria: En algunos casos, solo necesitas mantener un subconjunto de todos los estados posibles en la memoria en un momento dado. Al recorrer de atrás hacia adelante, puedes sobrescribir estados que ya no son necesarios, ahorrando memoria.
+* Subproblemas Anidados: En problemas donde los subproblemas están anidados de una manera que el subproblema más grande necesita ser resuelto antes que los más pequeños (por ejemplo, en la programación de intervalos), es útil recorrer de atrás hacia adelante.
+* Problemas de Secuencia: En problemas donde estás tratando con secuencias (como cadenas de texto o arrays) y la solución óptima a un subproblema depende de las soluciones a los subproblemas que vienen después en la secuencia.
 */

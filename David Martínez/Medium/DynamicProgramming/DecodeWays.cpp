@@ -131,4 +131,7 @@ Agregada solución con tabulacción. Estuvo muy sencilla la logica y si la tuve 
 por alguna razón batalle en implementarla. Talvez debí pensar en tomar los numeros de atras en lugar 
 de los de adelante y eso me hubiera simplificado bastante la logica como para haberlo podido 
 implementar por mi propia cuenta rapido desde el principio
+
+También ya sabía que no puedo checar más de 2 numeros atras, ya debo descartar eso una vez que me doy cuenta
+que no es util.
 */

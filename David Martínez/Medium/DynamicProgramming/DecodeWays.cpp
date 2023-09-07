@@ -50,9 +50,41 @@ public:
             check toInt function
             
         */
-        
+        /*
         vector<int> dp(s.size()+1, -1);
         return helperDp(s, 0, dp);
+        */
+
+                //check we have no leading 0
+        if(s[0] == '0') return 0;
+
+        //get size
+        int n = s.size();
+
+        //initalize dp vector
+        vector<int> dp(s.size()+1, 0);
+
+        //base cases
+        dp[0] = 1; //empty string
+        dp[1] = 1; //first character
+
+        for(int i = 2; i <= n; i++){
+
+            //if we have no leading 0 by taking two, continue previous count
+            if (s[i - 1] != '0') {
+                dp[i] += dp[i - 1]; //previous 
+            }
+
+            //get sum of previous 2 digits
+            int twoDigit = stoi(s.substr(i - 2, 2));
+
+            //if sum of both two previous digits, continue that count
+            if (twoDigit >= 10 && twoDigit <= 26) {
+                dp[i] += dp[i - 2];
+            }
+        }
+
+        return dp[n];
     }
 
     int helperDp(string & s, int i, vector<int> & dp){

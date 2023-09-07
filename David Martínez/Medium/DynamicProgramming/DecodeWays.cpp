@@ -126,4 +126,9 @@ Debería de familiarizarme un poco más con permutaciones
 
 
 Agregada optimización en logica, pero funcionamiento sigue igual
+
+Agregada solución con tabulacción. Estuvo muy sencilla la logica y si la tuve yo desde el principio pero
+por alguna razón batalle en implementarla. Talvez debí pensar en tomar los numeros de atras en lugar 
+de los de adelante y eso me hubiera simplificado bastante la logica como para haberlo podido 
+implementar por mi propia cuenta rapido desde el principio
 */

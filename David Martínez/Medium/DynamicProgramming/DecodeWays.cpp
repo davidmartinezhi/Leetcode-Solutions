@@ -51,47 +51,36 @@ public:
             
         */
         
-        vector<int> aux(s.size()+1, -1); //memoization array
-        return helper_dp(s, s.size(), aux);
+        vector<int> dp(s.size()+1, -1);
+        return helperDp(s, 0, dp);
     }
-    
-    int helper_dp(string s, int k, vector<int> & aux){
-        //O(n)
 
-        //base cases
-        //empty string
-        if(k == 0) return 1;
-            
-        //digit starts with 0
-        int i = s.size() - k;
+    int helperDp(string & s, int i, vector<int> & dp){
+        //base case: empty string
+        if(i == s.size()) return 1;
+
+        //base case: starts with 0
         if(s[i] == '0') return 0;
-        
-        //digit has already been calculated
-        if(aux[k] != -1) return aux[k];
-        
-            
-        //recursivity
-        int result = helper_dp(s, k-1, aux);
-        
-        if(k >= 2 && toInt(s.substr(i,i+2)) <= 26){
-            result += helper_dp(s, k-2, aux);
-        }
-        
-        aux[k] = result;
-        return result;
-        
-    }
-    
-    int toInt(string s){
-        //O(1)
+
+        //base case: cell has already been visited
+        if(dp[i] != -1) return dp[i];
+
+        //recursive call
         int result = 0;
-        
-        for(int i = 0; i < 2; i++){
-            result = (result*10) + (s[i] - '0');
+
+        //check with single digit
+        result = helperDp(s, i+1, dp);
+
+        //check with double digit
+        if(i < s.size()-1 && stoi(s.substr(i,2)) <= 26){
+            result += helperDp(s, i+2, dp);
         }
+
+        dp[i] = result;
+
         return result;
     }
-};
+}
 
 /*
 Time: 45+ minutes
@@ -103,4 +92,6 @@ complexity:
 Es un problem muy relacionado a permutaciones también.
 Debería de familiarizarme un poco más con permutaciones
 
+
+Agregada optimización en logica, pero funcionamiento sigue igual
 */

@@ -106,3 +106,21 @@ public:
         return dp[n];  // Return the final answer
     }
 };
+
+/*
+time: 45 minutes
+
+complexity:
+    runtime: O(n) text size
+    extra space:  O(n) text size
+
+Notes:
+    From the start I had a good idea of how to solve the problem recursively and with tabulation
+    What I struggled with the most was in the implementation, like, okay I know i have to traverse 
+    from each character backwards 4 for text 7 and 9, and 3 for the rest of characters
+
+    but i think it is a really slick apppeach to traverse the numbers and just be adding up the rest backwards
+    starting with the offset index at the beginning just checking
+    i-1 to get character and j-1 to get the dp value we are adding
+
+*/

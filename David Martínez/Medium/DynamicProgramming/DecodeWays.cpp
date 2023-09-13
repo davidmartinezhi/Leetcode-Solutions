@@ -134,4 +134,6 @@ implementar por mi propia cuenta rapido desde el principio
 
 También ya sabía que no puedo checar más de 2 numeros atras, ya debo descartar eso una vez que me doy cuenta
 que no es util.
+
+Debo de seguír practicando problemas similares
 */

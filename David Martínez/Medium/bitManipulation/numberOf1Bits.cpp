@@ -73,5 +73,6 @@ complexity optimal solution:
     runtime: O('1's present) -> O(1)
     extra space: O(1)
 
-
+Working with bits is new to me, maybe I should search for tutorials where i can learn
+to takle this problems and the common patterns.
 */

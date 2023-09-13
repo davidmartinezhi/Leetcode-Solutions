@@ -40,8 +40,13 @@ public:
             - no '1's
             - multiple '1's
         */
+        int count = 0, mask = 1;
+        //mask has a 1 in the bit position we are going to check
 
-
-        return __builtin_popcount(n);
+        for(int i = 0; i < 32; i++){
+            if((n&mask) != 0) count++;
+            mask = mask << 1;
+        }
+        return count;
     }
 };

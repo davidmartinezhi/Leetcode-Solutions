@@ -40,6 +40,7 @@ public:
             - no '1's
             - multiple '1's
         */
+        /*
         int count = 0, mask = 1;
         //mask has a 1 in the bit position we are going to check
 
@@ -47,6 +48,16 @@ public:
             if((n&mask) != 0) count++;
             mask = mask << 1;
         }
+        return count;
+        */
+
+        int count = 0;
+
+        while(n != 0){
+            n = n&(n-1);
+            count++;
+        }
+
         return count;
     }
 };

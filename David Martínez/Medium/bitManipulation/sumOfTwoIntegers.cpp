@@ -4,6 +4,26 @@ using namespace std;
 class Solution {
 public:
     int getSum(int a, int b) {
+
+        /*
+       int carry = 0, result = 0;
+
+        for (int i = 0; i < 32; ++i) {
+            int aBit = (a >> i) & 1;
+            int bBit = (b >> i) & 1;
+
+            // Suma de bits individuales
+            int sum = aBit ^ bBit ^ carry;
+
+            // Actualizar el acarreo para el siguiente ciclo
+            carry = (aBit & bBit) | (carry & (aBit ^ bBit));
+
+            // Colocar el bit de suma en el resultado
+            result |= (sum << i);
+        }
+
+        return result;
+        */
         
         //while b is not 0
         while(b != 0){
@@ -42,4 +62,5 @@ Creo que tuve un entendemiento de como es que funciona la solución
 ^ for addition
 << left shift operator
 
+agregada solución propia
 */

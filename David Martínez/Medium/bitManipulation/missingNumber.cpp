@@ -75,3 +75,13 @@ public:
 };
 
 //18 minutes
+
+/*
+Debo investigar cual era el metodo con el que conseguía los valores en orden,
+así sabía cuales numeros faltaban.
+
+Estoy mejorando en bit manipulation.
+
+Buen inicio, pero el syntax aún me hace un poco de ruido
+
+*/

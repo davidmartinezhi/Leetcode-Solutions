@@ -8,18 +8,24 @@ public:
         /*
        int carry = 0, result = 0;
 
-        for (int i = 0; i < 32; ++i) {
-            int aBit = (a >> i) & 1;
-            int bBit = (b >> i) & 1;
 
-            // Suma de bits individuales
-            int sum = aBit ^ bBit ^ carry;
+        for(int i = 0; i < 32; i++){
+            
+            //get both bit values
+            int bitA = (a >> i) & 1; // 1
+            int bitB = (b >> i) & 1; // 0
 
-            // Actualizar el acarreo para el siguiente ciclo
-            carry = (aBit & bBit) | (carry & (aBit ^ bBit));
+            //set sum
+            int sum = (bitA ^ bitB ^ carry);
 
-            // Colocar el bit de suma en el resultado
-            result |= (sum << i);
+            //Set carry
+            carry = (bitA & bitB) | (carry & (bitA ^ bitB));
+
+            //move sum '1' bit to its corresponding position
+            sum = (sum << i);
+
+            //add to result
+            result |= sum;
         }
 
         return result;

@@ -78,3 +78,17 @@ public:
         return result;
     }
 };
+
+/*
+time: 15 minutes
+
+complexity:
+    runtime: O(32) -> O(1)
+    extra space: O(1)
+
+Estoy comenzando a entender bastante bien bit manipulation, aunque no creo tener que llegar
+a usarlo en alguna entrevista.
+
+
+
+*/

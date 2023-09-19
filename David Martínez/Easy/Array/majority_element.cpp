@@ -63,3 +63,11 @@ public:
     }
 };
 //8 minutes
+/*
+time: 8 minutes
+complexity:
+    runtime: O(n)
+    extra space: O(n)
+
+I have really come a long way, this question was easy
+*/

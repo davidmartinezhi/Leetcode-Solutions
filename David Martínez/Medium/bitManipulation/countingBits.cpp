@@ -85,3 +85,12 @@ public:
 };
 
 //15 minutes
+
+/*
+Complexity:
+    runtime: O(32) -> O(1)
+    extra space: O(n)
+
+Saca el numero de bits que estan encendidos no esta tan pesado, aunque 
+
+*/

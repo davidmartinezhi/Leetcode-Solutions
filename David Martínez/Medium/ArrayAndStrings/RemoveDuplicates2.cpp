@@ -108,3 +108,19 @@ public:
     }
 };
 //27 minutes
+
+/*
+time: 27 minutes
+
+complexity:
+    runtime: O(n)
+    extra space: O(1)
+
+Notes:
+    I really feel an advancement in my coding skills. I came up with the solution very quicly
+    and it was very easy to implement. I just had to be careful with the edge cases.
+
+    I am very happy with my performance, I am getting better and better at this.
+    Maybe I could do it in less times, I should check out my solution methology and see where i can speed up
+    the solution time. But overall I am very happy with my performance.
+*/

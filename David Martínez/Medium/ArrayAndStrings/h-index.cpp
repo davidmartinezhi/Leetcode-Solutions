@@ -118,3 +118,18 @@ public:
         return hIdx;
     }
 };
+
+/*
+Time: 32 minutes
+
+complexity
+    runtime: O(n log n)
+    extra space: O(1)
+
+I noticed I've been using the solution flow methodologies instictively now.
+I've been applying them without consciously thinking of them. that is good.
+
+Thinking about my solution flow, I think that where I lost time was in the understanfing
+of the problem. I didn't understand the problem at first, so I had to read it a couple of times
+and I also had to do some tests to know if my understanding of the problem was correct.
+*/

@@ -118,3 +118,17 @@ public:
         return totalCandies;
     }
 };
+
+/*
+time: 45+ minutes
+
+complexity
+    runtime: O(n)
+    extra space: O(n)
+
+I struggled to find a way tosolve it and that really took some time.
+If values are dependent on answers from left and right
+I should consider traversing the array from left to right and then from right to left
+
+to construct answers
+*/

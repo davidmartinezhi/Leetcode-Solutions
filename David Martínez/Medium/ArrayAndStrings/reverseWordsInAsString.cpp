@@ -92,3 +92,17 @@ public:
 };
 
 //16 minutes
+
+/*
+time: 16 minutes
+
+complexity:
+    runtime: O(n)
+    extra space: O(n) the size of the result
+
+I did it fast, but only because I had discovered with the previous problem
+how to slice efficiently the strings.
+
+Should still try to display graphically on real time with an example how
+the code is working.
+*/

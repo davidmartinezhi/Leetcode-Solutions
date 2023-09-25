@@ -130,5 +130,10 @@ I struggled to find a way tosolve it and that really took some time.
 If values are dependent on answers from left and right
 I should consider traversing the array from left to right and then from right to left
 
-to construct answers
+How to Identify the Approach
+Constraints: The number of children (array size) can go up to 20,000. This eliminates the brute-force approach.
+Order Matters: Since we need to compare each child with its neighbors, a sorting-based approach wouldn't preserve this relationship.
+Local Decisions: We're making decisions based on the immediate neighbors, so a greedy approach can work. This hints at the two-pass or stack-based methods.
+
+
 */

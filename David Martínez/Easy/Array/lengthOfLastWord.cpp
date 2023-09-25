@@ -88,3 +88,13 @@ public:
 };
 
 //23 minutes
+/*
+time: 23 minutes
+complexity:    
+    runtime: O(n)
+    extra space: O(1)
+
+I struggled a little with some hotspots, but I was able to solve it
+I should try to stop and think about some logic that is making some noise and
+try to explain graphically what is happening
+*/

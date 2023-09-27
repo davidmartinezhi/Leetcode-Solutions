@@ -101,3 +101,26 @@ public:
         return water;
     }
 };
+
+/*
+time: 45+
+complexity
+    runtime: O(n)
+    extra space: O(1)
+
+Aprendí un nuevo concepto, o más bien una mezcla de conceptos que ya sabía.
+Usa el 2 pointer technique donde tienes un valor estatico y otro dinamico,
+Pero en este problema tiene 2 2-pointers. uno del lado izquierdo y otro del lado derecho.
+
+De esta manera siempre tenemos los limites como referencia y podemos saber si estamos
+atrapapndo agua o no.
+
+En el caso de que los valores formarán un triangulo (sin importar el tipo de triangulo que sea),
+siempre nos regresa 0.
+
+Esta solución si requiere un tipo de pensamiento muy abstracto, esta estimulante y satisfactorio
+encontrarte con este tipo de problemas.
+
+
+
+*/

@@ -62,3 +62,23 @@ public:
  * bool param_2 = obj->remove(val);
  * int param_3 = obj->getRandom();
  */
+
+
+/*
+time: 38 minutes aprox
+
+complexity
+    runtime: O(1)
+    space: O(n) 
+
+notes:
+    I have noticed that when I need to do object oriented programming
+    and create multiple methods, I tend to rush and document less.
+
+    I should stop and make a little documentation of what I am doing
+    it could start with seeing the methods and going to a lower level of
+    thinking about which data structures I will use and how I will use them.
+
+    Overall, good performance still
+
+*/

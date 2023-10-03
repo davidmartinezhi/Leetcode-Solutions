@@ -94,3 +94,16 @@ public:
         return false;
     }
 };
+
+/*
+time: 17 minutes
+
+complexity:
+    runtime: O(n)
+    space: O(1) 
+
+Notes:
+    Easy problems are really easy, i can still remember when i struggled
+    with them. I'm glad they seem easy now.
+
+*/

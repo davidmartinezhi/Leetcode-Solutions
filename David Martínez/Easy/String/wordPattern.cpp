@@ -60,7 +60,6 @@ public:
         check if word does not already exists
         check if letter does not already exists
 
-
             {
                 "dog" : "a",
                 "cat": "b"
@@ -196,3 +195,21 @@ public:
 };
 
 // 41 minutes
+/**
+ 
+ Time: 41 minutes
+
+ Complexity:
+    runtime: O(n)
+    extra space: O(n)
+
+Notes:
+    This problem really took me time to decipher and code, it was a long problem 
+    in terms of how much I needed to code. I'm glad i got the most optimal solution and
+    I recognized I have good reflexes for commenting code and good practces for interview
+    coding.
+
+    But It took me a lot of time to come out with the optimal solution, the examples did helped get
+    the solution correctly. 
+ 
+ */

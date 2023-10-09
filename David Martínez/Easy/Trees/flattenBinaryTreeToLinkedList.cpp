@@ -12,7 +12,7 @@ struct TreeNode {
      TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  };
  
- 
+
 class Solution {
 public:
     void flatten(TreeNode* root) {
@@ -111,3 +111,21 @@ public:
         return;
     }
 };
+
+/*
+time: 40 minutes
+
+complexity
+    runtime: O(n)
+    extra sapce: O(n) stack calls
+
+note: 
+Okay, no cheque inicialmente el traversal que estaba haciendo yo. Sabía que era dfs
+irme hasta abajo. Solo que comence a craftear la solución top-bottom,
+cuando la solución optima requería que fuera bottom-up approach.
+
+Es un buen refresh de algo que cuidar cuando trabajo con arboles, no solo
+ver el traversal, pero también en que parte del traversal aplico la respuesta.
+
+Si hubiese pensado en bottom-up approach lo hubiera conseguido resolver muy velozmente.
+*/

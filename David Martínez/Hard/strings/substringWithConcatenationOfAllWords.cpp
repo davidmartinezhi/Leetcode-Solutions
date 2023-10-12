@@ -70,3 +70,18 @@ int main() {
     cout << endl;
     return 0;
 }
+
+/*
+Time: 45+ minutes
+Complexity
+    runtime: O(size of words * (size of s / size of words)) = O(size of s) = O(n)
+    space: O(size of s * size of words). for the case that all words are unique
+
+Notes:
+    This problem was very fun and mentally tiring, but it made realize that there is nothing to fear
+    on hard problems. Hard problems is just a mixture of medium and easy problems, so the efficiency complexity
+    tends to be higher in hard problems and also the implementation usually requieres more layers and modules
+    to be implemented.
+
+    Still, I'll keep practicing to improve my skills even further and dominate hard problems.
+*/

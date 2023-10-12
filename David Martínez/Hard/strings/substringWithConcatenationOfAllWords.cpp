@@ -58,3 +58,15 @@ public:
         return res;
     }
 };
+
+int main() {
+    Solution sol;
+    string s = "barfoothefoobarman";
+    vector<string> words = {"foo","bar"};
+    vector<int> res = sol.findSubstring(s, words);
+    for (int idx : res) {
+        cout << idx << " ";
+    }
+    cout << endl;
+    return 0;
+}

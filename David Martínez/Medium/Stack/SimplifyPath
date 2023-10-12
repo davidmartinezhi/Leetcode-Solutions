@@ -134,3 +134,23 @@ public:
         return result;
     }
 };
+
+/*
+time: 31 minutes
+
+complexity:
+    runtime: O(n)
+    extra space: O(number of directory/file names)
+
+Notes:
+    This  problem felt easy, the part where I took most time to do was
+    understanding the problem and taking notes.
+
+    If the problem has a lot of conditions, I should either write faster or 
+    simplify them as much as possible.
+    Taking information from the problem took me like 8 minutes. 
+    I could have finished the problem in 25 minutes
+
+    Well performance overall.
+
+*/

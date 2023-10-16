@@ -105,3 +105,16 @@ public:
         return darts;
     }
 };
+
+/*
+time: 40 minutes
+
+complexity:
+    runtime: O(n log n)
+    extra space: O(1)
+
+Notes
+    I was able to come up with a solution easy and got the 
+    complexity right from the start.  
+
+*/

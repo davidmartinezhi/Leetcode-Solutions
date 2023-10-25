@@ -47,3 +47,18 @@ public:
         return minStack.top();
     }
 };
+
+/*
+time: 45+ minutes
+
+complexity:
+    runtime: O(1) for all operations
+    extra space: O(n)
+
+I really didnt like this problem because there could be other problems
+like what if i remove an element from main stack but still have that value on min stack
+then it would create confusion on keeping track of values.
+
+Still a good practice on working with stacks
+
+*/

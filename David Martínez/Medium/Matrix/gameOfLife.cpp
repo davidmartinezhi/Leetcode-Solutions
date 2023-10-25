@@ -142,4 +142,12 @@ but i took time on the auxiliary function of getting all the neighbours of a cel
 
 Still it was a very fun problem and I'll try on improving the memory usage
 by modifying the board instead of creating a new one.
+
+
+    // Definir las 8 posibles direcciones: arriba, abajo, izquierda, derecha y las 4 diagonales
+    int dx[] = {-1, -1, -1,  0, 0,  1, 1, 1};
+    int dy[] = {-1,  0,  1, -1, 1, -1, 0, 1};
+
+    Muy buena idea declarar el traversal como 2 arrays, uno el movimiento en eje x y otro en y
+    Buena herramienta para mi kit de soluciones
 */

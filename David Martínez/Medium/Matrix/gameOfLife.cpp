@@ -130,4 +130,16 @@ public:
         return neighbours;
     }
 };
+/*
+time: 38 minutes
+complexity:
+    runtime: O(n*m)
+    extra space: O(n*m)
 
+I came up with a brute force approach with optimal runtime very quickly
+and I believe the solution was displayed since the 20 minutes mark
+but i took time on the auxiliary function of getting all the neighbours of a cell
+
+Still it was a very fun problem and I'll try on improving the memory usage
+by modifying the board instead of creating a new one.
+*/

@@ -127,4 +127,14 @@ public:
     }
 };
 
-//23 minutes
+/*
+time: 23 minutes
+complexity
+    runtime: O(n)
+    extra space: O(1)
+
+I solved this problem easily because i had experience rotating arrays
+and reversing linked lists and this combines both solutions
+
+I'M PROUD OF HOW MUCH I HAVE ADVANCED IN MY PROBLEM SOLVING SKILLS
+*/

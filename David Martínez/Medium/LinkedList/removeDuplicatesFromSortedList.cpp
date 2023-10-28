@@ -106,3 +106,16 @@ public:
     }
 };
 //23 minutes, non optimal memory solution
+
+/*
+time 23 minutes
+
+complexity
+    runtime: O(n)
+    extra space: O(n)
+
+I really liked this problem and i believe it easy to work with linkedlist
+using arrays as auxiliaries data structures, I'll try to optimize later the memory usage
+
+
+*/

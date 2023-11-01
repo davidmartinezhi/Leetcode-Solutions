@@ -115,3 +115,19 @@ public:
 
     }
 };
+
+/*
+time: 26 minutes
+
+complexity:
+    runtime: O(n)
+    extra space: O(n) with no balanced trees
+
+Notes:
+    I'm getting pretty good at implementing algorithms based on just
+    ideas of how i can traverse the tree.
+
+    Nice Jobs. I've came a long way and I have succeded in all my technical interviews
+    since i'vve been practicing leetcode.
+
+*/

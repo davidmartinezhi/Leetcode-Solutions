@@ -100,4 +100,18 @@ public:
     }
 };
 
-//27 minutes
+/*
+Time: 27 minutes
+
+complexity:
+    runtime: O(n^k)
+    extra space: O(k) 
+
+    best conceivable runtime: O(n^k)
+
+notes:
+    I came up with a solution very fast and was able to code it
+    in a short amount of time.
+
+    I have done a well job. I'll keep practicing for my interview with microsoft.
+*/
